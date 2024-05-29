@@ -1,0 +1,22 @@
+{
+  "name": "il-toolkit-builder",
+  "version": "1.0.0",
+  "description": "Web toolkit builder",
+  "repository": "",
+  "author": "Web Implementation Guidelines Group",
+  "license": "NCSA",
+  "scripts": {
+    "gulp": "gulp",
+    "build-html": "eleventy",
+    "build-full": "gulp && eleventy"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "gulp": "^5.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2",
+    "markdown-it": "^14.1.0",
+    "markdown-it-attrs": "^4.1.6"
+  }
+}

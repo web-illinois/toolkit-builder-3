@@ -1,0 +1,52 @@
+{
+	"title": "Global Button Styles (anchor)",
+    "tag": "ilw-global-button-anchor",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "a",
+    "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'a' element.",
+	"toolkit-version": "",
+    "production-version": "",
+    "development-version": "3.0.0-alpha"
+},{
+	"title": "Global Button Styles (button)",
+    "tag": "ilw-global-button-button",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "button",
+    "description": "The Global WIGG Stylesheet contains styles for a single button. This is using the 'button' element.",
+	"toolkit-version": "",
+    "production-version": "",
+    "development-version": "3.0.0-alpha"
+},{
+    "title": "Global Button Group Styles",
+    "tag": "ilw-global-buttons",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "div",
+    "description": "The Global WIGG Stylesheet contains buttons.",
+	"toolkit-version": "",
+    "production-version": "",
+    "development-version": "3.0.0-alpha"
+},{
+	"title": "Global Screen Reader",
+    "tag": "ilw-global-sr-only",
+	"github": "https://github.com/web-illinois/toolkit-management/",
+    "type": "stylesheet",
+    "element-name": "div",
+    "description": "The Global WIGG Stylesheet contains styles to make an item visible for a screen reader but not displayed.",
+	"toolkit-version": "",
+    "production-version": "",
+    "development-version": "3.0.0-alpha"
+
+},{
+    "title": "Hero",
+    "tag": "ilw-hero",
+	"github": "https://github.com/web-illinois/ilw-hero/",
+    "type": "web component",
+    "element-name": "ilw-hero",
+	"description": "The Hero Image component adds a large picture at the top of the page. It is used to draw attention to the page and can be used to set the tone for the page.",
+    "toolkit-version": "",
+    "production-version": "",
+    "development-version": "1.0.0-alpha"
+}

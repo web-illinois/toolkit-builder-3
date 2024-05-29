@@ -1,0 +1,10 @@
+.idea
+dist
+html
+node_modules
+var
+_site
+site/data
+site/array/componentVersionPartial.txt
+site/_data/component-versions.json
+site/scripts/main.js

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Preconnect -->
+    <link rel="dns-prefetch" href="//cdn.brand.illinois.edu">
+    <link rel="dns-prefetch" href="//cdn.disability.illinois.edu">
+    <link rel="dns-prefetch" href="//onetrust.techservices.illinois.edu">
+
+    <!-- Illinois Toolkit -->
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/3.0.0-alpha/ilw-global.css">
+
+    <link rel="stylesheet" href="/stylesheets/component.css">
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+    {% render 'header' %}
+    <main>
+      <div class="builder-section">
+      {{ content }}
+      </div>
+      <div class="builder-section">
+      <h2>Components</h2>
+      <table>
+      <caption class="ilw-sr-only">Component Information</caption>
+      <tr>
+      <th scope='col'>Name</th>
+      <th scope='col'>Toolkit Version</th>
+      <th scope='col'>Latest Production Version</th>
+      <th scope='col'>Latest Development Version</th>
+      </tr>
+      {%- for component in components %}
+          <tr>
+          <td class="named"><a href="/component/{{ component.tag | slugify }}/index.html">{{ component.title }}</a></td>
+          <td>
+          {% if component.toolkit-version == '' %}
+          N/A
+          {% else %}
+          <a href="/component/{{ component.tag | slugify }}/{{ component.toolkit-version | slugify }}/index.html">{{ component.toolkit-version }}</a>
+          {% endif %}
+          </td>
+          <td>
+          {% if component.production-version == '' %}
+          N/A
+          {% else %}
+          <a href="/component/{{ component.tag | slugify }}/{{ component.production-version | slugify }}/index.html">{{ component.production-version }}</a>
+          {% endif %}
+          </td>
+          <td>
+          {% if component.development-version == '' %}
+          N/A
+          {% else %}
+          <a href="/component/{{ component.tag | slugify }}/{{ component.development-version | slugify }}/index.html">{{ component.development-version }}</a>
+          {% endif %}
+          </td>
+          </tr>
+      {% endfor -%}
+      </table>
+    </main>
+    {% render 'footer' %}
+</body>
+</html>

@@ -1,0 +1,122 @@
+{
+    "title": "Hero",
+    "tag": "ilw-hero",
+	"github": "https://github.com/web-illinois/ilw-hero/",
+    "type": "web component",
+    "element-name": "ilw-hero",
+	"description": "The Hero Image component adds a large picture at the top of the page. It is used to draw attention to the page and can be used to set the tone for the page.",
+	"version": "1.0.0-alpha",
+	"date": "5/22/2024",
+	"css": "https://dev.toolkit.illinois.edu/ilw-hero/1.0.0-alpha/ilw-hero.css",
+	"js": "https://dev.toolkit.illinois.edu/ilw-hero/1.0.0-alpha/ilw-hero.js",
+	"production": false,
+    "notes": "",
+	"parent-style": "",
+	"samples": [
+		{
+			"name": "default",
+			"description": "Default information with image",
+			"text": "<img src='https://picsum.photos/1920/1280' alt='' slot='background'><h1>Innovating solutions every year</h1><ul class='ilw-buttons'><li><a href='#'>Link 1</a></li><li><a href='#'>Link 2</a></li><li><a href='#'>Link 3</a></li></ul>"
+		},
+		{
+			"name": "noimage",
+			"description": "No image",
+			"text": "<h1>Innovating solutions every year</h1><ul class='ilw-buttons'><li><a href='#'>Link 1</a></li><li><a href='#'>Link 2</a></li><li><a href='#'>Link 3</a></li></ul>"
+		}
+	],
+	"attributes-fixed": [],
+	"attributes-text": [],
+	"attributes": [
+		{
+			"name": "theme",
+			"description": "Color theme used",
+			"depreciated": false,
+			"values": [
+				"",
+				"blue",
+				"orange",
+				"white"
+			]
+		},
+		{
+			"name": "align",
+			"description": "Text alignment, defaults to center",
+			"depreciated": false,
+			"values": [
+				"",
+				"top",
+				"bottom",
+				"left",
+				"right",
+				"top-left",
+				"top-right",
+				"bottom-left",
+				"bottom-right"
+			]
+		},
+		{
+			"name": "focus",
+			"description": "Focus for the image, defaults to center",
+			"depreciated": false,
+			"values": [
+				"",
+				"top",
+				"bottom",
+				"left",
+				"right"
+			]
+		},
+		{
+			"name": "shadow",
+			"description": "Whether or not to include a shadow",
+			"depreciated": false,
+			"values": [
+				"",
+				"true"
+			]
+		},
+		{
+			"name": "collapse",
+			"description": "Whether or not to remove the image / background in mobile",
+			"depreciated": false,
+			"values": [
+				"",
+				"true"
+			]
+		}
+	],
+	"classes-fixed": [],
+	"classes": [],
+	"css-variables": [
+		{
+			"name": "--ilw-hero--height",
+			"depreciated": false,
+			"description": "Size of the hero image"
+		},
+		{
+			"name": "--ilw-hero--font",
+			"depreciated": false,
+			"description": "Font for heading"
+		},
+		{
+			"name": "--ilw-hero--background",
+			"depreciated": false,
+			"description": "Hex color for background"
+		},
+		{
+			"name": "--ilw-hero--text-width",
+			"depreciated": false,
+			"description": "Text width for heading"
+		},
+		{
+			"name": "--ilw-hero--shadow-color",
+			"depreciated": false,
+			"description": "Hex color for shadow in rgba format"
+		},
+		{
+			"name": "--ilw-hero--text-color",
+			"depreciated": false,
+			"description": "Hex color for heading"
+		}
+	]
+}
