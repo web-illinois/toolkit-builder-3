@@ -6,5 +6,7 @@ var
 _site
 site/data
 site/array/componentVersionPartial.txt
+site/array/componentPartial.txt
+site/_data/components.json
 site/_data/component-versions.json
 site/scripts/main.js
