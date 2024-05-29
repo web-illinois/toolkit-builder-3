@@ -13,6 +13,7 @@
 }
 
 header {
+    background: var(--il-storm-lighter-4);
     border-bottom: 1px solid #ccc;
 }
 
