@@ -1,0 +1,24 @@
+name: deploy_release
+on:
+  push:
+    branches: [ 'main' ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: npm install
+    - run: npm rebuild
+    - run: npm run-script build-full
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ vars.TOOLKIT_AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.TOOLKIT_AWS_ACCESS_SECRET }}
+        aws-region: us-east-2
+
+    - name: Deploy examples to S3 bucket 
+      run: aws s3 sync ./_site/ s3://builder3.toolkit.illinois.edu/content --delete --acl bucket-owner-full-control
+    - name: Invalidate Cloudfront cache
+      run: aws cloudfront create-invalidation --distribution-id	EJE7H24JF0N2G --paths "/*"
