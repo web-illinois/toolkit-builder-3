@@ -1,0 +1,45 @@
+{
+    "title": "Back to Top",
+    "tag": "ilw-back-to-top",
+	"github": "https://github.com/web-illinois/ilw-back-to-top",
+    "type": "web component",
+    "element-name": "ilw-back-to-top",
+	"description": "The Illinois component back-to-top allows you to provide a simple way to skip either to the top of a page or to a designated point in the page (such as the page content area). You can choose alternate Illinois brand colors and adjust the position of the arrow.",
+	"version": "1.0.0-alpha",
+	"date": "6/7/2024",
+	"css": "https://dev.toolkit.illinois.edu/ilw-back-to-top/1.0.0-alpha/ilw-back-to-top.css",
+	"js": "https://dev.toolkit.illinois.edu/ilw-back-to-top/1.0.0-alpha/ilw-back-to-top.js",
+	"production": false,
+    "notes": "",
+	"parent-style": "",
+	"attributes" : [
+		{
+			"depreciated": false,
+			"name": "target",
+			"description" : "The ID of the element which represents the top of the page. If provided, the page will scroll to this element.",
+			"type": "string",
+			"value": ""
+		},
+		{
+			"depreciated": false,
+			"name": "alt",
+			"description" : "The accessible text label of the button, defaults to 'Back to top'",
+			"type": "string",
+			"value": ""
+		}
+	],
+	"styles" : [
+		{
+			"name": "--ilw-back-to-top-foreground-color",
+			"description" : "Color of the back to top",
+			"type": "dropdown",
+			"values" : [ "white", "var(--il-blue)", "var(--il-orange)" ]
+		},
+		{
+			"name": "--ilw-back-to-top-background-color",
+			"description" : "Background color of the back to top",
+			"type": "dropdown",
+			"values" : [ "white", "var(--il-blue)", "var(--il-orange)" ]
+		}
+	]
+}
