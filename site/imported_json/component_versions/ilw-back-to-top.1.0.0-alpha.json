@@ -12,34 +12,44 @@
 	"production": false,
     "notes": "",
 	"parent-style": "",
-	"attributes" : [
+	"attributes-fixed": [],
+	"attributes-text": [
 		{
 			"depreciated": false,
 			"name": "target",
 			"description" : "The ID of the element which represents the top of the page. If provided, the page will scroll to this element.",
-			"type": "string",
 			"value": ""
 		},
 		{
 			"depreciated": false,
 			"name": "alt",
 			"description" : "The accessible text label of the button, defaults to 'Back to top'",
-			"type": "string",
 			"value": ""
 		}
 	],
-	"styles" : [
+	"attributes" : [],
+	"classes-fixed": [],
+	"classes": [],
+	"css-variables" : [
 		{
-			"name": "--ilw-back-to-top-foreground-color",
-			"description" : "Color of the back to top",
-			"type": "dropdown",
-			"values" : [ "white", "var(--il-blue)", "var(--il-orange)" ]
+			"name": "--ilw-back-to-top--color",
+			"description" : "Hex color of the arrow and border",
+			"depreciated": false
 		},
 		{
-			"name": "--ilw-back-to-top-background-color",
-			"description" : "Background color of the back to top",
-			"type": "dropdown",
-			"values" : [ "white", "var(--il-blue)", "var(--il-orange)" ]
+			"name": "--ilw-back-to-top--background",
+			"description" : "Background hex color",
+			"depreciated": false
+		},
+		{
+			"name": "--ilw-back-to-top--bottom",
+			"description" : "Position in pixels from the bottom of the screen",
+			"depreciated": false
+		},
+		{
+			"name": "--ilw-back-to-top--right",
+			"description" : "Position in pixels from the right of the screen",
+			"depreciated": false
 		}
 	]
 }

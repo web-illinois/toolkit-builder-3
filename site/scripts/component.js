@@ -2,6 +2,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let samples = document.getElementsByClassName('sample');
     if (samples.length > 0) {
         document.getElementById('inner').value = samples[0].innerHTML.trimStart();
+    } else {
+        document.getElementById('inner').value = '';
+        document.getElementById('builder-textarea-section').style.display = 'none';
+        document.getElementById('inner').disabled = true;
+        document.getElementById('samples-list').disabled = true;
     }
     build();
 });

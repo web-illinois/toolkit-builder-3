@@ -1,0 +1,88 @@
+{
+    "title": "Lede",
+    "tag": "ilw-content-lede",
+	"github": "https://github.com/web-illinois/ilw-content/",
+    "type": "web component",
+    "element-name": "ilw-content",
+	"description": "The Content component with the lede mode enabled",
+	"version": "0.9.1",
+	"date": "7/3/2024",
+	"css": "https://dev.toolkit.illinois.edu/ilw-content/0.9.1/ilw-content.css",
+	"js": "https://dev.toolkit.illinois.edu/ilw-content/0.9.1/ilw-content.js",
+	"production": false,
+    "notes": "",
+	"parent-style": "margin: 0 auto; max-width: 1200px;",
+	"samples": [
+		{
+			"name": "default",
+			"description": "Default content",
+			"text": "<p>Sodium is an essential micronutrient, but the amount we need is small. Three slices of bread or one teaspoon of table salt will do it, and chances are your daily sodium intake is far greater.</p>"
+		}
+	],
+	"attributes-fixed": [
+		{
+			"name": "mode",
+			"description": "Mode of the component",
+			"depreciated": false,
+			"value": "lede"
+		}
+	],
+	"attributes-text": [
+		{
+			"name": "padding",
+			"description": "Padding of the text inside the component",
+			"depreciated": false,
+			"value": ""
+		}
+	],
+	"attributes": [
+		{
+			"name": "theme",
+			"description": "Color theme used",
+			"depreciated": false,
+			"values": [
+				"",
+				"blue",
+				"orange",
+				"blue-gradient",
+				"orange-gradient",
+				"gray",
+				"white"
+			]
+		},
+		{
+			"name": "width",
+			"description": "Width of component",
+			"depreciated": false,
+			"values": [
+				"",
+				"full",
+				"auto"
+			]
+		},
+		{
+			"name": "align",
+			"description": "Alignment of the text inside the component, defaults to left",
+			"depreciated": false,
+			"values": [
+				"",
+				"center",
+				"right"
+			]
+		}
+	],
+	"classes-fixed": [],
+	"classes": [],
+	"css-variables": [
+		{
+			"name": "--ilw-content--narrow-max-width",
+			"depreciated": false,
+			"description": "Size of the max width of the element in CSS length"
+		},
+		{
+			"name": "--ilw-content--narrow-padding",
+			"depreciated": false,
+			"description": "Size of the padding of the element in CSS length"
+		}
+	]
+}

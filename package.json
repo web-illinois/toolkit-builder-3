@@ -7,8 +7,8 @@
   "license": "NCSA",
   "scripts": {
     "gulp": "gulp",
-    "build-html": "eleventy",
-    "build-full": "gulp && eleventy"
+    "eleventy": "eleventy",
+    "build": "gulp && eleventy"
   },
   "dependencies": {},
   "devDependencies": {

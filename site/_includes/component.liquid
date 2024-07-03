@@ -17,7 +17,11 @@
     {% render 'header' %}
     <main>
       <div class="builder-section">
-      <h1>{{ component-version.title }} {{ component-version.version }}</h1>
+      <h1>"{{ component-version.title }}" {{ component-version.version }}</h1>
+      <p>This builder will allow you to generate a custom version of the {{ component-version.title }} component.</p>
+      <p>The component will show up in between the pink lines below. The pink lines will not show up in production -- they are only used to allow you to view margins and paddings. 
+      In the case of specialized components (things that are meant to be invisible or have a fixed location), the component may not display in this area. 
+      <br><a class="ilw-button" href="{{ component-version.github }}">View usage and accessibility notes</a></p>
       </div>
 
       <div role="presentation" class="builder-line top"></div>
@@ -25,7 +29,7 @@
       <div role="presentation" class="builder-line bottom"></div>
 
       <div class="builder-section builder-row">
-        <div class="builder-column">
+        <div class="builder-column" id="builder-textarea-section">
             <h2>Template -- enter raw HTML here</h2>
                 <div class="builder-row builder-selector builder-align-right">
                 <div class="builder-column builder-align-right">
@@ -90,8 +94,7 @@
                 {% endif %}
                 </div>
                 <div class="builder-column">
-                {{ attribute.value }}
-                <input type="text" onchange="build();" class="attribute" name="{{ attribute.name }}" id="{{ attribute.name }}" value="">
+                <input type="text" onchange="build();" class="attribute" name="{{ attribute.name }}" id="{{ attribute.name }}" value="{{ attribute.value }}">
                 </div>
                 </div>
             {% endfor -%}
@@ -160,8 +163,9 @@
         {% endif %}
         
         <ul class="ilw-buttons">
-        <li><button onclick="copyCode();">Copy to Clipboard</button><span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span></li>
-        <li><button onclick="generateCodepen();">Generate Codepen to Share</button></li>
+            <li><button onclick="copyCode();">Copy to Clipboard</button><span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span></li>
+            <li><button onclick="generateCodepen();">Generate Codepen to Share</button></li>
+            <li><a href="{{ component-version.github }}/issues/new">Contact the owner (create an issue)</a></li>
         </ul>
 
       </div>
