@@ -6,7 +6,14 @@ layout: sample.liquid
     <header slot='header'><p>Header</p></header>
     <main>
 
-<ilw-hero shadow="true"><img src="https://picsum.photos/1920/1280" alt="" slot="background"><h1>Innovating solutions every year</h1><ul class="ilw-buttons"><li><a href="#">Link 1</a></li><li><a href="#">Link 2</a></li><li><a href="#">Link 3</a></li></ul>
+<ilw-hero shadow="true">
+    <img src="https://picsum.photos/1920/1280" alt="" slot="background">
+    <h1>Innovating solutions every year</h1>
+    <ul class="ilw-buttons">
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+    </ul>
 </ilw-hero>
 
 <ilw-content mode="introduction" theme="blue" width="full" padding="50px">
