@@ -8,23 +8,30 @@ layout: sample.liquid
 
 <ilw-hero shadow="true">
     <img src="https://picsum.photos/1920/1280" alt="" slot="background">
-    <h1>Innovating solutions every year</h1>
+    <h1>Infinity Knowledge Citadel</h1>
     <ul class="ilw-buttons">
-        <li><a href="#">Link 1</a></li>
-        <li><a href="#">Link 2</a></li>
-        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Apply</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Our Programs</a></li>
     </ul>
 </ilw-hero>
 
 <ilw-content mode="introduction" theme="blue" width="full" padding="50px">
-    <p><em>Discover your path, define your future.</em></p>
-    <p>No matter what path brought you to ACES, we're glad you're here. A strong education is just a stepping stone to all of the incredible opportunities that await you.</p>
-    <p>Join us in changing your future and the world <a href="#">when you accept your ACES admission</a>.</p>
+    <p><em>Soar on the wings of knowledge.</em></p>
+    <p>Whispering Pines College stands as a beacon of intellectual curiosity and personal growth.</p>
+    <p>Students at Whispering Pines College embark on a transformative journey where academic excellence and vibrant campus life converge seamlessly</a>.</p>
 </ilw-content>
 
 <ilw-content>
-    <h2>About the College of Education</h2>
-    <p>Founded in 1905, the College of Education at the University of Illinois Urbana-Champaign is one of the first land-grant schools of education, revered for its groundbreaking research, preparation of educator-leaders, and worldwide impact. U.S. News and World Report consistently ranks the College and its programs among the nation’s best. Home of the late Dr. Samuel Kirk, the “father of special education,” more than 70 tenure-track faculty, nearly 2,000 undergraduate, graduate, doctoral, and online students, and over 36,000 proud alumni — Great Minds Think Illinois.</p>
+<h2>Whispering Pines College: Where Wisdom Finds Its Home</h2>
+
+<p>Nestled deep within the tranquil embrace of Whispering Pines, this storied institution stands as a beacon of higher learning and intellectual discovery. Established over a century ago, Whispering Pines College has earned a distinguished reputation for nurturing minds and fostering a community where curiosity thrives.</p>
+
+<p>At Whispering Pines College, students embark on a transformative journey guided by esteemed scholars and mentors who are leaders in their fields. The sprawling campus, adorned with century-old oak trees and winding pathways, provides a picturesque backdrop for academic exploration and personal growth.</p>
+
+<p>Beyond academics, Whispering Pines College boasts a vibrant tapestry of cultural diversity and extracurricular activities. From spirited debates in the hallowed halls of the Philosophy Department to the harmonious notes resonating from the Music Conservatory, every corner of the campus resonates with creativity and passion.</p>
+
+<p>With state-of-the-art facilities and a commitment to excellence, Whispering Pines College is more than an institution—it is a community united by a shared pursuit of knowledge, integrity, and the boundless possibilities that await each student who walks through its gates. Whether delving into the archives of its esteemed library or forging lifelong friendships in its bustling student center, Whispering Pines College promises an unforgettable collegiate experience unlike any other.</p>
 </ilw-content>
 
 </main>
