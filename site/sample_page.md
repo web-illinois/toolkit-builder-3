@@ -6,7 +6,7 @@ layout: sample.liquid
 <header slot='header'><p>Header</p></header>
 <main>
 
-<ilw-hero shadow="true">
+<ilw-hero shadow="true" width="full">
     <img src="https://picsum.photos/1920/1280" alt="" slot="background">
     <h1>Infinity Knowledge Citadel</h1>
     <ul class="ilw-buttons">
