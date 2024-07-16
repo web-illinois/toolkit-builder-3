@@ -25,4 +25,4 @@ This deploys to:
 
 ## Adding to this project
 
-The bad news is GitHub actions don't support looping except with the matrix option which isn't quite what we want, I'm using an external job and calling it. To add a new component to the toolkit builder, update the */.github/workflows/deploy_release.yml* file and add another pull_external line with the full name of the repository. This will check out the repository and copy the json files from the */builder/* and */builder/versions/* folders.
+The bad news is GitHub actions don't support looping except with the matrix option and external jobs have a limit of 20. I am using judicious copy-paste. To add a new component to the toolkit builder, update the */.github/workflows/deploy_release.yml* file and add another Checkout section  name of the repository. You will need to update the name of the repository in two places -- once in the title, once in the with repository name. This will check out the repository and copy the json files from the */builder/* and */builder/versions/* folders.

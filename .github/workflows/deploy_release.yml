@@ -8,24 +8,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - name: Checkout toolkit management
-      uses: actions/checkout@v4
-      with:
-        repository: 'web-illinois/toolkit-management'
-        ref: 'main'
-        path: './external-directory'
-    - name: Copy component files
-      run: cp ./external-directory/global-css/builder/*.json ./site/imported_json/components
-    - name: Copy component version files
-      run: cp ./external-directory/global-css/builder/versions/*.json ./site/imported_json/component_versions
-    - name: Remove directory
-      run: rm -r ./external-directory
-
 
     - name: Checkout ilw-hero
-      uses: ./.github/workflows/pull_external.yml@main
+      uses: actions/checkout@v4
       with:
-        repository-name: web-illinois/ilw-hero
+        repository: 'web-illinois/ilw-hero'
+        ref: 'main'
+        path: './external-directory'
+    - run: cp ./external-directory/builder/*.json ./site/imported_json/components
+    - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
+    - run: rm -r ./external-directory
 
     - name: Checkout ilw-back-to-top
       uses: actions/checkout@v4
@@ -33,12 +25,9 @@ jobs:
         repository: 'web-illinois/ilw-back-to-top'
         ref: 'main'
         path: './external-directory'
-    - name: Copy component files
-      run: cp ./external-directory/builder/*.json ./site/imported_json/components
-    - name: Copy component version files
-      run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
-    - name: Remove directory
-      run: rm -r ./external-directory
+    - run: cp ./external-directory/builder/*.json ./site/imported_json/components
+    - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
+    - run: rm -r ./external-directory
 
     - name: Checkout ilw-content
       uses: actions/checkout@v4
@@ -46,12 +35,9 @@ jobs:
         repository: 'web-illinois/ilw-content'
         ref: 'main'
         path: './external-directory'
-    - name: Copy component files
-      run: cp ./external-directory/builder/*.json ./site/imported_json/components
-    - name: Copy component version files
-      run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
-    - name: Remove directory
-      run: rm -r ./external-directory
+    - run: cp ./external-directory/builder/*.json ./site/imported_json/components
+    - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
+    - run: rm -r ./external-directory
 
     - name: Checkout ilw-page
       uses: actions/checkout@v4
@@ -59,17 +45,25 @@ jobs:
         repository: 'web-illinois/ilw-page'
         ref: 'main'
         path: './external-directory'
-    - name: Copy component files
-      run: cp ./external-directory/builder/*.json ./site/imported_json/components
-    - name: Copy component version files
-      run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
-    - name: Remove directory
-      run: rm -r ./external-directory
+    - run: cp ./external-directory/builder/*.json ./site/imported_json/components
+    - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
+    - run: rm -r ./external-directory
+
+    - name: Checkout toolkit management
+      uses: actions/checkout@v4
+      with:
+        repository: 'web-illinois/toolkit-management'
+        ref: 'main'
+        path: './external-directory'
+    - run: cp ./external-directory/global-css/builder/*.json ./site/imported_json/components
+    - run: cp ./external-directory/global-css/builder/versions/*.json ./site/imported_json/component_versions
+    - run: rm -r ./external-directory
 
     - name: NPM Install
       run: npm install
     - run: npm rebuild
     - run: npm run-script build
+
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
