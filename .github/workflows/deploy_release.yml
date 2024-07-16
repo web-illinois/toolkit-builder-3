@@ -23,7 +23,7 @@ jobs:
 
 
     - name: Checkout ilw-hero
-      uses: web-illinois/toolkit-builder3/.github/workflows/pull_external.yml@main
+      uses: ./.github/workflows/pull_external.yml@main
       with:
         repository-name: web-illinois/ilw-hero
 
