@@ -1,0 +1,23 @@
+name: pull_external
+on:
+  workflow_call:
+    inputs:
+      repository-name:
+        required: true
+        type: string
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout external
+      uses: actions/checkout@v4
+      with:
+        repository: '${{ inputs.repository-name }}'
+        ref: 'main'
+        path: './external-directory'
+    - name: Copy component files
+      run: cp ./external-directory/builder/*.json ./site/imported_json/components
+    - name: Copy component version files
+      run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
+    - name: Remove directory
+      run: rm -r ./external-directory

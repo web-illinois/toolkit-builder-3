@@ -4,6 +4,10 @@ The goal of this is to help test the web components and to serve as a training m
 
 This is a replacement of the old toolkit builder.
 
+Before you run this on your local machine, make sure you include the json files in */imported_json/component_versions* and */imported_json/components*.
+
+Any json files in these directories will not be pushed to GitHub. Instead, there's a process to pull them from GitHub repositories directly. This will allow us to test everything before we create NPM packages and put them in the toolkit package. 
+
 You can run the following commands to build the test site:
 
 ````
@@ -14,11 +18,11 @@ npm run build-full
 
 This will generate a static site under _site. You can use a live server tool to run this from your local machine. 
 
-## Adding components
-
-All of the components are driven through a .json file in the /imported_json/components and /imported_json/component_versions folders. 
-
 ## Deployment
 
 This deploys to:
 * https://builder3.toolkit.illinois.edu: the individual environment for a version 3 build. This is for both development (dev.toolkit.illinois.edu) and production (cdn.toolkit.illinois.edu).
+
+## Adding to this project
+
+The bad news is GitHub actions don't support looping except with the matrix option which isn't quite what we want, I'm using an external job and calling it. To add a new component to the toolkit builder, update the */.github/workflows/deploy_release.yml* file and add another pull_external line with the full name of the repository. This will check out the repository and copy the json files from the */builder/* and */builder/versions/* folders.

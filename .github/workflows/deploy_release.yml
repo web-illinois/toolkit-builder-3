@@ -21,18 +21,11 @@ jobs:
     - name: Remove directory
       run: rm -r ./external-directory
 
+
     - name: Checkout ilw-hero
-      uses: actions/checkout@v4
+      uses: web-illinois/toolkit-builder3/.github/workflows/pull_external.yml@main
       with:
-        repository: 'web-illinois/ilw-hero'
-        ref: 'main'
-        path: './external-directory'
-    - name: Copy component files
-      run: cp ./external-directory/builder/*.json ./site/imported_json/components
-    - name: Copy component version files
-      run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
-    - name: Remove directory
-      run: rm -r ./external-directory
+        repository-name: web-illinois/ilw-hero
 
     - name: Checkout ilw-back-to-top
       uses: actions/checkout@v4
