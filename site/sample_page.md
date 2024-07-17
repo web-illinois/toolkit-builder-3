@@ -4,15 +4,15 @@ layout: sample.liquid
 ---
 <ilw-page>
 <il-header slot="header">
-  <a slot="primary-unit" href="https://iou.edu/">The Illuminati Network</a>
-  <a slot="site-name" href="/">Whispering Pines College</a>
+  <a slot="primary-unit" href="/">Toolkit Builder 3</a>
+  <a slot="site-name" href="/sample_page/index.html">Whispering Pines College</a>
   <il-header-nav slot="navigation">
     <ul>
-      <li><a href="/">About</a></li>
-      <li><a href="/">Academics</a></li>
-      <li><a href="/">Admissions</a></li>
-      <li><a href="/">Research</a></li>
-      <li><a href="/">Diversity</a></li>
+      <li><a href="/sample_page/index.html">About</a></li>
+      <li><a href="/sample_page/index.html">Academics</a></li>
+      <li><a href="/sample_page/index.html">Admissions</a></li>
+      <li><a href="/sample_page/index.html">Research</a></li>
+      <li><a href="/sample_page/index.html">Diversity</a></li>
     </ul>
   </il-header-nav>
 </il-header>
@@ -51,8 +51,8 @@ layout: sample.liquid
 <ilw-back-to-top></ilw-back-to-top>
 </main>
 <il-footer slot='footer'>
-  <a slot="primary-unit" href="https://iou.edu/">The Illuminati Network</a>
-  <a slot="site-name" href="/">Whispering Pines College</a>
+  <a slot="primary-unit" href="/">Toolkit Builder 3</a>
+  <a slot="site-name" href="/sample_page/index.html">Whispering Pines College</a>
   <address slot="address">
     <div>1313 Pine Avenue</div>
     <div>Normal, OR 99999</div>
