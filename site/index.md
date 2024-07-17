@@ -10,7 +10,7 @@ The toolkit is a way to see components that have been designed by the WIGG Web C
 
 The web components may not meet all of your needs, so don't feel like you are constrained to use just these options or force your content to these components. The only official requirements are that your Illinois site must meet [accessibility guidelines](https://itaccessibility.illinois.edu/) and [brand guidelines](https://brand.illinois.edu/). These web components help ensure that you meet these requirements. 
 
-One of the things the toolkit is going to be better about is giving full page options. 
+One of the things we needed in the last iteration are full-page setups. How do these components interact with each other? Will one component cause another component to have problems? There are two sample pages: <a href="/sample_page/index.html">one without the "illinois" mode</a> (preferred), and <a href="/sample_page_mode/index.html">one with the "illinois" mode</a> (for CMSs that can't put everything in an il-content block). This uses the <a href="https://cdn.brand.illinois.edu/">brand stylesheets</a> and components. Note that the header and footer are in beta, so be warned. 
 
 Why does this page not look like an "Illinois site"? I was going to build this site with the latest web components, but these aren't really ready for prime-time. As these components and tools become more production-ready, we'll add them to this site to make it more branded. 
 
