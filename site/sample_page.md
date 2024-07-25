@@ -33,3 +33,11 @@ illinoisToggle: ''
 
   <p>With state-of-the-art facilities and a commitment to excellence, Whispering Pines College is more than an institution—it is a community united by a shared pursuit of knowledge, integrity, and the boundless possibilities that await each student who walks through its gates. Whether delving into the archives of its esteemed library or forging lifelong friendships in its bustling student center, Whispering Pines College promises an unforgettable collegiate experience unlike any other.</p>
 </ilw-content>
+
+<ilw-video>
+  <iframe width="560" height="315"
+    src="https://www.youtube-nocookie.com/embed/pW8cNXyAqyI?si=X9643WrgKwDm0BTw"
+    title="Progress isn't Quiet at Illinois" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</ilw-video>
