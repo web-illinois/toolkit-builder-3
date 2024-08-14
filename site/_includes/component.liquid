@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="dns-prefetch" href="//cdn.brand.illinois.edu">
-    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
-    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/3.0.0-alpha/ilw-global.css">
+    {% render 'scripts_styles' %}
     <link rel="stylesheet" href="{{ component-version.css }}">
     <script type="module" src="{{ component-version.js }}"></script>
     <script src="/scripts/main.js"></script>
-    <link rel="stylesheet" href="/stylesheets/component.css">
     <title>{{ component-version.title }}</title>
 </head>
 <body style="margin: 0;">
@@ -21,7 +15,7 @@
       <p>This builder will allow you to generate a custom version of the {{ component-version.title }} component.</p>
       <p>The component will show up in between the pink lines below. The pink lines will not show up in production -- they are only used to allow you to view margins and paddings. 
       In the case of specialized components (things that are meant to be invisible or have a fixed location), the component may not display in this area. 
-      <br><a class="ilw-button" href="{{ component-version.github }}">View usage and accessibility notes</a></p>
+      <br><a class="ilw-button" href="{{ component-version.github }}/blob/main/README.md">View usage and accessibility notes</a></p>
       </div>
 
       <div role="presentation" class="builder-line top"></div>
@@ -165,7 +159,8 @@
         <ul class="ilw-buttons">
             <li><button onclick="copyCode();">Copy to Clipboard</button><span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span></li>
             <li><button onclick="generateCodepen();">Generate Codepen to Share</button></li>
-            <li><a href="{{ component-version.github }}/issues/new">Contact the owner (create an issue)</a></li>
+            <li><a href="{{ component-version.github }}/blob/main/README.md">Read more about the component</a></li>
+            <li><a href="{{ component-version.github }}/issues/new">Contact the owner about a problem</a></li>
         </ul>
 
       </div>

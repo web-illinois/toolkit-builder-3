@@ -1,6 +1,6 @@
 ---
 title: Web Toolkit Builder
-layout: main.liquid
+layout: page.liquid
 ---
 # Web Toolkit Builder
 
@@ -15,3 +15,5 @@ One of the things we needed in the last iteration are full-page setups. How do t
 Why does this page not look like an "Illinois site"? I was going to build this site with the latest web components, but these aren't really ready for prime-time. As these components and tools become more production-ready, we'll add them to this site to make it more branded. 
 
 This also generates <a href="/preview/index.html">a preview of all the components</a>. This will be used by the aXe monitor to ensure that these components pass automated accessibility tests. 
+
+[Create an issue with the new toolkit builder](https://github.com/web-illinois/toolkit-builder-3/issues).
