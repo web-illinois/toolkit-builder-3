@@ -39,7 +39,10 @@
                 </div>
                 </div>
             <textarea id="inner"></textarea>
-            <p><button class="ilw-button" onclick="build();">Rebuild Component With Selected Options</button></p>
+            <ul class="ilw-buttons">
+                <li><button onclick="build();">Rebuild Component With Selected Options</button></li>
+                <li><button onclick="window.location.reload();">Reset</button></li>
+            </ul>
         </div>
         <div class="builder-column">
             <h2>Attributes, Classes, and CSS Variables</h2>
