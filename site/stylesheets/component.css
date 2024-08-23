@@ -132,6 +132,7 @@ code {
     margin:  20px 0;
     border: thin solid black;
     font-size: 1.2rem;
+    overflow-wrap: break-word;
 }
 
 summary {
