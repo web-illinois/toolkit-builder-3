@@ -126,6 +126,7 @@
                 </div>
                 </div>
             {% endfor -%}
+            {% if component-version.css-variables.length > 0 %}
             <details>
                <summary>Custom CSS Variables (advanced use only)</summary>
                 {%- for cssvariable in component-version.css-variables %}
@@ -143,6 +144,7 @@
                     </div>
                 {% endfor -%}
             </details>
+            {% endif %}
         </div>
       </div>
 
