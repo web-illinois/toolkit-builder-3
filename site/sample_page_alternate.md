@@ -2,7 +2,7 @@
 title: Sample Page
 layout: sample.liquid
 illinoisToggle: illinois
-localFiles: true
+localFiles: false
 ---
 
 <ilw-hero shadow="true" width="full">
