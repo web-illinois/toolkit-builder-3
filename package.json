@@ -10,7 +10,9 @@
     "eleventy": "eleventy",
     "build": "gulp && eleventy"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@illinois-toolkit/ilw-page": "file:../ilw-page"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "gulp": "^5.0.0",

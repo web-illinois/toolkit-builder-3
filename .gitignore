@@ -4,6 +4,7 @@ html
 node_modules
 var
 _site
+site/_localfiles
 site/data
 site/array/componentVersionPartial.txt
 site/array/componentPartial.txt

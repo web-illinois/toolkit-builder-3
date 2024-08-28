@@ -19,22 +19,18 @@
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/components/il-header.css">
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/components/il-footer.css">
-
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/3.0.0-alpha/ilw-global.css">
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-page/0.9.0/ilw-page.css">
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-hero/1.0.0-alpha/ilw-hero.css">
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-content/0.9.1/ilw-content.css">
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-back-to-top/1.0.0-alpha/ilw-back-to-top.css">
-    <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-video/1.0.0-alpha/ilw-video.css">
-
+    {% if localFiles %}
+    <link rel="stylesheet" href="/_localfiles/toolkit.css">
+    {% else %}
+    <link rel="stylesheet" href="//dev.toolkit.illinois.edu/3.0.0-alpha/toolkit.css">
+    {% endif %}
     <script src="https://cdn.brand.illinois.edu/components/il-header.mjs" type="module" async></script>
     <script src="https://cdn.brand.illinois.edu/components/il-footer.mjs" type="module" async></script>
-
-    <script type="module" src="https://dev.toolkit.illinois.edu/ilw-page/0.9.0/ilw-page.js"></script>
-    <script type="module" src="https://dev.toolkit.illinois.edu/ilw-hero/1.0.0-alpha/ilw-hero.js"></script>
-    <script type="module" src="https://dev.toolkit.illinois.edu/ilw-content/0.9.1/ilw-content.js"></script>
-    <script type="module" src="https://dev.toolkit.illinois.edu/ilw-back-to-top/1.0.0-alpha/ilw-back-to-top.js"></script>
-    <script type="module" src="https://dev.toolkit.illinois.edu/ilw-video/1.0.0-alpha/ilw-video.js"></script>
+    {% if localFiles %}
+    <script type="module" src="/_localfiles/toolkit.js"></script>
+    {% else %}
+    <script type="module" src="//dev.toolkit.illinois.edu/3.0.0-alpha/toolkit.js"></script>
+    {% endif %}
 
     <script src="//onetrust.techservices.illinois.edu/scripttemplates/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="26be7d61-2017-4ea7-8a8b-8f1704889763"></script>
     <script type="text/javascript">function OptanonWrapper() { }</script>

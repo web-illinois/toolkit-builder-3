@@ -26,3 +26,18 @@ This deploys to:
 ## Adding to this project
 
 The bad news is GitHub actions don't support looping except with the matrix option and external jobs have a limit of 20. I am using judicious copy-paste. To add a new component to the toolkit builder, update the */.github/workflows/deploy_release.yml* file and add another Checkout section  name of the repository. You will need to update the name of the repository in two places -- once in the title, once in the with repository name. This will check out the repository and copy the json files from the */builder/* and */builder/versions/* folders.
+
+## Using local NPM packages
+
+You may want to run a local version of code so you can test interactions with other components. The toolkit builder and toolkit management Github repositories support this workflow. 
+
+In Github, make a local copy of the toolkit-management repository. Manually run an NPM install of the packages you want to run, and then run the build step for the toolkit management. Then, copy those build files to the _localfiles folder in the builder application. These _localfiles will not be deployed to Github. Below is a sample Windows script to run that installs the local version of *ilw-page*, assuming you are on the toolkit-management repository. 
+
+```
+cd source/repos/toolkit-management
+npm install ../ilw-page/
+npm run build
+copy dist-toolkit\* ..\toolkit-builder-3\site\_localfiles /Y
+```
+
+When you are ready to test, change the `localFiles` of the sample pages to true in the .md file and run the npm build script for the toolkit builder 3 project. Make sure you change the `localFiles` variable back to false before checking the files back in. 
