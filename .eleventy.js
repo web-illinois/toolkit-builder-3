@@ -25,11 +25,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("generateGithubIssuesLink", function (name, components) {
     let returnValue = 'https://github.com/search?q=';
-    const arrayComponents = [];
+    const arrayComponents = [""];
     components.forEach(component => {
-        if (component.type === "web component" && !arrayComponents.includes(component.element-name)) {
-            returnValue += `repo%3Aweb-illinois%2F${component.element-name}+`;
-            arrayComponents.push(component.element-name);
+        if (component.type === "web component" && !arrayComponents.includes(component["element-name"])) {
+            returnValue += `repo%3Aweb-illinois%2F${component["element-name"]}+`;
+            arrayComponents.push(component["element-name"]);
         }
     });
     returnValue += 'state%3Aopen&type=Issues'
