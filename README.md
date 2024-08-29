@@ -41,3 +41,5 @@ copy dist-toolkit\* ..\toolkit-builder-3\site\_localfiles /Y
 ```
 
 When you are ready to test, change the `localFiles` of the sample pages to true in the .md file and run the npm build script for the toolkit builder 3 project. Make sure you change the `localFiles` variable back to false before checking the files back in. 
+
+If you are changing the toolkit-management repository, make sure you rebuild the package.json and package-lock.json files. Updating the package.json can be done manually, but to update the package-lock.json, run `npm update --save`.
