@@ -1,6 +1,6 @@
 ---
 title: Helpful Links
-layout: page.liquid
+layout: links.liquid
 ---
 # Links
 

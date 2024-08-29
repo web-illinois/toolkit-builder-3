@@ -22,6 +22,18 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("site/img");
 
+
+  eleventyConfig.addFilter("generateGithubIssuesLink", function (name, components) {
+    let returnValue = 'https://github.com/search?q=';
+    components.forEach(component => {
+        if (component.slug === name) {
+            returnValue += `repo%3Aweb-illinois%2Filw-content+`;
+        }
+    });
+    returnValue += 'state%3Aopen&type=Issues'
+    return returnValue;
+  });
+
   return {
     dir: {
       input: "site"
