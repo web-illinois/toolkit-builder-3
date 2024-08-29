@@ -4,7 +4,7 @@ layout: page.liquid
 ---
 # Demo Pages
 
-We built a few demonstration pages to ensure that everything worked OK. All of these pages open in a new window, and none of the links go anywhere. 
+We built a few demonstration pages to ensure that everything worked OK. All of the links below open in a new window. 
 
 * <a href="/demo/home.html" target="_blank">Sample Home Page</a>: A sample home page using the components. 
 * <a href="/demo/home-illinois-mode.html" target="_blank">Sample Home Page, Alternate</a>: A sample home page using the "illinois" mode on the **ilw-page** component. This is used if you don't want to wrap all of your content in an **ilw-content** block. 
