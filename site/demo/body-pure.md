@@ -1,8 +1,8 @@
 ---
 title: Sample Body Page
 layout: sample.liquid
-permalink: "demo/body.html"
-classOptions: 'ilw-font ilw-margin'
+permalink: "demo/body-pure.html"
+classOptions: 'ilw-font'
 localFiles: false
 
 ---
@@ -13,7 +13,7 @@ localFiles: false
 <img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" role="presentation" slot="background">
 <h1>Graduate Programs</h1>
 </ilw-page-title>
-<ilw-content>
+<ilw-content  width="page">
 <p>Graduate Programs include:</p>
 <ul><li>Environmental Philosophy and Ethics</li>
 <li>Forest Ecology and Conservation</li>
@@ -30,11 +30,11 @@ localFiles: false
 <p>Each program at Whispering Pines is designed to integrate academic excellence with an appreciation for the natural world, fostering a unique learning environment for students.</p>
 </ilw-content>
 
-<ilw-content>
+<ilw-content width="page">
 <h2>Frequently Asked Questions</h2>
 </ilw-content>
 
-<ilw-accordion limit>
+<ilw-accordion width="auto" limit>
 <ilw-accordion-panel>
 <h3 slot="summary">What are the admission requirements for Whispering Pines' graduate programs?</h3>
 <p>Applicants typically need a bachelor's degree from an accredited institution, a strong academic record, letters of recommendation, a statement of purpose, and, for some programs, relevant work or research experience. Specific requirements may vary by program, so it's best to consult the individual program's admissions page for detailed information.</p>

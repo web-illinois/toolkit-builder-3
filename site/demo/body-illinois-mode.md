@@ -12,7 +12,6 @@ localFiles: false
 <img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" role="presentation" slot="background">
 <h1>Graduate Programs</h1>
 </ilw-page-title>
-<p>Whispering Pines Graduate College is nestled in the heart of a secluded, evergreen forest, where towering pines seem to whisper ancient secrets to those who listen closely. </p>
 <p>Graduate Programs include:</p>
 <ul><li>Environmental Philosophy and Ethics</li>
 <li>Forest Ecology and Conservation</li>
