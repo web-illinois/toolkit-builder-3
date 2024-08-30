@@ -2,7 +2,7 @@
 title: Sample Card Grid
 layout: sample.liquid
 permalink: "demo/card-grid-illinois-mode.html"
-illinoisToggle: 'illinois'
+classOptions: 'ilw-format ilw-margin'
 localFiles: false
 ---
 <h1>Research Areas</h1>

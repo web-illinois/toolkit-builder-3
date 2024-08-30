@@ -2,7 +2,7 @@
 title: Sample Home Page with Illinois Mode
 layout: sample.liquid
 permalink: "demo/home-illinois-mode.html"
-illinoisToggle: illinois
+classOptions: 'ilw-format ilw-margin'
 localFiles: false
 ---
 
@@ -10,9 +10,9 @@ localFiles: false
   <img src="/img/header_image.png" alt="" slot="background">
   <h1>Knowledge is Evergreen</h1>
   <ul class="ilw-buttons">
-    <li><a href="#" class="ilw-theme-white">Apply</a></li>
-    <li><a href="#" class="ilw-theme-white">Contact Us</a></li>
-    <li><a href="#" class="ilw-theme-white">Our Programs</a></li>
+    <li><a href="#" class="ilw-theme-blue">Apply</a></li>
+    <li><a href="#" class="ilw-theme-white-orange">Contact Us</a></li>
+    <li><a href="#" class="ilw-theme-white-orange">Our Programs</a></li>
   </ul>
 </ilw-hero>
 
@@ -66,7 +66,7 @@ localFiles: false
 
 <ilw-columns gap="20px" theme="blue" width="auto" padding="0">
     <div class="ilw-image-cover-bottom"><img src="/img/feature.webp" alt=""></div>
-    <ilw-content theme="blue">
+    <ilw-content mode="inset" theme="blue">
         <h2>Join Us at Whispering Pines College</h2>
         <p>Discover a place where academic excellence meets natural beauty. At Whispering Pines College, your journey toward a brighter future begins in the heart of the forest. Embrace the spirit of exploration, innovation, and community that defines us. Come, write your story among the pines.</p>
     </ilw-content>
@@ -88,15 +88,13 @@ localFiles: false
 </ilw-columns>
 
 <ilw-call-to-action theme="blue-gradient" align="center">
-<img src="https://cdn.brand.illinois.edu/icons/line/white/faq.svg" alt="" slot="icon">
-<div>
-<h2>Get started today</h2>
-<p>Enroll in a class after you are admitted as a non-degree student. Enroll in a class after you are admitted as a non-degree student. Enroll in a class after you are admitted as a non-degree student.</p>
-<ul class="ilw-buttons">
-<li><a href="#">Register <span class="ilw-sr-only">for classes</span></a></li>
-<li><a href="#">Contact us</a></li>
-</ul>
-</div>
+    <img src="https://cdn.brand.illinois.edu/icons/line/white/faq.svg" alt="" slot="icon">
+    <h2>Get started today</h2>
+    <p>Enroll in a class after you are admitted as a non-degree student.</p>
+    <ul class="ilw-buttons">
+        <li><a href="#">Register <span class="ilw-sr-only">for classes</span></a></li>
+        <li><a href="#">Contact us</a></li>
+    </ul>
 </ilw-call-to-action>
 
-<div role="presentation" style="padding: 0 0 50px 0; margin: 0; background-color: transparent; visibility: hidden;"></div>
+<ilw-spacer height="50px"></ilw-spacer>

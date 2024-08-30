@@ -2,7 +2,7 @@
 title: Sample Body Page
 layout: sample.liquid
 permalink: "demo/body-illinois-mode.html"
-illinoisToggle: 'illinois'
+classOptions: 'ilw-format ilw-margin'
 localFiles: false
 ---
 
@@ -54,15 +54,13 @@ localFiles: false
 </ilw-accordion>
 
 <ilw-call-to-action theme="blue-gradient" align="center">
-<img src="https://cdn.brand.illinois.edu/icons/line/white/admissions.svg" alt="" slot="icon">
-<div>
-<h2>Get started today</h2>
-<p> Interested students can apply online through the Whispering Pines Graduate College website. </p>
-<ul class="ilw-buttons">
-<li><a href="#">Register <span class="ilw-sr-only">for classes</span></a></li>
-<li><a href="#">Contact us</a></li>
-</ul>
-</div>
+    <img src="https://cdn.brand.illinois.edu/icons/line/white/admissions.svg" alt="" slot="icon">
+    <h2>Get started today</h2>
+    <p> Interested students can apply online through the Whispering Pines Graduate College website. </p>
+    <ul class="ilw-buttons">
+        <li><a href="#">Register <span class="ilw-sr-only">for classes</span></a></li>
+        <li><a href="#">Contact us</a></li>
+    </ul>
 </ilw-call-to-action>
 
-<div role="presentation" style="padding: 0 0 50px 0; margin: 0; background-color: transparent; visibility: hidden;"></div>
+<ilw-spacer height="50px"></ilw-spacer>

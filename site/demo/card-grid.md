@@ -2,8 +2,9 @@
 title: Sample Card Grid
 layout: sample.liquid
 permalink: "demo/card-grid.html"
-illinoisToggle: 'font'
+classOptions: 'ilw-font ilw-margin'
 localFiles: false
+
 ---
 <ilw-content>
 <h1>Research Areas</h1>
