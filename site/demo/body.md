@@ -29,11 +29,9 @@ localFiles: false
 <ilw-content mode="lede" align="center" padding="20px 0 40px 0">
 <p>Each program at Whispering Pines is designed to integrate academic excellence with an appreciation for the natural world, fostering a unique learning environment for students.</p>
 </ilw-content>
-
 <ilw-content>
 <h2>Frequently Asked Questions</h2>
 </ilw-content>
-
 <ilw-accordion limit>
 <ilw-accordion-panel>
 <h3 slot="summary">What are the admission requirements for Whispering Pines' graduate programs?</h3>
@@ -56,7 +54,6 @@ localFiles: false
 <p>The natural environment is integral to the Whispering Pines experience. Many programs include fieldwork in the surrounding forests, and the campus itself is designed to promote a deep connection with nature. Outdoor classrooms, meditation gardens, and nature trails are just a few of the ways students engage with the natural world as part of their studies.</p>
 </ilw-accordion-panel>
 </ilw-accordion>
-
 <ilw-call-to-action theme="blue-gradient" align="center">
     <img src="https://cdn.brand.illinois.edu/icons/line/white/admissions.svg" alt="" slot="icon">
     <h2>Get started today</h2>
@@ -66,5 +63,4 @@ localFiles: false
         <li><a href="#">Contact us</a></li>
     </ul>
 </ilw-call-to-action>
-
 <ilw-spacer height="50px"></ilw-spacer>
