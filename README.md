@@ -4,9 +4,16 @@ The goal of this is to help test the web components and to serve as a training m
 
 This is a replacement of the old toolkit builder.
 
-Before you run this on your local machine, make sure you include the json files in */imported_json/component_versions* and */imported_json/components*.
+## Deployment
 
-Any json files in these directories will not be pushed to GitHub. Instead, there's a process to pull them from GitHub repositories directly. This will allow us to test everything before we create NPM packages and put them in the toolkit package. 
+This deploys to:
+* https://builder3.toolkit.illinois.edu: the individual environment for a version 3 build. This is for both development (dev.toolkit.illinois.edu) and production (cdn.toolkit.illinois.edu).
+
+## Adding to this project
+
+The bad news is GitHub actions don't support looping except with the matrix option and external jobs have a limit of 20. I am using judicious copy-paste. To add a new component to the toolkit builder, update the */.github/workflows/deploy_release.yml* file and add another Checkout section  name of the repository. You will need to update the name of the repository in two places -- once in the title, once in the with repository name. This will check out the repository and copy the json files from the */builder/* and */builder/versions/* folders.
+
+## Running the builder on your local machine
 
 You can run the following commands to build the test site:
 
@@ -18,16 +25,24 @@ npm run build-full
 
 This will generate a static site under _site. You can use a live server tool to run this from your local machine. 
 
-## Deployment
+## Using the builder to test your components
 
-This deploys to:
-* https://builder3.toolkit.illinois.edu: the individual environment for a version 3 build. This is for both development (dev.toolkit.illinois.edu) and production (cdn.toolkit.illinois.edu).
+You can use the builder to test your components without publishing. 
 
-## Adding to this project
+Before you run this on your local machine, make sure you include the json files in */site/imported_json/component_versions* and */site/imported_json/components*. By default, this will be blank, so you will need to manually copy the files from your component repository to these folders. 
 
-The bad news is GitHub actions don't support looping except with the matrix option and external jobs have a limit of 20. I am using judicious copy-paste. To add a new component to the toolkit builder, update the */.github/workflows/deploy_release.yml* file and add another Checkout section  name of the repository. You will need to update the name of the repository in two places -- once in the title, once in the with repository name. This will check out the repository and copy the json files from the */builder/* and */builder/versions/* folders.
+Note that if you are testing the component using the path /component/*name*/*version*/index.html, it's not going to use the NPM package. It will use the file path listed in your */site/imported_json/component_versions/* file. 
 
-## Using local NPM packages
+To point to a local copy of your files, copy your js and css files to */_localfiles/* and change your component_versions file to
+
+```
+    "css": "/_localfiles/ilw-hero.css",
+    "js": "/_localfiles/ilw-hero.js",
+```
+
+Any files in the directories */site/imported_json/component_versions*, */site/imported_json/components*, and */site/_localfiles* will not be pushed to GitHub. 
+
+## Using local NPM packages to test demo pages
 
 You may want to run a local version of code so you can test interactions with other components. The toolkit builder and toolkit management Github repositories support this workflow. 
 
@@ -40,6 +55,6 @@ npm run build
 copy dist-toolkit\* ..\toolkit-builder-3\site\_localfiles /Y
 ```
 
-When you are ready to test, change the `localFiles` of the sample pages to true in the .md file and run the npm build script for the toolkit builder 3 project. Make sure you change the `localFiles` variable back to false before checking the files back in. 
+To run the demo pages, change the `localFiles` of the demo pages to true in the .md file and run the npm build script for the toolkit builder 3 project. Make sure you change the `localFiles` variable back to false before checking the files back in. 
 
 If you are changing the toolkit-management repository, make sure you rebuild the package.json and package-lock.json files. Updating the package.json can be done manually, but to update the package-lock.json, run `npm update --save`.

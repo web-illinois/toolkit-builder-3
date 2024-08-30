@@ -53,5 +53,5 @@ function build() {
 
     let results = document.getElementById('results');
     results.innerText = componentBase.innerHTML;
-    scroll(0,0);
+    componentBase.scrollIntoView({ behavior: 'smooth' }); 
 }
