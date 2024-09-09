@@ -13,21 +13,37 @@ localFiles: false
 <img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" role="presentation" slot="background">
 <h1>Graduate Programs</h1>
 </ilw-page-title>
-<ilw-content>
-<p>Graduate Programs include:</p>
-<ul><li>Environmental Philosophy and Ethics</li>
-<li>Forest Ecology and Conservation</li>
-<li>Creative Writing with a focus on Nature Literature</li>
-<li>Sustainable Architecture and Design</li>
-<li>Mythology and Folklore Studies</li>
-<li>Psychology of Mindfulness and Well-being</li>
-<li>Renewable Energy Systems and Policy</li>
-<li>Herbal Medicine and Botanical Studies</li>
-<li>Wildlife Management and Conservation Biology</li>
-<li>Cultural Anthropology with a focus on Indigenous Practices</li></ul>
-</ilw-content>
+<ilw-columns mode="1x2" gap="20px">
+    <ilw-section-nav>
+        <a href="#" class="ilw-section-nav--root">Programs of Study</a>
+        <a href="#">Undergraduate Degrees</a>
+        <a href="#">Graduate Degrees</a>
+        <ilw-section-nav open="false">
+            <a href="#" aria-current="page">Programs and FAQ</a>
+            <a href="#">How to Apply</a>
+            <a href="#">Office of Graduate Programs</a>
+            <a href="#">Tuition and Financial Aid</a>
+        </ilw-section-nav>
+        <a href="#">Online Degrees</a>
+    </ilw-section-nav>
+    <div>
+        <ilw-content>
+            <p>Graduate Programs include:</p>
+            <ul><li>Environmental Philosophy and Ethics</li>
+            <li>Forest Ecology and Conservation</li>
+            <li>Creative Writing with a focus on Nature Literature</li>
+            <li>Sustainable Architecture and Design</li>
+            <li>Mythology and Folklore Studies</li>
+            <li>Psychology of Mindfulness and Well-being</li>
+            <li>Renewable Energy Systems and Policy</li>
+            <li>Herbal Medicine and Botanical Studies</li>
+            <li>Wildlife Management and Conservation Biology</li>
+            <li>Cultural Anthropology with a focus on Indigenous Practices</li></ul>
+        </ilw-content>
+    </div>
+</ilw-columns>
 <ilw-content mode="lede" align="center" padding="20px 0 40px 0">
-<p>Each program at Whispering Pines is designed to integrate academic excellence with an appreciation for the natural world, fostering a unique learning environment for students.</p>
+    <p>Each program at Whispering Pines is designed to integrate academic excellence with an appreciation for the natural world, fostering a unique learning environment for students.</p>
 </ilw-content>
 <ilw-content>
 <h2>Frequently Asked Questions</h2>
