@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-    {% render 'scripts_styles' %}
+    {% render 'scripts_styles_toolkit' %}
     <title>{{ title }}</title>
 </head>
 <body style="margin: 0;">
+<ilw-page class="ilw-margin ilw-font">
     {% render 'header' %}
     <main>
-      <div class="builder-section">
+      <ilw-content>
       {{ content }}
-      </div>
-      <div class="builder-section">
+      </ilw-content>
+      <ilw-content>
       <h2>Issues</h2>
       <p>We use Github to track issues. Because these are dispersed across multiple repositories, the below link contains a query that checks all the repositories listed and displays all the issues.</p>
       <p><a class="ilw-button" href="{{ slug | generateGithubIssuesLink: components }}">Github Issues</a></p>
@@ -20,8 +21,9 @@
           <li><a href="{{ component.github }}">{{ component.tag }} ({{ component.type }})</a></li>
       {% endfor -%}
       </ul>
-      </div>
+      </ilw-content>
     </main>
     {% render 'footer' %}
+</ilw-page>
 </body>
 </html>

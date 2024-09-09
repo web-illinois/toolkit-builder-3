@@ -33,7 +33,7 @@ localFiles: false
 
   <p>With state-of-the-art facilities and a commitment to excellence, Whispering Pines College is more than an institution—it is a community united by a shared pursuit of knowledge, integrity, and the boundless possibilities that await each student who walks through its gates. Whether delving into the archives of its esteemed library or forging lifelong friendships in its bustling student center, Whispering Pines College promises an unforgettable collegiate experience unlike any other.</p>
 </ilw-content>
-<ilw-columns gap="20px">
+<ilw-columns width="page" gap="20px">
     <ilw-card align="center">
         <img src="/img/card1.webp" alt="" slot="image">
         <h2>Unlock Your Future: Undergraduate Programs</h2>
@@ -53,7 +53,7 @@ localFiles: false
         <div slot="footer"><a href="#" class="ilw-button">Browse Online Courses</a></div>
     </ilw-card>
 </ilw-columns>
-<ilw-content  width="page">
+<ilw-content width="page">
 <h2>Campus Facilities</h2>
 </ilw-content>
 <ilw-tabs theme="gray" width="auto">

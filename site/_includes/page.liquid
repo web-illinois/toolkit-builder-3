@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-    {% render 'scripts_styles' %}
+    {% render 'scripts_styles_toolkit' %}
     <title>{{ title }}</title>
 </head>
 <body style="margin: 0;">
+  <ilw-page class="ilw-margin ilw-font">
     {% render 'header' %}
     <main>
-      <div class="builder-section">
-      {{ content }}
-      </div>
+      <ilw-content>
+        {{ content }}
+      </ilw-content>
     </main>
     {% render 'footer' %}
+  </ilw-page>
 </body>
 </html>
