@@ -6,6 +6,8 @@ layout: page.liquid
 
 We built a few demonstration pages to ensure that everything worked OK. All of the links below open in a new window. 
 
+If you aren't sure which variant to use, start with the first variant, and if you run into issues, go to the second variant to see if that fixes your issue. If that doesn't work, go to the third variant. 
+
 ## Using the 'ilw-font' variant
 
 This is used if you can ensure that all of your content can be enclosed in an *ilw-content* tag and you want to manage the  left/right margins through components. This will change your font to the Illinois-preferred fonts but leave everything else as normal. This is the preferred option. 
