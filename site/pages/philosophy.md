@@ -30,7 +30,7 @@ Yes. The Web Component team is not responsible for storing, retrieving, or stand
 
 ## What next? 
 
-* <a href="https://webtheme.illinois.edu/about/web-components/">Learn about our team</a>
+* <a href="https://webtheme.illinois.edu/about/web-components/">Learn about our team</a> (goes to a new webpage)
 * <a href="/demo/index.html">See all the components in a sample page</a>
 * <a href="/preview/index.html">See all the components individually</a>
 * <a href="/getting_started/index.html">Get started using the components</a>
