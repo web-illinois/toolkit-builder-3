@@ -18,7 +18,7 @@ As the web components became more complex, having them in a single repository be
 
 ## Where do your designs come from? 
 
-[WIGG has a design team](https://webtheme.illinois.edu/about/design/) that creates designs for us. These designs are collaborative and are not required to be used by any unit. However, they are vetted by designers, accessibility experts, and usability experts across campus.
+[WIGG has a design team](https://webtheme.illinois.edu/about/design/) that creates designs for us. These designs are collaborative and are not required to be used by any unit. However, they are vetted by designers, accessibility experts, and user experience designers across campus.
 
 ## Who uses your components?
 
