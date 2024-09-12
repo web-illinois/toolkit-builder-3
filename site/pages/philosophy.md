@@ -24,6 +24,10 @@ As the web components became more complex, having them in a single repository be
 
 Anyone on campus is welcome to use our components. We focus on the [WIGG WordPress team](https://webtheme.illinois.edu/about/wordpress/), the [WIGG Drupal team](https://webtheme.illinois.edu/about/drupal/), other areas on campus that manage CMSs, and those units that hand-code their web pages. 
 
+## Is this just the look and feel of the website? 
+
+Yes. The Web Component team is not responsible for storing, retrieving, or standardizing data. 
+
 ## What next? 
 
 * <a href="https://webtheme.illinois.edu/about/web-components/">Learn about our team</a>
