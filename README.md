@@ -25,6 +25,8 @@ npm run build-full
 
 This will generate a static site under _site. You can use a live server tool to run this from your local machine. If you are using Visual Studio Code, you can choose *File* --> *Add Folder to Workspace* to add _site and make this the root. 
 
+**Note:** this is assuming that the root directory is *_site*. If you are using Visual Studio Code, you can choose *Add Folder to Workspace* to add *_site* to the workspace so you can run Live Server with _site as the root folder. 
+
 ## Using the builder to test your components
 
 You can use the builder to test your components without publishing. 
