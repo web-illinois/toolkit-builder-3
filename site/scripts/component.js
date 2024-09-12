@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById('inner').disabled = true;
         document.getElementById('samples-list').disabled = true;
     }
-    build();
+    build(false);
 });
 
 function changeSamples() {
@@ -21,7 +21,7 @@ function changeSamples() {
     build();
 }
 
-function build() {
+function build(scrollIntoView) {
     let componentBase = document.getElementById('component');
     componentBase.innerHTML = '';
     let component = document.createElement(componentBase.getAttribute('data-name'));
@@ -53,5 +53,11 @@ function build() {
 
     let results = document.getElementById('results');
     results.innerText = componentBase.innerHTML;
-    componentBase.scrollIntoView({ behavior: 'smooth' }); 
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (scrollIntoView !== false) {
+        scrollIntoView = true;
+    }
+    if (!mediaQuery.matches && scrollIntoView) {
+        componentBase.scrollIntoView({ behavior: 'smooth' }); 
+    }
 }
