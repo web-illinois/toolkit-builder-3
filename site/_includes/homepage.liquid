@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render 'scripts_styles_toolkit' %}
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+  <ilw-page class="ilw-margin ilw-font">
+    {% render 'header' %}
+    <main>
+    <ilw-hero width="full"><img src="/img/toolkit_hero_image.png" alt="" slot="background">
+      <h1>Web Toolkit Builder</h1>
+      <ul class="ilw-buttons">
+        <li><a href="/components_toc/index.html">Components</a></li>
+        <li><a href="/demo/index.html">Demonstrations</a></li>
+        <li><a href="/links/index.html">Links</a></li>
+      </ul>
+    </ilw-hero>
+    <ilw-columns gap="50px">
+    <ilw-card clickable>
+      <h2><a href="/philosophy/index.html">Who is the toolkit for?</a></h2>
+      <p>Anyone using HTML to build campus websites can benefit, whether it's building a theme for a CMS or a static website.</p>
+    </ilw-card>
+    <ilw-card clickable>
+      <h2><a href="/getting_started/index.html">Using the Toolkit</a></h2>
+      <p>Learn how to include the toolkit components in a website and how to customize them.</p>
+    </ilw-card>
+    </ilw-columns>
+    <ilw-content>
+      {{ content }}
+    </ilw-content>
+    <ilw-spacer></ilw-spacer>
+    </main>
+    {% render 'footer' %}
+  </ilw-page>
+</body>
+</html>

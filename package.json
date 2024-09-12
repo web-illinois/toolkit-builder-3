@@ -1,5 +1,5 @@
 {
-  "name": "il-toolkit-builder",
+  "name": "ilw-toolkit-builder",
   "version": "1.0.0",
   "description": "Web toolkit builder",
   "repository": "",
@@ -9,9 +9,6 @@
     "gulp": "gulp",
     "eleventy": "eleventy",
     "build": "gulp && eleventy"
-  },
-  "dependencies": {
-    "@illinois-toolkit/ilw-page": "file:../ilw-page"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

@@ -23,7 +23,7 @@ npm rebuild
 npm run build-full
 ````
 
-This will generate a static site under _site. You can use a live server tool to run this from your local machine. 
+This will generate a static site under _site. You can use a live server tool to run this from your local machine. If you are using Visual Studio Code, you can choose *File* --> *Add Folder to Workspace* to add _site and make this the root. 
 
 ## Using the builder to test your components
 

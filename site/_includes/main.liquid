@@ -1,17 +1,67 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-    {% render 'scripts_styles' %}
+    {% render 'scripts_styles_toolkit' %}
     <title>{{ title }}</title>
+        <style>
+              ilw-page-title {
+          left: calc(50% - 10px);
+          margin-left: -50vw;
+          margin-right: -50vw;
+          padding-left: 0;
+          padding-right: 0;
+          position: relative;
+          right: 50%;
+          width: 100vw;
+          display: block;
+          container-type: inline-size;
+      }
+
+    table {
+        border-collapse: collapse;
+        margin-top: 30px;
+    }
+    
+    ilw-content thead tr, ilw-content th {
+        background-color: var(--il-blue);
+        color: #fff;
+        position: relative;
+    }
+
+    ilw-content thead tr th, ilw-content th {
+        border-left: 2px solid #fff;
+        color: #fff;
+        min-width:  90px;
+        padding: 10px;
+        font-weight: 700;
+    }
+
+    thead tr th:first-of-type, th:first-of-type {
+        border-left: 2px solid var(--il-blue);
+    }
+
+    tbody tr td {
+      border: 2px solid var(--il-blue);
+      min-width: 125px;
+      min-height: 90px;
+      padding: 10px;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: var(--il-industrial-lighter-4);
+    }
+</style>
 </head>
 <body style="margin: 0;">
+  <ilw-page class="ilw-margin ilw-font">
     {% render 'header' %}
     <main>
-      <div class="builder-section">
-      {{ content }}
-      </div>
-      <div class="builder-section">
-      <h1>Components</h1>
+    <ilw-page-title width="full">
+    <img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" slot="background">
+    <h1>Components</h1>
+    </ilw-page-title>
+      <ilw-content>
+      <div>
       <table>
       <caption class="ilw-sr-only">Component Information</caption>
       <tr>
@@ -47,7 +97,10 @@
           </tr>
       {% endfor -%}
       </table>
+      </ilw-content>
+      <ilw-spacer></ilw-spacer>
     </main>
     {% render 'footer' %}
+    </ilw-page>
 </body>
 </html>

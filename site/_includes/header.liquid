@@ -4,17 +4,31 @@
     <nav slot="links" aria-label="Utility">
     <ul>
       <li><a href="https://builder.toolkit.illinois.edu">Old Builder</a></li>
-      <li><a href="https://github.com/web-illinois/toolkit-builder-3/issues">Report a problem</a></li>
+      <li><a href="https://webtheme.illinois.edu/about/web-components/">About Our Team</a></li>
     </ul>
   </nav>
   <il-header-nav slot="navigation">
     <ul>
-      <li><a href="/links/index.html">Helpful Links</a></li>
-      <li><a href="/getting_started/index.html">Getting Started</a></li>
+      <li><il-header-nav-section>
+        <span slot="label">Start Here</span>
+        <ul>
+          <li><a href="/getting_started/index.html">Getting Started</a></li>
+          <li><a href="/create_page/index.html">Create a Page</a></li>
+          <li><a href="/upgrade/index.html">Upgrade from V2</a></li>
+        </ul>
+      </il-header-nav-section></li>      
+      <li><il-header-nav-section>
+        <span slot="label">Information</span>
+        <ul>
+          <li><a href="/philosophy/index.html">Philosophy</a></li>
+          <li><a href="/links/index.html">Helpful Links</a></li>
+          <li><a href="/github/index.html">Organization and Github</a></li>
+          <li><a href="https://webtheme.illinois.edu/about/web-components/">About Our Team</a></li>
+        </ul>
+      </il-header-nav-section></li>      
       <li><a href="/demo/index.html">Demo Pages</a></li>
       <li><a href="/components_toc/index.html">Components</a></li>
       <li><a href="/preview/index.html">Component Preview</a></li>
-      <li><a href="https://webtheme.illinois.edu/about/web-components/">About Our Team</a></li>
     </ul>
   </il-header-nav>
 </il-header>
