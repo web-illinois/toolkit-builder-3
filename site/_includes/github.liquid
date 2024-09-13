@@ -38,7 +38,7 @@
       <h2>List of Github Repositories</h2>
       <ul>
       {%- for component in component-versions %}
-          <li><a href="{{ component.github }}">{{ component.tag }} ({{ component.type }})</a> <br />See <a href="{{ component.github }}/issues">a list of known issues for this component</a><br /><a href="{{ component.github }}/issues/new">Create a new issue for this component</a></li>
+          <li><strong><a href="{{ component.github }}">{{ component.tag }} ({{ component.type }})</a></strong> <br />See <a href="{{ component.github }}/issues">a list of known issues for this component</a><br /><a href="{{ component.github }}/issues/new">Create a new issue for this component</a></li>
       {% endfor -%}
       </ul>
       </ilw-content>
