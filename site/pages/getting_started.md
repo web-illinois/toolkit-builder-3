@@ -25,8 +25,8 @@ First, note that this is in beta state. **Do not use this in an important produc
 Having said that, you need to add the following lines to your HTML:
 
 ```html
-    <link rel="stylesheet" href="//dev.toolkit.illinois.edu/beta/toolkit.css">
-    <script type="module" src="//dev.toolkit.illinois.edu/beta/toolkit.js"></script>
+    <link rel="stylesheet" href="//dev.toolkit.illinois.edu/latest/toolkit.css">
+    <script type="module" src="//dev.toolkit.illinois.edu/latest/toolkit.js"></script>
 ```
 
 This will get you the latest beta version of the toolkit. 
