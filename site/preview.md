@@ -3,13 +3,15 @@ pagination:
   data: component-versions
   size: 1
   alias: component-version
-permalink: "preview/{{ component-version.tag | slugify }}/{{ component-version.version | slugify }}/"
+permalink: "preview/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/"
 layout: preview.liquid
 
 ---
 ## Details
 
 {{ component-version.description }}
+
+Full Version: {{ component-version.version }}
 
 Type: {{ component-version.type }}
 
@@ -23,4 +25,4 @@ Javascript file:  <a href="{{ component-version.js }}">{{ component-version.js }
 
 CSS file: <a href="{{ component-version.css }}">{{ component-version.css }}</a>
 
-JSON information: <a href="/imported_json/component_versions/{{ component-version.tag }}.{{ component-version.version }}.json">{{ component-version.tag }}.{{ component-version.version }}.json</a>
+JSON information: <a href="/imported_json/component_versions/{{ component-version.tag }}.{{ component-version.builder-version }}.json">{{ component-version.tag }}.{{ component-version.builder-version }}.json</a>

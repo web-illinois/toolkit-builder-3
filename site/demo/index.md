@@ -1,8 +1,11 @@
 ---
-title: Demo Page Table of Contents
+title: Demonstration Pages List
 layout: page.liquid
 ---
-# Demo Pages
+<ilw-page-title width="full" style="background: var(--il-blue);">
+<img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" slot="background">
+<h1>Demonstration Pages List</h1>
+</ilw-page-title>
 
 We built a few demonstration pages to ensure that everything worked OK. All of the links below open in a new window. 
 
