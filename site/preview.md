@@ -11,6 +11,8 @@ layout: preview.liquid
 
 {{ component-version.description }}
 
+Full Version: {{ component-version.version }}
+
 Type: {{ component-version.type }}
 
 Date Created: {{ component-version.date }}
@@ -23,4 +25,4 @@ Javascript file:  <a href="{{ component-version.js }}">{{ component-version.js }
 
 CSS file: <a href="{{ component-version.css }}">{{ component-version.css }}</a>
 
-JSON information: <a href="/imported_json/component_versions/{{ component-version.tag }}.{{ component-version.version }}.json">{{ component-version.tag }}.{{ component-version.version }}.json</a>
+JSON information: <a href="/imported_json/component_versions/{{ component-version.tag }}.{{ component-version.builder-version }}.json">{{ component-version.tag }}.{{ component-version.builder-version }}.json</a>

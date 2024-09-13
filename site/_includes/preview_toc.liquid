@@ -34,8 +34,8 @@
       <div class="builder-section">
       <ul>
       {%- for component-version in component-versions %}
-        <li><a href="/preview/{{ component-version.tag | slugify }}/{{ component-version.version | slugify }}/index.html">
-        {{ component-version.title }} ({{ component-version.type }}) {{ component-version.version }}</a>: {{ component-version.description }}</li>
+        <li><a href="/preview/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/index.html">
+        {{ component-version.title }} ({{ component-version.type }}) {{ component-version.builder-version }}</a>: {{ component-version.description }}</li>
       {% endfor -%}
       </ul>
       </div>

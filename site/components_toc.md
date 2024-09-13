@@ -1,4 +1,4 @@
 ---
 title: Web Toolkit Builder Components
-layout: main.liquid
+layout: component_toc.liquid
 ---

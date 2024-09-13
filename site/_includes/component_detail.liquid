@@ -15,8 +15,8 @@
       <ul>
       {%- for component-version in component-versions %}
         {% if component-version.tag == component.tag and component-version.production == true %}
-          <li><a href="/component/{{ component-version.tag | slugify }}/{{ component-version.version | slugify }}/index.html">
-          {{ component-version.version }}</a></li>
+          <li><a href="/component/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/index.html">
+          {{ component-version.builder-version }} (full version: {{ component-version.version }})</a></li>
         {% endif %}
       {% endfor -%}
       </ul>
@@ -26,8 +26,8 @@
       <ul>
       {%- for component-version in component-versions %}
         {% if component-version.tag == component.tag and component-version.production == false %}
-          <li><a href="/component/{{ component-version.tag | slugify }}/{{ component-version.version | slugify }}/index.html">
-          {{ component-version.version }}</a></li>
+          <li><a href="/component/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/index.html">
+          {{ component-version.builder-version }} (full version: {{ component-version.version }})</a></li>
         {% endif %}
       {% endfor -%}
       </ul>
