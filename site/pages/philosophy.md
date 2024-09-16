@@ -16,6 +16,15 @@ The ultimate goal is to build these web components once at a central location, a
 
 As the web components became more complex, having them in a single repository became more problematic. In 2024, we re-architectured the toolkit to allow it to live in multiple repositories and published through Node Package Manager (NPM). This way, people can mix and match their components and not be locked to a single instance. However, we are still supporting an [overall build of the toolkit](https://github.com/web-illinois/toolkit-management) to allow areas to easily use the toolkit. 
 
+## What are the goals of the Toolkit
+
+The Toolkit contains components that are: 
+* accessible (able to be used by assistive technologies)
+* brand-compliant (uses brand-approved colors and fonts)
+* fast (can be loaded and processed quickly)
+* responsive (can be run on both mobile and desktops)
+* easy to use
+
 ## Where do your designs come from? 
 
 [WIGG has a design team](https://webtheme.illinois.edu/about/design/) that creates designs for us. These designs are collaborative and are not required to be used by any unit. However, they are vetted by designers, accessibility experts, and user experience designers across campus.
@@ -30,8 +39,8 @@ Yes. The Web Component team is not responsible for storing, retrieving, or stand
 
 ## What next? 
 
-* <a href="https://webtheme.illinois.edu/about/web-components/">Learn about our team</a> (goes to a new webpage)
 * <a href="/demo/index.html">See all the components in a sample page</a>
 * <a href="/preview/index.html">See all the components individually</a>
+* <a href="/links/index.html">Get more resource links on how to build a web page using a campus CMS</a>
 * <a href="/getting_started/index.html">Get started using the components</a>
 * <a href="/components_toc/index.html">Dive right into the component specifications directly</a>
