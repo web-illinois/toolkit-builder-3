@@ -8,14 +8,9 @@ permalink: "create_page/index.html"
 <h1>Creating a Page</h1>
 </ilw-page-title>
 
-The Toolkit contains components that are: 
-* accessible (able to be used by assistive technologies)
-* brand-compliant (uses brand-approved colors and fonts)
-* fast (can be loaded and processed quickly)
-* responsive (can be run on both mobile and desktops)
-* easy to use
-
-## 9 Steps to Create a Web Page:
+<ilw-content mode="introduction" padding="40px">
+<p><em>Here are nine steps on how to build a webpage from scratch.</em></p><p> We recommend having a basic knowledge of HTML, but you definitely don't to "be a coder" to create a web page. </p>
+</ilw-content>
 <ilw-accordion>
 <ilw-accordion-panel><h3 slot="summary">Create the page skeleton: <code>ilw-page</code></h3>
 <p>One of the problems with version 2 is that each component didn't have a way to work with other components. To fix this, we created a Page component that can house all the other components. This includes the brand header and footer component. </p>
@@ -126,7 +121,6 @@ The Toolkit contains components that are:
 </ul>
 </ilw-accordion-panel>
 </ilw-accordion>
-
 
 <h2>Special pages</h2>
 <p>Some pages will be customized, like news items, profiles, program pages, courses, etc. We will be creating these templates as we get them from the WIGG design group. </p>
