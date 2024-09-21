@@ -3,35 +3,112 @@
 <head>
     {% render 'scripts_styles_toolkit' %}
     <title>{{ title }}</title>
+    <style>
+        .component-image {
+            overflow: clip;
+            width: 100%;
+            height: 100%;
+        }
+
+        .component-image-inner {
+            overflow: clip;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100%;
+            background: #fff;
+        }
+
+        .component-image-inner img {
+            max-width: 80%;
+            margin: 20px 0;
+        }
+
+        .component-image-overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-bottom: 1px solid var(--il-storm-lighter-3);
+            background: linear-gradient(180deg, rgba(186, 186, 186, 0.00) 62.5%, rgba(126, 126, 126, 0.20) 100%), radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.00) 29%, rgba(160, 160, 160, 0.06) 82.5%);
+        }
+
+        .component-wrapper {
+            padding-bottom: 50px;
+        }
+
+        .component-wrapper > * {
+            min-height: 100%;
+            box-sizing: border-box;
+        }
+
+        ilw-card {
+            --ilw-card--font-size: 1rem;
+            --ilw-card--content-padding-top: 1.5rem;
+            --ilw-card--content-padding-bottom: 1rem;
+            --ilw-card--heading-color: --il-blue;
+            --ilw-card--content-padding-right: 1.25rem;
+            --ilw-card--content-padding-left: 1.25rem;
+        }
+
+        ilw-card h4 {
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 <body style="margin: 0;">
-  <ilw-page class="ilw-margin ilw-font">
+<ilw-page class="ilw-margin ilw-font">
     {% render 'header' %}
     <main>
-    <ilw-hero width="full"><img src="/img/toolkit_hero_image.png" alt="" slot="background">
-      <h1>Web Toolkit Builder</h1>
-      <ul class="ilw-buttons">
-        <li><a href="/components_toc/index.html">Components</a></li>
-        <li><a href="/demo/index.html">Demonstrations</a></li>
-        <li><a href="/links/index.html">Links</a></li>
-      </ul>
-    </ilw-hero>
-    <ilw-columns gap="50px" padding="20px 0 0 0">
-    <ilw-card clickable>
-      <h2><a href="/philosophy/index.html">Who is the toolkit for?</a></h2>
-      <p>Anyone using HTML to build campus websites can benefit, whether it's building a theme for a CMS or a static website.</p>
-    </ilw-card>
-    <ilw-card clickable>
-      <h2><a href="/getting_started/index.html">Using the Toolkit</a></h2>
-      <p>Learn how to include the toolkit components in a website and how to customize them.</p>
-    </ilw-card>
-    </ilw-columns>
-    <ilw-content>
-      {{ content }}
-    </ilw-content>
-    <ilw-spacer></ilw-spacer>
+        <ilw-hero width="full"><img src="/img/toolkit_hero_image.png" alt="" slot="background">
+            <h1>Web Toolkit Builder</h1>
+            <ul class="ilw-buttons">
+                <li><a href="/components_toc/index.html">Components</a></li>
+                <li><a href="/demo/index.html">Demonstrations</a></li>
+                <li><a href="/links/index.html">Links</a></li>
+            </ul>
+        </ilw-hero>
+        <ilw-columns gap="50px" padding="20px 0 0 0">
+            <ilw-card clickable>
+                <h2><a href="/philosophy/index.html">Who is the toolkit for?</a></h2>
+                <p>Anyone using HTML to build campus websites can benefit, whether it's building a theme for a CMS or a static website.</p>
+            </ilw-card>
+            <ilw-card clickable>
+                <h2><a href="/getting_started/index.html">Using the Toolkit</a></h2>
+                <p>Learn how to include the toolkit components in a website and how to customize them.</p>
+            </ilw-card>
+        </ilw-columns>
+        <ilw-spacer></ilw-spacer>
+        <ilw-grid id="component-cards" gap="50px">
+            {%- for component in components %}
+                <div class="component-wrapper">
+                    <ilw-card aspectratio="5/2" clickable
+                              style="">
+                        <div class="component-image" slot="image">
+                            <div class="component-image-inner">
+                                <img src="/img/components/{{ component.tag }}.png" alt="" loading="lazy"/>
+                            </div>
+                            <div class="component-image-overlay"></div>
+                        </div>
+                        <h4>
+                            <a href="/component/{{ component.tag | slugify }}/{{ component.development-version | slugify }}/index.html">
+                                {{ component.title }}
+                            </a>
+                        </h4>
+                        <p>
+                            {{ component.use }}
+                        </p>
+                    </ilw-card>
+                </div>
+            {% endfor -%}
+        </ilw-grid>
+        <ilw-content>
+            {{ content }}
+        </ilw-content>
     </main>
     {% render 'footer' %}
-  </ilw-page>
+</ilw-page>
 </body>
 </html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Card Component</title>
+        <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css" />
+        <link rel="stylesheet" href="//dev.toolkit.illinois.edu/3.0.0-beta/toolkit.css" />
+        <script type="module" src="//dev.toolkit.illinois.edu/3.0.0-beta/toolkit.js"></script>
+        <style>
+            body {
+                padding: 15px;
+                font-size: 16px;
+                font-family: var(--il-font-sans);
+                background: var(--il-storm-lighter-3);
+                min-height: 900px;
+            }
+
+            .renders {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                gap: 5px;
+                padding-top: 100px;
+            }
+            .renders > div {
+                margin: 20px 0;
+                background: #fff;
+                padding: 5px;
+            }
+
+            .visible-border {
+                border-width: 2px;
+                border-color: var(--il-storm-lighter-1);
+                border-style: dashed;
+            }
+
+            .preview > div {
+            }
+
+            ilw-back-to-top {
+                position: static !important;
+                display: block;
+            }
+            ilw-call-to-action {
+                container-type: normal !important;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="renders">
+            <div>
+                <ilw-back-to-top></ilw-back-to-top>
+            </div>
+            <div style="width: 420px">
+                <div style="padding: 0 40px">
+                    <ilw-card style="--ilw-card--content-padding-top: 20px"
+                        ><h3 style="margin-bottom: 10px">Who is the toolkit for?</h3>
+                        <p>
+                            Anyone using HTML to build campus websites can benefit.
+                        </p>
+                        <div slot="footer" style="text-align: center">
+                            <a href="#" class="ilw-button">Purpose & Goals</a>
+                        </div>
+                    </ilw-card>
+                </div>
+            </div>
+            <div style="width: 350px">
+                <ilw-columns mode="1x2" gap="20px">
+                    <div class="visible-border" style="height: 200px"></div>
+                    <div class="visible-border" style="height: 200px"></div>
+                </ilw-columns>
+            </div>
+            <div style="width: 450px" data-name="ilw-content-introduction">
+                <ilw-content mode="introduction">
+                    <p><em>Discover your path, define your future.</em></p>
+                    <p>
+                        No matter what path brought you to ACES, we're glad you're here. A strong education is just a
+                        stepping stone to all of the incredible opportunities that await you.
+                    </p>
+                </ilw-content>
+            </div>
+            <div>
+                <ilw-breadcrumbs>
+                    <a href="/">Home</a>
+                    <span>Current Page</span>
+                </ilw-breadcrumbs>
+            </div>
+            <div data-name="ilw-global-buttons">
+                <ul class="ilw-buttons">
+                    <li><button class="ilw-theme-orange-2">Contact Us</button></li>
+                    <li><button class="ilw-theme-blue-2">Register</button></li>
+                </ul>
+            </div>
+            <div style="width: 500px">
+                <ilw-accordion>
+                    <ilw-accordion-panel open="true">
+                        <h3 slot="summary" style="margin: 0">What are accordions?</h3>
+                        <div style="margin-top: 1em">
+                            An accordion is a vertically stacked set of interactive headings that each contain a title,
+                            content snippet, or thumbnail representing a section of content.
+                        </div>
+                    </ilw-accordion-panel>
+                    <ilw-accordion-panel>
+                        <h3 slot="summary" style="margin: 0">When are accordions used?</h3>
+                        <div>
+                            Accordions are commonly used to reduce the need to scroll when presenting multiple sections
+                            of content on a single page.
+                        </div>
+                    </ilw-accordion-panel>
+                </ilw-accordion>
+            </div>
+            <div style="width: 350px">
+                <ilw-grid innerwidth="100px">
+
+                    <div class="visible-border" style="height: 100px"></div>
+                    <div class="visible-border" style="height: 100px"></div>
+                    <div class="visible-border" style="height: 100px"></div>
+
+                    <div class="visible-border" style="height: 100px"></div>
+                    <div class="visible-border" style="height: 100px"></div>
+                    <div class="visible-border" style="height: 100px"></div>
+
+                    <div class="visible-border" style="height: 100px"></div>
+                    <div class="visible-border" style="height: 100px"></div>
+                    <div class="visible-border" style="height: 100px"></div>
+                </ilw-grid>
+            </div>
+            <div>
+                <div  style="width: 500px; overflow: clip">
+                <ilw-call-to-action theme="blue" style="width: 1024px; --ilw-call-to-action--padding-top: 30px; --ilw-call-to-action--content-padding: 5px">
+                    <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 7 51.26 51.26"><defs><style>.cls-1{fill:#0c1b55;}</style></defs><g id="Layer_2" data-name="Layer 2"><path class="cls-1" d="M37.92,10.39H13.33a4.08,4.08,0,0,0-4.06,4.06V28.18a4.08,4.08,0,0,0,4.06,4.06h4.76L17.55,39a1.14,1.14,0,0,0,1.95.89l7.56-7.64H37.92A4.08,4.08,0,0,0,42,28.18V14.45A4.08,4.08,0,0,0,37.92,10.39ZM19.48,23.26a1.83,1.83,0,1,1,1.83-1.83A1.83,1.83,0,0,1,19.48,23.26Zm6.15,0a1.83,1.83,0,1,1,1.83-1.83A1.83,1.83,0,0,1,25.63,23.26Zm6.15,0a1.83,1.83,0,1,1,1.83-1.83A1.83,1.83,0,0,1,31.78,23.26Z"></path></g></svg>
+                    <h2>Get started today</h2>
+                    <p>Enroll in a class after you are admitted as a non-degree student. Enroll in a class after you are admitted as a non-degree student. Enroll in a class after you are admitted as a non-degree student.</p>
+                    <ul class="ilw-buttons">
+                        <li><a href="#">Register <span class="ilw-sr-only">for classes</span></a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </ilw-call-to-action>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

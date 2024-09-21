@@ -13,3 +13,4 @@ site/_data/component-versions.json
 site/scripts/main.js
 site/imported_json/component_versions/*.json
 site/imported_json/components/*.json
+screenshot/results/
