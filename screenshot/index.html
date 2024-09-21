@@ -23,6 +23,7 @@
                 gap: 5px;
                 padding-top: 100px;
             }
+
             .renders > div {
                 margin: 20px 0;
                 background: #fff;
@@ -37,29 +38,19 @@
 
             .preview > div {
             }
-
-            ilw-back-to-top {
-                position: static !important;
-                display: block;
-            }
-            ilw-call-to-action {
-                container-type: normal !important;
-            }
         </style>
     </head>
 
     <body>
         <div class="renders">
             <div>
-                <ilw-back-to-top></ilw-back-to-top>
+                <ilw-back-to-top style="position: static; display: block"></ilw-back-to-top>
             </div>
             <div style="width: 420px">
                 <div style="padding: 0 40px">
                     <ilw-card style="--ilw-card--content-padding-top: 20px"
                         ><h3 style="margin-bottom: 10px">Who is the toolkit for?</h3>
-                        <p>
-                            Anyone using HTML to build campus websites can benefit.
-                        </p>
+                        <p>Anyone using HTML to build campus websites can benefit.</p>
                         <div slot="footer" style="text-align: center">
                             <a href="#" class="ilw-button">Purpose & Goals</a>
                         </div>
@@ -89,9 +80,34 @@
             </div>
             <div data-name="ilw-global-buttons">
                 <ul class="ilw-buttons">
-                    <li><button class="ilw-theme-orange-2">Contact Us</button></li>
-                    <li><button class="ilw-theme-blue-2">Register</button></li>
+                    <li>
+                        <button class="ilw-theme-orange-2">Contact Us</button>
+                    </li>
+                    <li>
+                        <button class="ilw-theme-blue-2">Register</button>
+                    </li>
                 </ul>
+            </div>
+            <div data-name="ilw-global-button-anchor">
+                <div style="width: 340px; text-align: center">
+                    <a href="#" class="ilw-button">Copy to Clipboard</a>
+                </div>
+            </div>
+            <div data-name="ilw-global-button-button">
+                <div style="width: 340px; text-align: center">
+                    <button class="ilw-button">Reset</button>
+                </div>
+            </div>
+            <div data-name="ilw-global-sr-only">
+                <div>
+                    <div class="ilw-sr-only">This can be read by a screen reader but is not displayed</div>
+                    <h2>...</h2>
+                </div>
+            </div>
+            <div data-name="ilw-global-image-cover" style="width: 400px; height: 400px">
+                <div class="ilw-image-cover">
+                    <img alt="" src="https://files.blogs.illinois.edu/files/6231/2004520606/230119.jpg" />
+                </div>
             </div>
             <div style="width: 500px">
                 <ilw-accordion>
@@ -113,7 +129,6 @@
             </div>
             <div style="width: 350px">
                 <ilw-grid innerwidth="100px">
-
                     <div class="visible-border" style="height: 100px"></div>
                     <div class="visible-border" style="height: 100px"></div>
                     <div class="visible-border" style="height: 100px"></div>
@@ -128,17 +143,250 @@
                 </ilw-grid>
             </div>
             <div>
-                <div  style="width: 500px; overflow: clip">
-                <ilw-call-to-action theme="blue" style="width: 1024px; --ilw-call-to-action--padding-top: 30px; --ilw-call-to-action--content-padding: 5px">
-                    <svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 7 51.26 51.26"><defs><style>.cls-1{fill:#0c1b55;}</style></defs><g id="Layer_2" data-name="Layer 2"><path class="cls-1" d="M37.92,10.39H13.33a4.08,4.08,0,0,0-4.06,4.06V28.18a4.08,4.08,0,0,0,4.06,4.06h4.76L17.55,39a1.14,1.14,0,0,0,1.95.89l7.56-7.64H37.92A4.08,4.08,0,0,0,42,28.18V14.45A4.08,4.08,0,0,0,37.92,10.39ZM19.48,23.26a1.83,1.83,0,1,1,1.83-1.83A1.83,1.83,0,0,1,19.48,23.26Zm6.15,0a1.83,1.83,0,1,1,1.83-1.83A1.83,1.83,0,0,1,25.63,23.26Zm6.15,0a1.83,1.83,0,1,1,1.83-1.83A1.83,1.83,0,0,1,31.78,23.26Z"></path></g></svg>
-                    <h2>Get started today</h2>
-                    <p>Enroll in a class after you are admitted as a non-degree student. Enroll in a class after you are admitted as a non-degree student. Enroll in a class after you are admitted as a non-degree student.</p>
-                    <ul class="ilw-buttons">
-                        <li><a href="#">Register <span class="ilw-sr-only">for classes</span></a></li>
-                        <li><a href="#">Contact us</a></li>
-                    </ul>
-                </ilw-call-to-action>
+                <div style="width: 500px; overflow: clip">
+                    <ilw-call-to-action
+                        theme="blue"
+                        style="
+                            container-type: normal;
+                            width: 1024px;
+                            --ilw-call-to-action--padding-top: 30px;
+                            --ilw-call-to-action--content-padding: 20px 0 0 0;
+                        "
+                    >
+                        <!-- prettier-ignore -->
+                        <ilw-icon icon="comment" size="140px" slot="icon"></ilw-icon>
+                        <h2>Get started today</h2>
+                        <p>
+                            Enroll in a class after you are admitted as a non-degree student. Enroll in a class after
+                            you are admitted as a non-degree student. Enroll in a class after you are admitted as a
+                            non-degree student.
+                        </p>
+                        <ul class="ilw-buttons">
+                            <li>
+                                <a href="#">Register <span class="ilw-sr-only">for classes</span></a>
+                            </li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </ilw-call-to-action>
                 </div>
+            </div>
+            <div data-name="ilw-content-inset" style="width: 400px">
+                <ilw-content mode="inset" padding="0" style="--ilw-content--inset-padding: 20px">
+                    <h2>Join Us at Whispering Pines College</h2>
+                    <p>
+                        Discover a place where academic excellence meets natural beauty. At Whispering Pines College,
+                        your journey toward a brighter future begins in the heart of the forest. Embrace the spirit of
+                        exploration, innovation, and community that defines us. Come, write your story among the pines.
+                    </p>
+                </ilw-content>
+            </div>
+            <div data-name="ilw-content-lede" style="width: 400px">
+                <ilw-content mode="lede"
+                    ><p>
+                        Sodium is an essential micronutrient, but the amount we need is small. Three slices of bread or
+                        one teaspoon of table salt will do it, and chances are your daily sodium intake is far greater.
+                    </p>
+                </ilw-content>
+            </div>
+            <div style="width: 750px">
+                <ilw-content>
+                    <h1>Campus Landmarks</h1>
+                    <p>
+                        Illinois is home to two National Historic Landmarks and several buildings on the National
+                        Register of Historic Places.
+                    </p>
+                    <h2>Allerton Park and Retreat Center</h2>
+                    <p>
+                        Allerton was deeded to the University of Illinois by Robert Allerton in 1946. Originally called
+                        “the farms,” the former private estate includes formal gardens, an extensive landscape park
+                        dotted with ornaments and fine art, and a manor house modeled after Ham House in England.
+                        Allerton House was built in 1900 and now serves as a conference center. In 1971 the lowland and
+                        southern forests of 1,000 acres were declared a National Natural Landmark and in 2007 one of the
+                        Seven Wonders of Illinois.
+                    </p>
+                </ilw-content>
+            </div>
+            <div style="width: 700px; height: 400px; overflow: clip">
+                <ilw-hero align="bottom" focus="right" shadow="true">
+                    <img src="https://illinois.edu/assets/img/about/header_about.jpg" alt="" slot="background" />
+                    <div style="position: relative; top: -200px">
+                        <h1 style="display: block">Innovation</h1>
+                        <ul class="ilw-buttons">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                        </ul>
+                    </div>
+                </ilw-hero>
+            </div>
+            <div style="width: 500px">
+                <ilw-page-title>
+                    <img src="https://news.uillinois.edu/files/7815/1272185027/230166.jpg" alt="" slot="background" />
+                    <h1>Our Alumni</h1>
+                </ilw-page-title>
+            </div>
+            <div data-name="ilw-icon" style="color: var(--il-blue); width: 160px; text-align: center">
+                <div>
+                    <ilw-icon icon="alumni"></ilw-icon>
+                    <ilw-icon icon="favorite"></ilw-icon>
+                    <ilw-icon icon="family"></ilw-icon>
+                    <ilw-icon icon="faculty"></ilw-icon>
+                    <ilw-icon icon="plan"></ilw-icon>
+                    <ilw-icon icon="home"></ilw-icon>
+                </div>
+            </div>
+            <div style="width: 450px">
+                <ilw-page>
+                    <header slot="header" class="visible-border" style="height: 50px; margin-bottom: 10px"></header>
+                    <main class="visible-border" style="height: 200px"></main>
+                </ilw-page>
+            </div>
+            <div>
+                <div style="padding: 3px">
+                    <ilw-pagination hidepagecount="true" pages="3" page="2"></ilw-pagination>
+                </div>
+            </div>
+            <div style="width: 500px">
+                <div style="padding: 0 5px">
+                    <ilw-quote>
+                        <p slot="content" style="margin-top: -30px">
+                            Our doubts are traitors, and make us lose the good we oft might win.
+                        </p>
+                        <p slot="author">William Shakespeare</p>
+                        <cite slot="source">Measure for Measure</cite>
+                    </ilw-quote>
+                </div>
+            </div>
+            <div data-name="ilw-section-nav-manual" style="width: 300px">
+                <ilw-section-nav mode="manual" style="--ilw-section-nav--margin-top: 0">
+                    <ul>
+                        <li><a href="#" class="ilw-section-nav--root">Programs of Study</a></li>
+                        <li>
+                            <a href="#">Undergraduate Degrees</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Animal Sciences Major</a>
+                                    <ul>
+                                        <li><a href="#" aria-current="page">Pre-Veterinary and Medical</a></li>
+                                        <li><a href="#">Companion Animal Equine</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Computer &amp; Animal Science</a>
+                            <ul>
+                                <li><a href="#">Some Third Thing</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </ilw-section-nav>
+            </div>
+            <div style="width: 300px">
+                <ilw-section-nav style="--ilw-section-nav--margin-top: 0">
+                    <a href="#" class="ilw-section-nav--root">Programs of Study</a>
+                    <a href="#">Undergraduate Degrees</a>
+                    <ilw-section-nav open="false" is-root="">
+                        <a href="#">Animal Sciences Major</a>
+                        <ilw-section-nav open="false">
+                            <a href="#" aria-current="page">Pre-Veterinary and Medical</a>
+                            <a href="#">Companion Animal Equine</a>
+                        </ilw-section-nav>
+                    </ilw-section-nav>
+                    <a href="#">Computer &amp; Animal Science</a>
+                    <ilw-section-nav open="false" is-root="">
+                        <a href="#">Some Third Thing</a>
+                    </ilw-section-nav>
+                </ilw-section-nav>
+            </div>
+            <div>
+                <div style="width: 450px; display: flex; justify-content: stretch; padding: 5px">
+                    <ilw-spacer class="visible-border" style="width: 450px"></ilw-spacer>
+                </div>
+            </div>
+            <div>
+                <ilw-statistic theme="blue-gradient" style="width: 300px">
+                    <span slot="top">Nation's</span>
+                    <span slot="stat">Top Six</span> Overall ranking among undergraduate programs in the U.S.
+                    <span slot="source">U.S. News and World 2022</span>
+                </ilw-statistic>
+            </div>
+            <div style="width: 850px">
+                <ilw-tabs style="--ilw-tabs--tablist-width: 210px">
+                    <div slot="tabs">
+                        <button
+                            role="tab"
+                            aria-controls="panel1"
+                            tabindex="0"
+                            data-ilw-initialized="1"
+                            aria-selected="true"
+                        >
+                            Tab #1
+                        </button>
+                        <button
+                            role="tab"
+                            aria-controls="panel2"
+                            tabindex="-1"
+                            data-ilw-initialized="1"
+                            aria-selected="false"
+                        >
+                            Tab #2
+                        </button>
+                        <button
+                            role="tab"
+                            aria-controls="panel3"
+                            tabindex="-1"
+                            data-ilw-initialized="1"
+                            aria-selected="false"
+                        >
+                            Tab #3
+                        </button>
+                    </div>
+                    <div id="panel1" data-ilw-tab-visible="1">
+                        <h3>Degree Programs</h3>
+                        <p>
+                            There's no academic experience quite like Grainger Engineering. Ranked the #6 college of
+                            engineering with 13 top 5 programs from US News and World Report, we have a reputation of
+                            being the best of the best.
+                        </p>
+                        <p>Second paragraph</p>
+                        <p><a href="#" class="ilw-button">Sample button</a></p>
+                    </div>
+                    <div id="panel2" data-ilw-tab-visible="0">
+                        <p>Panel #2. There's a <a href="#">link that goes somewhere</a> here.</p>
+                    </div>
+                    <div id="panel3" data-ilw-tab-visible="0"><p>Panel #3</p></div>
+                    <div id="panel4" data-ilw-tab-visible="0">
+                        <p>Panel #4 There's a <a href="#">link that goes somewhere</a> here.</p>
+                    </div>
+                </ilw-tabs>
+            </div>
+            <div data-name="ilw-video-short" style="width: 320px; height: 400px; overflow: clip">
+                <ilw-video>
+                    <iframe
+                        width="315"
+                        height="565"
+                        src="https://www.youtube-nocookie.com/embed/pW8cNXyAqyI?si=X9643WrgKwDm0BTw"
+                        title="Progress isn't Quiet at Illinois"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen=""
+                    ></iframe>
+                </ilw-video>
+            </div>
+            <div style="width: 565px; height: 320px">
+                <ilw-video>
+                    <iframe
+                        width="560"
+                        height="315"
+                        src="https://www.youtube-nocookie.com/embed/pW8cNXyAqyI?si=X9643WrgKwDm0BTw"
+                        title="Progress isn't Quiet at Illinois"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen=""
+                    ></iframe>
+                </ilw-video>
             </div>
         </div>
     </body>
