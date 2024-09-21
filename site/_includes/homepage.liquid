@@ -73,7 +73,8 @@
         <ilw-columns gap="50px" padding="20px 0 0 0">
             <ilw-card clickable>
                 <h2><a href="/philosophy/index.html">Who is the toolkit for?</a></h2>
-                <p>Anyone using HTML to build campus websites can benefit, whether it's building a theme for a CMS or a static website.</p>
+                <p>Anyone using HTML to build campus websites can benefit, whether it's building a theme for a CMS or a
+                    static website.</p>
             </ilw-card>
             <ilw-card clickable>
                 <h2><a href="/getting_started/index.html">Using the Toolkit</a></h2>
@@ -88,7 +89,8 @@
                               style="">
                         <div class="component-image" slot="image">
                             <div class="component-image-inner">
-                                <img src="/img/components/{{ component.tag }}.png" alt="" loading="lazy"/>
+                                {% assign img = '/img/components/' | append: component.tag | append: '.png' %}
+                                <img src="{{ img | url }}" alt="" loading="lazy"/>
                             </div>
                             <div class="component-image-overlay"></div>
                         </div>
@@ -98,7 +100,15 @@
                             </a>
                         </h4>
                         <p>
-                            {{ component.use }}
+                            {% cycle
+                                    "Reduce the need for scrolling with collapsible accordions.",
+                                    "Provide a way to scroll back to the top of the page.",
+                                    "Help users navigate the website's hierarchy.",
+                                    "Prompt users to perform highlighted actions.",
+                                    "Organize content using cards, with image and icon support.",
+                                    "Lay out content using columns.",
+                                    "Add normalized headings and content."
+                            %}
                         </p>
                     </ilw-card>
                 </div>
