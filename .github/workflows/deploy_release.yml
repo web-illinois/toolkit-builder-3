@@ -3,10 +3,16 @@ on:
   push:
     branches: [ 'main' ]
   workflow_dispatch:
-  schedule:
-    - cron: "30 10 * * *"
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -215,15 +221,12 @@ jobs:
       run: npm install
     - run: npm rebuild
     - run: npm run-script build
-
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        aws-access-key-id: ${{ vars.TOOLKIT_AWS_ACCESS_KEY }}
-        aws-secret-access-key: ${{ secrets.TOOLKIT_AWS_ACCESS_SECRET }}
-        aws-region: us-east-2
-
-    - name: Deploy examples to S3 bucket 
-      run: aws s3 sync ./_site/ s3://builder3.toolkit.illinois.edu/content --delete --acl bucket-owner-full-control
-    - name: Invalidate Cloudfront cache
-      run: aws cloudfront create-invalidation --distribution-id	EJE7H24JF0N2G --paths "/*"
+        path: '_site'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
