@@ -1,0 +1,18 @@
+<svg width="40" height="224" viewBox="0 0 40 224" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <mask id="mask0_108_503" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="224">
+        <path d="M0 0H40V224H0V0Z" fill="url(#paint0_linear_108_503)"/>
+    </mask>
+    <g mask="url(#mask0_108_503)">
+        <path d="M0 0H40V224H0V0Z" fill="url(#pattern0_108_503)"/>
+    </g>
+    <defs>
+        <pattern id="pattern0_108_503" patternContentUnits="objectBoundingBox" width="1" height="0.178571">
+            <use xlink:href="#image0_108_503" transform="scale(0.025 0.00446429)"/>
+        </pattern>
+        <linearGradient id="paint0_linear_108_503" x1="20" y1="0" x2="20" y2="224" gradientUnits="userSpaceOnUse">
+            <stop stop-color="white"/>
+            <stop offset="0.511" stop-opacity="0"/>
+        </linearGradient>
+        <image id="image0_108_503" width="40" height="40" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABgSURBVHgB7dTBCYBAFAPRdK6df1lBELyNByPMVPDIIclHzcw+z7Y0JI4mjiaOJo4mjiaOJo4mjiaOJo4mjiaOJo4mjibuTc24NV6acQuUZtwdWIm7gLW4E9iSV0f7Pe4ApJOUlvL/VygAAAAASUVORK5CYII="/>
+    </defs>
+</svg>
