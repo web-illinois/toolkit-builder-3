@@ -35,6 +35,10 @@ module.exports = function (eleventyConfig) {
     return returnValue;
   });
 
+  eleventyConfig.addFilter("markdownify", (markdownString) =>
+      markdownIt.render(markdownString)
+  );
+
   return {
     dir: {
       input: "site"

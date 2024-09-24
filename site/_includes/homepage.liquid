@@ -2,114 +2,8 @@
 <html dir="ltr" lang="en">
 <head>
     {% render 'scripts_styles_toolkit' %}
+    <link rel="stylesheet" href="/stylesheets/homepage.css">
     <title>{{ title }}</title>
-    <style>
-        .component-image {
-            overflow: clip;
-            width: 100%;
-            height: 100%;
-        }
-
-        .component-image-inner {
-            overflow: clip;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100%;
-            background: #fff;
-        }
-
-        .component-image-inner img {
-            max-width: 80%;
-            margin: 20px 0;
-        }
-
-        .component-image-overlay {
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            border-bottom: 1px solid var(--il-storm-lighter-3);
-            background: linear-gradient(180deg, rgba(186, 186, 186, 0.00) 62.5%, rgba(126, 126, 126, 0.20) 100%), radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.00) 29%, rgba(160, 160, 160, 0.06) 82.5%);
-        }
-
-        .component-wrapper {
-            padding-bottom: 50px;
-        }
-
-        .component-wrapper > * {
-            min-height: 100%;
-            box-sizing: border-box;
-        }
-
-        ilw-card {
-        }
-
-        #component-cards ilw-card {
-            --ilw-card--content-padding-bottom: 1rem;
-            --ilw-card--font-size: 1rem;
-            --ilw-card--content-padding-top: 1.5rem;
-            --ilw-card--heading-color: --il-blue;
-            --ilw-card--content-padding-right: 1.25rem;
-            --ilw-card--content-padding-left: 1.25rem;
-        }
-
-        ilw-card h2 {
-            font-size: 1.5rem;
-        }
-
-        ilw-card h4 {
-            font-size: 1.1rem;
-        }
-
-        ilw-card .buttons {
-            text-align: center;
-        }
-
-        .home-hero {
-            --ilw-hero--height: 285px;
-            --ilw-hero--text-width: 700px;
-        }
-
-        .home-hero-background {
-            background: var(--il-storm-lighter-4) url(img/ascending.svg) repeat-x;
-            border-bottom: 8px solid var(--il-orange);
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-        }
-
-        .home-hero h1 {
-            font-size: 40px;
-            color: var(--il-blue);
-        }
-
-        .home-hero p {
-            font-size: 24px;
-        }
-
-        .action-cards {
-            container-type: inline-size;
-        }
-        .action-cards > div {
-            background: var(--il-storm-lighter-4);
-            left: 50%;
-            margin-left: -50vw;
-            margin-right: -50vw;
-            padding: 0;
-            position: relative;
-            right: 50%;
-            width: 100vw;
-        }
-        .action-cards ilw-card {
-        }
-    </style>
 </head>
 <body style="margin: 0;">
 <ilw-page class="ilw-margin ilw-font">
@@ -117,33 +11,36 @@
     <main>
         <ilw-hero width="full" theme="white" collapse="true" class="home-hero">
             <div class="home-hero-background"></div>
-            <h1>Web Toolkit Builder</h1>
-            <p>Branded building blocks for the web, with emphasis on accessibility and ease of use.</p>
+            <h1>{{ title }}</h1>
+            <p>{{ tagline }}</p>
         </ilw-hero>
         <div class="action-cards">
             <div>
-                <ilw-columns gap="80px" padding="70px 20px" style="max-width: 800px; margin: 0 auto">
-                    <ilw-card>
-                        <h2>Who is the toolkit for?</h2>
-                        <p>Anyone using HTML to build campus websites can benefit, whether it's building a theme for a
-                            CMS
-                            or a
-                            static website.</p>
-                        <div class="buttons" slot="footer">
-                            <a class="ilw-button" href="/philosophy/index.html">Purpose &amp; Goals</a>
-                        </div>
-                    </ilw-card>
-                    <ilw-card>
-                        <h2>Using the Toolkit</h2>
-                        <p>Learn how to include the toolkit components in a website and how to customize them.</p>
-                        <div class="buttons" slot="footer">
-                            <a class="ilw-button" href="/getting_started/index.html">Get Started <span class="ilw-sr-only">Using The Toolkit</span></a>
-                        </div>
-                    </ilw-card>
+                <ilw-columns gap="80px" padding="70px 20px 40px" style="max-width: 800px; margin: 0 auto">
+                    {%- for card in cards %}
+                        <ilw-card>
+                            <h2>{{ card.title }}</h2>
+                            <p>{{ card.text | markdownify }}</p>
+                            <div class="buttons" slot="footer">
+                                <a class="ilw-button" href="{{ card.link }}">{{ card.button }}</a>
+                            </div>
+                        </ilw-card>
+                    {% endfor -%}
                 </ilw-columns>
+                <ilw-content align="center" width="full" theme="gray">
+                    {%- if notice %}
+                    <p>
+                        {{ notice | markdownify }}
+                    </p>
+                    {% endif %}
+                    <ilw-spacer height="40px"></ilw-spacer>
+                </ilw-content>
             </div>
+
         </div>
-        <ilw-content theme="orange" width="full" align="center" padding="5px"><h2>Components</h2></ilw-content>
+        <ilw-content theme="orange" width="full" align="center" padding="5px">
+            <h2 id="components">Components</h2>
+        </ilw-content>
         <ilw-spacer></ilw-spacer>
         <ilw-grid id="component-cards" gap="50px" padding="50px 10px 20px">
             {%- for component in components %}
@@ -158,20 +55,12 @@
                             <div class="component-image-overlay"></div>
                         </div>
                         <h4>
-                            <a href="/component/{{ component.tag | slugify }}/{{ component.development-version | slugify }}/index.html">
+                            <a href="/component/{{ component.tag | slugify }}/{{ component.production-version | default: component.development-version | slugify }}/index.html">
                                 {{ component.title }}
                             </a>
                         </h4>
                         <p>
-                            {% cycle
-                                    "Reduce the need for scrolling with collapsible accordions.",
-                                    "Provide a way to scroll back to the top of the page.",
-                                    "Help users navigate the website's hierarchy.",
-                                    "Prompt users to perform highlighted actions.",
-                                    "Organize content using cards, with image and icon support.",
-                                    "Lay out content using columns.",
-                                    "Add normalized headings and content."
-                            %}
+                            {{ component.purpose }}
                         </p>
                     </ilw-card>
                 </div>
@@ -179,15 +68,12 @@
         </ilw-grid>
         <ilw-call-to-action theme="blue" width="full">
             <ilw-icon icon="comment" slot="icon" size="140px"></ilw-icon>
-            <h2>Questions? Suggestions?</h2>
-            <p>Get in touch on Teams, or create a GitHub issue.</p>
+            <h2>{{ cta }}</h2>
+            <p>{{ cta_text }}</p>
             <ul class="ilw-buttons ilw-theme-orange-1">
-                <li>
-                    <a href="https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A2cc51acd22674e4988b0873980bfd20d%40thread.tacv2%2FGeneral%3FgroupId%3D7ecdbcb2-4a6c-438d-828c-70287b84f487%26tenantId%3D44467e6f-462c-4ea2-823f-7800de5434e3&type=channel&deeplinkId=94860568-4563-4424-ab39-8985c969772d&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true">
-                        WIGG Team
-                    </a>
-                </li>
-                <li><a href="https://github.com/web-illinois/toolkit-builder-3/issues">GitHub Issues</a></li>
+                {%- for button in cta_buttons %}
+                    <li><a href="{{ button.link }}">{{ button.text }}</a></li>
+                {% endfor %}
             </ul>
         </ilw-call-to-action>
         <ilw-content>
