@@ -2,11 +2,8 @@
 title: Creating a Page
 layout: page.liquid
 permalink: "create_page/index.html"
+title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 ---
-<ilw-page-title width="full">
-<img src="https://cdn.brand.illinois.edu/patterns/ascend/orange.svg" alt="" slot="background">
-<h1>Creating a Page</h1>
-</ilw-page-title>
 
 <ilw-content mode="introduction" padding="40px">
 <p><em>Here are nine steps on how to build a webpage from scratch.</em></p><p> We recommend having a basic knowledge of HTML, but you definitely don't to "be a coder" to create a web page. </p>

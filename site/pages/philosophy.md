@@ -2,11 +2,9 @@
 title: Philosophy
 layout: page.liquid
 permalink: "philosophy/index.html"
+title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
+lede: Toolkit web components are built once, and then can be used across the campus. They provide a central location for implementing brand and accessibility standards, and then are used by individual websites as well as large Content Management System groups.
 ---
-<ilw-page-title width="full">
-<img src="https://cdn.brand.illinois.edu/patterns/ascend/orange.svg" alt="" slot="background">
-<h1>Philosophy</h1>
-</ilw-page-title>
 
 The University always had multiple sites that looked a little (or a lot) different from the other sites on campus. The [Website Implementation Guidelines Group](https://webtheme.illinois.edu/about/) was created in 2019 to combat this issue and create a sense of cohesion on campus concerning how pages looked and behaved. 
 

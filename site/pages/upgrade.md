@@ -2,6 +2,7 @@
 title: Upgrade from Version 2
 layout: page.liquid
 permalink: "upgrade/index.html"
+title_background: https://cdn.brand.illinois.edu/patterns/ascend/blue.svg
 ---
 <style>
     ilw-content table {
@@ -38,10 +39,6 @@ ilw-content tbody tr:nth-child(even) td {
     background: var(--il-industrial-lighter-4);
 }
 </style>
-<ilw-page-title width="full">
-<img src="https://cdn.brand.illinois.edu/patterns/ascend/blue.svg" alt="" slot="background">
-<h1>Upgrade from Version 2</h1>
-</ilw-page-title>
 
 If you are upgrading from version 2, you should be able to do a swap from the old component to the new component. Most of them are a one-to-one swap, but there are a few exceptions. 
 
