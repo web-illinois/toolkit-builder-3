@@ -15,11 +15,13 @@ The bad news is GitHub actions don't support looping except with the matrix opti
 
 ## Running the builder on your local machine
 
-Copy component JSON files. If you have the `toolkit-management` repository, something like:
+Copy component JSON files. If you have the `toolkit-management` repository, you can use something like:
 
 ```bash
 cp toolkit-management/node_modules/@illinois-toolkit/*/builder/*.json toolkit-builder-3/site/imported_json/components/.
 cp toolkit-management/node_modules/@illinois-toolkit/*/builder/versions/*.json toolkit-builder-3/site/imported_json/component_versions/.
+cp toolkit-management/global-css/builder/*.json toolkit-builder-3/site/imported_json/components/.
+cp toolkit-management/global-css/builder/versions/*.json toolkit-builder-3/site/imported_json/component_versions/.
 ```
 
 You can run the following commands to build the test site:
