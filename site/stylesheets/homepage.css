@@ -1,0 +1,108 @@
+
+.component-image {
+    overflow: clip;
+    width: 100%;
+    height: 100%;
+}
+
+.component-image-inner {
+    overflow: clip;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    background: #fff;
+}
+
+.component-image-inner img {
+    max-width: 80%;
+    margin: 20px 0;
+}
+
+.component-image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid var(--il-storm-lighter-3);
+    background: linear-gradient(180deg, rgba(186, 186, 186, 0.00) 62.5%, rgba(126, 126, 126, 0.20) 100%), radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.00) 29%, rgba(160, 160, 160, 0.06) 82.5%);
+}
+
+.component-wrapper {
+    padding-bottom: 50px;
+}
+
+.component-wrapper > * {
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+ilw-card {
+}
+
+#component-cards ilw-card {
+    --ilw-card--content-padding-bottom: 1rem;
+    --ilw-card--font-size: 1rem;
+    --ilw-card--content-padding-top: 1.5rem;
+    --ilw-card--heading-color: --il-blue;
+    --ilw-card--content-padding-right: 1.25rem;
+    --ilw-card--content-padding-left: 1.25rem;
+}
+
+ilw-card h2 {
+    font-size: 1.5rem;
+}
+
+ilw-card h4 {
+    font-size: 1.1rem;
+}
+
+ilw-card .buttons {
+    text-align: center;
+}
+
+.home-hero {
+    --ilw-hero--height: 285px;
+    --ilw-hero--text-width: 700px;
+}
+
+.home-hero-background {
+    background: var(--il-storm-lighter-4) url(../img/ascending.svg) repeat-x;
+    border-bottom: 8px solid var(--il-orange);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.home-hero h1 {
+    font-size: 40px;
+    color: var(--il-blue);
+}
+
+.home-hero p {
+    font-size: 24px;
+}
+
+.action-cards {
+    container-type: inline-size;
+}
+
+.action-cards > div {
+    background: var(--il-storm-lighter-4);
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+}
+
+.action-cards ilw-card {
+}

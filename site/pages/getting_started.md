@@ -2,6 +2,7 @@
 title: Getting Started
 layout: page.liquid
 permalink: "getting_started/index.html"
+title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 ---
 <style>
 code {
@@ -15,10 +16,6 @@ code {
 }
 </style>
 
-<ilw-page-title width="full">
-<img src="https://cdn.brand.illinois.edu/patterns/ascend/orange.svg" alt="" slot="background">
-<h1>Getting Started</h1>
-</ilw-page-title>
 
 First, note that this is in beta state. **Do not use this in an important production system.**
 
@@ -30,6 +27,12 @@ Having said that, you need to add the following lines to your HTML:
 ```
 
 This will get you the latest beta version of the toolkit. 
+
+## Builder
+
+The Component Builder is a way to see components that have been designed by the WIGG Web Components group and other areas that have submitted components to the builder. This includes both production and development versions.
+
+<a href="/#components" class="ilw-button ilw-theme-orange-1">View All Components</a>
 
 ## Other links
 

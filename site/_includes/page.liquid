@@ -28,6 +28,22 @@
   <ilw-page class="ilw-margin ilw-font">
     {% render 'header' %}
     <main>
+      {%- if title_background %}
+        <ilw-page-title width="full" {% if title_background_color %}style="background: {{ title_background_color }}"{% endif %}>
+          <img src="{{ title_background }}" alt="" slot="background">
+          <h1>{{ title }}</h1>
+        </ilw-page-title>
+        <ilw-spacer></ilw-spacer>
+      {%- else %}
+        <ilw-content>
+          <h1>{{ title }}</h1>
+        </ilw-content>
+      {%- endif %}
+      {%- if lede %}
+        <ilw-content mode="lede">
+          <p>{{ lede }}</p>
+        </ilw-content>
+      {% endif %}
       <ilw-content>
         {{ content }}
       </ilw-content>

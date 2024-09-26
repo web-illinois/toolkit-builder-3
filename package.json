@@ -8,7 +8,9 @@
   "scripts": {
     "gulp": "gulp",
     "eleventy": "eleventy",
-    "build": "gulp && eleventy"
+    "build": "gulp && eleventy",
+    "dev": "eleventy --serve",
+    "screenshot-server": "http-server -p 8081 screenshot"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
@@ -16,6 +18,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-uglify": "^3.0.2",
     "markdown-it": "^14.1.0",
-    "markdown-it-attrs": "^4.1.6"
+    "markdown-it-attrs": "^4.1.6",
+    "@playwright/test": "^1.47.2",
+    "http-server": "^14.1.1"
   }
 }

@@ -22,7 +22,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("site/img");
 
-
   eleventyConfig.addFilter("generateGithubIssuesLink", function (name, components) {
     let returnValue = 'https://github.com/search?q=';
     const arrayComponents = [""];
@@ -36,9 +35,14 @@ module.exports = function (eleventyConfig) {
     return returnValue;
   });
 
+  eleventyConfig.addFilter("markdownify", (markdownString) =>
+      markdownIt.render(markdownString)
+  );
+
   return {
     dir: {
       input: "site"
-    }
+    },
+    pathPrefix: process.env.PATH_PREFIX || '/'
   };
 };

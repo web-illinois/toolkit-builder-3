@@ -2,36 +2,85 @@
 <html dir="ltr" lang="en">
 <head>
     {% render 'scripts_styles_toolkit' %}
+    <link rel="stylesheet" href="{{ '/stylesheets/homepage.css' |  url }}">
     <title>{{ title }}</title>
 </head>
 <body style="margin: 0;">
-  <ilw-page class="ilw-margin ilw-font">
+<ilw-page class="ilw-margin ilw-font">
     {% render 'header' %}
     <main>
-    <ilw-hero width="full"><img src="/img/toolkit_hero_image.png" alt="" slot="background">
-      <h1>Web Toolkit Builder</h1>
-      <ul class="ilw-buttons">
-        <li><a href="/components_toc/index.html">Components</a></li>
-        <li><a href="/demo/index.html">Demonstrations</a></li>
-        <li><a href="/links/index.html">Links</a></li>
-      </ul>
-    </ilw-hero>
-    <ilw-columns gap="50px" padding="20px 0 0 0">
-    <ilw-card clickable>
-      <h2><a href="/philosophy/index.html">Who is the toolkit for?</a></h2>
-      <p>Anyone using HTML to build campus websites can benefit, whether it's building a theme for a CMS or a static website.</p>
-    </ilw-card>
-    <ilw-card clickable>
-      <h2><a href="/getting_started/index.html">Using the Toolkit</a></h2>
-      <p>Learn how to include the toolkit components in a website and how to customize them.</p>
-    </ilw-card>
-    </ilw-columns>
-    <ilw-content>
-      {{ content }}
-    </ilw-content>
-    <ilw-spacer></ilw-spacer>
+        <ilw-hero width="full" theme="white" collapse="true" class="home-hero">
+            <div class="home-hero-background"></div>
+            <h1>{{ title }}</h1>
+            <p>{{ tagline }}</p>
+        </ilw-hero>
+        <div class="action-cards">
+            <div>
+                <ilw-columns gap="80px" padding="70px 20px 40px" style="max-width: 800px; margin: 0 auto">
+                    {%- for card in cards %}
+                        <ilw-card>
+                            <h2>{{ card.title }}</h2>
+                            <p>{{ card.text | markdownify }}</p>
+                            <div class="buttons" slot="footer">
+                                <a class="ilw-button" href="{{ card.link }}">{{ card.button }}</a>
+                            </div>
+                        </ilw-card>
+                    {% endfor -%}
+                </ilw-columns>
+                <ilw-content align="center" width="full" theme="gray">
+                    {%- if notice %}
+                    <p>
+                        {{ notice | markdownify }}
+                    </p>
+                    {% endif %}
+                    <ilw-spacer height="40px"></ilw-spacer>
+                </ilw-content>
+            </div>
+
+        </div>
+        <ilw-content theme="orange" width="full" align="center" padding="5px">
+            <h2 id="components">Components</h2>
+        </ilw-content>
+        <ilw-spacer></ilw-spacer>
+        <ilw-grid id="component-cards" gap="50px" padding="50px 10px 20px">
+            {%- for component in components %}
+                <div class="component-wrapper">
+                    <ilw-card aspectratio="5/2" clickable
+                              style="">
+                        <div class="component-image" slot="image">
+                            <div class="component-image-inner">
+                                {% assign img = '/img/components/' | append: component.tag | append: '.png' %}
+                                <img src="{{ img | url }}" alt="" loading="lazy"/>
+                            </div>
+                            <div class="component-image-overlay"></div>
+                        </div>
+                        <h4>
+                            <a href="/component/{{ component.tag | slugify }}/{{ component.production-version | default: component.development-version | slugify }}/index.html">
+                                {{ component.title }}
+                            </a>
+                        </h4>
+                        <p>
+                            {{ component.purpose }}
+                        </p>
+                    </ilw-card>
+                </div>
+            {% endfor -%}
+        </ilw-grid>
+        <ilw-call-to-action theme="blue" width="full">
+            <ilw-icon icon="comment" slot="icon" size="140px"></ilw-icon>
+            <h2>{{ cta }}</h2>
+            <p>{{ cta_text }}</p>
+            <ul class="ilw-buttons ilw-theme-orange-1">
+                {%- for button in cta_buttons %}
+                    <li><a href="{{ button.link }}">{{ button.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </ilw-call-to-action>
+        <ilw-content>
+            {{ content }}
+        </ilw-content>
     </main>
     {% render 'footer' %}
-  </ilw-page>
+</ilw-page>
 </body>
 </html>
