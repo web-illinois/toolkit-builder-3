@@ -11,11 +11,14 @@
     {% render 'header' %}
     <main>
       <div class="builder-section">
-      <h1>"{{ component-version.title }}" {{ component-version.builder-version }}</h1>
+      <h1>Component: <em>{{ component-version.title }} {{ component-version.builder-version }}</em></h1>
       <p>This builder will allow you to generate a custom version of the {{ component-version.title }} component.</p>
       <p>The component will show up in between the pink lines below. The pink lines will not show up in production -- they are only used to allow you to view margins and paddings. 
       In the case of specialized components (things that are meant to be invisible or have a fixed location), the component may not display in this area. 
-      <br><a class="ilw-button" href="{{ component-version.github }}/blob/main/README.md">View usage and accessibility notes</a></p>
+      <ul class="ilw-buttons">
+        <li><a href="/component/{{ component-version.tag | slugify }}/index.html">See all versions of component</a></li>
+        <li><a href="{{ component-version.github }}/blob/main/README.md">View usage and accessibility notes</a></li>
+      </ul>
       </div>
 
       <div role="presentation" class="builder-line top"></div>

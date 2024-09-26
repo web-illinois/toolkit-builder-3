@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 });
 
 function changeSamples() {
-    debugger;
     var currentSample = document.getElementById('samples-list').value;
     let sample = document.querySelector('.sample[data-name="' + currentSample + '"]');
     if (sample != null) {
@@ -25,7 +24,6 @@ function build(scrollIntoView) {
     let componentBase = document.getElementById('component');
     componentBase.innerHTML = '';
     let component = document.createElement(componentBase.getAttribute('data-name'));
-    component.innerHTML = document.getElementById('inner').value;
 
     document.querySelectorAll('.attribute').forEach(attribute => {
         if (attribute.value !== '') {
@@ -48,11 +46,14 @@ function build(scrollIntoView) {
         componentStyle.innerHTML = `#component ${componentBase.getAttribute('data-name')} { ${customStyleComponent} }`;
         componentBase.appendChild(componentStyle);
     }
-
+    component.innerHTML = document.getElementById('inner').value;
     componentBase.appendChild(component);
 
     let results = document.getElementById('results');
-    results.innerText = componentBase.innerHTML;
+    let componentText = component.cloneNode(false);
+    componentText.innerHTML = document.getElementById('inner').value;
+    results.innerText = componentText.outerHTML;
+
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (scrollIntoView !== false) {
         scrollIntoView = true;
