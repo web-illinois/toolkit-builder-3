@@ -27,6 +27,10 @@ The Toolkit contains components that are:
 
 [WIGG has a design team](https://webtheme.illinois.edu/about/design/) that creates designs for us. These designs are collaborative and are not required to be used by any unit. However, they are vetted by designers, accessibility experts, and user experience designers across campus.
 
+## Do I have to use the entire toolkit set? Is this required? 
+
+The web components may not meet all of your needs, so don't feel like you are constrained to use just these options or force your content to these components. The only official requirements are that your Illinois site must meet [accessibility guidelines](https://itaccessibility.illinois.edu/) and [brand guidelines](https://brand.illinois.edu/). These componets are here to make your life easier. 
+
 ## Who uses your components?
 
 Anyone on campus is welcome to use our components. We focus on the [WIGG WordPress team](https://webtheme.illinois.edu/about/wordpress/), the [WIGG Drupal team](https://webtheme.illinois.edu/about/drupal/), other areas on campus that manage CMSs, and those units that hand-code their web pages. 

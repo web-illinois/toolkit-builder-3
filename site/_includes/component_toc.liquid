@@ -79,6 +79,7 @@
           N/A
           {% else %}
           <a href="/component/{{ component.tag | slugify }}/{{ component.toolkit-version | slugify }}/index.html">{{ component.toolkit-version }}</a>
+          / <a href="/preview/{{ component.tag | slugify }}/{{ component.toolkit-version | slugify }}/index.html">Preview</a>
           {% endif %}
           </td>
           <td>
@@ -86,6 +87,7 @@
           N/A
           {% else %}
           <a href="/component/{{ component.tag | slugify }}/{{ component.production-version | slugify }}/index.html">{{ component.production-version }}</a>
+          / <a href="/preview/{{ component.tag | slugify }}/{{ component.production-version | slugify }}/index.html">Preview</a>
           {% endif %}
           </td>
           <td>
@@ -93,6 +95,7 @@
           N/A
           {% else %}
           <a href="/component/{{ component.tag | slugify }}/{{ component.development-version | slugify }}/index.html">{{ component.development-version }}</a>
+          / <a href="/preview/{{ component.tag | slugify }}/{{ component.development-version | slugify }}/index.html">Preview</a>
           {% endif %}
           </td>
           </tr>
