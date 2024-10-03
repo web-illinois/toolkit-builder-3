@@ -1,4 +1,3 @@
-
 .component-image {
     overflow: hidden;
     width: 100%;
@@ -37,9 +36,6 @@
 .component-wrapper > * {
     min-height: 100%;
     box-sizing: border-box;
-}
-
-ilw-card {
 }
 
 #component-cards ilw-card {
@@ -102,7 +98,4 @@ ilw-card .buttons {
     position: relative;
     right: 50%;
     width: 100vw;
-}
-
-.action-cards ilw-card {
 }
