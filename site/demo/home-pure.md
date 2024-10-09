@@ -6,7 +6,7 @@ classOptions: 'ilw-font'
 localFiles: false
 ---
 
-<ilw-hero shadow="true" width="full" theme="orange">
+<ilw-hero shadow="true" theme="orange">
   <img src="/img/header_image.png" alt="" slot="background">
   <h1>Knowledge is Evergreen</h1>
   <ul class="ilw-buttons">
@@ -15,7 +15,7 @@ localFiles: false
     <li><a href="#" class="ilw-theme-white-orange">Our Programs</a></li>
   </ul>
 </ilw-hero>
-<ilw-content mode="introduction" theme="blue" width="full" padding="50px">
+<ilw-content mode="introduction" theme="blue" padding="50px">
   <p><em>Soar on the wings of knowledge.</em></p>
 
   <p>Whispering Pines College stands as a beacon of intellectual curiosity and personal growth.</p>
@@ -53,23 +53,23 @@ localFiles: false
         <div slot="footer"><a href="#" class="ilw-button">Browse Online Courses</a></div>
     </ilw-card>
 </ilw-columns>
-<ilw-content width="page">
+<ilw-content>
 <h2>Campus Facilities</h2>
 </ilw-content>
-<ilw-tabs theme="gray" width="auto">
+<ilw-tabs width="page" theme="gray">
 <div slot="tabs"><button role="tab" aria-controls="panel1">The Solis Energy Innovation Lab</button><button role="tab" aria-controls="panel2">The Evergreen Botanical Conservatory</button><button role="tab" aria-controls="panel3">The Whispering Pines Archive of Nature and Myth</button></div>
 <ilw-content theme="gray" id="panel1" data-ilw-tab-visible="1"> <h3>The Solis Energy Innovation Lab</h3> <p><a href="">The Solis Energy Innovation Lab</a> is Whispering Pines’ cutting-edge research facility dedicated to the exploration and development of renewable energy technologies. Named after the Latin word for "sun," the lab is a beacon of innovation in sustainable energy solutions. Equipped with the latest in solar, wind, and hydroelectric research equipment, the Solis Lab provides students and researchers with the tools they need to push the boundaries of what is possible in the field of renewable energy. The lab also serves as a collaborative space where engineers, environmental scientists, and policymakers come together to create sustainable energy systems that could power future generations.</p></ilw-content>
 <ilw-content theme="gray" id="panel2" data-ilw-tab-visible="0"> <h3>The Evergreen Botanical Conservatory</h3> <p><a href="">The Evergreen Botanical Conservatory</a> is a living repository of plant species from around the world, with a special focus on native and medicinal plants. This sprawling garden serves as an outdoor classroom and research space where students can study plant biology, ecology, and sustainable agriculture firsthand. The conservatory is designed to mimic various ecosystems, from temperate forests to tropical rainforests, providing a diverse range of flora for academic and conservation purposes. Its centerpiece is the Healing Garden, a curated collection of medicinal plants that have been used in traditional practices for centuries, offering a unique resource for students in the Herbal Medicine and Botanical Studies program.</p></ilw-content>
 <ilw-content theme="gray" id="panel3" data-ilw-tab-visible="0"> <h3>The Whispering Pines Archive of Nature and Myth</h3> <p>The Whispering Pines Archive of Nature and Myth is an extensive library and research center specializing in rare collections of literature, folklore, and mythological texts that explore humanity’s relationship with the natural world. The archive houses ancient manuscripts, rare books, and modern works that delve into nature writing, environmental philosophy, and cultural myths from around the globe. Scholars from various disciplines come to the archive to study the narratives and beliefs that have shaped human interaction with nature throughout history. The library’s serene reading rooms, with large windows overlooking the surrounding forest, provide an inspiring environment for deep contemplation and scholarly research.</p> <ul class="ilw-buttons"><li><a href="#">Nature Archive</a></li><li><a href="#">Myth Archive</a></li></ul></ilw-content>
 </ilw-tabs>
-<ilw-columns gap="20px" theme="blue" width="auto" padding="0">
+<ilw-columns width="page" gap="20px" theme="blue" padding="0">
     <div class="ilw-image-cover-bottom"><img src="/img/feature.webp" alt=""></div>
     <ilw-content mode="inset" theme="blue">
         <h2>Join Us at Whispering Pines College</h2>
         <p>Discover a place where academic excellence meets natural beauty. At Whispering Pines College, your journey toward a brighter future begins in the heart of the forest. Embrace the spirit of exploration, innovation, and community that defines us. Come, write your story among the pines.</p>
     </ilw-content>
 </ilw-columns>
-<ilw-columns mode="2x1" gap="20px" width="full" padding="50px">
+<ilw-columns mode="2x1" gap="20px" padding="50px">
     <ilw-quote>
         <p slot="content">At Whispering Pines College, I found more than just an education—I found a place where my dreams could take root and grow. The quiet strength of the pines taught me that with patience and perseverance, anything is possible.</p>
         <p slot="author">Avery Mitchell</p>

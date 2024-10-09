@@ -31,7 +31,7 @@ module.exports = function (eleventyConfig) {
             arrayComponents.push(component["element-name"]);
         }
     });
-    returnValue += 'state%3Aopen&type=Issues'
+    returnValue += 'state%3Aopen&type=Issues&s=created&o=asc'
     return returnValue;
   });
 

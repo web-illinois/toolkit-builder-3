@@ -51,7 +51,7 @@ localFiles: false
 <h2>Frequently Asked Questions</h2>
 </ilw-content>
 
-<ilw-accordion width="auto" limit>
+<ilw-accordion width="page" limit>
 <ilw-accordion-panel>
 <h3 slot="summary">What are the admission requirements for Whispering Pines' graduate programs?</h3>
 <p>Applicants typically need a bachelor's degree from an accredited institution, a strong academic record, letters of recommendation, a statement of purpose, and, for some programs, relevant work or research experience. Specific requirements may vary by program, so it's best to consult the individual program's admissions page for detailed information.</p>

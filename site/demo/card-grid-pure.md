@@ -6,10 +6,10 @@ classOptions: 'ilw-font'
 localFiles: false
 
 ---
-<ilw-content>
+<ilw-content padding="0 20px">
 <h1>Research Areas</h1>
 </ilw-content>
-<ilw-grid padding="20px 0">
+<ilw-grid padding="20px">
 <ilw-card clickable="true"><h2>Renewable Energy Systems</h2><p> Research in <a href="#">Renewable Energy Systems</a> focuses on developing and optimizing technologies that harness sustainable energy sources such as solar, wind, and hydro power.</p></ilw-card>
 <ilw-card clickable="true"><h2>Sustainable Agriculture and Food Systems</h2><p>This area examines practices and innovations aimed at creating resilient, environmentally friendly, and <a href="#">efficient agricultural and food production systems</a>.</p></ilw-card>
 <ilw-card clickable="true"><h2>Forest Ecology and Conservation</h2><p>This field <a href="#">investigates forest ecosystems' structure, function, and dynamics, with an emphasis on preserving and managing forest resources</a>.</p></ilw-card>
