@@ -16,17 +16,14 @@ code {
 }
 </style>
 
-
-First, note that this is in beta state. **Do not use this in an important production system.**
-
-Having said that, you need to add the following lines to your HTML:
+Add the following lines to your HTML:
 
 ```html
-    <link rel="stylesheet" href="//dev.toolkit.illinois.edu/latest/toolkit.css">
-    <script type="module" src="//dev.toolkit.illinois.edu/latest/toolkit.js"></script>
+    <link rel="stylesheet" href="//cdn.toolkit.illinois.edu/3/toolkit.css">
+    <script type="module" src="//cdn.toolkit.illinois.edu/3/toolkit.js"></script>
 ```
 
-This will get you the latest beta version of the toolkit. 
+This will get you the latest production version of the toolkit. 
 
 ## Builder
 
@@ -44,12 +41,33 @@ There are a few other links that are recommended.
 
 ## Alternate versions of the toolkit
 
-If you need to hit a specific version of the toolkit due to maintenance reasons or technology concerns, you can do so by replacing the *beta* with the specific beta version. For example: 
+If you need to hit a specific version of the toolkit due to maintenance reasons or technology concerns, you can do so by replacing the *3* with the specific  version (either minor or patch). For example: 
+
+```html
+    <link rel="stylesheet" href="//cdn.toolkit.illinois.edu/3.0/toolkit.css">
+    <script type="module" src="//cdn.toolkit.illinois.edu/3.0/toolkit.js"></script>
+```
+
+```html
+    <link rel="stylesheet" href="//cdn.toolkit.illinois.edu/3.0.0/toolkit.css">
+    <script type="module" src="//cdn.toolkit.illinois.edu/3.0.0/toolkit.js"></script>
+```
+
+If you want to hit the latest beta version of the toolkit, you can do so by connecting to our development server. For example: 
+
+```html
+    <link rel="stylesheet" href="//dev.toolkit.illinois.edu/latest/toolkit.css">
+    <script type="module" src="//dev.toolkit.illinois.edu/latest/toolkit.js"></script>
+```
+
+If you want to hit a specific beta version of the toolkit, you can do so by replacing the *latest* with the specific beta version. For example: 
 
 ```html
     <link rel="stylesheet" href="//dev.toolkit.illinois.edu/3.0.0-beta/toolkit.css">
     <script type="module" src="//dev.toolkit.illinois.edu/3.0.0-beta/toolkit.js"></script>
 ```
+
+**You should not use the beta version on a production system.** The development / beta versions are not stable and can be removed at any time. 
 
 ## What next? 
 
