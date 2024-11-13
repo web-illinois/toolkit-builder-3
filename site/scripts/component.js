@@ -54,6 +54,19 @@ function build(scrollIntoView) {
     componentText.innerHTML = document.getElementById('inner').value;
     results.innerText = componentText.outerHTML;
 
+    let outerStyle = document.getElementById('outer-style');
+    let outerStyleDefinition = document.getElementById('outer-style-definition');
+    let outerStyleDefinitionNote = document.getElementById('outer-style-definition-note');
+    componentBase.style = outerStyle.value;
+    console.log(outerStyle.value);
+    if (outerStyle.value !== '') {
+        outerStyleDefinition.innerHTML = outerStyle.value;
+        outerStyleDefinitionNote.style.display = 'block';
+    } else {
+        outerStyleDefinition.innerHTML = 'N/A';
+        outerStyleDefinitionNote.style.display = 'none';
+    }
+
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (scrollIntoView !== false) {
         scrollIntoView = true;

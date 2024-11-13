@@ -42,6 +42,7 @@
                 </select>
                 </div>
                 </div>
+            <label for="inner">Enter raw HTML here</label>
             <textarea id="inner"></textarea>
             <ul class="ilw-buttons">
                 <li><button onclick="build();">Rebuild Component With Selected Options</button></li>
@@ -135,7 +136,13 @@
             {% endfor -%}
             {% if component-version.css-variables.length > 0 %}
             <details>
-               <summary>Custom CSS Variables (advanced use only)</summary>
+               <summary>Custom CSS Variables and Styles (advanced use only)</summary>
+               <div class="builder-row builder-selector">
+               
+                  <label style="flex: 100px;" for="outer-style">Parent style:</label>
+                  <input type="text" onchange="build();" name="outer-style" id="outer-style" value="{{ component-version.parent-style }}">
+                </div>
+
                 {%- for cssvariable in component-version.css-variables %}
                     <div class="builder-row builder-selector">
                     <div class="builder-column builder-align-right">
@@ -161,9 +168,7 @@
         <form id="codepen-form" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input id="codepen" type="hidden" name="data" value="">
         </form>
-        {% if component-version.parent-style != '' %}
-            <p>This parent has a style of <em>{{ component-version.parent-style }}</em> that is not figured into the source HTML. </p>
-        {% endif %}
+        <p id="outer-style-definition-note">This parent has a style of <em id="outer-style-definition"></em> that is not figured into the source HTML. You can change this by opening the Custom CSS Variables and Styles and editing the parent style.</p>
         
         <ul class="ilw-buttons">
             <li><button onclick="copyCode();">Copy to Clipboard</button><span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span></li>
