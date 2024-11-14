@@ -34,4 +34,4 @@ Note that links with an <strong>*</strong> will take you to a new website.
 * <a href="/github/index.html">Github Links</a>, a list of all issues and github repositories.
 * <a href="https://github.com/web-illinois/toolkit-management">The Toolkit Management Github <span role="presentation">*</span></a>, which has documentation on how to help with building components. 
 * <a href="https://wordpress.webtheme.illinois.edu/">The Illinois Theme for Wordpress <span role="presentation">*</span></a>, the web theme around WordPress. 
-* <a href="https://drupal.webtheme.illinois.edu/">The Illinois Theme for Drupal</a>, the web theme around Drupal.  
+* <a href="https://drupal.webtheme.illinois.edu/">The Illinois Theme for Drupal</a> <span role="presentation">*</span></a>, the web theme around Drupal.  
