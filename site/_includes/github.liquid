@@ -28,7 +28,7 @@
       <h2>List of Github Repositories</h2>
       <ul>
       {%- for component in components %}
-          <li><strong><a href="{{ component.github }}">{{ component.title }} / {{ component.tag }} ({{ component.type }})</a></strong> <br />See <a href="{{ component.github }}/issues">a list of known issues for {{ component.tag }}</a><br /><a href="{{ component.github }}/issues/new">Create a new issue for {{ component.tag }}</a></li>
+          <li><strong><a href="{{ component.github }}">{{ component.title }} / {{ component.element-name }} ({{ component.type }})</a></strong> <br />See <a href="{{ component.github }}/issues">a list of known issues for {{ component.element-name }}</a><br /><a href="{{ component.github }}/issues/new">Create a new issue for {{ component.element-name }}</a></li>
       {% endfor -%}
       </ul>
       </ilw-content>
