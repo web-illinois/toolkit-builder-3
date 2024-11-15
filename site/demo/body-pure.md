@@ -73,7 +73,6 @@ localFiles: false
 <p>The natural environment is integral to the Whispering Pines experience. Many programs include fieldwork in the surrounding forests, and the campus itself is designed to promote a deep connection with nature. Outdoor classrooms, meditation gardens, and nature trails are just a few of the ways students engage with the natural world as part of their studies.</p>
 </ilw-accordion-panel>
 </ilw-accordion>
-
 <ilw-call-to-action theme="blue-gradient" align="center">
     <img src="https://cdn.brand.illinois.edu/icons/line/white/admissions.svg" alt="" slot="icon">
     <h2>Get started today</h2>
