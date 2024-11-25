@@ -35,13 +35,13 @@ The Component Builder is a way to see components that have been designed by the 
 
 There are a few other links that are recommended. 
 
-* <a href="https://cdn.brand.illinois.edu/">Illinois Branding CDN</a>, which has the campus stylesheet, header, and footer. <strong>The campus stylesheet is required for the toolkit to work effectively.</strong>
+* <a href="https://cdn.brand.illinois.edu/">Illinois Branding CDN</a>, which has the campus stylesheet, header, and footer. <strong>The campus stylesheet is required for the toolkit to work effectively. Starting with version 3.1.0 of the toolkit, the campus stylesheet is automatically added via an include statement in the <em>toolkit.css</em>. </strong>
 * <a href="https://accessibleit.disability.illinois.edu/tools/skipto/">Campus skip-to link</a>, an accessibility "nice-to-have" that allows users to go specifically to a section of a page. 
 * <a href="https://www.vpaa.uillinois.edu/cms/One.aspx?portalId=420456&pageId=1050467">GDPR cookie banner</a>, a security requirement to meet privacy standards.
 
 ## Alternate versions of the toolkit
 
-If you need to hit a specific version of the toolkit due to maintenance reasons or technology concerns, you can do so by replacing the *3* with the specific  version (either minor or patch). For example: 
+If you need to hit a specific version of the toolkit due to maintenance reasons or technology concerns, you can do so by replacing the *3* with the specific version (either minor or patch). For example: 
 
 ```html
     <link rel="stylesheet" href="//cdn.toolkit.illinois.edu/3.0/toolkit.css">
