@@ -21,6 +21,7 @@ Note that links with an <strong>*</strong> will take you to a new website.
 
 ## For Everyone
 * <a href="https://go.illinois.edu/WIGGTeam">The WIGG Team on Microsoft Teams <span role="presentation">*</span></a>, where you can ask questions and get help. This will launch Microsoft Teams directly.
+* <a href="https://go.illinois.edu/WIGGComponentTeam">The WIGG Web Component Team on Microsoft Teams <span role="presentation">*</span></a>, where you can ask questions specifically about the Web Components. This will launch Microsoft Teams directly.
 * <a href="https://builder.toolkit.illinois.edu">The original Toolkit Builder <span role="presentation">*</span></a>, for V2 information. 
 * <a href="https://itaccessibility.illinois.edu/">Accessibility Guidelines <span role="presentation">*</span></a>, rules to make your website accessible.
 * <a href="https://brand.illinois.edu/">Brand Guidelines <span role="presentation">*</span></a>, rules to make your website meet brand standards. 
