@@ -3,13 +3,13 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
 gulp.task('concat-component-versions', () => {
-  return gulp.src('./site/imported_json/component_versions/*.json')
+  return gulp.src('./external-components/(global-css/)?*/builder/versions/*.json')
     .pipe(concat('componentVersionPartial.txt', { newLine: ',' }))
     .pipe(gulp.dest('./site/array'));
 });
 
 gulp.task('concat-components', () => {
-  return gulp.src('./site/imported_json/components/*.json')
+  return gulp.src('./external-components/(global-css/)?*/builder/*.json')
     .pipe(concat('componentPartial.txt', { newLine: ',' }))
     .pipe(gulp.dest('./site/array'));
 });
@@ -30,7 +30,6 @@ gulp.task('json-copy', () => {
   return gulp.src(['./site/_data/*.json'])
     .pipe(gulp.dest('./site/data'));
 });
-
 
 gulp.task('javascript', () => {
   return gulp.src(['./site/scripts/clipboard.js', './site/scripts/codepen.js', './site/scripts/component.js'])
