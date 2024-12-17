@@ -3,13 +3,13 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 
 gulp.task('concat-component-versions', () => {
-  return gulp.src('./site/imported_json/component_versions/*.json')
+  return gulp.src('./external-components/(global-css/)?*/builder/versions/*.json')
     .pipe(concat('componentVersionPartial.txt', { newLine: ',' }))
     .pipe(gulp.dest('./site/array'));
 });
 
 gulp.task('concat-components', () => {
-  return gulp.src('./site/imported_json/components/*.json')
+  return gulp.src('./external-components/(global-css/)?*/builder/*.json')
     .pipe(concat('componentPartial.txt', { newLine: ',' }))
     .pipe(gulp.dest('./site/array'));
 });

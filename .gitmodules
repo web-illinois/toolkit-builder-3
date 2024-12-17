@@ -1,0 +1,66 @@
+[submodule "external-components/ilw-accordion"]
+	path = external-components/ilw-accordion
+	url = https://github.com/web-illinois/ilw-accordion
+[submodule "external-components/ilw-breadcrumbs"]
+	path = external-components/ilw-breadcrumbs
+	url = https://github.com/web-illinois/ilw-breadcrumbs
+[submodule "external-components/ilw-call-to-action"]
+	path = external-components/ilw-call-to-action
+	url = https://github.com/web-illinois/ilw-call-to-action
+[submodule "external-components/ilw-card"]
+	path = external-components/ilw-card
+	url = https://github.com/web-illinois/ilw-card
+[submodule "external-components/ilw-columns"]
+	path = external-components/ilw-columns
+	url = https://github.com/web-illinois/ilw-columns
+[submodule "external-components/ilw-content"]
+	path = external-components/ilw-content
+	url = https://github.com/web-illinois/ilw-content
+[submodule "external-components/ilw-grid"]
+	path = external-components/ilw-grid
+	url = https://github.com/web-illinois/ilw-grid
+[submodule "external-components/ilw-hero"]
+	path = external-components/ilw-hero
+	url = https://github.com/web-illinois/ilw-hero
+[submodule "external-components/ilw-icon"]
+	path = external-components/ilw-icon
+	url = https://github.com/web-illinois/ilw-icon
+[submodule "external-components/ilw-page"]
+	path = external-components/ilw-page
+	url = https://github.com/web-illinois/ilw-page
+[submodule "external-components/ilw-page-title"]
+	path = external-components/ilw-page-title
+	url = https://github.com/web-illinois/ilw-page-title
+[submodule "external-components/ilw-pagination"]
+	path = external-components/ilw-pagination
+	url = https://github.com/web-illinois/ilw-pagination
+[submodule "external-components/ilw-profile"]
+	path = external-components/ilw-profile
+	url = https://github.com/web-illinois/ilw-profile
+[submodule "external-components/ilw-profile-card"]
+	path = external-components/ilw-profile-card
+	url = https://github.com/web-illinois/ilw-profile-card
+[submodule "external-components/ilw-quote"]
+	path = external-components/ilw-quote
+	url = https://github.com/web-illinois/ilw-quote
+[submodule "external-components/ilw-section-nav"]
+	path = external-components/ilw-section-nav
+	url = https://github.com/web-illinois/ilw-section-nav
+[submodule "external-components/ilw-spacer"]
+	path = external-components/ilw-spacer
+	url = https://github.com/web-illinois/ilw-spacer
+[submodule "external-components/ilw-statistic"]
+	path = external-components/ilw-statistic
+	url = https://github.com/web-illinois/ilw-statistic
+[submodule "external-components/ilw-tabs"]
+	path = external-components/ilw-tabs
+	url = https://github.com/web-illinois/ilw-tabs
+[submodule "external-components/ilw-video"]
+	path = external-components/ilw-video
+	url = https://github.com/web-illinois/ilw-video
+[submodule "external-components/toolkit-management"]
+	path = external-components/toolkit-management
+	url = https://github.com/web-illinois/toolkit-management
+[submodule "external-components/ilw-back-to-top"]
+	path = external-components/ilw-back-to-top
+	url = https://github.com/web-illinois/ilw-back-to-top
