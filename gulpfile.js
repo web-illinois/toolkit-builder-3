@@ -31,7 +31,6 @@ gulp.task('json-copy', () => {
     .pipe(gulp.dest('./site/data'));
 });
 
-
 gulp.task('javascript', () => {
   return gulp.src(['./site/scripts/clipboard.js', './site/scripts/codepen.js', './site/scripts/component.js'])
     .pipe(concat('main.js'))
