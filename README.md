@@ -18,6 +18,8 @@ The bad news is GitHub actions don't support looping except with the matrix opti
 Copy component JSON files. If you have the `toolkit-management` repository, you can use something like:
 
 ```bash
+rm toolkit-builder-3/site/imported_json/components/*.json
+rm toolkit-builder-3/site/imported_json/component_versions/*.json
 cp toolkit-management/node_modules/@illinois-toolkit/*/builder/*.json toolkit-builder-3/site/imported_json/components/.
 cp toolkit-management/node_modules/@illinois-toolkit/*/builder/versions/*.json toolkit-builder-3/site/imported_json/component_versions/.
 cp toolkit-management/global-css/builder/*.json toolkit-builder-3/site/imported_json/components/.
@@ -29,7 +31,7 @@ You can run the following commands to build the test site:
 ````
 npm install
 npm rebuild
-npm run build-full
+npm run build
 ````
 
 This will generate a static site under _site. You can use a live server tool to run this from your local machine. If you are using Visual Studio Code, you can choose *File* --> *Add Folder to Workspace* to add _site and make this the root. 

@@ -18,6 +18,6 @@ test('take screenshot of element', async ({ page }) => {
             tag = (await it.evaluate(it => it.children[0].children[0].tagName)).toLowerCase();
         }
         console.log(tag);
-        await it.locator("*").first().screenshot({ path: `site/img/components/${tag}.png` });
+        await it.screenshot({ path: `site/img/components/${tag}.png` });
     }
 });

@@ -5,8 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Card Component</title>
         <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css" />
-        <link rel="stylesheet" href="//cdn.toolkit.illinois.edu/3/toolkit.css" />
-        <script type="module" src="//cdn.toolkit.illinois.edu/3/toolkit.js"></script>
+        <link rel="stylesheet" href="//dev.toolkit.illinois.edu/latest/toolkit.css" />
+        <script type="module" src="//dev.toolkit.illinois.edu/latest/toolkit.js"></script>
+        <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-carousel/1.0.0-alpha/ilw-carousel.css" />
+        <script type="module" src="https://dev.toolkit.illinois.edu/ilw-carousel/1.0.0-alpha/ilw-carousel.js"></script>
         <style>
             body {
                 padding: 15px;
@@ -387,6 +389,38 @@
                         allowfullscreen=""
                     ></iframe>
                 </ilw-video>
+            </div>
+            <div style="width: 400px">
+                <ilw-profile-card round style="width: 300px; margin: 0 auto"
+                    ><img
+                        style="width: 200px"
+                        src="https://upload.wikimedia.org/wikipedia/commons/3/33/Chopin%2C_by_Wodzinska.JPG"
+                        alt="Portrait of Frederic Chopin"
+                        slot="image"
+                    />
+                    <h2 slot="name">First &amp; Last Name</h2>
+                    <p slot="title">Job Title or Description</p>
+                    <p slot="address">
+                        <span>110A Education</span>
+                        <span>M/C 708</span>
+                    </p>
+                </ilw-profile-card>
+            </div>
+            <div style="width: 400px">
+                <ilw-carousel label="Selected natural scenes" height="300px" overlay theme="blue">
+                    <ilw-slide>
+                        <h3>Northern Lights</h3>
+                        <p>Also known as <a href="#">aurora borealis</a>, they illuminate the sky.</p>
+                        <div class="ilw-buttons" slot="buttons">
+                            <button class="ilw-button">Explore Illinois</button>
+                        </div>
+                        <img
+                            src="https://fastly.picsum.photos/id/724/1920/768.jpg?hmac=oaOY1Ja3q32qdCoUGuVXUNvp6bQq3WSNi1Fbp6KbmAc"
+                            alt="Red and green lights in the night sky with evergreen trees in the foreground."
+                            slot="image"
+                        />
+                    </ilw-slide>
+                </ilw-carousel>
             </div>
         </div>
     </body>
