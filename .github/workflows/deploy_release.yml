@@ -60,6 +60,16 @@ jobs:
     - run: cp ./external-directory/builder/*.json ./site/imported_json/components
     - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
     - run: rm -r ./external-directory
+
+    - name: Checkout ilw-carousel
+      uses: actions/checkout@v4
+      with:
+        repository: 'web-illinois/ilw-carousel'
+        ref: 'main'
+        path: './external-directory'
+    - run: cp ./external-directory/builder/*.json ./site/imported_json/components
+    - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
+    - run: rm -r ./external-directory
     
     - name: Checkout ilw-columns
       uses: actions/checkout@v4
