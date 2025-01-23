@@ -16,15 +16,11 @@
     <link rel="apple-touch-icon" sizes="167x167" href="https://cdn.brand.illinois.edu/touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.brand.illinois.edu/touch-icon-180x180.png">
 
-    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/components/il-header.css">
-    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/components/il-footer.css">
     {% if localFiles %}
     <link rel="stylesheet" href="/_localfiles/toolkit.css">
     {% else %}
     <link rel="stylesheet" href="//cdn.toolkit.illinois.edu/3/toolkit.css">
     {% endif %}
-    <script src="https://cdn.brand.illinois.edu/components/il-header.mjs" type="module" async></script>
-    <script src="https://cdn.brand.illinois.edu/components/il-footer.mjs" type="module" async></script>
     {% if localFiles %}
     <script type="module" src="/_localfiles/toolkit.js"></script>
     {% else %}
@@ -41,10 +37,10 @@
 </head>
 <body style="margin: 0;">
 <ilw-page class="{{ classOptions }}">
-<il-header slot="header">
+<ilw-header slot="header">
   <a slot="primary-unit" href="/">Toolkit Builder 3</a>
   <a slot="site-name" href="/sample_page/index.html">Whispering Pines College</a>
-  <il-header-nav slot="navigation">
+  <ilw-header-menu slot="navigation">
     <ul>
       <li><a href="/sample_page/index.html">About</a></li>
       <li><a href="/sample_page/index.html">Academics</a></li>
@@ -52,14 +48,14 @@
       <li><a href="/sample_page/index.html">Research</a></li>
       <li><a href="/sample_page/index.html">Diversity</a></li>
     </ul>
-  </il-header-nav>
-</il-header>
+  </ilw-header-menu>
+</ilw-header>
 
 <main>
   {{ content }}
   <ilw-back-to-top></ilw-back-to-top>
 </main>
-<il-footer slot='footer'>
+<ilw-footer slot='footer'>
   <a slot="primary-unit" href="/">Toolkit Builder 3</a>
   <a slot="site-name" href="/sample_page/index.html">Whispering Pines College</a>
   <address slot="address">
@@ -103,7 +99,7 @@
         </ul>
       </ilw-content>
   </ilw-columns>
-</il-footer>
+</ilw-footer>
 </ilw-page>
 </body>
 </html>
