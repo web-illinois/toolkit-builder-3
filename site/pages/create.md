@@ -16,12 +16,12 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 <li><a href="/component/ilw-page/index.html">ilw-page builder link</a> - <a href=" https://github.com/web-illinois/ilw-page/blob/main/README.md">ilw-page detailed documentation</a></il>
 </ul>
 </ilw-accordion-panel>
-<ilw-accordion-panel><h3 slot="summary">Add the brand header and footer: <code>il-header</code>, <code>il-footer</code></h3>
-<p>Add the header and footer. This is handled by the Strategic Communications and Marketing department, and questions concerning these components should be directed there.</p>
+<ilw-accordion-panel><h3 slot="summary">Add the brand header and footer: <code>ilw-header</code>, <code>ilw-footer</code></h3>
+<p>Add the header and footer. We recently moved this from Strategic Communications to the WIGG toolkit.</p>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="https://cdn.brand.illinois.edu/header.html">il-header at cdn.brand.illinois.edu</a></il>
-<li><a href="https://cdn.brand.illinois.edu/footer.html">il-foooter at cdn.brand.illinois.edu</a></il>
+<li><a href="/notes/header/index.html">ilw-header</a></il>
+<li><a href="/notes/footer/index.html">ilw-footer</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Create a title: <code>ilw-hero</code>, <code>ilw-page-title</code>, <code>ilw-content</code></h3>

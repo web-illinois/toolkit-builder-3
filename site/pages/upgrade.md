@@ -55,11 +55,11 @@ Refer to the documentation of each component to see what needs to be changed wit
 | il-call-to-action    | ilw-call-to-action    |
 | il-card              | ilw-card              |
 | il-clickable-card    | ilw-card with clickable attribute |
-| il-footer            | il-footer (**Brand**)   |
+| il-footer            | ilw-footer    |
 | il-formatted class   | ilw-page <sup><a class="sub" href="#4">[4]</a></sup>  |
 | il-gallery-detail    | N/A <sup><a class="sub" href="#3">[3]</a></sup>                  |
 | il-gallery           | N/A <sup><a class="sub" href="#3">[3]</a></sup>                  |
-| il-header            | il-header (**Brand**)   |
+| il-header            | il-header             |
 | il-hero              | ilw-hero              |
 | il-icon              | ilw-icon              |
 | il-image-feature     | ilw-columns / ilw-image-cover class   |
