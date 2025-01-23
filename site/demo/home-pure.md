@@ -53,7 +53,7 @@ localFiles: false
         <div slot="footer"><a href="#" class="ilw-button">Browse Online Courses</a></div>
     </ilw-card>
 </ilw-columns>
-<ilw-content>
+<ilw-content width="auto">
 <h2>Campus Facilities</h2>
 </ilw-content>
 <ilw-tabs width="page" theme="gray">

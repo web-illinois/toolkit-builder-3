@@ -54,11 +54,19 @@
                             </div>
                             <div class="component-image-overlay"></div>
                         </div>
-                        <h4>
+                        {% if component.builder-override-link %}
+                        <h3>
+                            <a href="{{component.builder-override-link}}">
+                                {{ component.title }}
+                            </a>
+                        </h3>
+                        {% else %}
+                        <h3>
                             <a href="/component/{{ component.tag | slugify }}/{{ component.production-version | default: component.development-version | slugify }}/index.html">
                                 {{ component.title }}
                             </a>
-                        </h4>
+                        </h3>
+                        {% endif %}
                         <p>
                             {{ component.purpose }}
                         </p>

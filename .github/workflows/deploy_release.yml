@@ -111,6 +111,26 @@ jobs:
     - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
     - run: rm -r ./external-directory
 
+    - name: Checkout ilw-header
+      uses: actions/checkout@v4
+      with:
+        repository: 'web-illinois/ilw-header'
+        ref: 'main'
+        path: './external-directory'
+    - run: cp ./external-directory/builder/*.json ./site/imported_json/components
+    - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
+    - run: rm -r ./external-directory
+
+    - name: Checkout ilw-header-menu
+      uses: actions/checkout@v4
+      with:
+        repository: 'web-illinois/ilw-header-menu'
+        ref: 'main'
+        path: './external-directory'
+    - run: cp ./external-directory/builder/*.json ./site/imported_json/components
+    - run: cp ./external-directory/builder/versions/*.json ./site/imported_json/component_versions
+    - run: rm -r ./external-directory
+
     - name: Checkout ilw-hero
       uses: actions/checkout@v4
       with:
