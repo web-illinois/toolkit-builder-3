@@ -65,7 +65,9 @@
           <tr>
           <td class="named"><a href="/component/{{ component.tag | slugify }}/index.html">{{ component.title }}</a></td>
           <td>
-          {% if component.toolkit-version == '' %}
+          {% if component.builder-override-link %} 
+          No builder - <a href="{{ component.builder-override-link }}">See notes</a>
+          {% else if component.toolkit-version == '' %}
           N/A
           {% else %}
           <a href="/component/{{ component.tag | slugify }}/{{ component.toolkit-version | slugify }}/index.html">{{ component.toolkit-version }}</a>
@@ -73,7 +75,9 @@
           {% endif %}
           </td>
           <td>
-          {% if component.production-version == '' %}
+          {% if component.builder-override-link %} 
+          No builder - <a href="{{ component.builder-override-link }}">See notes</a>
+          {% else if component.production-version == '' %}
           N/A
           {% else %}
           <a href="/component/{{ component.tag | slugify }}/{{ component.production-version | slugify }}/index.html">{{ component.production-version }}</a>
@@ -81,7 +85,9 @@
           {% endif %}
           </td>
           <td>
-          {% if component.development-version == '' %}
+          {% if component.builder-override-link %} 
+          No builder - <a href="{{ component.builder-override-link }}">See notes</a>
+          {% else if component.development-version == '' %}
           N/A
           {% else %}
           <a href="/component/{{ component.tag | slugify }}/{{ component.development-version | slugify }}/index.html">{{ component.development-version }}</a>
