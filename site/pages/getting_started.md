@@ -71,6 +71,7 @@ If you want to hit a specific beta version of the toolkit, you can do so by repl
 
 ## What next? 
 
+* <a href="/generic_html/index.html">Get a generic HTML template</a>
 * <a href="/upgrade/index.html">Upgrade a site from version 2</a>
 * <a href="/create_page/index.html">View a step-by-step guide to create a new page</a>
 * <a href="/components_toc/index.html">Dive right into the component specifications directly</a>

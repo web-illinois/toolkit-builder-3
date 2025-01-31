@@ -10,6 +10,7 @@ Note that links with an <strong>*</strong> will take you to a new website.
 
 ## How to Use V3
 * <a href="/getting_started/index.html">Getting Started</a>, the code to implement the V3 Toolkit.
+* <a href="/generic_html/index.html">A Generic HTML template</a>, code you can copy and paste into an empty HTML document.
 * <a href="/upgrade/index.html">Upgrade Guide</a>, a guide to migrate from version 2 of the toolkit to version 3. 
 * <a href="/create_page/index.html">Creating a Web Page</a>, a guide to create a page using the V3 toolkit. 
 * <a href="/philosophy/index.html">Philosophy</a>, some general history and goals around the toolkit.
