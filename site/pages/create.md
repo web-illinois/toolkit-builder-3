@@ -13,8 +13,8 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 <p>Starting with a blank HTML page, you first need to create your `<head>` and `<body>` tags. If you want a template, use the generic HTML template listed below.</p>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/pages/getting_started/index.html">Getting Started</a></il>
-<li><a href="/pages/generic_html/index.html">Generic HTML template</a></il>
+<li><a href="/getting_started/index.html">Getting Started</a></il>
+<li><a href="/generic_html/index.html">Generic HTML template</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Create the page skeleton: <code>ilw-page</code></h3>
