@@ -6,9 +6,17 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 ---
 
 <ilw-content mode="introduction" padding="40px">
-<p><em>Here are nine steps on how to build a webpage from scratch.</em></p><p> We recommend having a basic knowledge of HTML, but you definitely don't to "be a coder" to create a web page. </p>
+<p><em>Here are ten steps on how to build a webpage from scratch.</em></p><p> We recommend having a basic knowledge of HTML, but you definitely don't to "be a coder" to create a web page. </p>
 </ilw-content>
 <ilw-accordion>
+<ilw-accordion-panel><h3 slot="summary">Create your HTML framework.</h3>
+<p>Starting with a blank HTML page, you first need to create your `<head>` and `<body>` tags. If you want a template, use the generic HTML template listed below.</p>
+<h4>Resource Links</h4>
+<ul>
+<li><a href="/pages/getting_started/index.html">Getting Started</a></il>
+<li><a href="/pages/generic_html/index.html">Generic HTML template</a></il>
+</ul>
+</ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Create the page skeleton: <code>ilw-page</code></h3>
 <p>One of the problems with version 2 is that each component didn't have a way to work with other components. To fix this, we created a Page component that can house all the other components. This includes the brand header and footer component. </p>
 <h4>Resource Links</h4>
