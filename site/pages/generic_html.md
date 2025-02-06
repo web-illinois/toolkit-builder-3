@@ -40,7 +40,7 @@ If you need a generic HTML template, feel free to use this:
         <title> <!-- Add title here --> </title>
         <!-- Add custom header tags here --> 
     </head>
-    <body style="padding: 0;">
+    <body style="margin: 0;">
         <ilw-page>
             <ilw-header slot="header">
             <!-- Add header details here -->
