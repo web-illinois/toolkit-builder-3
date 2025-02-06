@@ -45,7 +45,9 @@ If you need a generic HTML template, feel free to use this:
             <ilw-header slot="header">
             <!-- Add header details here -->
             </ilw-header>
+            <main>
             <!-- Add content details here -->
+            </main>
             <ilw-footer slot="footer">
             <!-- Add footer details here -->
             </ilw-footer>
@@ -64,8 +66,8 @@ If you need a generic HTML template, feel free to use this:
 5. Add `<link>` and `<script>` tags for toolkit
 6. Add `<script>` tags for SkipTo links
 7. Add your `<title>` tags and any custom tags in your header
-8. Add your `<body>` tag. Note that you should make the body padding 0. 
-9. Add your `<ilw-page>` tags and your header, body, and footer.
+8. Add your `<body>` tag. Note that you should make the body margin 0. 
+9. Add your `<ilw-page>`, `<ilw-header>`, and `<ilw-footer>` tags. The `<header>` and `<footer>` regions are automatically added by the `<ilw-header>`, and `<ilw-footer>` components.
 
 ## What next? 
 
