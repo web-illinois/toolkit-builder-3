@@ -24,7 +24,7 @@ function generateCodepen() {
         let scripts = Array.from(document.querySelectorAll('script'));
         let scriptArray = [];
         scripts.forEach(s => {
-            if (s.getAttribute('src') && s.getAttribute('src').startsWith('http') && !s.getAttribute('data-skip')) {
+            if (s.getAttribute('src') && s.getAttribute('src').startsWith('http') && !s.hasAttribute('data-skip')) {
                 scriptArray.push(s.getAttribute('src'));
             }
         });
@@ -33,7 +33,7 @@ function generateCodepen() {
         let links = Array.from(document.querySelectorAll('link[rel=stylesheet]'));
         let linkArray = [];
         links.forEach(l => {
-            if (l.getAttribute('href') && l.getAttribute('href').startsWith('http') && !s.getAttribute('data-skip')) {
+            if (l.getAttribute('href') && l.getAttribute('href').startsWith('http') && !l.hasAttribute('data-skip')) {
                 linkArray.push(l.getAttribute('href'));
             }
         });
