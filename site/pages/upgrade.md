@@ -59,7 +59,7 @@ Refer to the documentation of each component to see what needs to be changed wit
 | il-formatted class   | ilw-page <sup><a class="sub" href="#4">[4]</a></sup>  |
 | il-gallery-detail    | N/A <sup><a class="sub" href="#3">[3]</a></sup>                  |
 | il-gallery           | N/A <sup><a class="sub" href="#3">[3]</a></sup>                  |
-| il-header            | il-header             |
+| il-header            | ilw-header            |
 | il-hero              | ilw-hero              |
 | il-icon              | ilw-icon              |
 | il-image-feature     | ilw-columns / ilw-image-cover class   |
