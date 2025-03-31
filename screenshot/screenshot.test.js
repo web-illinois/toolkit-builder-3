@@ -8,6 +8,11 @@ test('take screenshot of element', async ({ page }) => {
     await page.mouse.wheel(0, 100);
     await page.waitForTimeout(500);
 
+    await page.locator('ilw-header-menu-section button').first().click({force: true, noWaitAfter: true});
+
+    await page.mouse.wheel(0, 100);
+    await page.waitForTimeout(500);
+
     const list = await page.locator('.renders > div').all();
     for (let it of list) {
         let tag = await it.evaluate(it => it.dataset["name"]);
