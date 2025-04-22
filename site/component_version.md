@@ -3,7 +3,7 @@ pagination:
   data: component-versions
   size: 1
   alias: component-version
-permalink: "component/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/"
+permalink: component/{{ component-version.tag | slugify }}{% if component-version.builder-version %}/{{ component-version.builder-version | slugify }}{% else %}/{{ component-version.version | slugify }}{% endif %}/ 
 layout: component.liquid
 
 ---
