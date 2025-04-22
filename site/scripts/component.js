@@ -8,6 +8,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         document.getElementById('inner').disabled = true;
         document.getElementById('samples-list').disabled = true;
     }
+    let addon = document.getElementById('addon');
+    if (addon != null) {
+        document.getElementById('results-addon').innerText = addon.outerHTML;
+    }
     build(false);
 });
 

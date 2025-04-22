@@ -23,6 +23,13 @@
       </div>
 
       <div role="presentation" class="builder-line top"></div>
+      {% if component-version.addon-html %}
+          <div class="builder-section">
+          <p>This additional item has been added to help test the component. Please see notes for how this should be used.</p>
+          <div id="addon">{{ component-version.addon-html }}</div>
+          </div>
+      {% endif %}
+
       <div id="component" style="{{ component-version.parent-style }}" data-name="{{ component-version.element-name }}"></div>
       <div role="presentation" class="builder-line bottom"></div>
 
@@ -174,6 +181,11 @@
             <li><a href="{{ component-version.github }}/blob/main/README.md">Read more about the component</a></li>
             <li><a href="{{ component-version.github }}/issues/new">Contact the owner about a problem</a></li>
         </ul>
+
+      {% if component-version.addon-html %}
+          <p>This is the additional HTML used to test the item.</p>
+          <code id="results-addon"></code>
+      {% endif %}
 
       </div>
 
