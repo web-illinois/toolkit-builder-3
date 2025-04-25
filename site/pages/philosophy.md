@@ -25,7 +25,7 @@ The Toolkit contains components that are:
 
 ## Where do your designs come from? 
 
-[WIGG has a design team](https://webtheme.illinois.edu/about/design/) that creates designs for us. These designs are collaborative and are not required to be used by any unit. However, they are vetted by designers, accessibility experts, and user experience designers across campus.
+[WIGG has a design team](https://wigg.illinois.edu/membership/design/) that creates designs for us. These designs are collaborative and are not required to be used by any unit. However, they are vetted by designers, accessibility experts, and user experience designers across campus.
 
 ## Do I have to use the entire toolkit set? Is this required? 
 
@@ -33,7 +33,7 @@ The web components may not meet all of your needs, so don't feel like you are co
 
 ## Who uses your components?
 
-Anyone on campus is welcome to use our components. We focus on the [WIGG WordPress team](https://webtheme.illinois.edu/about/wordpress/), the [WIGG Drupal team](https://webtheme.illinois.edu/about/drupal/), other areas on campus that manage CMSs, and those units that hand-code their web pages. 
+Anyone on campus is welcome to use our components. We focus on the [WIGG WordPress team](https://wigg.illinois.edu/membership/wordpress/), the [WIGG Drupal team](https://wigg.illinois.edu/membership/drupal/), other areas on campus that manage CMSs, and those units that hand-code their web pages. 
 
 ## Is this just the look and feel of the website? 
 

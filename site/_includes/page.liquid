@@ -19,7 +19,7 @@
     {% render 'header' %}
     <main>
       {%- if title_background %}
-        <ilw-page-title width="full" {% if title_background_color %}style="background: {{ title_background_color }}"{% endif %}>
+        <ilw-page-title width="page" {% if title_background_color %}style="background: {{ title_background_color }}"{% endif %}>
           <img src="{{ title_background }}" alt="" slot="background">
           <h1>{{ title }}</h1>
         </ilw-page-title>
