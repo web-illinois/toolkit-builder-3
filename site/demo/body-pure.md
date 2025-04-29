@@ -7,10 +7,10 @@ localFiles: false
 
 ---
 
-<ilw-breadcrumbs><a href="#">Home</a> <a href="#">Academics</a> <span>Graduate programs</span> </ilw-breadcrumbs>
+<ilw-breadcrumbs width="page"><a href="#">Home</a> <a href="#">Academics</a> <span>Graduate programs</span> </ilw-breadcrumbs>
 
-<ilw-page-title theme="white">
-<img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" role="presentation" slot="background">
+<ilw-page-title theme="white" width="page">
+<img src="/img/header_image.png" alt="" role="presentation" slot="background">
 <h1>Graduate Programs</h1>
 </ilw-page-title>
 <ilw-columns mode="1x2" gap="20px" width="page">
@@ -43,10 +43,10 @@ localFiles: false
     </div>
 </ilw-columns>
 
-<ilw-content mode="lede" align="center" padding="20px 0 40px 0">
+<ilw-content mode="lede" align="center" padding="20px 0 40px 0" theme="blue" width="full">
 <p>Each program at Whispering Pines is designed to integrate academic excellence with an appreciation for the natural world, fostering a unique learning environment for students.</p>
 </ilw-content>
-
+<ilw-spacer></ilw-spacer>
 <ilw-content width="page">
 <h2>Frequently Asked Questions</h2>
 </ilw-content>
@@ -83,4 +83,3 @@ localFiles: false
     </ul>
 </ilw-call-to-action>
 
-<ilw-spacer height="50px"></ilw-spacer>
