@@ -33,6 +33,7 @@ localFiles: false
 
   <p>With state-of-the-art facilities and a commitment to excellence, Whispering Pines College is more than an institution—it is a community united by a shared pursuit of knowledge, integrity, and the boundless possibilities that await each student who walks through its gates. Whether delving into the archives of its esteemed library or forging lifelong friendships in its bustling student center, Whispering Pines College promises an unforgettable collegiate experience unlike any other.</p>
 </ilw-content>
+<ilw-spacer></ilw-spacer>
 <ilw-columns width="page" gap="20px">
     <ilw-card align="center">
         <img src="/img/card1.webp" alt="" slot="image">
@@ -53,15 +54,16 @@ localFiles: false
         <div slot="footer"><a href="#" class="ilw-button">Browse Online Courses</a></div>
     </ilw-card>
 </ilw-columns>
-<ilw-content width="auto">
+<ilw-content width="auto" theme="gray">
 <h2>Campus Facilities</h2>
-</ilw-content>
 <ilw-tabs width="page" theme="gray">
 <div slot="tabs"><button role="tab" aria-controls="panel1">The Solis Energy Innovation Lab</button><button role="tab" aria-controls="panel2">The Evergreen Botanical Conservatory</button><button role="tab" aria-controls="panel3">The Whispering Pines Archive of Nature and Myth</button></div>
 <ilw-content theme="gray" id="panel1" data-ilw-tab-visible="1"> <h3>The Solis Energy Innovation Lab</h3> <p><a href="">The Solis Energy Innovation Lab</a> is Whispering Pines’ cutting-edge research facility dedicated to the exploration and development of renewable energy technologies. Named after the Latin word for "sun," the lab is a beacon of innovation in sustainable energy solutions. Equipped with the latest in solar, wind, and hydroelectric research equipment, the Solis Lab provides students and researchers with the tools they need to push the boundaries of what is possible in the field of renewable energy. The lab also serves as a collaborative space where engineers, environmental scientists, and policymakers come together to create sustainable energy systems that could power future generations.</p></ilw-content>
 <ilw-content theme="gray" id="panel2" data-ilw-tab-visible="0"> <h3>The Evergreen Botanical Conservatory</h3> <p><a href="">The Evergreen Botanical Conservatory</a> is a living repository of plant species from around the world, with a special focus on native and medicinal plants. This sprawling garden serves as an outdoor classroom and research space where students can study plant biology, ecology, and sustainable agriculture firsthand. The conservatory is designed to mimic various ecosystems, from temperate forests to tropical rainforests, providing a diverse range of flora for academic and conservation purposes. Its centerpiece is the Healing Garden, a curated collection of medicinal plants that have been used in traditional practices for centuries, offering a unique resource for students in the Herbal Medicine and Botanical Studies program.</p></ilw-content>
 <ilw-content theme="gray" id="panel3" data-ilw-tab-visible="0"> <h3>The Whispering Pines Archive of Nature and Myth</h3> <p>The Whispering Pines Archive of Nature and Myth is an extensive library and research center specializing in rare collections of literature, folklore, and mythological texts that explore humanity’s relationship with the natural world. The archive houses ancient manuscripts, rare books, and modern works that delve into nature writing, environmental philosophy, and cultural myths from around the globe. Scholars from various disciplines come to the archive to study the narratives and beliefs that have shaped human interaction with nature throughout history. The library’s serene reading rooms, with large windows overlooking the surrounding forest, provide an inspiring environment for deep contemplation and scholarly research.</p> <ul class="ilw-buttons"><li><a href="#">Nature Archive</a></li><li><a href="#">Myth Archive</a></li></ul></ilw-content>
 </ilw-tabs>
+</ilw-content>
+
 <ilw-columns width="page" gap="20px">
     <ilw-statistic><span slot="stat">94%</span> of 2022 graduates employed by March 2023</ilw-statistic>
     <ilw-statistic><span slot="stat">1-on-1</span> <a href="#">Alumni Mentoring</a></ilw-statistic>
@@ -97,4 +99,3 @@ localFiles: false
         <li><a href="#">Contact us</a></li>
     </ul>
 </ilw-call-to-action>
-<ilw-spacer height="50px"></ilw-spacer>
