@@ -25,7 +25,9 @@ Note that links with an <strong>*</strong> will take you to a new website.
 * <a href="https://builder.toolkit.illinois.edu">The original Toolkit Builder <span role="presentation">*</span></a>, for V2 information. 
 * <a href="https://itaccessibility.illinois.edu/">Accessibility Guidelines <span role="presentation">*</span></a>, rules to make your website accessible.
 * <a href="https://brand.illinois.edu/">Brand Guidelines <span role="presentation">*</span></a>, rules to make your website meet brand standards. 
-* <a href="https://webtheme.illinois.edu/">The Web Implementation Guidelines Group Web Theme page <span role="presentation">*</span></a>, which has information about WIGG and its overall goals.
+* <a href="https://webtheme.illinois.edu/">The Illinois Web Theme page <span role="presentation">*</span></a>, which has information about the Web Theme in general (CMS, Hosting, Design, etc.).
+* <a href="https://wigg.illinois.edu/">The Web Implementation Guidelines Group page <span role="presentation">*</span></a>, which has information about WIGG and its overall goals.
+
 
 ## For Content Editors
 * <a href="https://findwebhosting.web.illinois.edu/">Web Hosting Finder <span role="presentation">*</span></a>, which has a questionairre to direct you to the best web hosting platform. 

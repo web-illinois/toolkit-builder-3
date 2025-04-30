@@ -38,8 +38,8 @@ localFiles: false
 </p>
 </ilw-content>
 <ilw-spacer height="40px"></ilw-spacer>
-<ilw-columns>
-    <div class="ilw-image-cover-bottom"><img src="/img/UI-08-210510-028%20(1).jpg" alt=""></div>
+<ilw-columns theme="blue" padding="0">
+    <div class="ilw-image-cover"><img src="/img/UI-08-210510-028%20(1).jpg" alt=""></div>
     <ilw-content theme="blue" mode="inset">
         <h2>Allowing Students to Reach Their Highest Potentials</h2>
         <p>Students at the University of Illinois Urbana-Champaign enjoy a University that celebrates diversity, serves their health and wellness needs, and allows them to reach their highest potentials, both academically and personally. 450,000+ Illini graduates have been shaped by their time at our University and many say they are who they are because of it. Student Affairs is making sure this tradition continues, and, with your help, we will meet the needs of a changing student body.</p>
