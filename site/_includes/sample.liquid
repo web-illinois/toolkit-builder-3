@@ -45,6 +45,15 @@
 <ilw-header slot="header">
   <a slot="primary-unit" href="/">Toolkit Builder 3</a>
   <a slot="site-name" href="/sample_page/index.html">Whispering Pines College</a>
+  <nav slot="links" aria-label="Utility">
+      <ul><li><a href="#">Contact</a></li>
+      <li><a href="#">Apply</a></li>
+      <li><a href="#">Give</a></li></ul>
+  </nav>
+  <form class="search-form" role="search" method="GET" action="/" slot="search">
+      <input class="search-field" type="search" name="s" aria-labelledby="search-button" placeholder="Search this site">
+      <button class="search-button" type="submit" id="search-button" name="search" value="1">Search</button>
+  </form>
   <ilw-header-menu slot="navigation">
     <ul>
       <li><a href="/sample_page/index.html">About</a></li>
