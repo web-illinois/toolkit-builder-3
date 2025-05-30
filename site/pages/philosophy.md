@@ -44,5 +44,6 @@ Yes. The Web Component team is not responsible for storing, retrieving, or stand
 * <a href="/demo/index.html">See all the components in a sample page</a>
 * <a href="/preview/index.html">See all the components individually</a>
 * <a href="/links/index.html">Get more resource links on how to build a web page using a campus CMS</a>
+* <a href="/releases_support_lifecycle/index.html">Learn about our release schedule and support</a>
 * <a href="/getting_started/index.html">Get started using the components</a>
 * <a href="/components_toc/index.html">Dive right into the component specifications directly</a>

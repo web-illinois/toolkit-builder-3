@@ -53,6 +53,8 @@ If you need to hit a specific version of the toolkit due to maintenance reasons 
     <script type="module" src="//cdn.toolkit.illinois.edu/3.0.0/toolkit.js"></script>
 ```
 
+[Note the implications of pointing to a specific version of the toolkit.](/releases_support_lifecycle/index.html#support_lifecycle)
+
 If you want to hit the latest beta version of the toolkit, you can do so by connecting to our development server. For example: 
 
 ```html
@@ -75,3 +77,5 @@ If you want to hit a specific beta version of the toolkit, you can do so by repl
 * <a href="/upgrade/index.html">Upgrade a site from version 2</a>
 * <a href="/create_page/index.html">View a step-by-step guide to create a new page</a>
 * <a href="/components_toc/index.html">Dive right into the component specifications directly</a>
+* <a href="/links/index.html">Get more resource links on how to build a web page using a campus CMS</a>
+* <a href="/releases_support_lifecycle/index.html">Learn about our release schedule and support</a>

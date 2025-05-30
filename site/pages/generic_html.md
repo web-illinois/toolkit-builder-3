@@ -74,3 +74,5 @@ If you need a generic HTML template, feel free to use this:
 * <a href="/upgrade/index.html">Upgrade a site from version 2</a>
 * <a href="/create_page/index.html">View a step-by-step guide to create a new page</a>
 * <a href="/components_toc/index.html">Dive right into the component specifications directly</a>
+* <a href="/links/index.html">Get more resource links on how to build a web page using a campus CMS</a>
+* <a href="/releases_support_lifecycle/index.html">Learn about our release schedule and support</a>

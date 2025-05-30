@@ -13,6 +13,7 @@ Note that links with an <strong>*</strong> will take you to a new website.
 * <a href="/upgrade/index.html">Upgrade Guide</a>, a guide to migrate from version 2 of the toolkit to version 3. 
 * <a href="/create_page/index.html">Creating a Web Page</a>, a guide to create a page using the V3 toolkit. 
 * <a href="/philosophy/index.html">Philosophy</a>, some general history and goals around the toolkit.
+* <a href="/releases_support_lifecycle/index.html">Our release schedule and support</a>
 
 ## Other links for websites
 * <a href="https://cdn.brand.illinois.edu/">Illinois Branding CDN <span role="presentation">*</span></a>, which has the campus stylesheet, header, and footer. <strong>The campus stylesheet is required for the toolkit to work effectively.</strong>
