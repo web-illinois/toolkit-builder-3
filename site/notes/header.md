@@ -30,7 +30,7 @@ If you are incorporating the header into the ilw-page component, then make sure 
   <nav slot="links" aria-label="Utility">
     <ul>
       <li><a href="https://builder.toolkit.illinois.edu">Old Builder</a></li>
-      <li><a href="https://webtheme.illinois.edu/about/web-components/">About Our Team</a></li>
+      <li><a href="https://wigg.illinois.edu/membership/web-components/">About Our Team</a></li>
     </ul>
   </nav>
   <form slot="search" method="get" action="/search.php" role="search">
