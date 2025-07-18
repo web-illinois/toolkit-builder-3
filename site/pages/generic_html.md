@@ -34,7 +34,7 @@ If you need a generic HTML template, feel free to use this:
         <link rel="dns-prefetch" href="//cdn.toolkit.illinois.edu"> 
         <link rel="dns-prefetch" href="//cdn.disability.illinois.edu"> 
         <link rel="stylesheet" href="//cdn.toolkit.illinois.edu/3/toolkit.css">
-        <script src="//cdn.toolkit.illinois.edu/3/toolkit.js"></script>
+        <script type="module" src="//cdn.toolkit.illinois.edu/3/toolkit.js"></script>
         <script src="//cdn.disability.illinois.edu/skipto.min.js"></script>
         <script>var SkipToConfig = { 'settings': { 'skipTo': { colorTheme: 'illinois' } } };</script>
         <title> <!-- Add title here --> </title>
