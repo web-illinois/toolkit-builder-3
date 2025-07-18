@@ -58,7 +58,31 @@
     <ul>
       <li><a href="/sample_page/index.html">About</a></li>
       <li><a href="/sample_page/index.html">Academics</a></li>
-      <li><a href="/sample_page/index.html">Admissions</a></li>
+      <li><ilw-header-menu-section id="current2" linked="true">
+            <a slot="link" href="/sample_page/index.html">Admissions</a>
+            <ul>
+              <li><a href="/sample_page/index.html">Philosophy</a></li>
+              <li><a href="/sample_page/index.html">Helpful Links</a></li>
+              <li><a href="/sample_page/index.html">Organization and Github</a></li>
+              <li> <ilw-header-menu-section>
+                <span slot="label">Smithsonite</span>
+                <ul>
+                  <li><a href="#">Amphibole</a></li>
+                  <li><a href="#">Pyroxene</a></li>
+                  <li><a href="#">Feldspar</a></li>
+                </ul>
+              </ilw-header-menu-section></li>
+              <li><ilw-header-menu-section linked="true">
+                <a slot="link" href="#">Garnet</a>
+                <ul>
+                  <li><a href="#">Gneiss</a></li>
+                  <li><a href="#">Peridotite</a></li>
+                  <li><a href="#">Syenite</a></li>
+                  <li><a href="#">Porphyry</a></li>
+                </ul>
+               </ilw-header-menu-section></li>
+            </ul>
+        </ilw-header-menu-section></li>
       <li><ilw-header-menu-section id="current2" linked="true">
             <a slot="link" href="/sample_page/index.html">Research</a>
             <ul>
