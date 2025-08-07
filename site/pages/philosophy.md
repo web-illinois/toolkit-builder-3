@@ -6,7 +6,7 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 lede: Toolkit web components are built once, and then can be used across the campus. They provide a central location for implementing brand and accessibility standards, and then are used by individual websites as well as large Content Management System groups.
 ---
 
-The University always had multiple sites that looked a little (or a lot) different from the other sites on campus. The [Website Implementation Guidelines Group](https://webtheme.illinois.edu/about/) was created in 2019 to combat this issue and create a sense of cohesion on campus concerning how pages looked and behaved. 
+The University always had multiple sites that looked a little (or a lot) different from the other sites on campus. The [Website Implementation Guidelines Group](https://wigg.illinois.edu/) was created in 2019 to combat this issue and create a sense of cohesion on campus concerning how pages looked and behaved. 
 
 One of the early problems was how to easily make websites follow the design practices that WIGG promoted. There are a lot of Content Management Systems on campus, and many sites were still coded by hand. If we wanted a common header, each group on campus would need to build their own header, which would require a web developer comfortable with their particular CMS or raw HTML / JS / CSS. To address this, the WIGG Web Components group was created to build standalone web components that could be used in any CMS. The web components would be written using common standards. 
 

@@ -25,12 +25,12 @@ If you are incorporating the header into the ilw-page component, then make sure 
 
 ```
 <ilw-header slot="header">
-  <a slot="primary-unit" href="https://webtheme.illinois.edu/about/">Web Implementation Guidelines Group</a>
+  <a slot="primary-unit" href="https://wigg.illinois.edu/">Web Implementation Guidelines Group</a>
   <a slot="site-name" href="/index.html">Component Builder Information (v3+)</a>
   <nav slot="links" aria-label="Utility">
     <ul>
       <li><a href="https://builder.toolkit.illinois.edu">Old Builder</a></li>
-      <li><a href="https://webtheme.illinois.edu/about/web-components/">About Our Team</a></li>
+      <li><a href="https://wigg.illinois.edu/membership/web-components/">About Our Team</a></li>
     </ul>
   </nav>
   <form slot="search" method="get" action="/search.php" role="search">
