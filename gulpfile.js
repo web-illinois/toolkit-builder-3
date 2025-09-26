@@ -39,4 +39,11 @@ gulp.task('javascript', () => {
     .pipe(gulp.dest('./site/scripts'));
 });
 
-gulp.task("default", gulp.series(["concat-component-versions", "array-component-versions", "concat-components", "array-components", "json-copy", "javascript"]));
+gulp.task('javascript_fixed', () => {
+  return gulp.src(['./site/scripts/clipboard.js', './site/scripts/codepen.js', './site/scripts/component_fixed.js'])
+    .pipe(concat('main_fixed.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./site/scripts'));
+});
+
+gulp.task("default", gulp.series(["concat-component-versions", "array-component-versions", "concat-components", "array-components", "json-copy", "javascript", "javascript_fixed"]));

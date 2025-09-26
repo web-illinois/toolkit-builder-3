@@ -5,6 +5,17 @@
     <link rel="stylesheet" href="{{ component-version.css }}">
     <script type="module" src="{{ component-version.js }}"></script>
     <script src="/scripts/main.js"></script>
+    {% if component-version.added-components %}
+        {%- for added in component-version.added-components %}
+            {% if added.css %}
+            <link rel="stylesheet" href="{{ added.css }}">
+            {% endif %}
+            {% if added.js %}
+            <script type="module" src="{{ added.js }}"></script>
+            {% endif %}
+        {% endfor -%}
+    {% endif %}
+
     <title>{{ component-version.title }}</title>
 </head>
 <body style="margin: 0;">
@@ -14,7 +25,20 @@
       <h1>Component: <em>{{ component-version.title }} {{ component-version.builder-version }}</em></h1>
       <p>This builder will allow you to generate a custom version of the {{ component-version.title }} component.</p>
       <p>The component will show up in between the pink lines below. The pink lines will not show up in production -- they are only used to allow you to view margins and paddings. 
-      In the case of specialized components (things that are meant to be invisible or have a fixed location), the component may not display in this area. 
+      In the case of specialized components (things that are meant to be invisible or have a fixed location), the component may not display in this area. </p>
+     {% if component-version.added-components %}
+        <h2>Additional Components</h2>
+        <p>In addition to the main component, the following additional components and/or CSS/JS modules have been added to help you build your version of the component:</p>
+        <ul>
+        {%- for added in component-version.added-components %}
+            {% if added.link %}
+                <li><strong><a href="{{ added.link }}">{{ added.name }}</a>:</strong> {{ added.description }}</li>
+            {% else %}
+                <li><strong>{{ added.name }}:</strong> {{ added.description }}</li>
+            {% endif %}
+        {% endfor -%}
+    {% endif %}
+
       <ul class="ilw-buttons">
         <li><a href="/preview/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/index.html">Preview component</a></li>
         <li><a href="/component/{{ component-version.tag | slugify }}/index.html">See all versions of component</a></li>

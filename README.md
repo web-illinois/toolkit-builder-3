@@ -71,3 +71,29 @@ copy dist-toolkit\* ..\toolkit-builder-3\site\_localfiles /Y
 To run the demo pages, change the `localFiles` of the demo pages to true in the .md file and run the npm build script for the toolkit builder 3 project. Make sure you change the `localFiles` variable back to false before checking the files back in. 
 
 If you are changing the toolkit-management repository, make sure you rebuild the package.json and package-lock.json files. Updating the package.json can be done manually, but to update the package-lock.json, run `npm update --save`.
+
+## Building a component.json and component_version.json file
+
+### Component JSON file notes
+* "tag": if you have multiple instances of the tag, then use this as a unique identifier, so for ilw-content for lede, this is ilw-content-lede
+* "description": longer description of what this can do
+* "purpose": short statement, declarative purpose
+* "element-name": if you have multiple instances of the tag, then this is the tag name, so for ilw-content for lede, this is ilw-content
+* "builder-override-link": Used if you don't want to use the default component builder link -- this will go to a static page inside the builder site. 
+
+### Component Version JSON file notes
+* "tag": if you have multiple instances of the tag, then use this as a unique identifier, so for ilw-content for lede, this is ilw-content-lede
+* "description": longer description of what this can do
+* "element-name": if you have multiple instances of the tag, then this is the tag name, so for ilw-content for lede, this is ilw-content
+* "builder-version": the builder version doesn't necessarily means the actual version of the component -- some components may have multiple iterations but have the same builder version file because the interface doesn't change
+* "version": the actual component version
+* "notes": any version-specific infomration you want pointed out
+* "parent-style": if this needs to be wrapped in a parent CSS style, put the style definition here, like `margin: 0 auto; max-width: 1200px;`
+* "addon-html": if you need to add HTML as a helper class (like a tooltip or button that triggers a certain action), add the raw HTML here, like `<button class='ilw-button' data-modal-target='modal'>Open Modal</button>`
+* "added-components": This is an array of objects that can get added to a component. They consisit of a name, description, link, css, and js. 
+`{"name": "Icon", "description": "You can use the icon component inside the modal for decorative purposes.", "link": "https://toolkit.illinois.edu/components/ilw-icon/", "css": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.css", "js": "https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.js" }`
+* "samples": This is an array of samples that can get populated in a dropdown. They consisit of a name, description, and text (HTML of the sample). `{ "name": "default", "description": "Default information", "text": "<h2 slot=\"title\">Default Modal</h2>\n" }`
+* "attributes-fixed", "classes-fixed": This is an array of attributes or classes that automatically get added to the component. They consist of name (used only for attributes), description, depreciated (boolean saying if they are depreciated or not), and value
+* "attributes-text": This is an array of attributes that automatically get added to the component and users can enter a free value. They consist of name, description, depreciated (boolean saying if they are depreciated or not), and value (default value)
+* "attributes" and "classes": This is an array of attributes or classes that get added to the component as a dropdown of available options. They consist of name (used only for attributes), description, depreciated (boolean saying if they are depreciated or not), and values (an array of string options, make sure you have the first one be "" if you don't have to fill this in)
+* "css-variables": This is an array of css variables that can be overwritten. They consist of name (used only for attributes), description, and depreciated (boolean saying if they are depreciated or not)

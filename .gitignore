@@ -11,6 +11,7 @@ site/array/componentPartial.txt
 site/_data/components.json
 site/_data/component-versions.json
 site/scripts/main.js
+site/scripts/main_fixed.js
 site/imported_json/component_versions/*.json
 site/imported_json/components/*.json
 screenshot/results/
