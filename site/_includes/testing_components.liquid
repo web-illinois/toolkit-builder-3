@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render 'scripts_styles_toolkit' %}
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+  <ilw-page class="ilw-font">
+    {% render 'header' %}
+    <main>
+      <h1>Testing Page</h1>
+      <div class="builder-section">
+      {{ content }}
+      </div>
+
+      {%- for component-version in component-versions %}
+          <h2>Component: {{ component-version.title }} - {{ component-version.version }} </h2>
+          {% liquid
+            echo component-version.tag | outputComponent: component-version
+          %}
+          <hr>
+      {% endfor -%}
+    </main>
+    {% render 'footer' %}
+  </ilw-page>
+</body>
+</html>
