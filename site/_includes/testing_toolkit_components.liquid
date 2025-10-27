@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render 'scripts_styles_toolkit' %}
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+  <ilw-page class="ilw-font">
+    {% render 'header' %}
+    <main>
+      <h1>{{ title }}</h1>
+      <div class="builder-section">
+      {{ content }}
+      </div>
+      {%- for component in components %}
+        <h2>Component: {{ component.title }} - {{ component.toolkit-version }} </h2>
+        <p>{{ component.description }}</p>
+        {%- for component-version in component-versions %}
+          {% if component-version.title == component.title and component-version.version == component.toolkit-version %}
+            {% liquid
+              echo component-version.tag | outputComponent: component-version
+            %}
+            <hr>
+          {% elsif component-version.title == component.title and component-version.builder-version == component.toolkit-version %}
+            {% liquid
+              echo component-version.tag | outputComponent: component-version
+            %}
+            <hr>
+          {% endif %}
+        {% endfor -%}
+      {% endfor -%}
+
+    </main>
+    {% render 'footer' %}
+  </ilw-page>
+</body>
+</html>
