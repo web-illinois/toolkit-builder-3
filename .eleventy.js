@@ -68,6 +68,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("outputAllComponents", function (name, components, component_versions) {
     let returnValue = '';
     components.forEach(component => {
+      console.log(component.tag);
       let component_version = component_versions.find((cv) => cv['tag'] == component['tag'] && cv['builder-version'] == component['toolkit-version']);
         if (component_version.attributes && component_version.attributes.find((attr) => attr.name === name)) {
           returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.tag, components, component_versions, 'update');
