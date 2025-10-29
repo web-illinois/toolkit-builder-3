@@ -70,11 +70,14 @@ module.exports = function (eleventyConfig) {
     components.forEach(component => {
       console.log(component.tag);
       let component_version = component_versions.find((cv) => cv['tag'] == component['tag'] && cv['builder-version'] == component['toolkit-version']);
-        if (component_version.attributes && component_version.attributes.find((attr) => attr.name === name)) {
-          returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.tag, components, component_versions, 'update');
-        } else if (component_version.classes && component_version.classes.find((cls) => cls.name === name)) {
-          returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.tag, components, component_versions, 'update-class');
-        }
+      if (!component_version) {
+        console.log('WARNING: ' + component.tag + ' has no component version');
+      }
+      if (component_version && component_version.attributes && component_version.attributes.find((attr) => attr.name === name)) {
+        returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.tag, components, component_versions, 'update');
+      } else if (component_version && component_version.classes && component_version.classes.find((cls) => cls.name === name)) {
+        returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.tag, components, component_versions, 'update-class');
+      }
     });
     return returnValue;
  });
