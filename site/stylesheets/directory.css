@@ -1,0 +1,78 @@
+    .ilw-directory-grid {
+        display: grid;
+        grid-template-columns: 410px 1fr;
+        grid-template-rows: 60px 1fr;
+        gap: 1rem;
+    }
+    .ilw-directory-grid ilw-content p {
+        margin-top: .2rem
+    }
+    .ilw-directory-grid ul {
+        padding-left: 0;
+    }
+    .ilw-directory-grid li {
+        list-style: none;
+        border-top: thin solid var(--il-storm-lighter-2);
+        padding-top: 14px;
+        margin-top: 14px;
+    }
+    .ilw-directory-gridoptions {
+        display: flex;
+        column-gap: 23px;
+    }
+   .ilw-directory-gridoptions ilw-filter-dropdownsimple {
+        width: min(40%, 300px);
+    }
+   .ilw-directory-grid ilw-filter-search {
+        display: block; 
+        padding: 0 1.25rem;
+    }
+    #ilw-directory-results {
+        width: 100%;
+    }
+    #ilw-directory-results table {
+        border-collapse: collapse;
+    }
+    #ilw-directory-results tr:nth-child(even) {
+        background: var(--il-storm-lighter-4);
+    }
+    #ilw-directory-results td, #ilw-directory-results th, #ilw-directory-results caption {
+       font: normal 400 1rem / 1.15rem var(--il-font-sans);
+       padding: 4px 10px;
+    }
+    #ilw-directory-results th {
+       font-weight: 700;
+    }
+    .ilw-directory-office-title {
+        font-weight: 700;
+    }
+    .ilw-directory-office-description {
+        margin-bottom: 1.2rem;
+    }
+    .ilw-filters button {
+        cursor: pointer;
+        padding: 2px 40px 2px 20px;
+        margin-right: 10px;
+        font: 500 1rem / 1.17rem var(--il-font-sans);
+        border-radius: 25px;
+        border: thin solid;
+        background: url(//cdn.brand.illinois.edu/icons/solid/blue/cancel.png) no-repeat scroll calc(100% - 10px) 0;
+        background-clip: padding-box;
+        background-size: contain;
+    }
+    .ilw-filters button:focus, .ilw-filters button:hover {
+        background-color: var(--il-blue);
+        background-image: url(//cdn.brand.illinois.edu/icons/solid/white/cancel.png);
+        color: white;
+    }
+    @media only screen and (max-width: 950px) {
+        .ilw-directory-grid {
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: 1fr;
+            grid-template-rows: 60px 60px auto 1fr;
+        }
+        .ilw-directory-gridoptions ilw-filter-dropdownsimple {
+            width: 150px;
+        }
+    }

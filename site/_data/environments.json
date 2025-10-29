@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Latest Beta",
+    "tag": "beta",
+    "baseurl": "//dev.toolkit.illinois.edu/latest/"
+  },
+  {
+    "title": "Production",
+    "tag": "production",
+    "baseurl": "//cdn.toolkit.illinois.edu/3/"
+  }
+]

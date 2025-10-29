@@ -1,10 +1,13 @@
 ---
+pagination:
+  data: environments
+  size: 1
+  alias: environment
+permalink: "demo/{{ environment.tag | slugify }}/body-pure.html"
 title: Sample Body Page
 layout: sample.liquid
-permalink: "demo/body-pure.html"
 classOptions: 'ilw-font'
 localFiles: false
-
 ---
 
 <ilw-breadcrumbs width="page"><a href="#">Home</a> <a href="#">Academics</a> <span>Graduate programs</span> </ilw-breadcrumbs>

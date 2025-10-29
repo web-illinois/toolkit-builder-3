@@ -1,41 +1,15 @@
 ---
+pagination:
+  data: environments
+  size: 1
+  alias: environment
+permalink: "themes/{{ environment.tag | slugify }}/index.html"
 title: Theme Information
-layout: page_dev.liquid
+layout: themes.liquid
 ---
 As of 2025, we have promoted the theme information as a first-class attribute no longer associated with a specific component. This will allow us to have a stnadardized list of themes and the colors will be specific to the theme, not the component. 
 
-This is using the development version of the toolkit, and will be promoted to production once the toolkit is deployed. 
-
-<ilw-content padding="20px" class="update">
-    <h2>Sample Heading For Color Groups</h2>
-    <h3>
-        <a href="#">Sample Link Heading</a>
-    </h3>
-    <p>This is some paragraph text. <a href="#">Sample link for link text</a>.</p>
-    <button class="ilw-button" id="theme-demo-btn">Control Button</button>
-</ilw-content>
-<ilw-spacer></ilw-spacer>
-<div style="max-width: 400px; margin: auto;">
-<ilw-card class="update">
-    <img src="https://picsum.photos/570/300" alt="" slot="image">
-<h3>Student Life</h3>
-<p>Animal sciences students extend their learning and career networks beyond the classroom through internships, judging teams, student organizations, undergraduate research projects with our faculty, as well as short- and long-term study abroad opportunities all over the world.</p>
-<div slot="footer"><a href="#" class="ilw-button">Learn More <span class="ilw-sr-only">About Student Life</span></a></div>
-</ilw-card>
-</div>
-<ilw-spacer></ilw-spacer>
-<ilw-call-to-action class="update"><ilw-icon slot="icon" icon="faq-line"></ilw-icon>
-<h2>Get started today</h2>
-<p>Enroll in a class after you are admitted as a non-degree student. Enroll in a class after you are admitted as
-a
-non-degree student. Enroll in a class after you are admitted as a non-degree student.</p>
-<ul class="ilw-buttons">
-<li><a href="#">Register <span class="ilw-sr-only">for classes</span></a></li>
-<li><a href="#">Contact us</a></li>
-</ul>
-</ilw-call-to-action>
-<ilw-spacer></ilw-spacer>
-
+This is built with the development version of the toolkit in mind, and will be promoted to production once the toolkit is deployed. 
 
 <div>
     <label for="theme-changer">Selected theme</label>
@@ -49,7 +23,26 @@ non-degree student. Enroll in a class after you are admitted as a non-degree stu
     </select>
 </div>
 
+<div>
+    <label for="theme-class-changer">Selected class theme</label>
+    <select id="theme-class-changer" onchange="changeClassTheme()">
+        <option value="">Default</option>
+        <option value="ilw-theme-white">White</option>
+        <option value="ilw-theme-blue-outline">Blue</option>
+        <option value="ilw-theme-blue-solid">Blue Solid</option>
+        <option value="ilw-theme-blue-inverse">Blue Inverse</option>
+        <option value="ilw-theme-orange-outline">Orange</option>
+        <option value="ilw-theme-orange-solid">Orange Solid</option>
+        <option value="ilw-theme-orange-inverse">Orange Inverse</option>
+    </select>
+</div>
+
 <style>
+ilw-content label {
+    font: 400 1.125rem / 1.667rem var(--il-font-sans);
+    margin: 1.2rem 1rem 1.2rem 0;
+    display: inline-block;
+}
 ilw-content select {
   margin: 0;
   border-radius: 5px;
@@ -63,10 +56,9 @@ ilw-content select:focus, ilw-content select:focus-visible {
     background-color: var(--il-storm-lighter-4);
     outline: 3px solid var(--il-altgeld);
   }
-
 ilw-content select:hover {
     background-color: var(--il-storm-lighter-4);
-  }
+}
 </style>
 
 <script>
@@ -75,5 +67,16 @@ ilw-content select:hover {
         document.querySelectorAll('.update').forEach(element => {
           element.setAttribute('theme', val);
         });
+    }
+
+    function changeClassTheme() {
+        let val = document.getElementById('theme-class-changer').value;
+        document.querySelectorAll('.update-class').forEach(element => {
+          element.classList.forEach(c => { 
+            if (c.startsWith('ilw-theme')) {
+                element.classList.remove(c); 
+            }
+            element.classList.add(val);
+        })});
     }
 </script>

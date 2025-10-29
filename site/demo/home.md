@@ -1,7 +1,11 @@
 ---
+pagination:
+  data: environments
+  size: 1
+  alias: environment
+permalink: "demo/{{ environment.tag | slugify }}/home.html"
 title: Sample Home Page
 layout: sample.liquid
-permalink: "demo/home.html"
 classOptions: 'ilw-font ilw-margin'
 localFiles: false
 ---

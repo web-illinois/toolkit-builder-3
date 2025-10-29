@@ -1,7 +1,11 @@
 ---
+pagination:
+  data: environments
+  size: 1
+  alias: environment
+permalink: "demo/{{ environment.tag | slugify }}/home-pure.html"
 title: Sample Home Page
 layout: sample.liquid
-permalink: "demo/home-pure.html"
 classOptions: 'ilw-font'
 localFiles: false
 ---
@@ -54,7 +58,7 @@ localFiles: false
         <div slot="footer"><a href="#" class="ilw-button">Browse Online Courses</a></div>
     </ilw-card>
 </ilw-columns>
-<ilw-content width="auto" theme="gray">
+<ilw-content width="auto" theme="gray" padding="10px 0 20px 0">
 <h2>Campus Facilities</h2>
 <ilw-tabs width="page" theme="gray">
 <div slot="tabs"><button role="tab" aria-controls="panel1">The Solis Energy Innovation Lab</button><button role="tab" aria-controls="panel2">The Evergreen Botanical Conservatory</button><button role="tab" aria-controls="panel3">The Whispering Pines Archive of Nature and Myth</button></div>

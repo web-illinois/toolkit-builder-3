@@ -1,7 +1,11 @@
 ---
+pagination:
+  data: environments
+  size: 1
+  alias: environment
+permalink: "demo/{{ environment.tag | slugify }}/body-illinois-mode.html"
 title: Sample Body Page
 layout: sample.liquid
-permalink: "demo/body-illinois-mode.html"
 classOptions: 'ilw-format ilw-margin'
 localFiles: false
 ---

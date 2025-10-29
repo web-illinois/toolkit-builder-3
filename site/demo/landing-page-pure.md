@@ -1,7 +1,11 @@
 ---
+pagination:
+  data: environments
+  size: 1
+  alias: environment
+permalink: "demo/{{ environment.tag | slugify }}/landing-page-pure.html"
 title: Sample Landing Page
 layout: sample.liquid
-permalink: "demo/landing-page-pure.html"
 classOptions: 'ilw-font'
 localFiles: false
 ---

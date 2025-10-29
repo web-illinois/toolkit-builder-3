@@ -1,7 +1,11 @@
 ---
+pagination:
+  data: environments
+  size: 1
+  alias: environment
+permalink: "demo/{{ environment.tag | slugify }}/home-illinois-mode.html"
 title: Sample Home Page with Illinois Mode
 layout: sample.liquid
-permalink: "demo/home-illinois-mode.html"
 classOptions: 'ilw-format ilw-margin'
 localFiles: false
 ---

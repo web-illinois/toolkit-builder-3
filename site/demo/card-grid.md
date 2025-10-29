@@ -1,7 +1,11 @@
 ---
+pagination:
+  data: environments
+  size: 1
+  alias: environment
+permalink: "demo/{{ environment.tag | slugify }}/card-grid.html"
 title: Sample Card Grid
 layout: sample.liquid
-permalink: "demo/card-grid.html"
 classOptions: 'ilw-font ilw-margin'
 localFiles: false
 

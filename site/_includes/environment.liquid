@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
-        <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Preconnect -->
     <link rel="dns-prefetch" href="//cdn.toolkit.illinois.edu">
@@ -12,18 +13,13 @@
     <!-- Illinois Toolkit -->
     <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
-    <link rel="stylesheet" href="//dev.toolkit.illinois.edu/latest/toolkit.css">
-
-    <script type="module" src="//dev.toolkit.illinois.edu/latest/toolkit.js"></script>
+    <link rel="stylesheet" href="{{ environment.baseurl }}toolkit.css">
+    <script type="module" src="{{ environment.baseurl }}toolkit.js"></script>
     <title>{{ title }}</title>
     <style>
-      code {
-          background: #e7e7f7;
-          font-size: 1.2rem;
-          overflow-wrap: break-word;
-      }
       ilw-page-title img {
          -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+         width: 100%;
       }
     </style>
 </head>
@@ -34,12 +30,12 @@
       {%- if title_background %}
         <ilw-page-title width="page" {% if title_background_color %}style="background: {{ title_background_color }}"{% endif %}>
           <img src="{{ title_background }}" alt="" slot="background">
-          <h1>{{ title }}</h1>
+          <h1>{{ title }} - {{ environment.title }}</h1>
         </ilw-page-title>
         <ilw-spacer></ilw-spacer>
       {%- else %}
         <ilw-content>
-          <h1>{{ title }}</h1>
+          <h1>{{ title }} - {{ environment.title }}</h1>
         </ilw-content>
       {%- endif %}
       {%- if lede %}
@@ -50,7 +46,6 @@
       <ilw-content>
         {{ content }}
       </ilw-content>
-      <ilw-spacer></ilw-spacer>
     </main>
     {% render 'footer' %}
   </ilw-page>
