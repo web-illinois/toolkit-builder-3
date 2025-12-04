@@ -12,8 +12,8 @@
     <!-- Illinois Toolkit -->
     <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
     <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
-    <link rel="stylesheet" href="{{ environment.baseurl }}toolkit.css">
-    <script type="module" src="{{ environment.baseurl }}toolkit.js"></script>
+    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/3/toolkit.css">
+    <script type="module" src="https://cdn.toolkit.illinois.edu/3/toolkit.js"></script>
     <title>{{ title }}</title>
     <style>
       code {
@@ -34,7 +34,15 @@
         <h1>{{ title }} {{ environment.title }}</h1>
         {{ content }}
       </ilw-content>
-      {{ "theme" | outputAllComponents: components, component-versions }}
+      <ilw-spacer></ilw-spacer>
+      <ilw-content class="update" padding="40px;">
+            <h2>Sample Heading For Color Groups</h2>
+            <h3>
+                <a href="#">Sample Link Heading</a>
+            </h3>
+            <p>This is some paragraph text. <a href="#">Sample link for link text</a>.</p>
+            <button class="ilw-button">Control Button</button>
+      </ilw-content>
       <ilw-spacer></ilw-spacer>
     </main>
     {% render 'footer' %}

@@ -279,7 +279,7 @@
     function createDirectory(offices, profileResults) {
         let accordion = document.createElement('ilw-accordion');
         accordion.setAttribute('buttons', 'true');
-        accordion.setAttribute('theme', 'orange');
+        accordion.setAttribute('accent', 'orange');
 
         let academic = document.createElement('div');
         let academicTitle = document.createElement('ilw-content');

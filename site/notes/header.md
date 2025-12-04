@@ -21,6 +21,10 @@ The menu is almost the same.
 
 If you are incorporating the header into the ilw-page component, then make sure you add the `header` slot to the `<ilw-header>` tag.
 
+### Special Note Concerning the Search Button
+
+We have recently moved from having the *search* text on the button to just the magnifying glass. If you do this, make sure you update your aria-label to give the search button a proper name. 
+
 ## Sample Header Information
 
 ```
@@ -35,7 +39,7 @@ If you are incorporating the header into the ilw-page component, then make sure 
   </nav>
   <form slot="search" method="get" action="/search.php" role="search">
     <input type="search" name="search" aria-labelledby="search-button">
-    <button id="search-button" type="submit">Search</button>
+    <button id="search-button" type="submit" aria-label="Submit Search"></button>
   </form>
   <ilw-header-menu slot="navigation">
     <ul>

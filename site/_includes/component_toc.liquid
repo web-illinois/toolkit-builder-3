@@ -90,8 +90,8 @@
           {% elsif component.development-version == '' %}
           N/A
           {% else %}
-          <a href="/component/{{ component.tag | slugify }}/{{ component.development-version | slugify }}/index.html">{{ component.development-version }}</a>
-          / <a href="/preview/{{ component.tag | slugify }}/{{ component.development-version | slugify }}/index.html">Preview</a>
+          <a href="/component/{{ component.tag | slugify }}/latest/index.html">{{ component.development-version }}</a>
+          / <a href="/preview/{{ component.tag | slugify }}/latest/index.html">Preview</a>
           {% endif %}
           </td>
           </tr>

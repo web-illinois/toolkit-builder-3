@@ -9,7 +9,7 @@ layout: themes.liquid
 ---
 As of 2025, we have promoted the theme information as a first-class attribute no longer associated with a specific component. This will allow us to have a stnadardized list of themes and the colors will be specific to the theme, not the component. 
 
-This is built with the development version of the toolkit in mind, and will be promoted to production once the toolkit is deployed. 
+This screen grabs all the components associated with the theme class and changes them all to a specific theme color. 
 
 <div>
     <label for="theme-changer">Selected theme</label>
@@ -76,7 +76,9 @@ ilw-content select:hover {
             if (c.startsWith('ilw-theme')) {
                 element.classList.remove(c); 
             }
-            element.classList.add(val);
+            if (val != '') {
+                element.classList.add(val);
+            }
         })});
     }
 </script>
