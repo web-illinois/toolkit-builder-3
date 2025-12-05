@@ -25,12 +25,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-    border-bottom: 1px solid var(--il-storm-lighter-3);
+    border-bottom: 1px solid var(--il-storm-80);
     background: linear-gradient(180deg, rgba(186, 186, 186, 0.00) 62.5%, rgba(126, 126, 126, 0.20) 100%), radial-gradient(50% 50% at 50% 50%, rgba(217, 217, 217, 0.00) 29%, rgba(160, 160, 160, 0.06) 82.5%);
-}
-
-.component-wrapper {
-    padding-bottom: 50px;
 }
 
 .component-wrapper > * {
@@ -39,10 +35,9 @@
 }
 
 #component-cards ilw-card {
-    --ilw-card--content-padding-bottom: 1rem;
+    --ilw-card--content-padding-bottom: 2rem;
     --ilw-card--font-size: 1rem;
-    --ilw-card--content-padding-top: 1.5rem;
-    --ilw-card--heading-color: --il-blue;
+    --ilw-card--clickable--content-padding-top: 1.5rem;
     --ilw-card--content-padding-right: 1.25rem;
     --ilw-card--content-padding-left: 1.25rem;
 }
@@ -65,7 +60,7 @@ ilw-card .buttons {
 }
 
 .home-hero-background {
-    background: var(--il-storm-lighter-4) url(../img/ascending.svg) repeat-x;
+    background: var(--il-storm-95) url(../img/ascending.svg) repeat-x;
     border-bottom: 8px solid var(--il-orange);
     display: block;
     position: absolute;
@@ -90,7 +85,7 @@ ilw-card .buttons {
 }
 
 .action-cards > div {
-    background: var(--il-storm-lighter-4);
+    background: var(--il-storm-95);
     left: 50%;
     margin-left: -50vw;
     margin-right: -50vw;

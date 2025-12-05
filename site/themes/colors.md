@@ -12,7 +12,7 @@ As of 2025, we have promoted the theme information as a first-class attribute no
 
 The theme information is in the colors.css file in https://github.com/web-illinois/toolkit-management/blob/main/global-css/src/colors.css. Below is a quick way to see how themes work in small case. We also have a <a href="/themes/production/index.html">theme page</a> that lists all the themed components and allows you to view them all at once. 
 
-<div>
+<div style="margin-top: 1.5rem; margin-bottom: 1rem;">
     <label for="theme-changer">Selected theme</label>
     <select id="theme-changer" onchange="changeTheme()">
         <option value="">Default</option>
