@@ -62,7 +62,7 @@
                         </h3>
                         {% else %}
                         <h3>
-                            <a href="/component/{{ component.tag | slugify }}/{{ component.production-version | default: component.development-version | slugify }}/index.html">
+                            <a href="/component/{{ component.tag | slugify }}/{{ component.toolkit-version | default: component.development-version | slugify }}/index.html">
                                 {{ component.title }}
                             </a>
                         </h3>

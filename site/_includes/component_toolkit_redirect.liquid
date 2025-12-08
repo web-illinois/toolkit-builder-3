@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<title>{{ component.title }}</title>
+<meta http-equiv="refresh" content="0; url=/component/{{ component.tag | slugify }}/{{ component.toolkit-version | default: component.development-version | slugify }}/index.html">
+</head>
+<body style="margin: 0;">
+</body>
+</html>

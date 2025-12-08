@@ -11,6 +11,8 @@ layout: component.liquid
 
 {{ component-version.description }}
 
+Toolkit Permalink: http://builder3.toolkit.illinois.edu/component/{{ component-version.tag }}/toolkit/index.html
+
 Full Version: {{ component-version.version }}
 
 Type: {{ component-version.type }}
