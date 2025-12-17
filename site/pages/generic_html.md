@@ -51,6 +51,7 @@ If you need a generic HTML template, feel free to use this:
             <ilw-footer slot="footer">
             <!-- Add footer details here -->
             </ilw-footer>
+         </ilw-page>
     </body>
 </html>
 ```
