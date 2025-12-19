@@ -71,6 +71,12 @@ If you want to hit a specific beta version of the toolkit, you can do so by repl
 
 **You should not use the beta version on a production system.** The development / beta versions are not stable and can be removed at any time. 
 
+## It's not working on my local machine!
+
+If you are trying to use the components on your local machine and it is not rendering properly, chances are you are running into a [Cross-Origin Resource Sharing (CORS) issue](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS). We have made the Content Security Policy as permissive as possible for the toolkit, but if you are pointing at a local version of a webpage, you may still encounter the problem. 
+
+To fix this, you can push your HTML page to a web server, or run a live server using a tool like Tomcat for Eclipse or Liveserver for Visual Studio Code. Please consult your IDE documentation for the best way forwards with this. 
+
 ## What next? 
 
 * <a href="/generic_html/index.html">Get a generic HTML template</a>
