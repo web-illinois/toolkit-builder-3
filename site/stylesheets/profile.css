@@ -1,0 +1,23 @@
+.profile-topics a {
+    display: inline-block;
+    padding: 0 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: thin solid;
+    background: #fff;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+ilw-profile .ilw-profile--icon {
+    align-items: center;
+}
+
+ilw-profile .ilw-profile--icon ilw-icon {
+    font-size: 30px;
+}
+
+ilw-profile p + ilw-accordion, ilw-profile ul + ilw-accordion {
+    display: block;
+    margin-top: 15px;
+}

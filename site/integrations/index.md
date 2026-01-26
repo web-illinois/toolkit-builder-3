@@ -16,5 +16,5 @@ We are building a few integration pages to show how to build components that int
 
 * <a href="/integration/{{ environment.tag }}/directory.html">Sample Directory page</a>: This is like the simple directory, but shows how you can split out your offices into different filters.
 
-
+* <a href="/integration/{{ environment.tag }}/profile.html">Sample Profile</a>: This allows you to enter in your directory code and NetID from the <a href="https://directory.wigg.illinois.edu">IT Partners Directory Application</a> and generates a profile page.
 
