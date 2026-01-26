@@ -47,17 +47,23 @@ document.addEventListener('DOMContentLoaded', function() {
         let left = document.getElementById('ilw-profile-left');
         appendLeft(left, 'email', data.email, `<a href="mailto:${data.email}">${data.email}</a>`);
         appendLeft(left, 'phone', data.phone, `<a href="tel:${data.phone}">${data.phoneFormatted}</a>`);
-        let address = data.addressLine1.trim();
-        if (data.addressLine2 != '') {
-            address += '<br>' + data.addressLine2;
+
+        let address = '';
+        if (data.building != '' && data.roomNumber != '') {
+            address = data.roomNumber + ' '  + data.building; 
         }
-        if (data.city != '') {
+        if (data.addressLine1 != '') {
+            address += address == '' ? data.addressLine1.trim() : '<br>' + data.addressLine1.trim();
+            if (data.addressLine2 != '') {
+                address += '<br>' + data.addressLine2;
+            }
             address += `<br>${data.city}, ${data.state} ${data.zip}`;
         }
         appendLeft(left, 'location', address, address);
         appendLeft(left, 'hours', data.hours, data.hours);
         appendLeft(left, 'document', data.cvUrl, `<a href="${data.cvUrl}">Download CV</a>`);
         appendLeft(left, 'research', data.expertsUrl, `<a href="${data.expertsUrl}">Illinois Experts Link</a>`);
+        appendLeft(left, 'linkedin', data.linkedInUrl, `<a href="${data.linkedInUrl}">LinkedIn Link</a>`);
 
         let alternateContactHtml = data.alternateContact;
         if (data.alternateEmail != '') {
