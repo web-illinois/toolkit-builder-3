@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.head.appendChild(metaTag);
         document.title = data.fullName + ' | Illinois';
         document.getElementById('ilw-profile-name').innerHTML = data.fullName;
-        document.getElementById('ilw-profile-title').innerHTML = `<p><em><strong>${data.primaryTitle}</strong>, ${data.primaryOffice}</em></p>`;
+        let pronouns = data.preferredPronouns == '' ? "" : " (" + data.preferredPronouns + ")";
+        document.getElementById('ilw-profile-title').innerHTML = `<p><em><strong>${data.primaryTitle}</strong>, ${data.primaryOffice}</em>${pronouns}</p>`;
         document.getElementById('ilw-profile-image').src = data.imageUrl;
         document.getElementById('ilw-profile-image').alt = data.imageAltText;
 
