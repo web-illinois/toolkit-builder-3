@@ -1,0 +1,202 @@
+ilw-filter, ilw-filter-search {
+    --ilw-filter--width: 225px;
+}
+
+.ilw-programfinder-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    row-gap: 24px;
+    column-gap: 49px;
+}
+.ilw-programfinder-grid > ilw-filter {
+    grid-row: 1 / span 2;
+}
+
+.ilw-programfinder-grid > ilw-filter h2 {
+    font-size: 1.5625rem;
+}
+
+.ilw-programfinder-grid ilw-content p {
+    margin-top: .0;
+}
+.ilw-programfinder-grid .ilw-program-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ilw-programfinder-grid .ilw-program-summary > ilw-content {
+    flex-grow: 1;
+}
+
+.ilw-programfinder-grid .ilw-program-summary > ilw-filter-dropdownsimple {
+    flex-grow: 0;
+    width: 150px;
+}
+
+.ilw-programfinder-grid #ilw-program-header {
+    font-size: 1.8125rem;
+    margin: 0;
+}
+
+.ilw-programfinder-grid ul {
+    padding: 0;
+    margin: 0;
+}
+.ilw-programfinder-grid ul li {
+    list-style: none;
+}
+
+.ilw-programfinder-grid ul.card > li {
+    border: 1px solid var(--il-storm);
+    border-top: 4px solid var(--il-blue);
+    margin-bottom: 35px;
+    padding: 25px 30px;
+    max-width: 826px;
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    row-gap: 20px;
+}
+
+.ilw-programfinder-grid ul.card > li.compact {
+    grid-template-columns: 150px 1fr;
+    row-gap: 10px;
+}
+
+.ilw-programfinder-grid ul.card > li.compact p, .ilw-programfinder-grid ul.card > li.compact li {
+    font-weight: bold;
+    padding-bottom: 0;
+}
+
+.ilw-programfinder-grid ul.card > li p.title {
+    grid-column: 1 / span 2;
+}
+
+.ilw-programfinder-grid ul.card > li.compact p.title {
+    margin-bottom: 0;
+}
+
+.ilw-programfinder-grid ul.card > li p.title a {
+    font-size: 1.3125rem;
+    font-weight: 700;
+    color: var(--il-blue);
+}
+
+.ilw-programfinder-grid ul.card > li p.title a:hover {
+    color: var(--il-altgeld);
+}
+
+.ilw-programfinder-grid ul.card > li div.credential-list p, .ilw-programfinder-grid ul.card > li div.credential-list li {
+    font-weight: 500;
+    line-height: 24px;
+}
+
+.ilw-programfinder-grid ul.card > li div.credential-list p.credential-title, .ilw-programfinder-grid ul.card > li div.credential-list p.department-title {
+    font-weight: 700;
+    color: var(--il-blue);
+    margin-bottom: 4px;
+}
+
+.ilw-programfinder-grid ul.card > li p.department-title {
+    margin-top: 20px;
+}
+
+.ilw-programfinder-grid ul.card > li.compact p.department-title {
+    margin-top: 0;
+}
+
+.ilw-programfinder-grid ul.card > li li {
+    color: var(--il-industrial);
+    padding-bottom: 15px;
+}
+
+.ilw-programfinder-grid ul.card > li .credential-list .credtype {
+    display: block;
+    line-height: .9rem;
+    color: var(--il-storm);
+    margin-top: 6px;
+}
+
+.ilw-programfinder-grid ul.card > li.compact .credential-list .credtype {
+    display: inline;
+}
+
+.ilw-programfinder-grid ul.card > li p.summary {
+    padding-right: 22px;
+}
+
+.ilw-programfinder-grid ul.card > li div.credential-list {
+    border-left: 2px dashed var(--il-storm-80);
+    padding: 0 30px 0 24px;
+}
+
+.ilw-programfinder-gridoptions {
+    display: flex;
+    column-gap: 23px;
+}
+.ilw-programfinder-gridoptions ilw-filter-dropdownsimple {
+    width: min(40%, 300px);
+}
+.ilw-programfinder-grid ilw-filter-search {
+    display: block; 
+    padding: 0 0 20px 0;
+}
+
+#ilw-programfinder-results {
+    width: 100%;
+}
+#ilw-program-results table {
+    border-collapse: collapse;
+}
+#ilw-program-results tr:nth-child(even) {
+    background: var(--il-storm-95);
+}
+#ilw-program-results td, #ilw-program-results th, #ilw-program-results caption {
+    padding: 4px 10px;
+}
+#ilw-program-results th {
+    font-weight: 700;
+}
+
+.ilw-filters button {
+    cursor: pointer;
+    padding: 2px 40px 2px 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font: 500 1rem / 1.17rem var(--il-font-sans);
+    border-radius: 25px;
+    border: thin solid;
+    background: url(//cdn.brand.illinois.edu/icons/solid/blue/cancel.png) no-repeat scroll calc(100% - 10px) 0;
+    background-clip: padding-box;
+    background-size: contain;
+}
+
+.ilw-filters button:hover {
+    background-color: var(--il-blue);
+    background-image: url(//cdn.brand.illinois.edu/icons/solid/white/cancel.png);
+    color: white;
+    text-decoration: underline;
+}
+
+.ilw-filters button:focus {
+    background-color: var(--ilw-color--focus--background);
+    background-image: url(//cdn.brand.illinois.edu/icons/solid/blue/cancel.png);
+    color: var(--ilw-color--focus--text);
+    outline: var(--ilw-color--focus--outline);
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 950px) {
+    .ilw-programfinder-grid {
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+    }
+    .ilw-programfinder-gridoptions ilw-filter-dropdownsimple {
+        width: 150px;
+    }
+
+    .ilw-programfinder-grid ul.card > li {
+        grid-template-columns: 1fr 230px;
+    }
+}

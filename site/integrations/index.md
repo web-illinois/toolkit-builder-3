@@ -18,3 +18,6 @@ We are building a few integration pages to show how to build components that int
 
 * <a href="/integration/{{ environment.tag }}/profile.html">Sample Profile</a>: This allows you to enter in your directory code and NetID from the <a href="https://directory.wigg.illinois.edu">IT Partners Directory Application</a> and generates a profile page.
 
+## Programs and Courses
+
+* <a href="/integration/{{ environment.tag }}/program_finder.html">Sample Program Finder</a>: This allows you to enter in your program finder code from the <a href="https://course.wigg.illinois.edu">IT Partners Program / Course Application</a> and generates a program finder.
