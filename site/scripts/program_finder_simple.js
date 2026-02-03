@@ -51,17 +51,11 @@ function remove(category, item) {
     if (category == 'searchquery') {
         filterJson.searchquery = '';
     } 
-    if (category == 'credential') {
-        filterJson.credential = filterJson.credential.split('[-]').filter((i) => i != item).join('[-]')
-    }
     if (category == 'degree') {
         filterJson.degree = filterJson.degree.split('[-]').filter((i) => i != item).join('[-]');
     }
     if (category == 'department') {
         filterJson.department = filterJson.department.split('[-]').filter((i) => i != item).join('[-]')
-    }
-    if (category == 'licensure') {
-        filterJson.licensure = filterJson.licensure.split('[-]').filter((i) => i != item).join('[-]')
     }
     if (category == 'format') {
         filterJson.format = filterJson.format.split('[-]').filter((i) => i != item).join('[-]')
@@ -92,69 +86,42 @@ function search(e) {
         searchQuery = encodeURIComponent(jsonFilters.searchquery ?? '');
         displayType = jsonFilters.displaytype ?? '';
         if (jsonFilters.degree && jsonFilters.degree != '') {
-            if (jsonFilters.credential && jsonFilters.credential != '') {
-                credentials = addQuerystring(credentials, 'xxxxx');
-            } else {
-                if (jsonFilters.degree.includes('Bachelor of Science')) {
-                    credentials = addQuerystring(credentials, 'BS');
-                }
-                if (jsonFilters.degree.includes('Undergraduate Minor')) {
-                    credentials = addQuerystring(credentials, 'Undergrad Minor');
-                }
-                if (jsonFilters.degree.includes('Master of Arts')) {
-                    credentials = addQuerystring(credentials, 'MA');
-                }
-                if (jsonFilters.degree.includes('Master of Science')) {
-                    credentials = addQuerystring(credentials, 'MS');
-                }
-                if (jsonFilters.degree.includes('Master of Education')) {
-                    credentials = addQuerystring(credentials, 'EdM');
-                }
-                if (jsonFilters.degree.includes('Doctor of Philosophy')) {
-                    credentials = addQuerystring(credentials, 'PhD');
-                }
-                if (jsonFilters.degree.includes('Doctor of Education')) {
-                    credentials = addQuerystring(credentials, 'EdD');
-                }
-                if (jsonFilters.degree.includes('Graduate Certificate')) {
-                    credentials = addQuerystring(credentials, 'Graduate Certificate');
-                }
-                if (jsonFilters.degree.includes('Endorsement')) {
-                    credentials = addQuerystring(credentials, 'Endorsement');
-                }
-                if (jsonFilters.degree.includes('Graduate Minor')) {
-                    credentials = addQuerystring(credentials, 'Graduate Minor');
-                }
-                if (jsonFilters.degree.includes('Non-Degree Option')) {
-                    credentials = addQuerystring(credentials, 'Specialty[-]MOOC Specialization Certificate');
-                }
+            if (jsonFilters.degree.includes('Bachelor of Science')) {
+                credentials = addQuerystring(credentials, 'BS');
             }
-        }
-        else if (jsonFilters.credential && jsonFilters.credential != '') {
-            if (jsonFilters.credential.includes('(and Minor)')) {
-                credentials = addQuerystring(credentials, 'BS[-]Undergrad Minor');
+            if (jsonFilters.degree.includes('Undergraduate Minor')) {
+                credentials = addQuerystring(credentials, 'Undergrad Minor');
             }
-            if (jsonFilters.credential.includes('Undergrad Certificate')) {
-                credentials = addQuerystring(credentials, 'Undergrad Certificate');
+            if (jsonFilters.degree.includes('Master of Arts')) {
+                credentials = addQuerystring(credentials, 'MA');
             }
-            if (jsonFilters.credential.includes('Master')) {
-                credentials = addQuerystring(credentials, 'EdM[-]MS[-]MA[-]Graduate Minor');
+            if (jsonFilters.degree.includes('Master of Science')) {
+                credentials = addQuerystring(credentials, 'MS');
             }
-            if (jsonFilters.credential.includes('Doctorate')) {
-                credentials = addQuerystring(credentials, 'EdD[-]PhD[-]Graduate Minor');
+            if (jsonFilters.degree.includes('Master of Education')) {
+                credentials = addQuerystring(credentials, 'EdM');
             }
-            if (jsonFilters.credential.includes('Graduate Certificate')) {
-                credentials = addQuerystring(credentials, 'Certificate of Specialization[-]Illinois Graduate Certificate[-]Graduate Certificate');
+            if (jsonFilters.degree.includes('Doctor of Philosophy')) {
+                credentials = addQuerystring(credentials, 'PhD');
             }
-            if (jsonFilters.credential.includes('Non-Degree Option')) {
-                credentials = addQuerystring(credentials, 'Specialty[-]Endorsement[-]MOOC Specialization Certificate');
+            if (jsonFilters.degree.includes('Doctor of Education')) {
+                credentials = addQuerystring(credentials, 'EdD');
+            }
+            if (jsonFilters.degree.includes('Graduate Certificate')) {
+                credentials = addQuerystring(credentials, 'Graduate Certificate');
+            }
+            if (jsonFilters.degree.includes('Endorsement')) {
+                credentials = addQuerystring(credentials, 'Endorsement');
+            }
+            if (jsonFilters.degree.includes('Graduate Minor')) {
+                credentials = addQuerystring(credentials, 'Graduate Minor');
+            }
+            if (jsonFilters.degree.includes('Non-Degree Option')) {
+                credentials = addQuerystring(credentials, 'Specialty[-]MOOC Specialization Certificate');
             }
         }
         if (jsonFilters.department && jsonFilters.department != '') {
             department = encodeURIComponent(jsonFilters.department);
-        }
-        if (jsonFilters.licensure && jsonFilters.licensure != '') {
-            tags = 'licensure';
         }
         if (jsonFilters.format && jsonFilters.format != '') {
             format = encodeURIComponent(jsonFilters.format);
@@ -195,7 +162,6 @@ function clearAndAddFilters(profileResults, jsonFilters) {
             filterSpan.setAttribute('onclick', `remove("searchquery", "searchquery")`);
             filterDiv.appendChild(filterSpan);
         }
-        addFilter(filterDiv, 'credential', jsonFilters.credential, 'checkboxessimple');
         addFilter(filterDiv, 'degree', jsonFilters.degree, 'checkboxessimple');
         addFilter(filterDiv, 'department', jsonFilters.department, 'checkboxessimple');
         addFilter(filterDiv, 'format', jsonFilters.format, 'checkboxessimple');

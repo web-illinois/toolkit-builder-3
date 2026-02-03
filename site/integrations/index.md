@@ -20,4 +20,6 @@ We are building a few integration pages to show how to build components that int
 
 ## Programs and Courses
 
-* <a href="/integration/{{ environment.tag }}/program_finder.html">Sample Program Finder</a>: This allows you to enter in your program finder code from the <a href="https://course.wigg.illinois.edu">IT Partners Program / Course Application</a> and generates a program finder.
+* <a href="/integration/{{ environment.tag }}/program_finder_simple.html">Sample Simple Program Finder</a>: This allows you to enter in your program finder code from the <a href="https://course.wigg.illinois.edu">IT Partners Program / Course Application</a> and generates a program finder.
+
+* <a href="/integration/{{ environment.tag }}/program_finder.html">Sample Program Finder</a>: This is like the simple program finder, but shows how you can customize to include specific tags and group by degree types.
