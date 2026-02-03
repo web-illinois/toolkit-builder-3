@@ -7,8 +7,6 @@ permalink: "integration/{{ environment.tag | slugify }}/profile.html"
 title: Integration - Profile
 layout: environment.liquid
 ---
-<link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-profile/1/ilw-profile.css">
-<script type="module" src="https://cdn.toolkit.illinois.edu/ilw-profile/1/ilw-profile.js"></script>
 <script src="/scripts/profile.js"></script>
 <link rel="stylesheet" href="/stylesheets/profile.css"></link>
 <div class="example">
