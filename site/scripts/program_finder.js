@@ -162,7 +162,7 @@ function search(e) {
             skills = encodeURIComponent(jsonFilters.interest);
         }
         if (jsonFilters.gradeband && jsonFilters.gradeband != '') {
-            skills = encodeURIComponent(jsonFilters.gradeband);
+            skills = skills == '' ? encodeURIComponent(jsonFilters.gradeband) : skills + encodeURIComponent('[-]') + encodeURIComponent(jsonFilters.gradeband);
         }
     }
 
