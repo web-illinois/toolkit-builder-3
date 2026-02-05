@@ -20,8 +20,8 @@ layout: environment.liquid
         <ilw-filter-search hideLabel="true" label="Search" placeholder="Search by keyword" name="searchquery" query></ilw-filter-search>
         <ilw-filter-checkboxessimple id="ilw-filter-credential" label="Credential Type" name="credential" allValues="Bachelor's (and Minor)[-]Undergrad Certificate[-]Master's[-]Doctorate[-]Graduate Certificate[-]Non-Degree Option" query compact></ilw-filter-checkboxessimple>
         <ilw-filter-checkboxessimple id="ilw-filter-degree" label="Specific Degree" name="degree" allValues="Bachelor of Science[-]Undergraduate Minor[-]Master of Arts[-]Master of Science[-]Master of Education[-]Doctor of Philosophy[-]Doctor of Education[-]Graduate Certificate[-]Endorsement[-]Graduate Minor[-]Non-Degree Option" query compact></ilw-filter-checkboxessimple>
-        <ilw-filter-checkboxessimple id="ilw-filter-licensure" toggles="true" label="Licensure" name="licensure" allValues="Licensure Only" query compact></ilw-filter-checkboxessimple>
         <ilw-filter-checkboxessimple id="ilw-filter-format" label="Format" name="format" allValues="Online[-]On-Campus[-]Hybrid" query compact></ilw-filter-checkboxessimple>
+        <ilw-filter-checkboxessimple id="ilw-filter-gradeband" label="Teaching Grade Range" name="gradeband" query compact></ilw-filter-checkboxessimple>
         <ilw-filter-checkboxessimple id="ilw-filter-interest" label="Interest Area" name="interest" query compact></ilw-filter-checkboxessimple>
         <ilw-filter-checkboxessimple id="ilw-filter-department" label="Department" name="department" query compact></ilw-filter-checkboxessimple>
     </ilw-filter>

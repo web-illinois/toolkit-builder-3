@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }).then(res => res.json()).then(data => {
         data.forEach(i => {
             if (i.Title == "Skill") {
-                document.getElementById('ilw-filter-interest').setAttribute('allvalues', i.List.join('[-]'));
+                const grades = i.List.filter((item) => item.indexOf('Grade') > -1);
+                const interests = i.List.filter((item) => item.indexOf('Grade') == -1);
+                document.getElementById('ilw-filter-gradeband').setAttribute('allvalues', grades.join('[-]'));
+                document.getElementById('ilw-filter-interest').setAttribute('allvalues', interests.join('[-]'));
             }
             else if (i.Title == "Department") {
                 document.getElementById('ilw-filter-department').setAttribute('allvalues', i.List.join('[-]'));
@@ -57,11 +60,11 @@ function remove(category, item) {
     if (category == 'degree') {
         filterJson.degree = filterJson.degree.split('[-]').filter((i) => i != item).join('[-]');
     }
+    if (category == 'gradeband') {
+        filterJson.gradeband = filterJson.gradeband.split('[-]').filter((i) => i != item).join('[-]');
+    }
     if (category == 'department') {
         filterJson.department = filterJson.department.split('[-]').filter((i) => i != item).join('[-]')
-    }
-    if (category == 'licensure') {
-        filterJson.licensure = filterJson.licensure.split('[-]').filter((i) => i != item).join('[-]')
     }
     if (category == 'format') {
         filterJson.format = filterJson.format.split('[-]').filter((i) => i != item).join('[-]')
@@ -85,7 +88,6 @@ function search(e) {
     let credentials = '';
     let department = '';
     let format = '';
-    let tags = '';
     let skills = '';
     let jsonFilters = e != null && e.detail != null ? e.detail.values : e != null ? JSON.parse(e.getAttribute('filters')) : null;
     if (jsonFilters != null) {
@@ -153,18 +155,18 @@ function search(e) {
         if (jsonFilters.department && jsonFilters.department != '') {
             department = encodeURIComponent(jsonFilters.department);
         }
-        if (jsonFilters.licensure && jsonFilters.licensure != '') {
-            tags = 'licensure';
-        }
         if (jsonFilters.format && jsonFilters.format != '') {
             format = encodeURIComponent(jsonFilters.format);
         }
         if (jsonFilters.interest && jsonFilters.interest != '') {
             skills = encodeURIComponent(jsonFilters.interest);
         }
+        if (jsonFilters.gradeband && jsonFilters.gradeband != '') {
+            skills = encodeURIComponent(jsonFilters.gradeband);
+        }
     }
 
-    var url = `https://courseapi.wigg.illinois.edu/api/ProgramSearch?source=${code}&q=${searchQuery}&credentials=${credentials}&departments=${department}&formats=${format}&tags=${tags}&skills=${skills}&skip=0&take=999`;
+    var url = `https://courseapi.wigg.illinois.edu/api/ProgramSearch?source=${code}&q=${searchQuery}&credentials=${credentials}&departments=${department}&formats=${format}&skills=${skills}&skip=0&take=999`;
     fetch(url, {
         method: 'GET',
         headers: {
