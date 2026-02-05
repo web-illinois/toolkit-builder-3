@@ -202,7 +202,7 @@ function clearAndAddFilters(profileResults, jsonFilters) {
         addFilter(filterDiv, 'department', jsonFilters.department, 'checkboxessimple');
         addFilter(filterDiv, 'format', jsonFilters.format, 'checkboxessimple');
         addFilter(filterDiv, 'interest', jsonFilters.interest, 'checkboxessimple');
-        addFilter(filterDiv, 'licensure', jsonFilters.licensure, 'checkboxessimple');
+        addFilter(filterDiv, 'gradeband', jsonFilters.gradeband, 'checkboxessimple');
         profileResults.appendChild(filterDiv);
     }
 }
