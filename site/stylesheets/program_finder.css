@@ -104,7 +104,7 @@ ilw-filter, ilw-filter-search {
     margin-top: 0;
 }
 
-.ilw-programfinder-grid ul.card > li li {
+.ilw-programfinder-grid ul.card > li li, .ilw-programfinder-grid ul.card p.depttype {
     color: var(--il-industrial);
     padding-bottom: 15px;
 }

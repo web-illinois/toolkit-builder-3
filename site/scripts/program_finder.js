@@ -346,6 +346,7 @@ function createCardView(parentNode, programs, count) {
             departmentTitle.classList = 'department-title';
             details.appendChild(departmentTitle);
             let departmentDetail = document.createElement('p');
+            departmentDetail.classList = 'depttype';
             departmentDetail.innerHTML = departmentDetailText;
             details.appendChild(departmentDetail);
         }
