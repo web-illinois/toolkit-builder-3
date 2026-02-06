@@ -44,6 +44,15 @@
 
 <body>
 <div class="renders">
+
+
+    <div style="width: 214px; height: 52px; overflow: clip; padding-left: 100px; padding-top: 75px;">
+        <ilw-tooltip theme="blue"><a href="javascript:void(0);" slot="trigger" class="hover">Hover over me</a>
+            <span slot="content">
+This is a simple tooltip example.
+</span>
+        </ilw-tooltip>
+    </div>
     <div style="width: 300px;">
         <ilw-award-list>
             <h2 slot="heading" id="awards-2024">2024 Awards</h2>
@@ -268,7 +277,7 @@
     </div>
     <div style="width: 700px; height: 400px; overflow: clip">
         <ilw-hero align="bottom" focus="right" shadow="true">
-            <img src="https://illinois.edu/assets/img/about/header_about.jpg" alt="" slot="background"/>
+            <img src="https://gradcdn.blob.core.windows.net/public/alma-square.jpg" alt="" slot="background"/>
             <div style="position: relative; top: -200px">
                 <h1 style="display: block">Innovation</h1>
                 <ul class="ilw-buttons">
@@ -421,7 +430,7 @@
         </ilw-tabs>
     </div>
     <div data-name="ilw-video-short" style="width: 320px; height: 400px; overflow: clip">
-        <ilw-video>
+        <ilw-video style="height:100%">
             <iframe
                     width="315"
                     height="565"
@@ -463,6 +472,25 @@
                 <span>M/C 708</span>
             </p>
         </ilw-profile-card>
+    </div>
+
+    <div style="width: 389px; height: 214px; overflow: clip">
+        <ilw-filter toggle register='["searchquery", "displaytype", "viewperpage"]'>
+            <h2 slot="heading">Filter by</h2>
+            <ilw-filter-checkboxessimple label="Academic Category" name="jobtypes" allValues="Faculty[-]Affiliate[-]Staff[-]Graduate Student[-]Emeritus" query compact></ilw-filter-checkboxessimple>
+            <ilw-filter-checkboxessimple label="Departments" name="offices" allValues="Curriculum & Instruction[-]Education Policy, Organization & Leadership[-]Educational Psychology[-]Special Education" query compact></ilw-filter-checkboxessimple>
+            <ilw-filter-checkboxessimple label="Research and Outreach Units" name="offices2" allValues="Bureau of Educational Research[-]Center for Culturally Responsive Evaluation and Assessment[-]Center for Education in Small Urban Communities[-]Early Childhood Collective[-]Forum on the Future of Public Education[-]Illinois New Teacher Collaborative[-]Office for Mathematics, Science, & Technology Education[-]Office of Community College Research and Leadership[-]Technology Innovation in Educational Research & Design[-]University Primary School" query compact></ilw-filter-checkboxessimple>
+            <ilw-filter-checkboxessimple label="Administrative Units" name="offices3" allValues="Office of Advancement[-]Marketing and Communications[-]Council on Teacher Education[-]Office of the Dean[-]Facilities[-]Finance[-]Human Resources[-]IT Partners at Education[-]Office of Graduate Programs[-]Office of International Programs[-]Office of Online Programs[-]Office of School and Community Experiences[-]Office of Undergraduate Programs" query compact></ilw-filter-checkboxessimple>
+        </ilw-filter>
+    </div>
+
+    <div style="width: 389px; height: 150px; overflow: clip">
+        <ilw-icon-panel theme="gray" style="width: 600px; position: relative; top: -25px">
+            <ilw-icon slot="icon" icon="resources"></ilw-icon>
+            <a href="#2" slot="link">Graduate College Handbook (PDF)</a>
+            <p>Complete details of academic policies and requirements pertaining to graduate students as well as administrative
+                policy for programs, units and staff.</p>
+        </ilw-icon-panel>
     </div>
 </div>
 </body>

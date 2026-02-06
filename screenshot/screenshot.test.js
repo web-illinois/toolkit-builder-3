@@ -23,6 +23,13 @@ test('take screenshot of element', async ({ page }) => {
             tag = (await it.evaluate(it => it.children[0].children[0].tagName)).toLowerCase();
         }
         console.log(tag);
+
+        let hover = await page.locator(`${tag} .hover`);
+
+        if (hover) {
+            await hover.hover();
+            await page.waitForTimeout(500);
+        }
         await it.screenshot({ path: `site/img/components/${tag}.png` });
     }
 });
