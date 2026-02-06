@@ -339,13 +339,16 @@ function createCardView(parentNode, programs, count) {
         credentialDetailsUl.classList = 'credential-list';
         credentialDetailsUl.innerHTML = createCredentialList(programs[i].CredentialsOnlineList, programs[i].CredentialsOnCampusList, programs[i].CredentialsHybridList);
         details.appendChild(credentialDetailsUl);
-        let departmentTitle = document.createElement('p');
-        departmentTitle.innerText = 'Department:';
-        departmentTitle.classList = 'department-title';
-        details.appendChild(departmentTitle);
-        let departmentDetail = document.createElement('p');
-        departmentDetail.innerHTML = createDepartment(programs[i].DepartmentList);
-        details.appendChild(departmentDetail);
+        let departmentDetailText = createDepartment(programs[i].DepartmentList);
+        if (departmentDetailText != '') {
+            let departmentTitle = document.createElement('p');
+            departmentTitle.innerText = 'Department:';
+            departmentTitle.classList = 'department-title';
+            details.appendChild(departmentTitle);
+            let departmentDetail = document.createElement('p');
+            departmentDetail.innerHTML = departmentDetailText;
+            details.appendChild(departmentDetail);
+        }
         li.appendChild(details);
         ul.appendChild(li);
     }
