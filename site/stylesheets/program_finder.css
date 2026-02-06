@@ -79,7 +79,6 @@ ilw-filter, ilw-filter-search {
 .ilw-programfinder-grid ul.card > li p.title a {
     font-size: 1.3125rem;
     font-weight: 700;
-    color: var(--il-blue);
 }
 
 .ilw-programfinder-grid ul.card > li p.title a:hover {
