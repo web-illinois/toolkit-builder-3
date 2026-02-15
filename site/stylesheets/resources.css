@@ -1,0 +1,143 @@
+ilw-filter, ilw-filter-search {
+    --ilw-filter--width: 285px;
+}
+
+.ilw-resource-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    row-gap: 24px;
+    column-gap: 49px;
+    margin: var(--ilw-content--main-margin, 0);
+    padding-top: 40px;
+    
+}
+.ilw-resource-grid > ilw-filter {
+    grid-row: 1 / span 2;
+}
+
+.ilw-resource-grid > ilw-filter h2 {
+    font-size: 1.5625rem;
+}
+
+.ilw-resource-grid ilw-content p {
+    margin-top: .0;
+}
+.ilw-resource-grid .ilw-resource-summary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ilw-resource-grid .ilw-resource-summary > ilw-content {
+    flex-grow: 1;
+}
+
+.ilw-resource-grid .ilw-resource-summary > ilw-filter-dropdownsimple {
+    flex-grow: 0;
+    width: 150px;
+}
+
+.ilw-resource-grid #ilw-resource-header {
+    font-size: 1.8125rem;
+    margin: 0;
+}
+
+.ilw-resource-grid ul {
+    padding: 0;
+    margin: 0;
+}
+.ilw-resource-grid ul li {
+    list-style: none;
+}
+
+.ilw-resource-grid ul.card > li {
+    border: 1px solid var(--il-storm);
+    border-top: 4px solid var(--il-blue);
+    margin-bottom: 35px;
+    padding: 25px 30px;
+    max-width: 826px;
+    display: grid;
+    grid-template-columns: 1fr 330px;
+    row-gap: 20px;
+}
+
+.ilw-resource-grid ul.card > li p.title {
+    grid-column: 1 / span 2;
+}
+
+.ilw-resource-grid ul.card > li.compact p.title {
+    margin-bottom: 0;
+}
+
+.ilw-resource-grid ul.card > li p.title a {
+    font-size: 1.3125rem;
+    font-weight: 700;
+}
+
+.ilw-resource-grid ul.card > li p.title a:hover {
+    color: var(--il-altgeld);
+}
+
+.ilw-resource-grid ul.card > li p.tags {
+    margin-left: 20px;
+}
+
+.ilw-resource-gridoptions {
+    display: flex;
+    column-gap: 23px;
+}
+.ilw-resource-gridoptions ilw-filter-dropdownsimple {
+    width: min(40%, 300px);
+}
+.ilw-resource-grid ilw-filter-search {
+    display: block; 
+    padding: 0 0 20px 0;
+}
+
+#ilw-resource-results {
+    width: 100%;
+}
+
+
+.ilw-filters button {
+    cursor: pointer;
+    padding: 2px 40px 2px 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font: 500 1rem / 1.17rem var(--il-font-sans);
+    border-radius: 25px;
+    border: thin solid;
+    background: url(//cdn.brand.illinois.edu/icons/solid/blue/cancel.png) no-repeat scroll calc(100% - 10px) 0;
+    background-clip: padding-box;
+    background-size: contain;
+}
+
+.ilw-filters button:hover {
+    background-color: var(--il-blue);
+    background-image: url(//cdn.brand.illinois.edu/icons/solid/white/cancel.png);
+    color: white;
+    text-decoration: underline;
+}
+
+.ilw-filters button:focus {
+    background-color: var(--ilw-color--focus--background);
+    background-image: url(//cdn.brand.illinois.edu/icons/solid/blue/cancel.png);
+    color: var(--ilw-color--focus--text);
+    outline: var(--ilw-color--focus--outline);
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 950px) {
+    .ilw-resource-grid {
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1fr;
+    }
+    .ilw-resource-gridoptions ilw-filter-dropdownsimple {
+        width: 150px;
+    }
+
+    .ilw-resource-grid ul.card > li {
+        grid-template-columns: 1fr 230px;
+    }
+}
