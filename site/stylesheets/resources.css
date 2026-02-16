@@ -1,16 +1,13 @@
 ilw-filter, ilw-filter-search {
     --ilw-filter--width: 285px;
 }
-
 .ilw-resource-grid {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
     row-gap: 24px;
     column-gap: 49px;
-    margin: var(--ilw-content--main-margin, 0);
     padding-top: 40px;
-    
 }
 .ilw-resource-grid > ilw-filter {
     grid-row: 1 / span 2;
