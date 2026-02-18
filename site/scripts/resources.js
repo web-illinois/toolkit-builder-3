@@ -76,6 +76,7 @@ function search(e) {
     let tag3 = '';
     let tag4 = '';
     let department = '';
+    let audience = '';
     let topic = '';
     let jsonFilters = e != null && e.detail != null ? e.detail.values : e != null ? JSON.parse(e.getAttribute('filters')) : null;
     if (jsonFilters != null) {
@@ -95,11 +96,14 @@ function search(e) {
         if (jsonFilters.department && jsonFilters.department != '') {
             department = encodeURIComponent(jsonFilters.department);
         }
+        if (jsonFilters.audience && jsonFilters.audience != '') {
+            audience = encodeURIComponent(jsonFilters.audience);
+        }
         if (jsonFilters.topic && jsonFilters.topic != '') {
             topic = encodeURIComponent(jsonFilters.topic);
         }
     }
-    let url = `https://resourceapi.wigg.illinois.edu/api/SearchResources?take=1000&source=${code}&q=${searchQuery}&tag1=${tag1}&tag2=${tag2}&tag3=${tag3}&tag4=${tag4}&topic=${topic}&department=${department}`;
+    let url = `https://resourceapi.wigg.illinois.edu/api/SearchResources?take=1000&source=${code}&q=${searchQuery}&tag1=${tag1}&tag2=${tag2}&tag3=${tag3}&tag4=${tag4}&topic=${topic}&audience=${audience}&department=${department}`;
     fetch(url, {
         method: 'GET',
         headers: {
@@ -136,6 +140,7 @@ function createCardView(parentNode, resources, count) {
         addTagItem(tagParent, 'tag3', resources[i]);
         addTagItem(tagParent, 'tag4', resources[i]);
         addTagItem(tagParent, 'topic', resources[i]);
+        addTagItem(tagParent, 'audience', resources[i]);
         addTagItem(tagParent, 'department', resources[i]);
 
         if (tagParent.childNodes.length > 0) {
@@ -193,6 +198,10 @@ function clearAndAddFilters(profileResults, jsonFilters) {
         }
         addFilter(filterDiv, 'tag1', jsonFilters.tag1);
         addFilter(filterDiv, 'tag2', jsonFilters.tag2);
+        addFilter(filterDiv, 'tag3', jsonFilters.tag3);
+        addFilter(filterDiv, 'tag4', jsonFilters.tag4);
+        addFilter(filterDiv, 'department', jsonFilters.department);
+        addFilter(filterDiv, 'audience', jsonFilters.audience);
         addFilter(filterDiv, 'topic', jsonFilters.topic);
         profileResults.appendChild(filterDiv);
     }
@@ -211,6 +220,18 @@ function remove(category, item) {
     if (category == 'tag2') {
         filterJson.tag2 = item == '' ? '' : filterJson.tag2.split('[-]').filter((i) => i != item).join('[-]');
     }
+    if (category == 'tag3') {
+        filterJson.tag3 = item == '' ? '' : filterJson.tag3.split('[-]').filter((i) => i != item).join('[-]');
+    }
+    if (category == 'tag4') {
+        filterJson.tag4 = item == '' ? '' : filterJson.tag4.split('[-]').filter((i) => i != item).join('[-]');
+    }
+    if (category == 'audience') {
+        filterJson.audience = item == '' ? '' : filterJson.audience.split('[-]').filter((i) => i != item).join('[-]');
+    }
+    if (category == 'department') {
+        filterJson.department = item == '' ? '' : filterJson.department.split('[-]').filter((i) => i != item).join('[-]');
+    }
     if (category == 'topic') {
         filterJson.topic = item == '' ? '' : filterJson.topic.split('[-]').filter((i) => i != item).join('[-]');
     }
@@ -224,6 +245,14 @@ function getTagInformation(item, tag) {
         array.push(...item.taglist); 
     if (tag == 'tag2')
         array.push(...item.tag2list); 
+    if (tag == 'tag3')
+        array.push(...item.tag3list); 
+    if (tag == 'tag4')
+        array.push(...item.tag4list); 
+    if (tag == 'audience')
+        array.push(...item.audiencelist); 
+    if (tag == 'department')
+        array.push(...item.departmentlist); 
     if (tag == 'topic')
         array.push(...item.topiclist); 
     return array.join(', ');
