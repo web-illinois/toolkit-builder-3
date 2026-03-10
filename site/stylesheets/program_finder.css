@@ -59,7 +59,7 @@ ilw-filter, ilw-filter-search {
 }
 
 .ilw-programfinder-grid ul.card > li.compact {
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 150px 1fr 200px;
     row-gap: 10px;
 }
 
@@ -72,8 +72,35 @@ ilw-filter, ilw-filter-search {
     grid-column: 1 / span 2;
 }
 
+.ilw-programfinder-grid ul.card > li p.title.partial {
+    grid-column: 1 / span 1;
+}
+
+.ilw-programfinder-grid ul.card > li div.pill {
+    margin-left: 24px;
+    padding: 4px 14px;
+    background: var(--il-storm-95);
+    color: var(--il-blue);
+    border-radius: 50px;
+    width: fit-content;
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
 .ilw-programfinder-grid ul.card > li.compact p.title {
     margin-bottom: 0;
+    grid-column: 1 / span 3;
+}
+
+.ilw-programfinder-grid ul.card > li.compact p.title.partial {
+    grid-column: 1 / span 2;
+}
+
+.ilw-programfinder-grid ul.card > li.compact ul.credential-list, .ilw-programfinder-grid ul.card > li.compact p.depttype {
+    grid-column: 2 / span 2;
 }
 
 .ilw-programfinder-grid ul.card > li p.title a {
@@ -197,5 +224,29 @@ ilw-filter, ilw-filter-search {
 
     .ilw-programfinder-grid ul.card > li {
         grid-template-columns: 1fr 230px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .ilw-programfinder-grid ul.card > li {
+        grid-template-columns: 1fr;
+    }
+
+    .ilw-programfinder-grid ul.card > li p.title, .ilw-programfinder-grid ul.card > li div.pill, .ilw-programfinder-grid ul.card > li div.credential-list {
+        grid-column: 1 / span 2;
+    }
+
+    .ilw-programfinder-grid ul.card > li div.credential-list {
+        border-top: 2px dashed var(--il-storm-80);
+        border-left: none;
+        padding: 24px 30px 0 0;
+    }
+
+    .ilw-programfinder-grid ul.card > li div.pill {
+        margin-left: 0;
+    }
+
+    .ilw-programfinder-grid ul.card > li.compact p.title.partial, .ilw-programfinder-grid ul.card > li.compact div.pill {
+        grid-column: 1 / span 3;
     }
 }

@@ -223,6 +223,24 @@ function addFilter(filterDiv, category, filterString, queryType) {
     }
 }
 
+function createTitleAndLicensurePill(titleText, url, tagList, parentNode) {
+    let title = document.createElement('p');
+    title.innerHTML = `<a href="${url}">${titleText}</a>`;
+    title.classList = 'title';
+
+    if (tagList.includes('licensure')) {
+        let pill = document.createElement('div');
+        pill.className = 'pill';
+        pill.innerText = 'Licensure Eligible';
+        title.classList.add('partial');
+        parentNode.appendChild(title);
+        parentNode.appendChild(pill);
+    } else {
+        parentNode.appendChild(title);
+    }
+
+}
+
 function createDepartment(departmentList) {
     return departmentList.join(", ");
 }
@@ -321,10 +339,7 @@ function createCardView(parentNode, programs, count) {
     ul.classList = 'card';
     for (let i = 0; i < programs.length; i++) {
         let li = document.createElement('li');
-        let title = document.createElement('p');
-        title.innerHTML = `<a href="${programs[i].Url}">${programs[i].Title}</a>`;
-        title.classList = 'title';
-        li.appendChild(title);
+        createTitleAndLicensurePill(programs[i].Title, programs[i].Url, programs[i].TagList, li);
         let summary = document.createElement('p');
         summary.innerHTML = programs[i].SummaryText;
         summary.classList = 'summary';
@@ -364,10 +379,7 @@ function createCompactView(parentNode, programs, count) {
     for (let i = 0; i < programs.length; i++) {
         let li = document.createElement('li');
         li.classList = 'compact';
-        let title = document.createElement('p');
-        title.innerHTML = `<a href="${programs[i].Url}">${programs[i].Title}</a>`;
-        title.classList = 'title';
-        li.appendChild(title);
+        createTitleAndLicensurePill(programs[i].Title, programs[i].Url, programs[i].TagList, li);
         let credentialTitle = document.createElement('p');
         credentialTitle.innerText = 'Credentials:';
         credentialTitle.classList = 'credential-title';
@@ -381,6 +393,7 @@ function createCompactView(parentNode, programs, count) {
         departmentTitle.classList = 'department-title';
         li.appendChild(departmentTitle);
         let departmentDetail = document.createElement('p');
+        departmentDetail.classList = 'depttype';
         departmentDetail.innerHTML = createDepartment(programs[i].DepartmentList);
         li.appendChild(departmentDetail);
         ul.appendChild(li);
