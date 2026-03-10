@@ -89,6 +89,7 @@ ilw-filter, ilw-filter-search {
     line-height: 1.5rem;
     display: flex;
     align-items: center;
+    justify-self: end;
 }
 
 .ilw-programfinder-grid ul.card > li.compact p.title {
@@ -245,6 +246,7 @@ ilw-filter, ilw-filter-search {
 
     .ilw-programfinder-grid ul.card > li div.pill {
         margin-left: 0;
+        justify-self: initial;
     }
 
     .ilw-programfinder-grid ul.card > li.compact p.title.partial, .ilw-programfinder-grid ul.card > li.compact div.pill {
