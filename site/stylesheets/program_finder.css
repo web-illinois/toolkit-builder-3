@@ -24,6 +24,7 @@ ilw-filter, ilw-filter-search {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .ilw-programfinder-grid .ilw-program-summary > ilw-content {
     flex-grow: 1;
