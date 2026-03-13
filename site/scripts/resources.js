@@ -1,5 +1,4 @@
 // start section where we are choosing the code
-
     function save() {
         let url = new URL(window.location.href);
         const codeInput = document.getElementById('code');
@@ -16,12 +15,17 @@
         }
         return code;
     }
+// end section where we are choosing the code - swap with below to hardocde the source code
 
-// end section where we are choosing the code
+//    function getCode() {
+//        return '';
+//    }
 
 addEventListener("DOMContentLoaded", () => {
+    // remove this if code is hardcoded
     const codeButton = document.getElementById('code-submit');
     codeButton.addEventListener('click', function() { save(); });
+    // end remove section
     let code = getCode();
     if (code == '') { document.getElementsByClassName('ilw-resource-grid')[0].style.display = 'none'; return; }
 
