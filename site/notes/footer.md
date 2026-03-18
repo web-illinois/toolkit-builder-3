@@ -9,7 +9,7 @@ Unlike many components, the header and footer will be handled by your content ma
 - [Footer Builder Page](/component/ilw-footer/1-0/index.html) shows examples.
 - See [web-illinois/ilw-footer](https://github.com/web-illinois/ilw-footer) for technical information about the footer. 
 
-## Updating from campus header to v3 header
+## Updating from campus footer to v3 footer
 
 The footer is basically the same as the campus version as far as the interface goes. You just need to change `<il-footer>` to `<ilw-footer>` and `</il-footer>` to `<\ilw-footer>`. All the slots are the same. 
 
