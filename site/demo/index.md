@@ -17,7 +17,7 @@ Note that all pages will open in a new window.
 
 ## Using the 'ilw-font' variant (preferred)
 
-This is used if you can ensure that all of your content can be enclosed in an *ilw-content* tag and you want to manage the left/right margins through components. This will change your font to the Illinois-preferred fonts but leave everything else as normal. This is the preferred option. Using this option, you will control your content using `width="page"` or just manually control the width of your content. 
+This is used if you can ensure that all of your content can be enclosed in an *ilw-content* tag and you want to manage the left/right margins through components. This will change your font to the Illinois-preferred fonts but leave everything else as normal. This is the preferred option. Using this option, you will control your content using `width="auto"` or `width="page"`, or just manually control the width of your content. 
 
 * <a href="/demo/{{ environment.tag }}/home-pure.html" target="_blank">Sample Home Page</a>: A sample home page using the components. 
 * <a href="/demo/{{ environment.tag }}/landing-page-pure.html" target="_blank">Sample Landing Page</a>: A landing or top level page using the components.
@@ -26,7 +26,7 @@ This is used if you can ensure that all of your content can be enclosed in an *i
 
 ## Using the 'ilw-font ilw-margin' variant (second preference)
 
-This is used if you can ensure that all of your content can be enclosed in an *ilw-content* tag and you want the page itself to handle left/right margins. This will change your font to the Illinois-preferred fonts but leave everything else as normal. This is the preferred option. Using this option, you will control your content using `width="auto"` or `width="full"`. **Note that you may get a horizontal scrollbar by implementing this version.**
+This is used if you can ensure that all of your content can be enclosed in an *ilw-content* tag and you want the page itself to handle left/right margins. This will change your font to the Illinois-preferred fonts but leave everything else as normal. Using this option, you will control your content using `width="auto"` or `width="full"`. **Note that you may get a horizontal scrollbar by implementing this version.** To fix this on a global scale, add `body { overflow-x: hidden; }` to your CSS, but this wiill also prevent all horizontal scrolling. 
 
 * <a href="/demo/{{ environment.tag }}/home.html" target="_blank">Sample Home Page</a>: A sample home page using the components. 
 * <a href="/demo/{{ environment.tag }}/landing-page.html" target="_blank">Sample Landing Page</a>: A landing or top level page using the components.
