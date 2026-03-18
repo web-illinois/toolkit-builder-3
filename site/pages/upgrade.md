@@ -46,35 +46,35 @@ Refer to the documentation of each component to see what needs to be changed wit
 
 | Version 2 Component  | Version 3 Component   |
 | ---   | ---   |
-| il-accordion         | ilw-accordion         |
-| il-accordion-panel   | ilw-accordion-panel   |
-| il-back-to-top       | ilw-back-to-top       |
+| il-accordion         | [ilw-accordion](/component/ilw-accordion/toolkit/index.html)         |
+| il-accordion-panel   | [ilw-accordion-panel](/component/ilw-accordion-panel/toolkit/index.html)  |
+| il-back-to-top       | [ilw-back-to-top](/component/ilw-back-to-top/toolkit/index.html)     |
 | il-breadcrumbs-page  | N/A <sup><a class="sub" href="#1">[1]</a> </sup>                 |
-| il-breadcrumbs       | ilw-breadcrumbs       |
-| il-button class      | ilw-button class      |
-| il-call-to-action    | ilw-call-to-action    |
-| il-card              | ilw-card              |
+| il-breadcrumbs       | [ilw-breadcrumbs](/component/ilw-breadcrumbs/toolkit/index.html) |
+| il-button class      | [ilw-button](/component/ilw-global-button-anchor/toolkit/index.html) class                |
+| il-call-to-action    | [ilw-call-to-action](/component/ilw-call-to-action/toolkit/index.html)  |
+| il-card              | [ilw-card](/component/ilw-card/toolkit/index.html)  |
 | il-clickable-card    | ilw-card with clickable attribute |
-| il-footer            | ilw-footer    |
-| il-formatted class   | ilw-page <sup><a class="sub" href="#4">[4]</a></sup>  |
+| il-footer            | [ilw-footer](/component/ilw-footer/toolkit/index.html)    |
+| il-formatted class   | [ilw-page](/component/ilw-page/toolkit/index.html) <sup><a class="sub" href="#4">[4]</a></sup>  |
 | il-gallery-detail    | N/A <sup><a class="sub" href="#3">[3]</a></sup>                  |
 | il-gallery           | N/A <sup><a class="sub" href="#3">[3]</a></sup>                  |
-| il-header            | ilw-header            |
-| il-hero              | ilw-hero              |
-| il-icon              | ilw-icon              |
-| il-image-feature     | ilw-columns / ilw-image-cover class   |
-| il-introduction      | ilw-content with introduction mode    |
+| il-header            | [ilw-header](/component/ilw-header/toolkit/index.html)            |
+| il-hero              | [ilw-hero](/component/ilw-hero/toolkit/index.html)           |
+| il-icon              | [ilw-icon](/component/ilw-icon/toolkit/index.html)             |
+| il-image-feature     | [ilw-columns](/component/ilw-columns/toolkit/index.html) / ilw-image-cover class   |
+| il-introduction      | [ilw-content](/component/ilw-content/toolkit/index.html) with introduction mode    |
 | il-lede              | ilw-content with lede mode     |
-| il-page-title        | ilw-page-title        |
-| il-pagination        | ilw-pagination        |
-| il-profile-card      | ilw-card              |
-| il-profile           | ilw-profile           |
-| il-quote             | ilw-quote             |
-| il-section-nav       | ilw-section-nav       |
-| il-statistic         | ilw-statistic         |
-| il-vertical-tab      | ilw-tabs              |
+| il-page-title        | [ilw-page-title](/component/ilw-page-title/toolkit/index.html)        |
+| il-pagination        | [ilw-pagination](/component/ilw-pagination/toolkit/index.html)       |
+| il-profile-card      | [ilw-profile-card](/component/ilw-profile-card/toolkit/index.html)              |
+| il-profile           | [ilw-profile](/component/ilw-profile/toolkit/index.html)          |
+| il-quote             | [ilw-quote](/component/ilw-quote/toolkit/index.html)            |
+| il-section-nav       | [ilw-section-nav](/component/ilw-section-nav/toolkit/index.html)       |
+| il-statistic         | [ilw-statistic](/component/ilw-statistic/toolkit/index.html)         |
+| il-vertical-tab      | [ilw-tabs](/component/ilw-tabs/toolkit/index.html)              |
 | il-video-feature     | ilw-columns / ilw-video <sup><a class="sub" href="#2">[2]</a></sup>  |
-| il-video             | ilw-video             |
+| il-video             | [ilw-video](/component/ilw-video/toolkit/index.html)             |
 
 1. <a name="1"></a>The il-breadcrumbs-page was used by the il-breadcrumbs. The new component doesn't use a child component. 
 2. <a name="2"></a>The il-image-feature and il-video-feature components have been deprecated. You can build them by using the ilw-columns component to create columns, and then fill one of the columns with an image with the ilw-image-cover class, a video, or another component.  
