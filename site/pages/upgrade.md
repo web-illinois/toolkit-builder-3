@@ -77,6 +77,6 @@ Refer to the documentation of each component to see what needs to be changed wit
 | il-video             | ilw-video             |
 
 1. <a name="1"></a>The il-breadcrumbs-page was used by the il-breadcrumbs. The new component doesn't use a child component. 
-2. <a name="2"></a>The il-image-feature and il-video-feature components have been depreciated. You can build them by using the ilw-columns component to create columns, and then fill one of the columns with an image with the ilw-image-cover class, a video, or another component.  
-3. <a name="3"></a>The il-gallery and il-gallery-detail components have been depreciated. 
-4. <a name="4"></a>The il-formatted class has been depreciated. Instead, use the ilw-page with one of the modes, based on your needs. 
+2. <a name="2"></a>The il-image-feature and il-video-feature components have been deprecated. You can build them by using the ilw-columns component to create columns, and then fill one of the columns with an image with the ilw-image-cover class, a video, or another component.  
+3. <a name="3"></a>The il-gallery and il-gallery-detail components have been deprecated. 
+4. <a name="4"></a>The il-formatted class has been deprecated. Instead, use the ilw-page with one of the modes, based on your needs. 
