@@ -20,6 +20,7 @@ The menu is almost the same.
 * Change `<il-nav>` to `<ilw-header-menu>` and `<\il-nav>` to `<\ilw-header-menu>`
 * Change `<il-nav-section>` and `<il-nav-section-with-link>` to `<ilw-header-menu-section>`. 
 * If there is a link in the menu along with the dropdown, then you need to add the `linked` attribute and assign the link to the `link` slot. Otherwise, assign the label to the `label` slot.
+* Remove any references to `<il-nav-link>` -- these are just simple anchor tags and are formatted correctly via the header menu. 
 
 If you are incorporating the header into the ilw-page component, then make sure you add the `header` slot to the `<ilw-header>` tag.
 
