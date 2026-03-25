@@ -28,3 +28,7 @@ We are building a few integration pages to show how to build components that int
 
 * <a href="/integration/{{ environment.tag }}/resources_simple.html">Sample Simple Resource List</a>: This allows you to enter in your resource code from the <a href="https://resource.wigg.illinois.edu">IT Partners Resource Application</a> and generates a list of resources.
 
+* <a href="/integration/{{ environment.tag }}/people_simple.html">Sample People List</a>: This allows you to enter in your resource code from the <a href="https://resource.wigg.illinois.edu">IT Partners Resource Application</a> and generates a list of people.
+
+* <a href="/integration/{{ environment.tag }}/people_nofilter.html">Sample People List Without Filters</a>: This allows you to enter in your resource code from the <a href="https://resource.wigg.illinois.edu">IT Partners Resource Application</a> and generates a list of people without filters. This code is a little bit easier to modify.
+

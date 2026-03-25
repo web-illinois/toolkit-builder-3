@@ -9,6 +9,7 @@
     <main>
       <div class="builder-section">
       {{ content }}
+      <p>Toolkit version Permalink: <a href="/component/{{ component.tag | slugify }}/toolkit/index.html">https://builder3.toolkit.illinois.edu/component/{{ component.tag | slugify }}/toolkit/index.html</a></p>
       </div>
       <div class="builder-section">
       <h2>Production Versions</h2>
@@ -23,11 +24,12 @@
       </div>
       <div class="builder-section">
       <h2>Development Versions</h2>
+      <p>Only use this if directed by the owner of the component -- these may be out-of-date or not available.</p>
       <ul>
       {%- for component-version in component-versions %}
         {% if component-version.tag == component.tag and component-version.production == false %}
           <li><a href="/component/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/index.html">
-          {{ component-version.builder-version }} (full version: {{ component-version.version }})</a></li>
+          Development Version</a></li>
         {% endif %}
       {% endfor -%}
       </ul>

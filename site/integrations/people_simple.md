@@ -3,16 +3,16 @@ pagination:
   data: environments
   size: 1
   alias: environment
-permalink: "integration/{{ environment.tag | slugify }}/resources_simple.html"
-title: Integration - Resource Finder
+permalink: "integration/{{ environment.tag | slugify }}/people_simple.html"
+title: Integration - People
 layout: environment.liquid
 ---
-<script src="/scripts/resources.js"></script>
-<link rel="stylesheet" href="/stylesheets/resources.css"></link>
+<script src="/scripts/people.js"></script>
+<link rel="stylesheet" href="/stylesheets/people.css"></link>
 <div class="example">
-<h2>Resources List example</h2>
+<h2>People List example</h2>
 <p><label for="code">Type in your resource code</label><input id="code" type="text"></p>
-<p><button class="ilw-button" id="code-submit">Reload with Resource List</button></p>
+<p><button class="ilw-button" id="code-submit">Reload with People List</button></p>
 </div>
 <div class="ilw-resource-grid">
     <ilw-filter toggle id="ilw-filter-parent">
@@ -25,7 +25,7 @@ layout: environment.liquid
     <ilw-content id="ilw-resource-results" aria-label="Resource Results"></ilw-content>
 </div>
 <ul>
-    <li><a href="/scripts/resources.js">Script file used to build resource list</a></li>
-    <li><a href="/stylesheets/resources.css">Stylesheet file used to build resource list</a></li>
+    <li><a href="/scripts/people.js">Script file used to build resource list</a></li>
+    <li><a href="/stylesheets/people.css">Stylesheet file used to build resource list</a></li>
 </ul>
 
