@@ -9,9 +9,7 @@ layout: sample.liquid
 classOptions: 'ilw-font'
 localFiles: false
 ---
-
 <ilw-breadcrumbs width="page"><a href="#">Home</a> <a href="#">Academics</a> <span>Graduate programs</span> </ilw-breadcrumbs>
-
 <ilw-page-title theme="white" width="page">
 <img src="/img/header_image.png" alt="" role="presentation" slot="background">
 <h1>Graduate Programs</h1>

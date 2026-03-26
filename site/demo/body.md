@@ -9,9 +9,7 @@ layout: sample.liquid
 classOptions: 'ilw-font ilw-margin'
 localFiles: false
 ---
-
 <ilw-breadcrumbs><a href="#">Home</a> <a href="#">Academics</a> <span>Graduate programs</span> </ilw-breadcrumbs>
-
 <ilw-page-title theme="white">
 <img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" role="presentation" slot="background">
 <h1>Graduate Programs</h1>
