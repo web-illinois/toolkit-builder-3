@@ -9,11 +9,9 @@ layout: sample.liquid
 classOptions: 'ilw-font'
 localFiles: false
 ---
+<div>
 <ilw-breadcrumbs width="page"><a href="#">Home</a> <a href="#">Academics</a> <span>Graduate programs</span> </ilw-breadcrumbs>
-<ilw-page-title theme="white" width="page">
-<img src="/img/header_image.png" alt="" role="presentation" slot="background">
-<h1>Graduate Programs</h1>
-</ilw-page-title>
+<ilw-page-title theme="white" width="page"><img src="/img/header_image.png" alt="" role="presentation" slot="background"><h1>Graduate Programs</h1></ilw-page-title>
 <ilw-columns mode="1x2" gap="20px" width="page">
     <ilw-section-nav>
         <a href="#" class="ilw-section-nav--root">Programs of Study</a>
@@ -83,4 +81,4 @@ localFiles: false
         <li><a href="#">Contact us</a></li>
     </ul>
 </ilw-call-to-action>
-
+</div>
