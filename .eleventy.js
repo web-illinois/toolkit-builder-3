@@ -12,7 +12,9 @@ module.exports = function (eleventyConfig) {
   markdownIt.use(markdownItAttrs, {
     leftDelimiter: '{',
     rightDelimiter: '}',
-    allowedAttributes: []
+    allowedAttributes: [],
+    html: true,
+    breaks: false
   });
 
   eleventyConfig.setUseGitIgnore(false);

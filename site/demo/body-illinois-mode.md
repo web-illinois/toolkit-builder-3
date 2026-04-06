@@ -9,6 +9,7 @@ layout: sample.liquid
 classOptions: 'ilw-format ilw-margin'
 localFiles: false
 ---
+<div>
 <ilw-breadcrumbs><a href="#">Home</a> <a href="#">Academics</a> <span>Graduate programs</span> </ilw-breadcrumbs>
 <ilw-page-title theme="white">
 <img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" role="presentation" slot="background">
@@ -81,3 +82,4 @@ localFiles: false
 </ilw-call-to-action>
 
 <ilw-spacer height="50px"></ilw-spacer>
+</div>
