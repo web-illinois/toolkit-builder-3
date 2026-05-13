@@ -44,7 +44,7 @@ function checkColors(backgroundList, foregroundList, customForegroundColor, cust
     let displayOption = document.getElementById('displayOptions').value;
     let foregroundLink = foregroundList.map(f => f.replace('#', '')).join(',');
     let backgroundLink = backgroundList.map(b => b.replace('#', '')).join(',');
-    document.getElementById('link').innerHTML = `<a href='https://accessibility.itpartners.illinois.edu/colorcheck.html?fore=${foregroundLink}&back=${backgroundLink}&customfore=${customForegroundColor.replace('#', '')}&customback=${customBackgroundColor.replace('#', '')}#results-area'>Link to results</a>`;
+    document.getElementById('link').innerHTML = `<a href='https://builder3.toolkit.illinois.edu/colorchecker/production/index.html?fore=${foregroundLink}&back=${backgroundLink}&customfore=${customForegroundColor.replace('#', '')}&customback=${customBackgroundColor.replace('#', '')}#results-area'>Link to results</a>`;
 
     if (customForegroundColor && customForegroundColor != '' && customForegroundColor != '#') {
         foregroundList.push(customForegroundColor);

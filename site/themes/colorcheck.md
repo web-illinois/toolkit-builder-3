@@ -1,6 +1,6 @@
 ---
 title: Color Checker
-permalink: "colors/production/colorcheck.html"
+permalink: "colorchecker/production/index.html"
 layout: colorcheck.liquid
 ---
 
