@@ -1,0 +1,154 @@
+[
+  {
+    "name": "il-orange",
+    "value": "#FF5F05"
+  },
+  {
+    "name": "il-altgeld",
+    "value": "#C84113"
+  },
+  {
+    "name": "il-altgeld-darker-1",
+    "value": "#983220"
+  },
+  {
+    "name": "il-blue",
+    "value": "#13294B"
+  },
+  {
+    "name": "il-blue-darker-1",
+    "value": "#000033"
+  },
+  {
+    "name": "il-blue-darker-2",
+    "value": "#0E0F20"
+  },
+  {
+    "name": "il-blue-lighter-1",
+    "value": "#3A4461"
+  },
+  {
+    "name": "il-blue-lighter-2",
+    "value": "#677592"
+  },
+  {
+    "name": "il-blue-lighter-3",
+    "value": "#929FB5"
+  },
+  {
+    "name": "il-blue-lighter-4",
+    "value": "#BFC9D9"
+  },
+  {
+    "name": "il-industrial",
+    "value": "#1D58A7"
+  },
+  {
+    "name": "il-industrial-darker-1",
+    "value": "#2F568C"
+  },
+  {
+    "name": "il-industrial-darker-2",
+    "value": "#1F3D7B"
+  },
+  {
+    "name": "il-industrial-lighter-1",
+    "value": "#526FB3"
+  },
+  {
+    "name": "il-industrial-lighter-2",
+    "value": "#759BD1"
+  },
+  {
+    "name": "il-industrial-lighter-3",
+    "value": "#90AED5"
+  },
+  {
+    "name": "il-industrial-lighter-4",
+    "value": "#CAD9EF"
+  },
+  {
+    "name": "il-storm",
+    "value": "#707372"
+  },
+  {
+    "name": "il-storm-darker-1",
+    "value": "#4A4C4B"
+  },
+  {
+    "name": "il-storm-darker-2",
+    "value": "#252525"
+  },
+  {
+    "name": "il-storm-lighter-1",
+    "value": "#8D8F8E"
+  },
+  {
+    "name": "il-storm-lighter-2",
+    "value": "#A9ABAA"
+  },
+  {
+    "name": "il-storm-lighter-3",
+    "value": "#C6C7C7"
+  },
+  {
+    "name": "il-storm-lighter-4",
+    "value": "#F4F4F4"
+  },
+  {
+    "name": "il-arches",
+    "value": "#009FD4"
+  },
+  {
+    "name": "il-arches-darker-1",
+    "value": "#00779F"
+  },
+  {
+    "name": "il-arches-darker-2",
+    "value": "#005677"
+  },
+  {
+    "name": "il-arches-lighter-1",
+    "value": "#3CB4E5"
+  },
+  {
+    "name": "il-arches-lighter-2",
+    "value": "#7FC3E1"
+  },
+  {
+    "name": "il-arches-lighter-3",
+    "value": "#A6D7EB"
+  },
+  {
+    "name": "il-arches-lighter-4",
+    "value": "#D2EBF5"
+  },
+  {
+    "name": "il-harvest",
+    "value": "#FCB316"
+  },
+  {
+    "name": "il-prairie",
+    "value": "#006230"
+  },
+  {
+    "name": "il-patina",
+    "value": "#007E8E"
+  },
+  {
+    "name": "il-berry",
+    "value": "#5C0E41"
+  },
+  {
+    "name": "il-earth",
+    "value": "#7D3E13"
+  },
+  {
+    "name": "white",
+    "value": "#ffffff"
+  },
+  {
+    "name": "black",
+    "value": "#000000"
+  }
+]

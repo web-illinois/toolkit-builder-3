@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Preconnect -->
+    <link rel="dns-prefetch" href="//cdn.toolkit.illinois.edu">
+    <link rel="dns-prefetch" href="//cdn.brand.illinois.edu">
+    <link rel="dns-prefetch" href="//cdn.disability.illinois.edu">
+    <link rel="dns-prefetch" href="//onetrust.techservices.illinois.edu">
+
+    <!-- Illinois Toolkit -->
+    <link rel="icon" href="https://cdn.brand.illinois.edu/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/3/toolkit.css">
+    <link rel="stylesheet" href="/stylesheets/colorcheck.css">
+    <script type="module" src="https://cdn.toolkit.illinois.edu/3/toolkit.js"></script>
+    <style>
+      code {
+          background: #e7e7f7;
+          font-size: 1.2rem;
+          overflow-wrap: break-word;
+      }
+      ilw-page-title img {
+         -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0));
+      }
+    </style>
+    <script src="/scripts/colorcheck.js"></script>
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+<ilw-page>
+    {% render 'header' %}
+    <main>
+    <div>
+    <ilw-content width="page">
+        {{ content }}
+    </ilw-content>
+    <ilw-content width="page">
+        <a id="testrun"></a>
+        <h2>Test Run Options</h2>
+        <div class='flex runoptions'>
+            <div>
+                <div class='title-buttons'>
+                    <h3>Foreground</h3>
+                    <button class='ilw-button' id='checkallfore'>Select All</button>
+                    <button class='ilw-button' id='checknonefore'>De-select All</button>
+                </div>
+                <ul id='foreground'>
+                <li class="ils-input-entry-compact"><label for='customcolor-foreground'>Custom Color Hex Value: </label><input type='text' id='customcolor-foreground' style="width: 80px;" value="#"></li>
+                {%- for color in colors %}
+                    <li class="ils-input-entry-checkbox"><label for="fore-{{ color.value }}">{{ color.name }} ({{ color.value }})<span class="swatch" role="presentation" style="background-color: {{ color.value }};"></span></label><input type="checkbox" data-name="{{ color.name }}" value="{{ color.value }}" id="fore-{{ color.value }}"></li>
+                {% endfor -%}
+                </ul>
+            </div>
+            <div>
+                <div class='title-buttons'>
+                    <h3>Background</h3>
+                    <button class='ilw-button' id='checkallback'>Select All</button>
+                    <button class='ilw-button' id='checknoneback'>De-select All</button>
+                </div>
+                <ul id='background'>
+                <li class="ils-input-entry-compact"><label for='customcolor-background'>Custom Color Hex Value: </label><input type='text' id='customcolor-background' style="width: 80px;" value="#"></li>
+                {%- for color in colors %}
+                    <li class="ils-input-entry-checkbox"><label for="back-{{ color.value }}">{{ color.name }} ({{ color.value }})<span class="swatch" role="presentation" style="background-color: {{ color.value }};"></span></label><input type="checkbox" data-name="{{ color.name }}" value="{{ color.value }}" id="back-{{ color.value }}"></li>
+                {% endfor -%}
+                </ul>
+            </div>
+        </div>
+        <button class='ilw-button ilw-theme-orange-1' id='btnTestColor'>Run Test</button>
+        <div>
+            <h3>Test Options</h3>
+            <p></p>
+            <p>
+                <label for="displayOptions">Display Options: </label><select id="displayOptions">
+                    <option value="all">Show all tests</option>
+                    <option value="pass" selected>Show all passing tests</option>
+                    <option value="full">Show only passing tests for all sizes</option>
+                </select>
+            </p>
+            <p>
+                Sample Text (optional, may include HTML tags, but color checker will ignore them)<br>
+                <textarea id='sampletext' style="width: 100%; height: 160px;"></textarea>
+            </p>
+        </div>
+    </ilw-content>
+    <ilw-content width="page">
+        <h2 id='results-area'>Test Results</h2>
+        <p><a href="#testrun">Back to Test Run Options</a></p>
+        <div id='colors'></div>
+    </ilw-content>
+    <ilw-content width="page">
+        <h2>Link to current results</h2>
+        <p id='link'></p>
+    </ilw-content>
+    </main>
+    {% render 'footer' %}
+</body>
+</html>
+
+
