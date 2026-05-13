@@ -1,0 +1,64 @@
+.flex {
+    display: flex;
+    padding: 20px;
+    column-gap: 20px;
+}
+
+.flex > div {
+    flex: 1;
+}
+
+.large {
+    font-size: 24px;
+}
+
+.bold {
+    font-size: 19px;
+    font-weight: 700
+}
+
+.normal {
+    font-size: 16px;
+}
+
+label {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#foreground, #background {
+    height: 400px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding: 10px 0 10px 10px;
+    background: var(--il-storm-lighter-4);
+}
+
+.swatch {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    border: thin solid black;
+    margin-left: 3px;
+}
+
+#link {
+    margin: 0 0 100px 0;
+}
+
+.runoptions .ils-input-entry-checkbox {
+    --ils-input-form-label-width: 320px;
+    margin: 5px 0;
+}
+
+.title-buttons {
+    display: flex;
+    column-gap: 20px;
+    height: 60px;
+    padding-right: 20px;
+}
+
+.title-buttons h3 {
+    flex-grow: 1;
+}
