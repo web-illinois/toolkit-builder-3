@@ -17,6 +17,7 @@ The theme information is in the colors.css file in https://github.com/web-illino
     <select id="theme-changer" onchange="changeTheme()">
         <option value="">Default</option>
         <option value="white">White</option>
+        <option value="gray">Gray</option>
         <option value="blue">Blue</option>
         <option value="blue-gradient">Blue Gradient</option>
         <option value="orange">Orange</option>
@@ -80,6 +81,24 @@ ilw-content select:hover {
     color: var(--il-storm-30);
     margin-top: 0.1rem;
     text-align: left;
+}
+#colorlist li {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+#colorlist span {
+    display: inline-block;
+    width: 240px;
+}
+#colorlist span.swatch {
+    display: inline-block;
+    width: 120px;
+    height: 48px;
+    border-radius: 0.4rem;
+    border: solid 1px black;
+    margin-left: 10px;
 }
 </style>
 

@@ -16,6 +16,7 @@ This screen grabs all the components associated with the theme class and changes
     <select id="theme-changer" onchange="changeTheme()">
         <option value="">Default</option>
         <option value="white">White</option>
+        <option value="gray">Gray</option>
         <option value="blue">Blue</option>
         <option value="blue-gradient">Blue Gradient</option>
         <option value="orange">Orange</option>
