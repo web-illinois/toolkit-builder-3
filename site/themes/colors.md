@@ -100,6 +100,9 @@ ilw-content select:hover {
     border: solid 1px black;
     margin-left: 10px;
 }
+#colorlist span.swatchtext {
+    margin-left: 10px;
+}
 </style>
 
 <script>
@@ -107,6 +110,11 @@ ilw-content select:hover {
         let val = document.getElementById('theme-changer').value;
         document.querySelectorAll('.update').forEach(element => {
           element.setAttribute('theme', val);
+          element.querySelectorAll('.swatchtext').forEach(e2 => {
+            let compstyle = window.getComputedStyle(e2.previousElementSibling).backgroundColor;
+            const colorText = '#' + compstyle.match(/\d+/g).map(x => (+x).toString(16).padStart(2, '0')).join('');
+            e2.innerText = colorText.toUpperCase();
+          });
         });
     }
 
