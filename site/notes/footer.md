@@ -37,9 +37,12 @@ If you are incorporating the footer into the ilw-page component, then make sure 
   </div>
   <nav slot="social" aria-label="Social media">
     <ul>
-      <li><a data-service="facebook" href="#">Facebook</a></li>
-      <li><a data-service="instagram" href="#">Instagram</a></li>
-      <li><a data-service="linkedin" href="#">LinkedIn</a></li>
+        <li><a href="#"><ilw-icon icon="instagram" size="50px"></ilw-icon></a></li>
+        <li><a href="#"><ilw-icon icon="facebook" size="50px"></ilw-icon></a></li>
+        <li><a href="#"><ilw-icon icon="threads" size="50px"></ilw-icon></a></li>
+        <li><a href="#"><ilw-icon icon="bluesky" size="50px"></ilw-icon></a></li>
+        <li><a href="#"><ilw-icon icon="youtube" size="50px"></ilw-icon></a></li>
+        <li><a href="#"><ilw-icon icon="linkedin" size="50px"></ilw-icon></a></li>
     </ul>
   </nav>
   <ilw-columns>
