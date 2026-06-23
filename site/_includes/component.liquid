@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 <head>
+    {% if component-version.production %}
     {% render 'scripts_styles' %}
+    {% else %}
+    {% render 'scripts_styles_dev' %}
+    {% endif %}
     <link rel="stylesheet" href="{{ component-version.css }}">
     <script type="module" src="{{ component-version.js }}"></script>
     <script src="/scripts/main.js"></script>
