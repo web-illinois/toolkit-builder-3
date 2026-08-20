@@ -62,3 +62,8 @@ label {
 .title-buttons h3 {
     flex-grow: 1;
 }
+
+main .runoptions .ils-input-entry-checkbox label, main .runoptions .ils-input-entry-compact label {
+    display: inline;
+    padding-left: 10px;
+}
