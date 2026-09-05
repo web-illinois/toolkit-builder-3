@@ -16,7 +16,7 @@
       <ul class="ilw-buttons">
         <li><a href="/component/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/index.html">Build component</a></li>
         <li><a href="/component/{{ component-version.tag | slugify }}/index.html">See all versions of component</a></li>
-        <li><a href="{{ component-version.github }}/blob/main/README.md">View usage and accessibility notes</a></li>
+        <li><a href="{{ component-version.github | githubReadmePath }}">View usage and accessibility notes</a></li>
       </ul>
       </div>
 

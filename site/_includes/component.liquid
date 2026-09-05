@@ -46,7 +46,7 @@
       <ul class="ilw-buttons">
         <li><a href="/preview/{{ component-version.tag | slugify }}/{{ component-version.builder-version | slugify }}/index.html">Preview component</a></li>
         <li><a href="/component/{{ component-version.tag | slugify }}/index.html">See all versions of component</a></li>
-        <li><a href="{{ component-version.github }}/blob/main/README.md">View usage and accessibility notes</a></li>
+        <li><a href="{{ component-version.github | githubReadmePath }}">View usage and accessibility notes</a></li>
       </ul>
       </div>
 
@@ -206,7 +206,7 @@
         <ul class="ilw-buttons">
             <li><button onclick="copyCode();">Copy to Clipboard</button><span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span></li>
             <li><button onclick="generateCodepen();">Generate Codepen to Share</button></li>
-            <li><a href="{{ component-version.github }}/blob/main/README.md">Read more about the component</a></li>
+            <li><a href="{{ component-version.github | githubReadmePath }}">Read more about the component</a></li>
             <li><a href="{{ component-version.github }}/issues/new">Contact the owner about a problem</a></li>
         </ul>
 

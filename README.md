@@ -11,7 +11,9 @@ This deploys to:
 
 ## Adding to this project
 
-The bad news is GitHub actions don't support looping except with the matrix option and external jobs have a limit of 20. I am using judicious copy-paste. To add a new component to the toolkit builder, update the */.github/workflows/deploy_release.yml* file and add another Checkout section  name of the repository. You will need to update the name of the repository in two places -- once in the title, once in the with repository name. This will check out the repository and copy the json files from the */builder/* and */builder/versions/* folders.
+To add a new component to the toolkit builder, update `component-repositories.json` with the repository name. The deployment workflow runs `npm run import-components`, which checks out each repository, copies JSON files from the `builder/` and `builder/versions/` folders, and imports each repository README into the builder site under `/readme/{repository}/`.
+
+If a repository keeps builder JSON files in a different folder, add a `builderPath` value in `component-repositories.json`.
 
 ## Running the builder on your local machine
 
@@ -35,6 +37,14 @@ npm run build
 ````
 
 This will generate a static site under _site. You can use a live server tool to run this from your local machine. If you are using Visual Studio Code, you can choose *File* --> *Add Folder to Workspace* to add _site and make this the root. 
+
+To import the component JSON files and README pages from GitHub the same way deployment does, run:
+
+```bash
+npm run import-components
+```
+
+This replaces any generated JSON and README files in `site/imported_json` and `site/imported_readmes`.
 
 **Note:** this is assuming that the root directory is *_site*. If you are using Visual Studio Code, you can choose *Add Folder to Workspace* to add *_site* to the workspace so you can run Live Server with _site as the root folder. 
 

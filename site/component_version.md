@@ -23,6 +23,8 @@ Version notes: {{ component-version.notes }}
 
 Github repository: <a href="{{ component-version.github }}">{{ component-version.github }}</a>
 
+README: <a href="{{ component-version.github | githubReadmePath }}">Read documentation on this site</a>
+
 Javascript file:  <a href="{{ component-version.js }}">{{ component-version.js }}</a>
 
 CSS file: <a href="{{ component-version.css }}">{{ component-version.css }}</a>

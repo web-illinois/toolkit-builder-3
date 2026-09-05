@@ -8,6 +8,7 @@
   "scripts": {
     "gulp": "gulp",
     "eleventy": "eleventy",
+    "import-components": "node scripts/import-component-data.js",
     "build": "gulp && eleventy",
     "dev": "eleventy --serve",
     "screenshot-server": "http-server -p 8081 screenshot"

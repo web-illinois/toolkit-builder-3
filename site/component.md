@@ -13,3 +13,5 @@ Type: {{ component.type }}
 Description: {{ component.description }}
 
 Github Link: {{ component.github }}
+
+README: <a href="{{ component.github | githubReadmePath }}">Read documentation on this site</a>

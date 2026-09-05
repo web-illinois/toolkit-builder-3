@@ -36,6 +36,15 @@ module.exports = function (eleventyConfig) {
     return returnValue;
   });
 
+  eleventyConfig.addFilter("githubReadmePath", function (githubUrl) {
+    if (!githubUrl) {
+      return '';
+    }
+
+    const match = String(githubUrl).match(/github\.com\/web-illinois\/([^/]+)/);
+    return match ? `/readme/${match[1]}/index.html` : `${githubUrl}/blob/main/README.md`;
+  });
+
   eleventyConfig.addFilter("outputComponent", function (name, component_version) {
     let returnValue = '';
     if (component_version['parent-style'] && component_version['parent-style'].length > 0) {
