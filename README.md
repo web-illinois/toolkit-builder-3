@@ -97,3 +97,14 @@ If you are changing the toolkit-management repository, make sure you rebuild the
 * "attributes-text": This is an array of attributes that automatically get added to the component and users can enter a free value. They consist of name, description, depreciated (boolean saying if they are depreciated or not), and value (default value)
 * "attributes" and "classes": This is an array of attributes or classes that get added to the component as a dropdown of available options. They consist of name (used only for attributes), description, depreciated (boolean saying if they are depreciated or not), and values (an array of string options, make sure you have the first one be "" if you don't have to fill this in)
 * "css-variables": This is an array of css variables that can be overwritten. They consist of name (used only for attributes), description, and depreciated (boolean saying if they are depreciated or not)
+
+## Creating a custom demo page for special cases
+For special case components that cannot be duplicated inside of the builder website, like the header, footer, and [org chart](https://github.com/web-illinois/toolkit-builder-3/blob/main/site/notes/orgchart.md), an override builder page can be created. To do this the component must already exist in the toolkit package. 
+
+1. Create a new branch in toolkit-builder-3 for your customizations.
+2. In your new branch, build out the custom page inside: toolkit-builder-3/site/notes/YOUR-NEW-COMPONENT.md
+3. Submit a pull-request to request the custom override. 
+4. Once approved, go to your component repo: builder/ilw-YOUR-NEW-COMPONENT.json
+5. [Append a new line](https://github.com/web-illinois/ilw-org-chart/blob/main/builder/ilw-org-chart.json) at the end of the json:
+        ``` “builder-override-link”: “/notest/megamenu/index.html ```
+Note: If this component is updated, its custom builder page will need to be updated manually with it. 
