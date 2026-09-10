@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render '_partials/scripts_styles' %}
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+<ilw-page class="ilw-font">
+    {% render '_partials/header' %}
+    <main>
+      <ilw-content width="page">
+      {{ content }}
+      </ilw-content>
+      <ilw-content width="page">
+      <h2>Issues</h2>
+      <p>We use Github to track issues. Because these are dispersed across multiple repositories, the below link contains a query that checks all the repositories listed and displays all the issues.</p>
+      <p><a class="ilw-button" href="{{ slug | generateGithubIssuesLink: components }}">Github Issues</a></p>
+      <h2>List of Github Repositories</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>List of Issues</th>
+            <th>Create New Issue</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for component in components %}
+          <tr>
+            <td><strong><a href="{{ component.repository-name | generateGithubLink }}">{{ component.title }} / {{ component.tag }} ({{ component.type }})</a></strong></td>
+            <td><a href="{{ component.repository-name | generateGithubLink }}/issues">Known Issues for {{ component.title }}</a></td>
+            <td><a href="{{ component.repository-name | generateGithubLink }}/issues/new">Create a new issue for {{ component.title }}</a></td>
+          </tr>
+          {% endfor -%}
+        </tbody>
+      </table>
+      </ilw-content>
+      <ilw-spacer></ilw-spacer>
+    </main>
+    {% render '_partials/footer' %}
+</ilw-page>
+</body>
+</html>

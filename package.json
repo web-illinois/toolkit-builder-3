@@ -6,18 +6,16 @@
   "author": "Web Implementation Guidelines Group",
   "license": "NCSA",
   "scripts": {
-    "gulp": "gulp",
     "eleventy": "eleventy",
-    "import-components": "node scripts/import-component-data.js",
-    "build": "gulp && eleventy",
+    "import-components": "node npmscripts/import_component_data.js",
+    "clean": "node npmscripts/clean.js",
+    "build": "node npmscripts/import_component_data.js && eleventy && node npmscripts/clean.js",
     "dev": "eleventy --serve",
     "screenshot-server": "http-server -p 8081 screenshot"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
-    "gulp": "^5.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-uglify": "^3.0.2",
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-fetch": "^5.1.1",
     "markdown-it": "^14.1.0",
     "markdown-it-attrs": "^4.1.6",
     "@playwright/test": "^1.47.2",

@@ -23,26 +23,19 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("site/img");
 
+  eleventyConfig.addFilter("generateGithubLink", (name) => `https://github.com/web-illinois/${name}`);
+
   eleventyConfig.addFilter("generateGithubIssuesLink", function (name, components) {
     let returnValue = 'https://github.com/search?q=';
     const arrayComponents = [""];
     components.forEach(component => {
-        if (component.type === "web component" && !arrayComponents.includes(component["element-name"])) {
-            returnValue += `repo%3Aweb-illinois%2F${component["element-name"]}+`;
-            arrayComponents.push(component["element-name"]);
+        if (arrayComponents.includes(component["repository-name"])) {
+            returnValue += `repo%3Aweb-illinois%2F${component["repository-name"]}+`;
+            arrayComponents.push(component["repository-name"]);
         }
     });
     returnValue += 'state%3Aopen&type=Issues&s=created&o=asc'
     return returnValue;
-  });
-
-  eleventyConfig.addFilter("githubReadmePath", function (githubUrl) {
-    if (!githubUrl) {
-      return '';
-    }
-
-    const match = String(githubUrl).match(/github\.com\/web-illinois\/([^/]+)/);
-    return match ? `/readme/${match[1]}/index.html` : `${githubUrl}/blob/main/README.md`;
   });
 
   eleventyConfig.addFilter("outputComponent", function (name, component_version) {

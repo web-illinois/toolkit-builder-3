@@ -5,10 +5,10 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/profile.html"
 title: Integration - Profile
-layout: environment.liquid
+layout: demo\environment.liquid
 ---
-<script src="/scripts/profile.js"></script>
-<link rel="stylesheet" href="/stylesheets/profile.css"></link>
+<script src="/scripts/integrations/profile.js"></script>
+<link rel="stylesheet" href="/stylesheets/integrations/profile.css"></link>
 <div class="example">
 <h2>Profile example</h2>
 <p><label for="code">Type in your directory code</label><input id="code" type="text"></p>
@@ -30,7 +30,7 @@ layout: environment.liquid
 </div>
 
 <ul>
-    <li><a href="/scripts/profile.js">Script file used to build profile</a></li>
-    <li><a href="/stylesheets/profile.css">Stylesheet file used to build profile</a></li>
+    <li><a href="/scripts/integrations/profile.js">Script file used to build profile</a></li>
+    <li><a href="/stylesheets/integrations/profile.css">Stylesheet file used to build profile</a></li>
 </ul>
 

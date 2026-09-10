@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render '_partials/scripts_styles' %}
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+  <ilw-page class="ilw-font">
+    {% render '_partials/header' %}
+    <main>
+      <ilw-content width="page">
+        <h1>{{ title }} {{ environment.title }}</h1>
+        {{ content }}
+      </ilw-content>
+      <ilw-content width="page" class="update" padding="40px">
+            <h2>Sample Heading For Color Groups</h2>
+            <h3>
+                <a href="#">Sample Link Heading</a>
+            </h3>
+            <p>This is some paragraph text. <a href="#">Sample link for link text</a>.</p>
+            <button class="ilw-button">Control Button</button>
+      </ilw-content>
+      <ilw-spacer></ilw-spacer>
+      <ilw-content width="page" padding="0 40px">
+        <h2>Color Swatches for Themes</h2>
+        <ul class="update" id="colorlist">
+          <li><span class="intro">Background color (ignore on gradient):</span> <span class="swatch" style="background-color: var(--ilw-color--background);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Text color:</span> <span class="swatch" style="background-color: var(--ilw-color--text);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Border color:</span> <span class="swatch" style="background-color: var(--ilw-color--border);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Border light color:</span> <span class="swatch" style="background-color: var(--ilw-color--border-light);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Link color:</span> <span class="swatch" style="background-color: var(--ilw-color--link);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Link hover color:</span> <span class="swatch" style="background-color: var(--ilw-color--link-hover);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Link visited color:</span> <span class="swatch" style="background-color: var(--ilw-color--link-visited);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Heading color:</span> <span class="swatch" style="background-color: var(--ilw-color--heading);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Heading link color:</span> <span class="swatch" style="background-color: var(--ilw-color--heading-link);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Heading link hover color:</span> <span class="swatch" style="background-color: var(--ilw-color--heading-link-hover);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Heading link visited color:</span> <span class="swatch" style="background-color: var(--ilw-color--heading-link-visited);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Control color:</span> <span class="swatch" style="background-color: var(--ilw-color--control);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Control text color:</span> <span class="swatch" style="background-color: var(--ilw-color--control-text);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Control accent color:</span> <span class="swatch" style="background-color: var(--ilw-color--control-accent);"></span><span class="swatchtext"></span></li>
+          <li><span class="intro">Control accent text color:</span> <span class="swatch" style="background-color: var(--ilw-color--control-accent-text);"></span><span class="swatchtext"></span></li>
+        </ul>
+      </ilw-content>
+    </main>
+    {% render '_partials/footer' %}
+  </ilw-page>
+</body>
+</html>

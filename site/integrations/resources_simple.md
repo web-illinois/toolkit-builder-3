@@ -5,10 +5,10 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/resources_simple.html"
 title: Integration - Resource Finder
-layout: environment.liquid
+layout: demo\environment.liquid
 ---
-<script src="/scripts/resources.js"></script>
-<link rel="stylesheet" href="/stylesheets/resources.css"></link>
+<script src="/scripts/integrations/resources.js"></script>
+<link rel="stylesheet" href="/stylesheets/integrations/resources.css"></link>
 <div class="example">
 <h2>Resources List example</h2>
 <p><label for="code">Type in your resource code</label><input id="code" type="text"></p>
@@ -25,7 +25,7 @@ layout: environment.liquid
     <ilw-content id="ilw-resource-results" aria-label="Resource Results"></ilw-content>
 </div>
 <ul>
-    <li><a href="/scripts/resources.js">Script file used to build resource list</a></li>
-    <li><a href="/stylesheets/resources.css">Stylesheet file used to build resource list</a></li>
+    <li><a href="/scripts/integrations/resources.js">Script file used to build resource list</a></li>
+    <li><a href="/stylesheets/integrations/resources.css">Stylesheet file used to build resource list</a></li>
 </ul>
 

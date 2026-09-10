@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render '_partials/scripts_styles_environment' with environment as environment %}
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+  <ilw-page class="ilw-font">
+    {% render '_partials/header' %}
+    <main>
+      <ilw-content>
+        <h1>{{ title }} {{ environment.title }}</h1>
+        {{ content }}
+      </ilw-content>
+      {{ "theme" | outputAllComponents: components, component_templates }}
+      <ilw-spacer></ilw-spacer>
+    </main>
+    {% render '_partials/footer' %}
+  </ilw-page>
+</body>
+</html>

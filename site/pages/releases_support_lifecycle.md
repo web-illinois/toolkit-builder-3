@@ -1,6 +1,6 @@
 ---
 title: Releases and Support Lifecycle
-layout: page.liquid
+layout: general\page.liquid
 permalink: "releases_support_lifecycle/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/ascend/blue.svg
 ---

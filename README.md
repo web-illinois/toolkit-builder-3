@@ -44,8 +44,6 @@ To import the component JSON files and README pages from GitHub the same way dep
 npm run import-components
 ```
 
-This replaces any generated JSON and README files in `site/imported_json` and `site/imported_readmes`.
-
 **Note:** this is assuming that the root directory is *_site*. If you are using Visual Studio Code, you can choose *Add Folder to Workspace* to add *_site* to the workspace so you can run Live Server with _site as the root folder. 
 
 ## Using the builder to test your components

@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "demo/{{ environment.tag | slugify }}/card-grid-illinois-mode.html"
 title: Sample Card Grid
-layout: sample.liquid
+layout: demo\sample.liquid
 classOptions: 'ilw-format ilw-margin'
 localFiles: false
 ---

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+{%- for template_info in component_templates %}
+  {% if template_info.tag == tag %}
+      {% assign template_tag = template_info.template %}
+      {% assign preview_tag = template_info.template %}
+  {% endif %}
+{% endfor -%}
+{%- for component in components %}
+  {% if component.tag == tag %}
+      {%- for version_info in component.versions %}
+        {% assign version_tag = version_info.name %}
+      {% endfor -%}
+      {% if component.customtemplates %}
+        {%- for custom in component.customtemplates %}
+          {% assign template_tag = custom.name %}
+          {% assign use_custom_url = custom.path %}
+        {% endfor -%}
+      {% endif %}
+  {% endif %}
+{% endfor -%}
+<head>
+    {% render '_partials/scripts_styles' %}
+    <title>{{ title }}</title>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        const versionText = document.getElementById('current-version');
+        const templateText = document.getElementById('current-template');
+        const versionSelect = document.getElementById('version-select');
+        const templateSelect = document.getElementById('template-select');
+        const previewSelect = document.getElementById('preview');
+        versionSelect.addEventListener('change', function() {
+            updateIFrame();
+        });
+        templateSelect.addEventListener('change', function() {
+            updateIFrame();
+        });
+        previewSelect.addEventListener('change', function() {
+            updateIFrame();
+        });
+    });
+
+    function updateIFrame() {
+        const versionText = document.getElementById('current-version');
+        const templateText = document.getElementById('current-template');
+        const versionSelect = document.getElementById('version-select');
+        const templateSelect = document.getElementById('template-select');
+        const previewSelect = document.getElementById('preview');
+        versionText.innerText = versionSelect.options[versionSelect.selectedIndex].text;
+        templateText.innerText = templateSelect.options[templateSelect.selectedIndex].text;
+        const iframe = document.getElementById('iframe');
+        if (iframe) {
+            const previewValue = previewSelect.value;
+            if (previewValue == 'preview') {
+              iframe.src = `/component/{{ tag }}/{{ preview_tag | slugify }}_preview`;
+              document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = 'none');
+            } else if (previewValue == 'previewdev') {
+              iframe.src = `/component/{{ tag }}/{{ preview_tag | slugify }}_preview_dev`;
+              document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = 'none');
+            } else {
+              iframe.src = `${templateSelect.value}?${versionSelect.value}`;
+              document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = '');
+            }
+        }
+    }
+    </script>
+</head>
+<body style="margin: 0;">
+<ilw-page class="ilw-font">
+    {% render '_partials/header' %}
+    <main style="container-type: inline-size;">
+      <ilw-page-title width="page">
+        <img src="https://cdn.brand.illinois.edu/patterns/finial/blue.svg" alt="" slot="background">
+        <h1>{{ title }}</h1>
+      </ilw-page-title>
+
+      <ilw-spacer></ilw-spacer>
+      {% if use_custom_url %}
+      <iframe id="iframe" src="{{ use_custom_url }}?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>
+      {% else %}
+      <iframe id="iframe" src="/component/{{ tag }}/{{ template_tag | slugify }}/index.html?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>
+      {% endif %}
+      <ilw-spacer></ilw-spacer>
+
+      <ilw-content width="page">
+      <h2>Choose Alternate Versions</h2>
+      <ilw-columns>
+       {% if preview_tag %}
+       <div>
+          <label for="preview">Builder or Preview:</label>
+          <select id="preview" style="width: calc(100% - 50px);">
+            <option value="builder" selected>Builder</option>
+            <option value="preview">Preview (latest production only)</option>
+            <option value="previewdev">Preview (latest development only)</option>
+          </select>
+       </div>
+       {% endif %}
+       <div>
+          <label class="hide-on-preview" for="version-select">Choose a version:</label>
+          <select class="hide-on-preview" id="version-select" style="width: calc(100% - 50px);">
+          <option value="{{ version_tag }}" selected>Default version</option>
+          {%- for component in components %}
+              {% if component.tag == tag %}
+                  {%- for version_info in component.versions %}
+                    <option value="{{ version_info.name }}">{{ version_info.name }} {{ version_info.notes }} (for best results, choose template {{  version_info.template }})</option>
+                  {% endfor -%}
+              {% endif %}
+          {% endfor -%}
+          <option value="dev">Latest development version</option>
+        </select>
+        <p class="hide-on-preview">Most recent version: {{ version_tag }}</p>
+        <p class="hide-on-preview">Current version: <span id="current-version">{{ version_tag }}</span></p>
+       </div>
+       <div>
+         <label class="hide-on-preview" for="template-select">Choose a template:</label>
+         <select class="hide-on-preview" id="template-select" style="width: calc(100% - 50px);">
+          {% if use_custom_url %}
+           <option value="{{ custom.path }}" selected>Default template</option>
+          {% else %}
+           <option value="/component/{{ tag }}/{{ template_tag | slugify }}" selected>Default template</option>
+          {% endif %}
+           {%- for template_info in component_templates %}
+              {% if template_info.tag == tag %}
+                <option value="/component/{{ tag }}/{{ template_info.template | slugify }}">{{ template_info.template }} {{ template_info.notes }}</option>
+              {% endif %}
+            {% endfor -%}
+            {%- for component in components %}
+                {% if component.tag == tag %}
+                    {% if component.customtemplates %}
+                      {%- for custom in component.customtemplates %}
+                        <option value="{{ custom.path }}">{{ custom.name }} {{ custom.notes }}</option>
+                      {% endfor -%}
+                    {% endif %}
+                {% endif %}
+            {% endfor -%}
+            </select>
+          <p class="hide-on-preview">Most recent template: {{ template_tag }}</p>
+          <p class="hide-on-preview">Current template: <span id="current-template">{{ template_tag }}</span></p>
+        </div>
+      </ilw-columns>
+      </ilw-content>
+      <ilw-spacer></ilw-spacer>
+
+      <ilw-content width="page">
+        <h2>Component Notes for Latest Version</h2>
+        <p><a href="{{ sourceRepository }}">View repository on GitHub</a></p>
+        {{ content }}
+      </ilw-content>
+      <ilw-spacer></ilw-spacer>
+
+    </main>
+    {% render '_partials/footer' %}
+</ilw-page>
+</body>
+</html>

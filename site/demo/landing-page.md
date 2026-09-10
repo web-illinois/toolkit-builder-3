@@ -3,9 +3,9 @@ pagination:
   data: environments
   size: 1
   alias: environment
-permalink: "demo/{{ environment.tag | slugify }}/anding-page.html"
+permalink: "demo/{{ environment.tag | slugify }}/landing-page.html"
 title: Sample Landing Page
-layout: sample.liquid
+layout: demo\sample.liquid
 classOptions: 'ilw-font ilw-margin'
 localFiles: false
 ---

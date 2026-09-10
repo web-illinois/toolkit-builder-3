@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <link rel="stylesheet" href="/stylesheets/components/component.css" data-skip="true">
+    <title>{{ title }}</title>
+    {%- if scripturl %}
+        <script type="module" src="{{ scripturl | url }}"></script>
+    {%- endif %}
+    {%- if stylesheeturl %}
+        <link rel="stylesheet" href="{{ stylesheeturl | url }}">
+    {%- endif %}
+    <script>
+    document.addEventListener("DOMContentLoaded", async function(event) {
+        let version = 'dev';
+        if (window.parent && window.parent.document) {
+            version = window.parent.document.getElementById('version-select').value;
+        }
+        const rootPath = version == 'dev' ? `https://dev.toolkit.illinois.edu/ilw-accordion/latest` : `https://cdn.toolkit.illinois.edu/ilw-accordion/${version}`;
+        const globalLink = document.createElement('link');
+        globalLink.rel = 'stylesheet';
+        globalLink.type = 'text/css';
+        globalLink.href = version == 'dev' ? `https://dev.toolkit.illinois.edu/ilw-global/latest/ilw-global.css` : `https://cdn.toolkit.illinois.edu/ilw-global/3/ilw-global.css`;;
+        document.head.appendChild(globalLink);
+    });
+
+    const observer = new ResizeObserver(() => {
+        if (window.parent && window.parent.document) {
+            const iframe = window.parent.document.getElementById('iframe');
+            if (iframe) {
+                iframe.style.height = document.documentElement.scrollHeight + 'px';
+            }
+        }
+    });
+    observer.observe(document.documentElement);
+    </script>
+</head>
+<body style="margin: 0;">
+    <main style="container-type: inline-size; padding: 0 30px;">
+        {{ content }}
+    </main>
+</body>
+</html>

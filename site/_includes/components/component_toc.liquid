@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render '_partials/scripts_styles' %}
+    <link rel="stylesheet" href="{{ '/stylesheets/general/homepage.css' |  url }}">
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+<ilw-page class="ilw-font">
+    {% render '_partials/header' %}
+    <main>
+        <ilw-content width="page">
+          <h1>{{ title }}</h1>
+          {{ content }}
+        </ilw-content>
+        <ilw-spacer></ilw-spacer>
+        <ilw-grid width="page" id="component-cards" gap="50px" padding="50px 10px 20px">
+            {%- for component in components %}
+                <div class="component-wrapper">
+                    <ilw-card aspectratio="5/2" clickable style="">
+                        <div class="component-image" slot="image">
+                            <div class="component-image-inner">
+                                {% assign img = '/img/components/' | append: component.tag | append: '.png' %}
+                                <img src="{{ img | url }}" alt="" loading="lazy"/>
+                            </div>
+                            <div class="component-image-overlay"></div>
+                        </div>
+                        {%- if preview %}
+                        <h3><a href="/preview/{{ component.tag | slugify }}/index.html">
+                                {{ component.title }}
+                        </a></h3>
+                        {%- else %}
+                        <h3><a href="/component/{{ component.tag | slugify }}/index.html">
+                                {{ component.title }}
+                        </a></h3>
+                        {%- endif %}
+                        <p>{{ component.purpose }}</p>
+                    </ilw-card>
+                </div>
+            {% endfor -%}
+        </ilw-grid>
+    </main>
+    {% render '_partials/footer' %}
+</ilw-page>
+</body>
+</html>

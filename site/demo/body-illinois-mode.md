@@ -5,14 +5,14 @@ pagination:
   alias: environment
 permalink: "demo/{{ environment.tag | slugify }}/body-illinois-mode.html"
 title: Sample Body Page
-layout: sample.liquid
-classOptions: 'ilw-format ilw-margin'
+layout: demo\sample.liquid
+classOptions: 'ilw-format'
 localFiles: false
 ---
 <div>
 <ilw-breadcrumbs><a href="#">Home</a> <a href="#">Academics</a> <span>Graduate programs</span> </ilw-breadcrumbs>
 <ilw-page-title theme="white">
-<img src="https://cdn.brand.illinois.edu/patterns/finial/orange.svg" alt="" role="presentation" slot="background">
+<img src="/img/header_image.png" alt="" role="presentation" slot="background">
 <h1>Graduate Programs</h1>
 </ilw-page-title>
 <ilw-columns mode="1x2" gap="20px">

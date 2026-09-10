@@ -5,10 +5,10 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/program_finder.html"
 title: Integration - Program Finder
-layout: environment.liquid
+layout: demo\environment.liquid
 ---
-<script src="/scripts/program_finder.js"></script>
-<link rel="stylesheet" href="/stylesheets/program_finder.css"></link>
+<script src="/scripts/integrations/program_finder.js"></script>
+<link rel="stylesheet" href="/stylesheets/integrations/program_finder.css"></link>
 <div class="example">
 <h2>Program Finder example</h2>
 <p><label for="code">Type in your program code</label><input id="code" type="text"></p>
@@ -35,7 +35,7 @@ layout: environment.liquid
 
 
 <ul>
-    <li><a href="/scripts/program_finder.js">Script file used to build program finder</a></li>
-    <li><a href="/stylesheets/program_finder.css">Stylesheet file used to build program finder</a></li>
+    <li><a href="/scripts/integrations/program_finder.js">Script file used to build program finder</a></li>
+    <li><a href="/stylesheets/integrations/program_finder.css">Stylesheet file used to build program finder</a></li>
 </ul>
 
