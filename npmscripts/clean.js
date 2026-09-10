@@ -12,7 +12,7 @@ function ensureCleanDirectory(directory) {
 }
 
 async function run() {
-  console.log('Waiting started to ensure OS resources are released...');
+  console.log('Waiting to ensure OS resources are released...');
   await timer.setTimeout(30000); 
   console.log('Starting clean process...');
   ensureCleanDirectory(checkoutRoot);
