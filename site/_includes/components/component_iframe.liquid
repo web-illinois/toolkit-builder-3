@@ -21,7 +21,11 @@
         if (window.parent && window.parent.document) {
             version = window.parent.document.getElementById('version-select').value;
         }
-        const rootPath = version == 'dev' ? `https://dev.toolkit.illinois.edu/{{ component_template.tag }}/latest` : `https://cdn.toolkit.illinois.edu/{{ component_template.tag }}/${version}`;
+        {% if localFiles %}
+            const rootPath = `/_localfiles`;
+        {% else %}
+            const rootPath = version == 'dev' ? `https://dev.toolkit.illinois.edu/{{ component_template.tag }}/latest` : `https://cdn.toolkit.illinois.edu/{{ component_template.tag }}/${version}`;
+        {% endif %}
         const globalLink = document.createElement('link');
         globalLink.rel = 'stylesheet';
         globalLink.type = 'text/css';

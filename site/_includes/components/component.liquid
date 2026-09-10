@@ -73,7 +73,9 @@
         <img src="https://cdn.brand.illinois.edu/patterns/finial/blue.svg" alt="" slot="background">
         <h1>{{ title }}</h1>
       </ilw-page-title>
-
+      <ilw-content mode="introduction" theme="blue" width="full">
+        {{ content.description }}
+      </ilw-content>
       <ilw-spacer></ilw-spacer>
       {% if use_custom_url %}
       <iframe id="iframe" src="{{ use_custom_url }}?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>

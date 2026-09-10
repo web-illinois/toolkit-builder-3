@@ -23,6 +23,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("site/img");
 
+  eleventyConfig.addPassthroughCopy("site/_localfiles");
+
   eleventyConfig.addFilter("generateGithubLink", (name) => `https://github.com/web-illinois/${name}`);
 
   eleventyConfig.addFilter("generateGithubIssuesLink", function (name, components) {

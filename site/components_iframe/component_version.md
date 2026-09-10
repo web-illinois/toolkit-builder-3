@@ -5,4 +5,5 @@ pagination:
   alias: component_template
 permalink: component/{{ component_template.tag | slugify }}/{{ component_template.template | slugify }}/index.html
 layout: components/component_iframe.liquid
+localFiles: false
 ---
