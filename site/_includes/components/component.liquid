@@ -119,11 +119,11 @@
          {% if use_custom_url %}
            <option value="{{ custom.path }}" selected>Default template ({{ template_tag }})</option>
          {% else %}
-           <option value="/component/{{ id }}/{{ template_tag | slugify }}" selected>Default template ({{ template_tag }})</option>
+           <option value="/component/{{ id }}/{{ template_tag | slugify }}/index.html" selected>Default template ({{ template_tag }})</option>
          {% endif %}
          {%- for template_info in component_templates %}
          {% if template_info.id == id %}
-           <option value="/component/{{ id }}/{{ template_info.template | slugify }}">{{ template_info.template }} {{ template_info.notes }}</option>
+           <option value="/component/{{ id }}/{{ template_info.template | slugify }}/index.html">{{ template_info.template }} {{ template_info.notes }}</option>
          {% endif %}
          {% endfor -%}
          {%- for component in components %}
