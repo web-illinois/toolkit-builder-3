@@ -42,6 +42,12 @@
         document.head.appendChild(link);
         {% endif %}
         build(false);
+        if (window.parent && window.parent.document) {
+            const iframe = window.parent.document.getElementById('iframe');
+            if (iframe) {
+                iframe.style.height = document.body.scrollHeight + 'px';
+            }
+        }
     });
 
     const observer = new ResizeObserver(() => {
@@ -55,7 +61,7 @@
     observer.observe(document.documentElement);
     </script>
 </head>
-<body style="margin: 0 30px;">
+<body style="padding: 0 30px;">
     <main>
 
     <div role="presentation" class="builder-line top"></div>
@@ -199,6 +205,17 @@
                     </div>
                     </div>
                 {% endfor -%}
+                {%- for cssvariable in global_css %}
+                    <div class="builder-row builder-selector">
+                    <div class="builder-column builder-align-right">
+                    <div><label for="css{{ cssvariable.name }}">{{ cssvariable.name }}</label></div>
+                    <div>Global style: {{ cssvariable.description }}</div>
+                    </div>
+                    <div class="builder-column">
+                    <input class="cssVariable" onchange="build();" data-name="{{ cssvariable.name }}" id="css{{ cssvariable.name }}">
+                    </div>
+                    </div>
+                {% endfor -%}
             </details>
         </div>
       </div>
@@ -230,10 +247,9 @@
         
         <ul class="ilw-buttons">
             <li><button onclick="copyCode();">Copy to Clipboard</button><span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span></li>
-            <li><button onclick="generateCodepen();">Generate Codepen to Share</button></li>
         </ul>
 
-      {% if component_template.builder-infomration.addon-html %}
+      {% if component_template.builder-information.addon-html %}
           <p>This is the additional HTML used to test the item.</p>
           <code id="results-addon"></code>
       {% endif %}

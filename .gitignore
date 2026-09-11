@@ -6,5 +6,6 @@ var
 _site
 site/_localfiles
 site/_data/*.json
+site/json/*.json
 site/components/*.md
 screenshot/results/

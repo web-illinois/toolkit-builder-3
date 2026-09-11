@@ -11,8 +11,12 @@ const readmesDir = path.join(root, 'site', 'components');
 
 const componentsFile = path.join(root, 'site', '_data', 'components.json');
 const componentVersionsFile = path.join(root, 'site', '_data', 'component_templates.json');
+const componentsFilePublic = path.join(root, 'site', 'json', 'components.json');
+const componentVersionsFilePublic = path.join(root, 'site', 'json', 'component_templates.json');
 
 const environmentsFile = path.join(root, 'site', '_data', 'environments.json');
+const globalCssFile = path.join(root, 'site', '_data', 'global_css.json');
+const globalCssFilePublic = path.join(root, 'site', 'json', 'global_css.json');
 
 function run(command, args, options = {}) {
   childProcess.execFileSync(command, args, {
@@ -127,6 +131,8 @@ for (const entry of repositories) {
 combinedComponents.sort((a, b) => a.title.localeCompare(b.title));
 fs.writeFileSync(componentsFile, JSON.stringify(combinedComponents, null, 2), 'utf8');
 fs.writeFileSync(componentVersionsFile, JSON.stringify(combinedComponentVersions, null, 2), 'utf8');
+fs.writeFileSync(componentsFilePublic, JSON.stringify(combinedComponents, null, 2), 'utf8');
+fs.writeFileSync(componentVersionsFilePublic, JSON.stringify(combinedComponentVersions, null, 2), 'utf8');
 
 const environments = `[
   {
@@ -143,3 +149,116 @@ const environments = `[
 
 fs.writeFileSync(environmentsFile, environments, 'utf8');
 
+const global_css = `[
+  {
+    "name": "--ilw-color--background",
+    "description": "Background color"
+  },
+  {
+    "name": "--ilw-color--text",
+    "description": "Text color"
+  },
+  {
+    "name": "--ilw-color--border",
+    "description": "Border color"
+  },
+  {
+    "name": "--ilw-color--border-light",
+    "description": "Light border color"
+  },
+  {
+    "name": "--ilw-color--link",
+    "description": "Link color"
+  },
+  {
+    "name": "--ilw-color--link-hover",
+    "description": "Link hover color"
+  },
+  {
+    "name": "--ilw-color--link-visited",
+    "description": "Link visited color"
+  },
+  {
+    "name": "--ilw-color--heading",
+    "description": "Heading color"
+  },
+  {
+    "name": "--ilw-color--heading-link",
+    "description": "Heading link color"
+  },
+  {
+    "name": "--ilw-color--heading-link-hover",
+    "description": "Heading link hover color"
+  },
+  {
+    "name": "--ilw-color--heading-link-visited",
+    "description": "Heading link visited color"
+  },
+  {
+    "name": "--ilw-color--control",
+    "description": "Control color"
+  },
+  {
+    "name": "--ilw-color--control-text",
+    "description": "Control text color"
+  },
+  {
+    "name": "--ilw-color--control-accent",
+    "description": "Control accent color"
+  },
+  {
+    "name": "--ilw-color--control-accent-text",
+    "description": "Control accent text color"
+  },
+  {
+    "name": "--ilw-color--table-border",
+    "description": "Table border color"
+  },
+  {
+    "name": "--ilw-color--table-background",
+    "description": "Table background color"
+  },
+  {
+    "name": "--ilw-color--table-row-stripe",
+    "description": "Table row stripe color"
+  },
+  {
+    "name": "--ilw-color--table-head-background",
+    "description": "Table head background color"
+  },
+  {
+    "name": "--ilw-color--table-head-color",
+    "description": "Table head text color"
+  },
+  {
+    "name": "--ilw-color--focus--background",
+    "description": "Focus background color"
+  },
+  {
+    "name": "--ilw-color--focus--text",
+    "description": "Focus text color"
+  },
+  {
+    "name": "--ilw-color--focus--outline",
+    "description": "Focus outline color"
+  },
+  {
+    "name": "--ilw-margin--side",
+    "description": "Side margin in pixels"
+  },
+  {
+    "name": "--ilw-panel--color",
+    "description": "Panel color (depreciated)"
+  },
+  {
+    "name": "--ilw-panel--highlighted-color",
+    "description": "Panel highlighted color (depreciated)"
+  },
+  {
+    "name": "--ilw-panel--focused-color",
+    "description": "Panel focused color (depreciated)"
+  }
+]`
+
+fs.writeFileSync(globalCssFile, global_css, 'utf8');
+fs.writeFileSync(globalCssFilePublic, global_css, 'utf8');

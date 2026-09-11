@@ -41,13 +41,9 @@
     });
 
     function updateIFrame() {
-        const versionText = document.getElementById('current-version');
-        const templateText = document.getElementById('current-template');
         const versionSelect = document.getElementById('version-select');
         const templateSelect = document.getElementById('template-select');
         const previewSelect = document.getElementById('preview');
-        versionText.innerText = versionSelect.options[versionSelect.selectedIndex].text;
-        templateText.innerText = templateSelect.options[templateSelect.selectedIndex].text;
         const iframe = document.getElementById('iframe');
         if (iframe) {
             const previewValue = previewSelect.value;
@@ -61,6 +57,10 @@
               iframe.src = `${templateSelect.value}?${versionSelect.value}`;
               document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = '');
             }
+            window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+            });
         }
     }
     </script>
@@ -73,9 +73,21 @@
         <img src="https://cdn.brand.illinois.edu/patterns/finial/blue.svg" alt="" slot="background">
         <h1>{{ title }}</h1>
       </ilw-page-title>
-      <ilw-content mode="introduction" theme="blue" width="full">
-        {{ content.description }}
+      <ilw-columns width="page" padding="20px 0" gap="20px" mode="3x1" style="margin-bottom: 20px; border-bottom: 2px solid var(--il-blue);">
+      <ilw-content mode="introduction">
+        <p><em>{{ component.description }}</em></p>
       </ilw-content>
+       {% if preview_tag %}
+       <ilw-content>
+          <label for="preview">Builder or Preview:</label>
+          <select id="preview" style="width: calc(100% - 50px);">
+            <option value="builder" selected>Builder</option>
+            <option value="preview">Preview (latest production only)</option>
+            <option value="previewdev">Preview (latest development only)</option>
+          </select>
+       </ilw-content>
+       {% endif %}
+      </ilw-columns>
       <ilw-spacer></ilw-spacer>
       {% if use_custom_url %}
       <iframe id="iframe" src="{{ use_custom_url }}?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>
@@ -85,22 +97,12 @@
       <ilw-spacer></ilw-spacer>
 
       <ilw-content width="page">
-      <h2>Choose Alternate Versions</h2>
-      <ilw-columns>
-       {% if preview_tag %}
+      <h2 class="hide-on-preview">Choose Alternate Versions</h2>
+      <ilw-columns class="hide-on-preview" >
        <div>
-          <label for="preview">Builder or Preview:</label>
-          <select id="preview" style="width: calc(100% - 50px);">
-            <option value="builder" selected>Builder</option>
-            <option value="preview">Preview (latest production only)</option>
-            <option value="previewdev">Preview (latest development only)</option>
-          </select>
-       </div>
-       {% endif %}
-       <div>
-          <label class="hide-on-preview" for="version-select">Choose a version:</label>
+          <label for="version-select">Choose a version:</label>
           <select class="hide-on-preview" id="version-select" style="width: calc(100% - 50px);">
-          <option value="{{ version_tag }}" selected>Default version</option>
+          <option value="{{ version_tag }}" selected>Default version ({{ version_tag }})</option>
           {%- for component in components %}
               {% if component.tag == tag %}
                   {%- for version_info in component.versions %}
@@ -110,16 +112,14 @@
           {% endfor -%}
           <option value="dev">Latest development version</option>
         </select>
-        <p class="hide-on-preview">Most recent version: {{ version_tag }}</p>
-        <p class="hide-on-preview">Current version: <span id="current-version">{{ version_tag }}</span></p>
        </div>
        <div>
          <label class="hide-on-preview" for="template-select">Choose a template:</label>
          <select class="hide-on-preview" id="template-select" style="width: calc(100% - 50px);">
           {% if use_custom_url %}
-           <option value="{{ custom.path }}" selected>Default template</option>
+           <option value="{{ custom.path }}" selected>Default template ({{ template_tag }})</option>
           {% else %}
-           <option value="/component/{{ tag }}/{{ template_tag | slugify }}" selected>Default template</option>
+           <option value="/component/{{ tag }}/{{ template_tag | slugify }}" selected>Default template ({{ template_tag }})</option>
           {% endif %}
            {%- for template_info in component_templates %}
               {% if template_info.tag == tag %}
@@ -136,20 +136,20 @@
                 {% endif %}
             {% endfor -%}
             </select>
-          <p class="hide-on-preview">Most recent template: {{ template_tag }}</p>
-          <p class="hide-on-preview">Current template: <span id="current-template">{{ template_tag }}</span></p>
         </div>
       </ilw-columns>
       </ilw-content>
       <ilw-spacer></ilw-spacer>
-
+      <ul class="ilw-buttons">
+        <li><a href="{{ sourceRepository }}/issues/new">Contact us about a problem</a></li>
+        <li><a href="{{ sourceRepository }}">View repository on GitHub</a></li>
+      </ul>
       <ilw-content width="page">
         <h2>Component Notes for Latest Version</h2>
-        <p><a href="{{ sourceRepository }}">View repository on GitHub</a></p>
         {{ content }}
       </ilw-content>
       <ilw-spacer></ilw-spacer>
-
+      <ilw-back-to-top></ilw-back-to-top>
     </main>
     {% render '_partials/footer' %}
 </ilw-page>

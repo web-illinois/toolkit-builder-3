@@ -1,7 +1,7 @@
 ---
 title: Org Chart Information
 layout: components/base.liquid
-permalink: "notes/orgchart/index.html"
+permalink: "component/ilw-org-chart/custom/index.html"
 scripturl: "//cdn.toolkit.illinois.edu/ilw-org-chart/1/ilw-org-chart.js"
 stylesheeturl: "//cdn.toolkit.illinois.edu/ilw-org-chart/1/ilw-org-chart.css"
 ---

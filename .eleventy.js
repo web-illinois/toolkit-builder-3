@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt);
 
   eleventyConfig.addPassthroughCopy("site/img");
-
+  eleventyConfig.addPassthroughCopy("site/json");
   eleventyConfig.addPassthroughCopy("site/_localfiles");
 
   eleventyConfig.addFilter("generateGithubLink", (name) => `https://github.com/web-illinois/${name}`);

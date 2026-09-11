@@ -66,3 +66,16 @@ To run the demo pages, change the `localFiles` of the demo pages to true in the 
 
 If you are changing the toolkit-management repository, make sure you rebuild the package.json and package-lock.json files. Updating the package.json can be done manually, but to update the package-lock.json, run `npm update --save`.
 
+## Creating a custom demo page for special cases
+For special case components that cannot be duplicated inside of the builder website, like the [org chart](https://github.com/web-illinois/toolkit-builder-3/blob/main/site/components_iframe/orgchart.md), an override builder page can be created. 
+
+1. Create a new branch in toolkit-builder-3 for your customizations.
+2. In your new branch, build out the custom page inside: `toolkit-builder-3/site/components_iframe/YOUR-NEW-COMPONENT.md`
+    * This will be put in an `<iframe>` inside your component builder page, so start with an H2
+    * Your permalink should be nested inside the component -- in most cases, this will be `component/YOUR-COMPONENT/`. Make sure you give it a subdirectory inside this structure -- do not write to the index.html or it will break. 
+    * Make sure to add your production or development version JS and CSS with the parameters `scripturl` and `stylesheeturl`. 
+3. Submit a pull-request to request the custom override. 
+4. Once approved, go to your component repo: builder/ilw-YOUR-NEW-COMPONENT.json
+5. Follow the steps to add a Custom Templates (used in component.json) in [the Builder Files readme](https://github.com/web-illinois/toolkit-builder-3/blob/main/BUILDER_FILES.md).
+
+Note: If this component is updated, its custom builder page will need to be updated manually with it. 
