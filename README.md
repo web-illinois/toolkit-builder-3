@@ -15,6 +15,8 @@ To add a new component to the toolkit builder, update `site/component-repositori
 
 The deployment workflow runs `npm run import-components`, which checks out each repository, copies JSON files from the `builder/` and `builder/versions/` folders, and imports each repository README into the builder site under `/readme/{repository}/`.
 
+[The Builder Files readme](https://github.com/web-illinois/toolkit-builder-3/blob/main/BUILDER_FILES.md) outlines what is in the `builder/` and `builder/versions/` folders.
+
 If a repository keeps builder JSON files in a different folder, add a `builderPath` value in `component-repositories.json`.
 
 If a repository uses a README.md file for other information besides component information, add a `file` value in `component-repositories.json` that points to the markdown file you want to use. This is case sensitive.
@@ -65,6 +67,7 @@ copy dist-toolkit\* ..\toolkit-builder-3\site\_localfiles /Y
 To run the demo pages, change the `localFiles` of the demo pages to true in the .md file and run the npm build script for the toolkit builder 3 project. Make sure you change the `localFiles` variable back to false before checking the files back in. 
 
 If you are changing the toolkit-management repository, make sure you rebuild the package.json and package-lock.json files. Updating the package.json can be done manually, but to update the package-lock.json, run `npm update --save`.
+
 
 ## Creating a custom demo page for special cases
 For special case components that cannot be duplicated inside of the builder website, like the [org chart](https://github.com/web-illinois/toolkit-builder-3/blob/main/site/components_iframe/orgchart.md), an override builder page can be created. 
