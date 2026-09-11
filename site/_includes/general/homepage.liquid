@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render '_partials/scripts_styles' %}
+    <link rel="stylesheet" href="{{ '/stylesheets/general/homepage.css' |  url }}">
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+<ilw-page class="ilw-font">
+    {% render '_partials/header' %}
+    <main>
+        <ilw-hero width="full" theme="white" collapse="true" class="home-hero">
+            <div class="home-hero-background"></div>
+            <h1>{{ title }}</h1>
+            <p>{{ tagline }}</p>
+        </ilw-hero>
+        <div class="action-cards">
+            <div>
+                <ilw-columns gap="80px" padding="70px 20px 40px" style="max-width: 800px; margin: 0 auto; display: block;">
+                    {%- for card in cards %}
+                        <ilw-card>
+                            <h2>{{ card.title }}</h2>
+                            <p>{{ card.text | markdownify }}</p>
+                            <div class="buttons" slot="footer">
+                                <a class="ilw-button" href="{{ card.link }}">{{ card.button }}</a>
+                            </div>
+                        </ilw-card>
+                    {% endfor -%}
+                </ilw-columns>
+                <ilw-content align="center" width="full" theme="gray">
+                    {%- if notice %}
+                    <p>
+                        {{ notice | markdownify }}
+                    </p>
+                    {% endif %}
+                    <ilw-spacer height="40px"></ilw-spacer>
+                </ilw-content>
+            </div>
+
+        </div>
+        <ilw-content theme="orange" align="center" padding="5px">
+            <h2 id="components">Components</h2>
+        </ilw-content>
+        <ilw-spacer></ilw-spacer>
+        <ilw-grid id="component-cards" width="page" gap="50px" padding="50px 10px 20px">
+            {%- for component in components %}
+                <div class="component-wrapper">
+                    <ilw-card aspectratio="5/2" clickable style="">
+                        <div class="component-image" slot="image">
+                            <div class="component-image-inner">
+                                {% assign img = '/img/components/' | append: component.tag | append: '.png' %}
+                                <img src="{{ img | url }}" alt="" loading="lazy"/>
+                            </div>
+                            <div class="component-image-overlay"></div>
+                        </div>
+                        <h3><a href="/component/{{ component.tag | slugify }}/index.html">
+                                {{ component.title }}
+                        </a></h3>
+                        <p>{{ component.purpose }}</p>
+                    </ilw-card>
+                </div>
+            {% endfor -%}
+        </ilw-grid>
+        <ilw-call-to-action theme="blue" width="full">
+            <ilw-icon icon="comment" slot="icon" size="140px"></ilw-icon>
+            <h2>{{ cta }}</h2>
+            <p>{{ cta_text }}</p>
+            <ul class="ilw-buttons ilw-theme-orange-1">
+                {%- for button in cta_buttons %}
+                    <li><a href="{{ button.link }}">{{ button.text }}</a></li>
+                {% endfor %}
+            </ul>
+        </ilw-call-to-action>
+        <ilw-content>
+            {{ content }}
+        </ilw-content>
+    </main>
+    {% render '_partials/footer' %}
+</ilw-page>
+</body>
+</html>

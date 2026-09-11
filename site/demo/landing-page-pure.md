@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "demo/{{ environment.tag | slugify }}/landing-page-pure.html"
 title: Sample Landing Page
-layout: sample.liquid
+layout: demo\sample.liquid
 classOptions: 'ilw-font'
 localFiles: false
 ---
@@ -68,7 +68,7 @@ localFiles: false
 </ilw-columns>
 
 <ilw-columns mode="1x2" theme="gray" width="page">
-    <div class="image-padding"><img src="/img/UI-02-160420-012.jpg" alt="Student sitting at a desk in the library"></div>
+    <div><img src="/img/UI-02-160420-012.jpg" alt="Student sitting at a desk in the library"></div>
 
 <ilw-content theme="gray">
 <h2>

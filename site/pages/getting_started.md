@@ -1,21 +1,9 @@
 ---
 title: Getting Started
-layout: page.liquid
+layout: general\page.liquid
 permalink: "getting_started/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 ---
-<style>
-code {
-    display: block;
-    padding: 30px;
-    background: #e7e7f7;
-    margin: 20px 0;
-    border: thin solid black;
-    font-size: 1.2rem;
-    overflow-wrap: break-word;
-}
-</style>
-
 Add the following lines to your HTML:
 
 ```html

@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "themes/{{ environment.tag | slugify }}/index.html"
 title: Theme Information
-layout: themes.liquid
+layout: demo\themes.liquid
 ---
 As of 2025, we have promoted the theme information as a first-class attribute no longer associated with a specific component. This will allow us to have a stnadardized list of themes and the colors will be specific to the theme, not the component. 
 

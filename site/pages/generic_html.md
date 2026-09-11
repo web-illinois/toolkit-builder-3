@@ -1,21 +1,9 @@
 ---
 title: Generic HTML Template
-layout: page.liquid
+layout: general\page.liquid
 permalink: "generic_html/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 ---
-<style>
-.template code {
-    display: block;
-    padding: 30px;
-    background: #e7e7f7;
-    margin: 20px 0;
-    border: thin solid black;
-    font-size: 1.2rem;
-    overflow-wrap: break-word;
-}
-</style>
-
 If you need a generic HTML template, feel free to use this:
 <div class="template">
 

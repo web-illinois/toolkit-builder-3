@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    {% render '_partials/scripts_styles' %}
+    <title>{{ title }}</title>
+</head>
+<body style="margin: 0;">
+  <ilw-page class="ilw-font">
+    {% render '_partials/header' %}
+    <main>
+      {%- if title_background %}
+        <ilw-page-title width="page" {% if title_background_color %}style="background: {{ title_background_color }}"{% endif %}>
+          <img src="{{ title_background }}" alt="" slot="background">
+          <h1>{{ title }}</h1>
+        </ilw-page-title>
+        <ilw-spacer></ilw-spacer>
+      {%- else %}
+        <ilw-content width="page">
+          <h1>{{ title }}</h1>
+        </ilw-content>
+      {%- endif %}
+      {%- if lede %}
+        <ilw-content mode="lede" width="page">
+          <p>{{ lede }}</p>
+        </ilw-content>
+      {% endif %}
+      <ilw-content width="page">
+        {{ content }}
+      </ilw-content>
+      <ilw-spacer></ilw-spacer>
+    </main>
+    {% render '_partials/footer' %}
+  </ilw-page>
+</body>
+</html>

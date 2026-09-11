@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
+    <script src="/scripts/components/component.js"></script>
+    <link rel="stylesheet" href="/stylesheets/components/component.css" data-skip="true">
+    {% if component_template.added-components %}
+        {%- for added in component-version.added-components %}
+            {% if added.css %}
+            <link rel="stylesheet" href="{{ added.css }}">
+            {% endif %}
+            {% if added.js %}
+            <script type="module" src="{{ added.js }}"></script>
+            {% endif %}
+        {% endfor -%}
+    {% endif %}
+    <title>{{ component_template.title }} Builder IFrame</title>
+    <script>
+    document.addEventListener("DOMContentLoaded", async function(event) {
+        let version = 'dev';
+        if (window.parent && window.parent.document) {
+            version = window.parent.document.getElementById('version-select').value;
+        }
+        {% if localFiles %}
+            const rootPath = `/_localfiles`;
+        {% else %}
+            const rootPath = version == 'dev' ? `https://dev.toolkit.illinois.edu/{{ component_template.tag }}/latest` : `https://cdn.toolkit.illinois.edu/{{ component_template.tag }}/${version}`;
+        {% endif %}
+        const globalLink = document.createElement('link');
+        globalLink.rel = 'stylesheet';
+        globalLink.type = 'text/css';
+        globalLink.href = version == 'dev' ? `https://dev.toolkit.illinois.edu/ilw-global/latest/ilw-global.css` : `https://cdn.toolkit.illinois.edu/ilw-global/3/ilw-global.css`;;
+        document.head.appendChild(globalLink);
+        {% if component_template.usejs %}
+        await import(`${rootPath}/{{ component_template.tag }}.js`);
+        {% endif %}
+        {% if component_template.usecss %}
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = `${rootPath}/{{ component_template.tag }}.css`;
+        document.head.appendChild(link);
+        {% endif %}
+        build(false);
+        if (window.parent && window.parent.document) {
+            const iframe = window.parent.document.getElementById('iframe');
+            if (iframe) {
+                iframe.style.height = document.body.scrollHeight + 'px';
+            }
+        }
+    });
+
+    const observer = new ResizeObserver(() => {
+        if (window.parent && window.parent.document) {
+            const iframe = window.parent.document.getElementById('iframe');
+            if (iframe) {
+                iframe.style.height = document.documentElement.scrollHeight + 'px';
+            }
+        }
+    });
+    observer.observe(document.documentElement);
+    </script>
+</head>
+<body style="padding: 0 30px;">
+    <main>
+
+    <div role="presentation" class="builder-line top"></div>
+    {% if component_template.builder-information.addon-html %}
+          <div class="builder-section">
+          <div id="addon">{{ component_template.addon-html }}</div>
+          </div>
+    {% endif %}
+
+    <div id="component" data-name="{{ component_template.builder-information.element-name }}"></div>
+    <div role="presentation" class="builder-line bottom"></div>
+
+    <div class="builder-section builder-row">
+      <div class="builder-column" id="builder-textarea-section">
+          <h2>Template -- enter raw HTML here</h2>
+              <div class="builder-row builder-selector builder-align-right">
+              <div class="builder-column builder-align-right">
+              <div><label for="samples-list">Samples:</label></div>
+              <p>{{ attribute.description }}</p>
+              </div>
+              <div class="builder-column">
+              <select onchange="changeSamples();" id="samples-list" name="samples-list">
+              {%- for sample in component_template.samples %}
+                  <option value="{{ sample.name }}">{{ sample.description }}</option>
+              {% endfor -%}
+              </select>
+              </div>
+              </div>
+          <label for="inner">Enter raw HTML here</label>
+          <textarea id="inner"></textarea>
+          <ul class="ilw-buttons">
+              <li><button onclick="build();">Rebuild Component With Selected Options</button></li>
+              <li><button onclick="window.location.reload();">Reset</button></li>
+          </ul>
+      </div>
+
+      <div class="builder-column">
+            <h2>Attributes, Classes, and CSS Variables</h2>
+            {%- for attribute in component_template.attributes-fixed %}
+                <div class="builder-row builder-selector">
+                <div class="builder-column builder-align-right">
+                <div>{{ attribute.name }} (fixed attribute)</div>
+                <div>{{ attribute.description }}</div>
+                {% if attribute.depreciated %}
+                    <div><strong>Deprecated value, see notes</strong></div>
+                {% endif %}
+                </div>
+                <div class="builder-column">
+                {{ attribute.value }}
+                <input type="hidden" class="attribute" name="{{ attribute.name }}" id="{{ attribute.name }}" value="{{ attribute.value }}">
+                </div>
+                </div>
+            {% endfor -%}
+
+            {%- for attribute in component_template.attributes %}
+                <div class="builder-row builder-selector">
+                <div class="builder-column builder-align-right">
+                <div><label for="{{ attribute.name }}">{{ attribute.name }}</label> (attribute)</div>
+                <div>{{ attribute.description }}</div>
+                {% if attribute.depreciated %}
+                    <div><strong>Deprecated value, see notes</strong></div>
+                {% endif %}
+                </div>
+                <div class="builder-column">
+                <select class="attribute" onchange="build();" id="{{ attribute.name }}" name="{{ attribute.name }}">
+                {%- for v in attribute.values %}
+                    <option value="{{ v }}">{{ v }}</option>
+                {% endfor -%}
+                </select>
+                </div>
+                </div>
+            {% endfor -%}
+
+            {%- for attribute in component_template.attributes-text %}
+                <div class="builder-row builder-selector">
+                <div class="builder-column builder-align-right">
+                <div><label for="{{ attribute.name }}">{{ attribute.name }}</label> (text attribute)</div>
+                <div>{{ attribute.description }}</div>
+                {% if attribute.depreciated %}
+                    <div><strong>Deprecated value, see notes</strong></div>
+                {% endif %}
+                </div>
+                <div class="builder-column">
+                <input type="text" onchange="build();" class="attribute" name="{{ attribute.name }}" id="{{ attribute.name }}" value="{{ attribute.value }}">
+                </div>
+                </div>
+            {% endfor -%}
+
+            {%- for class in component_template.classes-fixed %}
+                <div class="builder-row builder-selector">
+                <div class="builder-column builder-align-right">
+                <div>{{ class.name }} (fixed class)</div>
+                <div>{{ class.description }}</div>
+                {% if class.depreciated %}
+                    <div><strong>Deprecated value, see notes</strong></div>
+                {% endif %}
+                </div>
+                <div class="builder-column">
+                {{ class.value }}
+                <input type="hidden" class="class" name="{{ class.name }}" id="{{ class.name }}" value="{{ class.value }}">
+                </div>
+                </div>
+            {% endfor -%}
+            {%- for class in component_template.classes %}
+                <div class="builder-row builder-selector">
+                <div class="builder-column builder-align-right">
+                <div><label for="{{ class.name }}">{{ class.name }}</label> (class)</div>
+                <div>{{ class.description }}</div>
+                {% if class.depreciated %}
+                    <div><strong>Deprecated value, see notes</strong></div>
+                {% endif %}
+                </div>
+                <div class="builder-column">
+                <select class="class" onchange="build();" id="{{ class.name }}" name="{{ class.name }}">
+                {%- for v in class.values %}
+                    <option value="{{ v }}">{{ v }}</option>
+                {% endfor -%}
+                </select>
+                </div>
+                </div>
+            {% endfor -%}
+            <details>
+               <summary>Custom CSS Variables and Styles (advanced use only)</summary>
+               <div class="builder-row builder-selector">
+               
+                  <label style="flex: 100px;" for="outer-style">Parent style:</label>
+                  <input type="text" onchange="build();" name="outer-style" id="outer-style" value="{{ component_template.builder-information.parent-style }}">
+                </div>
+
+                {%- for cssvariable in component_template.css-variables %}
+                    <div class="builder-row builder-selector">
+                    <div class="builder-column builder-align-right">
+                    <div><label for="css{{ cssvariable.name }}">{{ cssvariable.name }}</label></div>
+                    <div>{{ cssvariable.description }}</div>
+                    {% if cssvariable.depreciated %}
+                        <div><strong>Deprecated value, see notes</strong></div>
+                    {% endif %}
+                    </div>
+                    <div class="builder-column">
+                    <input class="cssVariable" onchange="build();" data-name="{{ cssvariable.name }}" id="css{{ cssvariable.name }}">
+                    </div>
+                    </div>
+                {% endfor -%}
+                {%- for cssvariable in global_css %}
+                    <div class="builder-row builder-selector">
+                    <div class="builder-column builder-align-right">
+                    <div><label for="css{{ cssvariable.name }}">{{ cssvariable.name }}</label></div>
+                    <div>Global style: {{ cssvariable.description }}</div>
+                    </div>
+                    <div class="builder-column">
+                    <input class="cssVariable" onchange="build();" data-name="{{ cssvariable.name }}" id="css{{ cssvariable.name }}">
+                    </div>
+                    </div>
+                {% endfor -%}
+            </details>
+        </div>
+      </div>
+
+     {% if component_template.added-components %}
+        <div class="builder-section">
+        <h2>Additional Components</h2>
+        <p>In addition to the main component, the following additional components and/or CSS/JS modules have been added to help you build your version of the component:</p>
+        <ul>
+        {%- for added in component_template.added-components %}
+            {% if added.link %}
+                <li><strong><a href="{{ added.link }}">{{ added.name }}</a>:</strong> {{ added.description }}</li>
+            {% else %}
+                <li><strong>{{ added.name }}:</strong> {{ added.description }}</li>
+            {% endif %}
+        {% endfor -%}
+        </ul>
+        </div>
+    {% endif %}
+
+
+      <div class="builder-section">
+        <h2>HTML listed here</h2>
+        <code id="results"></code>
+        <form id="codepen-form" action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input id="codepen" type="hidden" name="data" value="">
+        </form>
+        <p id="outer-style-definition-note">This parent has a style of <em id="outer-style-definition"></em> that is not figured into the source HTML. You can change this by opening the Custom CSS Variables and Styles and editing the parent style.</p>
+        
+        <ul class="ilw-buttons">
+            <li><button onclick="copyCode();">Copy to Clipboard</button><span id="buildingCodeCopied" class="warning hide">Copied to clipboard</span></li>
+        </ul>
+
+      {% if component_template.builder-information.addon-html %}
+          <p>This is the additional HTML used to test the item.</p>
+          <code id="results-addon"></code>
+      {% endif %}
+      </div>
+
+      <div class="samples" style="display: none;">
+      {%- for sample in component_template.samples %}
+          <div class="sample" data-name="{{ sample.name }}">
+          {{ sample.text }}
+          </div>
+      {% endfor -%}
+      </div>
+
+    </main>
+</body>
+</html>

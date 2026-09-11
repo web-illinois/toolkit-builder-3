@@ -1,45 +1,9 @@
 ---
 title: Upgrade from Version 2
-layout: page.liquid
+layout: general\page.liquid
 permalink: "upgrade/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/ascend/blue.svg
 ---
-<style>
-    ilw-content table {
-        border-collapse: collapse;
-        margin-top: 30px;
-    }
-    
-    ilw-content thead tr {
-        background-color: var(--il-blue);
-        color: #fff;
-        position: relative;
-    }
-
-    ilw-content thead tr th {
-        border-left: 2px solid #fff;
-        color: #fff;
-        min-width:  90px;
-        padding: 10px;
-        font-weight: 700;
-    }
-
-    ilw-content thead tr th:first-of-type {
-        border-left: 2px solid var(--il-blue);
-    }
-
-ilw-content tbody tr td {
-    border: 2px solid var(--il-blue);
-    min-width: 300px;
-    min-height: 90px;
-    padding: 10px;
-}
-
-ilw-content tbody tr:nth-child(even) td {
-    background: var(--il-industrial-lighter-4);
-}
-</style>
-
 If you are upgrading from version 2, you should be able to do a swap from the old component to the new component. Most of them are a one-to-one swap, but there are a few exceptions. 
 
 Refer to the documentation of each component to see what needs to be changed with the component to move from v2 to v3. 

@@ -1,6 +1,6 @@
 ---
 title: Helpful Links
-layout: page.liquid
+layout: general\page.liquid
 permalink: "links/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/finial/blue.svg
 ---
@@ -16,9 +16,8 @@ Note that links with an <strong>*</strong> will take you to a new website.
 * <a href="/releases_support_lifecycle/index.html">Our release schedule and support</a>
 
 ## Other links for websites
-* <a href="https://cdn.brand.illinois.edu/">Illinois Branding CDN <span role="presentation">*</span></a>, which has the campus stylesheet, header, and footer. <strong>The campus stylesheet is required for the toolkit to work effectively.</strong>
+* <a href="https://web.brand.illinois.edu/">Illinois Branding CDN <span role="presentation">*</span></a>, which has the campus stylesheet, header, and footer. <strong>The campus stylesheet is required for the toolkit to work effectively.</strong>
 * <a href="https://accessibleit.disability.illinois.edu/tools/skipto/">Campus skip-to link <span role="presentation">*</span></a>, an accessibility "nice-to-have" that allows users to go specifically to a section of a page. 
-* <a href="https://www.vpaa.uillinois.edu/cms/One.aspx?portalId=420456&pageId=1050467">GDPR cookie banner <span role="presentation">*</span></a>, a security requirement to meet privacy standards.
 
 ## For Everyone
 * <a href="https://go.illinois.edu/WIGGTeam">The WIGG Team on Microsoft Teams <span role="presentation">*</span></a>, where you can ask questions and get help. This will launch Microsoft Teams directly.

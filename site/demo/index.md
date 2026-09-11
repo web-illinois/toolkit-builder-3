@@ -5,8 +5,7 @@ pagination:
   alias: environment
 permalink: "demo/{{ environment.tag | slugify }}/index.html"
 title: Demonstration Pages List
-layout: environment.liquid
-title_background: https://cdn.brand.illinois.edu/patterns/finial/orange.svg
+layout: demo\environment.liquid
 ---
 
 We built a few demonstration pages to ensure that everything worked OK. We encourage you to use your browser *Inspect Tools* or *View Source* to see how we have built these pages if you want to see how we did this. 

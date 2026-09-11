@@ -1,7 +1,7 @@
 ---
 permalink: "colors/production/index.html"
 title: Color Information
-layout: colors.liquid
+layout: color/colors.liquid
 ---
 As of 2025, we have promoted the theme information as a first-class attribute no longer associated with a specific component. This will allow us to have a stnadardized list of themes and the colors will be specific to the theme, not the component. This is a list of colors set for the Illinois Theme and the generic content theme class. 
 
@@ -90,7 +90,11 @@ ilw-content select:hover {
 }
 #colorlist span {
     display: inline-block;
-    width: 240px;
+    width: 340px;
+}
+#colorlist span.intro {
+    padding-right: 20px;
+    text-align: right;
 }
 #colorlist span.swatch {
     display: inline-block;
