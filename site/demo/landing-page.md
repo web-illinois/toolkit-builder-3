@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "demo/{{ environment.tag | slugify }}/landing-page.html"
 title: Sample Landing Page
-layout: demo\sample.liquid
+layout: demo/sample.liquid
 classOptions: 'ilw-font ilw-margin'
 localFiles: false
 ---

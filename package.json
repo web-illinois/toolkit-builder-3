@@ -10,7 +10,8 @@
     "import-components": "node npmscripts/import_component_data.js",
     "clean": "node npmscripts/clean.js",
     "clean-external-only": "node npmscripts/clean_external_only.js",
-    "build": "node npmscripts/import_component_data.js && eleventy && node npmscripts/clean.js",
+    "build": "eleventy",
+    "build-all": "node npmscripts/import_component_data.js && eleventy && node npmscripts/clean.js",
     "dev": "eleventy --serve",
     "screenshot-server": "http-server -p 8081 screenshot"
   },

@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "demo/{{ environment.tag | slugify }}/home-illinois-mode.html"
 title: Sample Home Page with Illinois Mode
-layout: demo\sample.liquid
+layout: demo/sample.liquid
 classOptions: 'ilw-format ilw-margin'
 localFiles: false
 ---

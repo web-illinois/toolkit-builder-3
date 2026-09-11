@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "demo/{{ environment.tag | slugify }}/body-pure.html"
 title: Sample Body Page
-layout: demo\sample.liquid
+layout: demo/sample.liquid
 classOptions: 'ilw-font'
 localFiles: false
 ---

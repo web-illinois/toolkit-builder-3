@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "demo/{{ environment.tag | slugify }}/body-illinois-mode.html"
 title: Sample Body Page
-layout: demo\sample.liquid
+layout: demo/sample.liquid
 classOptions: 'ilw-format'
 localFiles: false
 ---
