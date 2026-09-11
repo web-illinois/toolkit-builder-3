@@ -24,7 +24,7 @@
         {% if localFiles %}
             const rootPath = `/_localfiles`;
         {% else %}
-            const rootPath = version == 'dev' ? `https://dev.toolkit.illinois.edu/{{ component_template.id | slugify }}/latest` : `https://cdn.toolkit.illinois.edu/{{ component_template.id | slugify }}/${version}`;
+            const rootPath = version == 'dev' ? `https://dev.toolkit.illinois.edu/{{ component_template.builder-information.element-name | slugify }}/latest` : `https://cdn.toolkit.illinois.edu/{{ component_template.builder-information.element-name | slugify }}/${version}`;
         {% endif %}
         const globalLink = document.createElement('link');
         globalLink.rel = 'stylesheet';
@@ -32,13 +32,13 @@
         globalLink.href = version == 'dev' ? `https://dev.toolkit.illinois.edu/ilw-global/latest/ilw-global.css` : `https://cdn.toolkit.illinois.edu/ilw-global/3/ilw-global.css`;;
         document.head.appendChild(globalLink);
         {% if component_template.usejs %}
-        await import(`${rootPath}/{{ component_template.id }}.js`);
+        await import(`${rootPath}/{{ component_template.builder-information.element-name | slugify }}.js`);
         {% endif %}
         {% if component_template.usecss %}
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = `${rootPath}/{{ component_template.id }}.css`;
+        link.href = `${rootPath}/{{ component_template.builder-information.element-name | slugify }}.css`;
         document.head.appendChild(link);
         {% endif %}
         build(false);
