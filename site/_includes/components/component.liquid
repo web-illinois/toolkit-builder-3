@@ -48,10 +48,10 @@
         if (iframe) {
             const previewValue = previewSelect.value;
             if (previewValue == 'preview') {
-              iframe.src = `/component/{{ id }}/{{ preview_tag | slugify }}_preview`;
+              iframe.src = `/component/{{ id }}/{{ preview_tag | slugify }}_preview/index.html`;
               document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = 'none');
             } else if (previewValue == 'previewdev') {
-              iframe.src = `/component/{{ id }}/{{ preview_tag | slugify }}_preview_dev`;
+              iframe.src = `/component/{{ id }}/{{ preview_tag | slugify }}_preview_dev/index.html`;
               document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = 'none');
             } else {
               iframe.src = `${templateSelect.value}?${versionSelect.value}`;
