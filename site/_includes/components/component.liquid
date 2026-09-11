@@ -86,6 +86,8 @@
             <option value="previewdev">Preview (latest development only)</option>
           </select>
        </ilw-content>
+       {% else %}
+          <input type="hidden" id="preview" value="builder">
        {% endif %}
       </ilw-columns>
       <ilw-spacer></ilw-spacer>
@@ -100,6 +102,7 @@
       <h2 class="hide-on-preview">Choose Alternate Versions</h2>
       <ilw-columns class="hide-on-preview" >
        <div>
+          {% if preview_tag %}
           <label for="version-select">Choose a version:</label>
           <select class="hide-on-preview" id="version-select" style="width: calc(100% - 50px);">
           <option value="{{ version_tag }}" selected>Default version ({{ version_tag }})</option>
@@ -112,6 +115,9 @@
           {% endfor -%}
           <option value="dev">Latest development version</option>
         </select>
+        {% else %}
+        <input type="hidden" id="version-select" value="">
+        {% endif %}
        </div>
        <div>
          <label class="hide-on-preview" for="template-select">Choose a template:</label>
