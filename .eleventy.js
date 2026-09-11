@@ -75,7 +75,7 @@ module.exports = function (eleventyConfig) {
     let returnValue = '';
     components.forEach(component => {
       console.log(component.id);
-      let component_version = component_versions.find((cv) => cv['tag'] == component['tag'] && cv['builder-version'] == component['toolkit-version']);
+      let component_version = component_versions.find((cv) => cv['id'] == component['id']);
       if (!component_version) {
         console.log('WARNING: ' + component.id + ' has no component version');
       }
@@ -90,8 +90,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("outputSingleComponent", function (name, components, component_versions, className) {
     let returnValue = '';
-    let component = components.find((c) => c['tag'] === name);
-    let component_version = component_versions.find((cv) => cv['tag'] == component['tag'] && cv['builder-version'] == component['toolkit-version']);
+    let component = components.find((c) => c['id'] === name);
+    let component_version = component_versions.find((cv) => cv['id'] == component['id']);
 
     if (component_version) {
       if (component_version['parent-style'] && component_version['parent-style'].length > 0) {

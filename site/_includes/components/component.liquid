@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
 {%- for template_info in component_templates %}
-  {% if template_info.tag == tag %}
+  {% if template_info.id == id %}
       {% assign template_tag = template_info.template %}
       {% assign preview_tag = template_info.template %}
   {% endif %}
@@ -48,10 +48,10 @@
         if (iframe) {
             const previewValue = previewSelect.value;
             if (previewValue == 'preview') {
-              iframe.src = `/component/{{ tag }}/{{ preview_tag | slugify }}_preview`;
+              iframe.src = `/component/{{ id }}/{{ preview_tag | slugify }}_preview`;
               document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = 'none');
             } else if (previewValue == 'previewdev') {
-              iframe.src = `/component/{{ tag }}/{{ preview_tag | slugify }}_preview_dev`;
+              iframe.src = `/component/{{ id }}/{{ preview_tag | slugify }}_preview_dev`;
               document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = 'none');
             } else {
               iframe.src = `${templateSelect.value}?${versionSelect.value}`;
@@ -92,7 +92,7 @@
       {% if use_custom_url %}
       <iframe id="iframe" src="{{ use_custom_url }}?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>
       {% else %}
-      <iframe id="iframe" src="/component/{{ tag }}/{{ template_tag | slugify }}/index.html?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>
+      <iframe id="iframe" src="/component/{{ id }}/{{ template_tag | slugify }}/index.html?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>
       {% endif %}
       <ilw-spacer></ilw-spacer>
 
@@ -116,26 +116,26 @@
        <div>
          <label class="hide-on-preview" for="template-select">Choose a template:</label>
          <select class="hide-on-preview" id="template-select" style="width: calc(100% - 50px);">
-          {% if use_custom_url %}
+         {% if use_custom_url %}
            <option value="{{ custom.path }}" selected>Default template ({{ template_tag }})</option>
-          {% else %}
-           <option value="/component/{{ tag }}/{{ template_tag | slugify }}" selected>Default template ({{ template_tag }})</option>
-          {% endif %}
-           {%- for template_info in component_templates %}
-              {% if template_info.tag == tag %}
-                <option value="/component/{{ tag }}/{{ template_info.template | slugify }}">{{ template_info.template }} {{ template_info.notes }}</option>
-              {% endif %}
-            {% endfor -%}
-            {%- for component in components %}
-                {% if component.id == id %}
-                    {% if component.customtemplates %}
-                      {%- for custom in component.customtemplates %}
-                        <option value="{{ custom.path }}">{{ custom.name }} {{ custom.notes }}</option>
-                      {% endfor -%}
-                    {% endif %}
-                {% endif %}
-            {% endfor -%}
-            </select>
+         {% else %}
+           <option value="/component/{{ id }}/{{ template_tag | slugify }}" selected>Default template ({{ template_tag }})</option>
+         {% endif %}
+         {%- for template_info in component_templates %}
+         {% if template_info.id == id %}
+           <option value="/component/{{ id }}/{{ template_info.template | slugify }}">{{ template_info.template }} {{ template_info.notes }}</option>
+         {% endif %}
+         {% endfor -%}
+         {%- for component in components %}
+         {% if component.id == id %}
+         {% if component.customtemplates %}
+             {%- for custom in component.customtemplates %}
+             <option value="{{ custom.path }}">{{ custom.name }} {{ custom.notes }}</option>
+             {% endfor -%}
+         {% endif %}
+         {% endif %}
+         {% endfor -%}
+         </select>
         </div>
       </ilw-columns>
       </ilw-content>

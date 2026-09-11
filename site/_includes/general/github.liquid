@@ -22,6 +22,8 @@
             <th>Component</th>
             <th>List of Issues</th>
             <th>Create New Issue</th>
+            <th>View Releases</th>
+            <th>Deployments</th>
           </tr>
         </thead>
         <tbody>
@@ -30,7 +32,9 @@
             <td><strong><a href="{{ component.repository-name | generateGithubLink }}">{{ component.title }} / {{ component.id }} ({{ component.type }})</a></strong></td>
             <td><a href="{{ component.repository-name | generateGithubLink }}/issues">Known Issues for {{ component.title }}</a></td>
             <td><a href="{{ component.repository-name | generateGithubLink }}/issues/new">Create a new issue for {{ component.title }}</a></td>
-          </tr>
+            <td><a href="{{ component.repository-name | generateGithubLink }}/releases">View Releases for {{ component.title }}</a></td>  
+            <td><a href="{{ component.repository-name | generateGithubLink }}/actions">Deployments and Testing for {{ component.title }}</a></td>
+            </tr>
           {% endfor -%}
         </tbody>
       </table>
