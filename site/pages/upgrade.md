@@ -1,6 +1,6 @@
 ---
 title: Upgrade from Version 2
-layout: general\page.liquid
+layout: general/page.liquid
 permalink: "upgrade/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/ascend/blue.svg
 ---

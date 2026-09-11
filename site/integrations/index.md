@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/index.html"
 title: Integration
-layout: demo\environment.liquid
+layout: demo/environment.liquid
 ---
 
 We are building a few integration pages to show how to build components that interact with each other or interact with various campus APIs. We encourage you to use your browser *Inspect Tools* or *View Source* to see how we have built these pages if you want to see how we did this. 

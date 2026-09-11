@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/people_nofilter.html"
 title: Integration - People
-layout: demo\environment.liquid
+layout: demo/environment.liquid
 ---
 <script src="/scripts/integrations/people_nofilter.js"></script>
 <link rel="stylesheet" href="/stylesheets/integrations/people_nofilter.css"></link>

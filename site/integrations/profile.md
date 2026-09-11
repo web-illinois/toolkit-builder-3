@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/profile.html"
 title: Integration - Profile
-layout: demo\environment.liquid
+layout: demo/environment.liquid
 ---
 <script src="/scripts/integrations/profile.js"></script>
 <link rel="stylesheet" href="/stylesheets/integrations/profile.css"></link>

@@ -1,6 +1,6 @@
 ---
 title: Creating a Page
-layout: general\page.liquid
+layout: general/page.liquid
 permalink: "create_page/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 ---

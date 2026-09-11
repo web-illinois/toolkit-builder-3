@@ -1,6 +1,6 @@
 ---
 title: Philosophy
-layout: general\page.liquid
+layout: general/page.liquid
 permalink: "philosophy/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 lede: Toolkit web components are built once, and then can be used across the campus. They provide a central location for implementing brand and accessibility standards, and then are used by individual websites as well as large Content Management System groups.

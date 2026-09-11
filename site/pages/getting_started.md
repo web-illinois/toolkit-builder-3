@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-layout: general\page.liquid
+layout: general/page.liquid
 permalink: "getting_started/index.html"
 title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 ---

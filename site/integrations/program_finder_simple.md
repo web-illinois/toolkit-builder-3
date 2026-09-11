@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/program_finder_simple.html"
 title: Integration - Program Finder
-layout: demo\environment.liquid
+layout: demo/environment.liquid
 ---
 <script src="/scripts/integrations/program_finder_simple.js"></script>
 <link rel="stylesheet" href="/stylesheets/integrations/program_finder.css"></link>

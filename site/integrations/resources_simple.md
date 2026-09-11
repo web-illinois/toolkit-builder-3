@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/resources_simple.html"
 title: Integration - Resource Finder
-layout: demo\environment.liquid
+layout: demo/environment.liquid
 ---
 <script src="/scripts/integrations/resources.js"></script>
 <link rel="stylesheet" href="/stylesheets/integrations/resources.css"></link>

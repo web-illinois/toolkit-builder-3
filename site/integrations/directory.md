@@ -5,7 +5,7 @@ pagination:
   alias: environment
 permalink: "integration/{{ environment.tag | slugify }}/directory.html"
 title: Integration - Directory
-layout: demo\environment.liquid
+layout: demo/environment.liquid
 ---
 <script src="/scripts/integrations/directory.js"></script>
 <link rel="stylesheet" href="/stylesheets/integrations/directory.css"></link>
