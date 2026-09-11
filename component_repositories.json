@@ -1,5 +1,10 @@
 [
   {
+    "repository": "toolkit-management",
+    "builderPath": "global-css/builder",
+    "file": "OVERVIEW.md"
+  },
+  {
     "repository": "ilw-accordion"
   },
   {
@@ -97,10 +102,5 @@
   },
   {
     "repository": "ilw-video"
-  },
-  {
-    "repository": "toolkit-management",
-    "builderPath": "global-css/builder",
-    "file": "OVERVIEW.md"
   }
 ]
