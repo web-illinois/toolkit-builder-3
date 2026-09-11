@@ -103,10 +103,10 @@ function writeReadmePage(repository, readmeFile, checkoutPath) {
   repository: "${repository}"
   sourceRepository: "${sourceRepository}"
   layout: components/component.liquid
-  permalink: component/{{ component.tag | slugify }}/index.html
+  permalink: component/{{ component.id | slugify }}/index.html
   eleventyComputed:
     title: "{{ component.title }}"
-    tag: "{{ component.tag }}"
+    id: "{{ component.id }}"
 ---`;
   fs.writeFileSync(outputPath, `${frontMatter}\n\n${truncatedBody}\n`);
 }

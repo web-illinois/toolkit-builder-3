@@ -5,18 +5,18 @@
     {% if usedev %}
         <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/ilw-global/latest/ilw-global.css">
         {% if component_template.usejs %}
-        <script type="module" src="https://dev.toolkit.illinois.edu/{{ component_template.tag }}/latest/{{ component_template.tag }}.js"></script>
+        <script type="module" src="https://dev.toolkit.illinois.edu/{{ component_template.id | slugify }}/latest/{{ component_template.id }}.js"></script>
         {% endif %}
         {% if component_template.usejs %}
-        <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/{{ component_template.tag }}/latest/{{ component_template.tag }}.css">
+        <link rel="stylesheet" href="https://dev.toolkit.illinois.edu/{{ component_template.id | slugify }}/latest/{{ component_template.id }}.css">
         {% endif %}
     {% else %}
         <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-global/3/ilw-global.css">
         {% if component_template.usejs %}
-        <script type="module" src="https://cdn.toolkit.illinois.edu/{{ component_template.tag }}/1/{{ component_template.tag }}.js"></script>
+        <script type="module" src="https://cdn.toolkit.illinois.edu/{{ component_template.id | slugify }}/1/{{ component_template.id }}.js"></script>
         {% endif %}
         {% if component_template.usejs %}
-        <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/{{ component_template.tag }}/1/{{ component_template.tag }}.css">
+        <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/{{ component_template.id | slugify }}/1/{{ component_template.id }}.css">
         {% endif %}
     {% endif %}
     {% if component_template.added-components %}

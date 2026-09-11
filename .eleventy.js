@@ -74,15 +74,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("outputAllComponents", function (name, components, component_versions) {
     let returnValue = '';
     components.forEach(component => {
-      console.log(component.tag);
+      console.log(component.id);
       let component_version = component_versions.find((cv) => cv['tag'] == component['tag'] && cv['builder-version'] == component['toolkit-version']);
       if (!component_version) {
-        console.log('WARNING: ' + component.tag + ' has no component version');
+        console.log('WARNING: ' + component.id + ' has no component version');
       }
       if (component_version && component_version.attributes && component_version.attributes.find((attr) => attr.name === name)) {
-        returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.tag, components, component_versions, 'update');
+        returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.id, components, component_versions, 'update');
       } else if (component_version && component_version.classes && component_version.classes.find((cls) => cls.name === name)) {
-        returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.tag, components, component_versions, 'update-class');
+        returnValue += eleventyConfig.getFilter("outputSingleComponent")(component.id, components, component_versions, 'update-class');
       }
     });
     return returnValue;

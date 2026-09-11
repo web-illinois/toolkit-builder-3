@@ -48,12 +48,12 @@
                     <ilw-card aspectratio="5/2" clickable style="">
                         <div class="component-image" slot="image">
                             <div class="component-image-inner">
-                                {% assign img = '/img/components/' | append: component.tag | append: '.png' %}
+                                {% assign img = '/img/components/' | append: component.id | append: '.png' %}
                                 <img src="{{ img | url }}" alt="" loading="lazy"/>
                             </div>
                             <div class="component-image-overlay"></div>
                         </div>
-                        <h3><a href="/component/{{ component.tag | slugify }}/index.html">
+                        <h3><a href="/component/{{ component.id | slugify }}/index.html">
                                 {{ component.title }}
                         </a></h3>
                         <p>{{ component.purpose }}</p>

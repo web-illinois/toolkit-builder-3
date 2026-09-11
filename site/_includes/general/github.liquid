@@ -27,7 +27,7 @@
         <tbody>
           {%- for component in components %}
           <tr>
-            <td><strong><a href="{{ component.repository-name | generateGithubLink }}">{{ component.title }} / {{ component.tag }} ({{ component.type }})</a></strong></td>
+            <td><strong><a href="{{ component.repository-name | generateGithubLink }}">{{ component.title }} / {{ component.id }} ({{ component.type }})</a></strong></td>
             <td><a href="{{ component.repository-name | generateGithubLink }}/issues">Known Issues for {{ component.title }}</a></td>
             <td><a href="{{ component.repository-name | generateGithubLink }}/issues/new">Create a new issue for {{ component.title }}</a></td>
           </tr>

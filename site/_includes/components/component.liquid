@@ -7,7 +7,7 @@
   {% endif %}
 {% endfor -%}
 {%- for component in components %}
-  {% if component.tag == tag %}
+  {% if component.id == id %}
       {%- for version_info in component.versions %}
         {% assign version_tag = version_info.name %}
       {% endfor -%}
@@ -104,7 +104,7 @@
           <select class="hide-on-preview" id="version-select" style="width: calc(100% - 50px);">
           <option value="{{ version_tag }}" selected>Default version ({{ version_tag }})</option>
           {%- for component in components %}
-              {% if component.tag == tag %}
+              {% if component.id == id %}
                   {%- for version_info in component.versions %}
                     <option value="{{ version_info.name }}">{{ version_info.name }} {{ version_info.notes }} (for best results, choose template {{  version_info.template }})</option>
                   {% endfor -%}
@@ -127,7 +127,7 @@
               {% endif %}
             {% endfor -%}
             {%- for component in components %}
-                {% if component.tag == tag %}
+                {% if component.id == id %}
                     {% if component.customtemplates %}
                       {%- for custom in component.customtemplates %}
                         <option value="{{ custom.path }}">{{ custom.name }} {{ custom.notes }}</option>
