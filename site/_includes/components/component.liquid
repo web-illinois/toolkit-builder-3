@@ -57,10 +57,6 @@
               iframe.src = `${templateSelect.value}?${versionSelect.value}`;
               document.querySelectorAll('.hide-on-preview').forEach(el => el.style.display = '');
             }
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
         }
     }
     </script>
@@ -85,12 +81,14 @@
             <option value="preview">Preview (latest production only)</option>
             <option value="previewdev">Preview (latest development only)</option>
           </select>
+          <p><a class="ilw-button" href="#advanced">Advanced Options</a></p>
        </ilw-content>
        {% else %}
           <input type="hidden" id="preview" value="builder">
        {% endif %}
       </ilw-columns>
       <ilw-spacer></ilw-spacer>
+      <a name="builder"></a>
       {% if use_custom_url %}
       <iframe id="iframe" src="{{ use_custom_url }}?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>
       {% else %}
@@ -98,7 +96,7 @@
       {% endif %}
       <ilw-spacer></ilw-spacer>
 
-      <ilw-content width="page">
+      <ilw-content width="page"><a name="advanced"></a>
       <h2 class="hide-on-preview">Choose Alternate Versions</h2>
       <ilw-columns class="hide-on-preview" >
        <div>
@@ -142,6 +140,9 @@
          {% endif %}
          {% endfor -%}
          </select>
+        </div>
+        <div>
+          <a href="#builder" class="ilw-button ilw-theme-orange-solid">Back to the builder</a>
         </div>
       </ilw-columns>
       </ilw-content>

@@ -71,7 +71,7 @@
           </div>
     {% endif %}
 
-    <div id="component" data-name="{{ component_template.builder-information.element-name }}"></div>
+    <div id="component" data-name="{{ component_template.builder-information.element-name }}" data-wrapper="{{ component_template.builder-information.parent-wrapper }}"  data-wrapperclass="{{ component_template.builder-information.parent-class }}"></div>
     <div role="presentation" class="builder-line bottom"></div>
 
     <div class="builder-section builder-row">
@@ -258,7 +258,7 @@
       <div class="samples" style="display: none;">
       {%- for sample in component_template.samples %}
           <div class="sample" data-name="{{ sample.name }}">
-          {{ sample.text }}
+          {{ sample.text | escape }}
           </div>
       {% endfor -%}
       </div>

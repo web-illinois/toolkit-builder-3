@@ -42,7 +42,9 @@ The JSON files are broken down into two categories:
 
 ### Builder Information (used in component_version.json)
 * `element-name`: this is the tag name. In most web components, this will be the web component, but this may be `<div>`, `<button>`, etc. All the attributes, classes, and css will be applied to this item.
-* `parent-style`: if this needs to be wrapped in a parent CSS style, put the style definition here, like `margin: 0 auto; max-width: 1200px;`. This can be modified by the end-user in the builder.
+* `parent-style`: if this needs to be wrapped in a parent CSS style, put the style definition here, like `margin: 0 auto; max-width: 1200px;`. This can be modified by the end-user in the builder. By default, this will be a `div`. Do not use this as well as the `parent-wrapper`
+* `parent-wrapper`: if this needs to be wrapped in a parent element, put the element name here, like `ilw-content`. This *cannot* be modified by the end-user in the builder and will be invisible to them. Only use this if the component needs to be embedded in another component. In most cases, this will be blank. 
+* `parent-class`: if this needs to be wrapped in a parent element, put the element name here, like `ilw-content`. This *cannot* be modified by the end-user in the builder and will be invisible to them. Only use this if the component needs to be embedded in another component. In most cases, this will be blank. 
 * `addon-html`: if you need to add HTML as a helper class (like a tooltip or button that triggers a certain action), add the raw HTML here, like `<button class='ilw-button' data-modal-target='modal'>Open Modal</button>`
 
 ### Added Components (used in component_version.json)
