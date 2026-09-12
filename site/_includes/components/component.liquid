@@ -69,6 +69,7 @@
         <img src="https://cdn.brand.illinois.edu/patterns/finial/blue.svg" alt="" slot="background">
         <h1>{{ title }}</h1>
       </ilw-page-title>
+      <a name="builderlink"></a>
       <ilw-columns width="page" padding="20px 0" gap="20px" mode="3x1" style="margin-bottom: 20px; border-bottom: 2px solid var(--il-blue);">
       <ilw-content mode="introduction">
         <p><em>{{ component.description }}</em></p>
@@ -88,7 +89,6 @@
        {% endif %}
       </ilw-columns>
       <ilw-spacer></ilw-spacer>
-      <a name="builder"></a>
       {% if use_custom_url %}
       <iframe id="iframe" src="{{ use_custom_url }}?version={{ version_tag }}" style="width: calc(100vw - 20px); margin: 0; padding: 0; border: none;" title="{{ title }} Builder IFrame" ></iframe>
       {% else %}
@@ -142,7 +142,7 @@
          </select>
         </div>
         <div>
-          <a href="#builder" class="ilw-button ilw-theme-orange-solid">Back to the builder</a>
+          <a href="#builderlink" class="ilw-button ilw-theme-orange-solid">Back to the builder</a>
         </div>
       </ilw-columns>
       </ilw-content>
