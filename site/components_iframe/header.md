@@ -1,7 +1,7 @@
 ---
 title: Header Information
 layout: components/base.liquid
-permalink: "notes/header/index.html"
+permalink: "component/ilw-header/custom/index.html"
 scripturl: "//cdn.toolkit.illinois.edu/ilw-header/1/ilw-header.js"
 stylesheeturl: "//cdn.toolkit.illinois.edu/ilw-header/1/ilw-header.css"
 ---
