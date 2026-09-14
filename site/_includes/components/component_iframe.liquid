@@ -5,7 +5,7 @@
     <script src="/scripts/components/component.js"></script>
     <link rel="stylesheet" href="/stylesheets/components/component.css" data-skip="true">
     {% if component_template.added-components %}
-        {%- for added in component-version.added-components %}
+        {%- for added in component_template.added-components %}
             {% if added.css %}
             <link rel="stylesheet" href="{{ added.css }}">
             {% endif %}
