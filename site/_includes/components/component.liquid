@@ -151,9 +151,22 @@
         <li><a href="{{ sourceRepository }}/issues/new">Contact us about a problem</a></li>
         <li><a href="{{ sourceRepository }}">View repository on GitHub</a></li>
       </ul>
+      <ilw-spacer></ilw-spacer>
+      <ilw-content width="auto" theme="orange">
+         <h2>Component Notes for Latest Version</h2>
+      </ilw-content>
       <ilw-content width="page">
-        <h2>Component Notes for Latest Version</h2>
         {{ content }}
+      </ilw-content>
+      <ilw-content width="page">
+      {% if component.type == "Web Component" %}
+      <h2>Production Files</h2>
+      <ul>
+        <li>JavaScript: <a id="component-javascript" href="https://cdn.toolkit.illinois.edu/{{ component.repository-name }}/1/{{ component.repository-name }}.js">https://cdn.toolkit.illinois.edu/{{ component.repository-name }}/1/{{ component.repository-name }}.js</a></li>
+        <li>CSS: <a id="component-css" href="https://cdn.toolkit.illinois.edu/{{ component.repository-name }}/1/{{ component.repository-name }}.css">https://cdn.toolkit.illinois.edu/{{ component.repository-name }}/1/{{ component.repository-name }}.css</a></li>
+        <li><a href="{{ sourceRepository }}/blob/main/README.md">View usage and accessibility notes</a></li>
+      </ul>
+      {% endif %}
       </ilw-content>
       <ilw-spacer></ilw-spacer>
       <ilw-back-to-top></ilw-back-to-top>
