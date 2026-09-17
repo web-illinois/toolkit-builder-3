@@ -28,20 +28,27 @@ stylesheeturl: "//cdn.toolkit.illinois.edu/ilw-header/1/ilw-header.css"
         return document.getElementById(id).value.trim();
     }
 
-    function createTextSlot(slot, text, href) {
+    function createTextSlot(slot, text, href, elementOverride) {
         if (!text) {
             return null;
         }
 
         const element = document.createElement(href ? 'a' : 'div');
-        element.slot = slot;
         element.textContent = text;
 
         if (href) {
             element.href = href;
         }
 
-        return element;
+        if (!elementOverride || elementOverride == '') {
+           element.slot = slot;
+           return element;
+        }
+
+        const elementParent = document.createElement(elementOverride);
+        elementParent.slot = slot;
+        elementParent.append(element);
+        return elementParent;
     }
 
     function appendRawHtml(component, html) {
@@ -79,18 +86,19 @@ stylesheeturl: "//cdn.toolkit.illinois.edu/ilw-header/1/ilw-header.css"
             'site-name': formValue('site-name'),
             'site-name-link': formValue('site-name-link'),
             'search': document.getElementById('search').value.trim(),
-            'links': document.getElementById('links').value.trim()
+            'links': document.getElementById('links').value.trim(),
+            'h1': document.getElementById('site-name-h1').value
         };
 
         const component = document.getElementById('header-preview');
         component.replaceChildren();
 
-        const primaryUnit = createTextSlot('primary-unit', values['primary-unit'], values['primary-unit-link']);
+        const primaryUnit = createTextSlot('primary-unit', values['primary-unit'], values['primary-unit-link'], '');
         if (primaryUnit) {
             component.append(primaryUnit);
         }
 
-        const siteName = createTextSlot('site-name', values['site-name'], values['site-name-link']);
+        const siteName = createTextSlot('site-name', values['site-name'], values['site-name-link'], values['h1']);
         if (siteName) {
             component.append(siteName);
         }
@@ -130,6 +138,12 @@ stylesheeturl: "//cdn.toolkit.illinois.edu/ilw-header/1/ilw-header.css"
     <input id="site-name" name="site-name" style="width: 100%;">
     <p><label for="site-name-link">Site Name Link</label></p>
     <input id="site-name-link" name="site-name-link" style="width: 100%;">
+    <p><label for="site-name-h1">Site Name Semantic Tag</label></p>
+    <select id="site-name-h1" name="site-name-h1">
+        <option value="">Nothing (just anchor)</option>
+        <option value="p">Paragraph</option>
+        <option value="h1">Heading 1</option>
+    </select>
     <p><label for="search">Search Raw HTML</label></p>
     <textarea id="search" name="search" style="width: 100%; height: 180px; font-family: monospace; font-size: 16px;"></textarea>
     <p><label for="links">Links Raw HTML</label></p>
