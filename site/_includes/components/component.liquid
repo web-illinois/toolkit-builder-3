@@ -17,6 +17,9 @@
           {% assign use_custom_url = custom.path %}
         {% endfor -%}
       {% endif %}
+      {% if component.devonly %}
+        {% assign version_tag = 'dev' %}
+      {% endif %}
   {% endif %}
 {% endfor -%}
 <head>
@@ -73,6 +76,9 @@
       <ilw-columns width="page" padding="20px 0" gap="20px" mode="3x1" style="margin-bottom: 20px; border-bottom: 2px solid var(--il-blue);">
       <ilw-content mode="introduction">
         <p><em>{{ component.description }}</em></p>
+        {% if component.notes != null %}
+        <p><strong>Note:</strong> {{ component.notes }}</p>
+        {% endif %}
       </ilw-content>
        {% if preview_tag %}
        <ilw-content>
@@ -103,7 +109,9 @@
           {% if preview_tag %}
           <label for="version-select">Choose a version:</label>
           <select class="hide-on-preview" id="version-select" style="width: calc(100% - 50px);">
-          <option value="{{ version_tag }}" selected>Default version ({{ version_tag }})</option>
+          {% if version_tag != 'dev' %}
+            <option value="{{ version_tag }}" selected>Default version ({{ version_tag }})</option>
+          {% endif %}
           {%- for component in components %}
               {% if component.id == id %}
                   {%- for version_info in component.versions %}
