@@ -10,103 +10,156 @@ classOptions: 'ilw-font ilw-margin'
 localFiles: false
 ---
 
-<ilw-hero width="full" theme="orange">
-  <img src="/img/STA.jpg" alt="" slot="background">
-  <h1>Advancement & Alumni Engagement</h1>
+<ilw-hero width="page" theme="orange" align="bottom-left">
+  <img src="/img/demo-landing/hero.jpg" alt="" slot="background">
+  <h1>Whispering Pines College</h1>
 </ilw-hero>
-<ilw-call-to-action theme="blue" width="full"><svg slot="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.26 51.26">
-<path fill="#FFFFFF" d="M42.85 17.15a2.58 2.58 0 0 0-2.57-2.57H35.5a5 5 0 0 0-5.27-8.24c-1.18.5-3 2.32-4.43 4-1.47-1.68-3.25-3.5-4.43-4a5 5 0 0 0-5.28 8.24H11a2.57 2.57 0 0 0-2.57 2.57v8.26h1.85v18.4a1.52 1.52 0 0 0 1.51 1.51h27.7A1.52 1.52 0 0 0 41 43.81v-18.4h1.85ZM31.68 9.73a1.28 1.28 0 0 1 1 0 1.31 1.31 0 0 1 .7.69 1.33 1.33 0 0 1 0 1 1.3 1.3 0 0 1-.68.7 14.92 14.92 0 0 1-3.63.14 15.12 15.12 0 0 1 2.61-2.53Zm-13.44.69a1.31 1.31 0 0 1 .7-.69 1.36 1.36 0 0 1 .48-.09 1.24 1.24 0 0 1 .5.1 14.54 14.54 0 0 1 2.62 2.5 14.82 14.82 0 0 1-3.62-.14 1.29 1.29 0 0 1-.68-1.68Zm-8.58 6.73A1.32 1.32 0 0 1 11 15.83h11.49v8.33H9.66Zm1.85 26.66v-17h11v17.26H11.77a.26.26 0 0 1-.26-.26Zm28 .26H28.76V26.82h11v17a.26.26 0 0 1-.27.25Zm2.09-19.91H28.76v-8.33h11.52a1.32 1.32 0 0 1 1.32 1.32Z"></path>
-</svg>
-<h2>Make a Gift</h2>
-<p>Your financial support to Student Affairs makes a difference in the life of each and every student on campus. Our culture of excellence at Illinois is built upon the continuous gifts of time, talent, and treasure from our alumni and friends.</p>
+<ilw-call-to-action theme="blue" width="page">
+<ilw-icon slot="icon" icon="gift"></ilw-icon>
+<ilw-content mode="inset" style="--ilw-content--inset-padding: 0;">
+<h2>Keep the Lanterns Burning</h2>
+<p>Your gift sustains the singular life of Whispering Pines College—from midnight research in Moonroot Library to fieldwork beneath the ancient evergreens. With the generosity of alumni and friends, every student can follow curiosity beyond the familiar and discover where it may lead.</p>
+</ilw-content>
 <ul class="ilw-buttons">
-<li><a href="#">Donate Now</a></li>
+<li><a href="#">Make a Gift</a></li>
 </ul>
 </ilw-call-to-action>
 <ilw-spacer></ilw-spacer>
-<ilw-content padding="20px">
+<ilw-content padding="20px" width="page">
 <h2>
-    The Office of Student Affairs Advancement works with our donors, alumni, and friends to secure critical, sustainable funding to the programs and services that provide our students an extraordinary Illinois Experience.
+    At Whispering Pines College, rigorous scholarship meets the quiet wonder of the wild. Together, our community preserves a place where uncommon questions take root and remarkable futures begin.
 </h2>
 <p>
-    We cultivate, steward, and sustain &nbsp;life-long engagement through relevant and meaningful relationships with and among the students, alumni, and friends in the Student Affairs at Illinois Family.
+    We nurture lifelong bonds among students, graduates, faculty, and friends—relationships shaped by shared inquiry, rain-bright pathways, and traditions passed from one class to the next.
 </p>
 <p>
-    We facilitate inter-generational connectivity between students and alumni, connecting the past with the present, and the future, in support of student success, perseverance, and community impact through time, talent, and advocacy.
+    We bring generations together, joining the college's living history with new ideas and new voices. Through mentorship, service, and discovery, our community carries the wisdom of the past into a future still waiting to be imagined.
 </p>
 <p>
-    We also work with Student Affairs Advisory Council members, Campus Advancement Colleagues, and the University of Illinois Foundation to identify opportunities for our Student Affairs constituents to make an impact in the lives of our students in a way that fulfills their donor interests, passions, and intent.
+    In partnership with the College Council, campus colleagues, and devoted supporters, we create opportunities to strengthen the programs, places, and experiences that make Whispering Pines unlike anywhere else.
 </p>
 <p>
-    <strong>If you are looking for ways to help students who experience unexpected hardships during this time,&nbsp; please learn more about our&nbsp;</strong><a href="http://studentaffairsn.web.illinois.edu/node/42" data-entity-type="node" data-entity-uuid="1240709d-0ee4-4a11-99c2-065091f6b653" data-entity-substitution="canonical"><strong>giving opportunities</strong></a><strong>.</strong>
+    <strong>If you would like to help a student weather an unexpected hardship, please explore our </strong><a href="#" data-entity-type="node" data-entity-uuid="1240709d-0ee4-4a11-99c2-065091f6b653" data-entity-substitution="canonical"><strong>giving opportunities</strong></a><strong>.</strong>
 </p>
 </ilw-content>
 <ilw-spacer height="40px"></ilw-spacer>
-<ilw-columns width="full" theme="blue" padding="0">
-    <div class="ilw-image-cover"><img src="/img/UI-08-210510-028%20(1).jpg" alt=""></div>
+<ilw-columns theme="blue" padding="0">
+    <div class="ilw-image-cover"><img src="/img/demo-landing/image-1.jpg" alt=""></div>
     <ilw-content theme="blue" mode="inset">
-        <h2>Allowing Students to Reach Their Highest Potentials</h2>
-        <p>Students at the University of Illinois Urbana-Champaign enjoy a University that celebrates diversity, serves their health and wellness needs, and allows them to reach their highest potentials, both academically and personally. 450,000+ Illini graduates have been shaped by their time at our University and many say they are who they are because of it. Student Affairs is making sure this tradition continues, and, with your help, we will meet the needs of a changing student body.</p>
+        <h2>Find Your Way Beyond the Familiar</h2>
+        <p>Students at Whispering Pines College learn within a close-knit community that values many perspectives, tends to the whole person, and makes room for bold ambition. Generations of graduates have left these wooded hills changed by what they found here: enduring friendships, demanding questions, and the courage to choose an unexpected path. With your help, that tradition will keep growing.</p>
     </ilw-content>
 </ilw-columns>
 <ilw-spacer height="40px"></ilw-spacer>
 
-<ilw-columns mode="1x2">
-    <div><img src="/img/UI-08-210413-035.jpg" alt="Student in front of a block I"></div>
+<ilw-columns mode="1x2" width="page">
+    <div><img src="/img/demo-landing/image-2.jpg" alt="Student in front of a block I"></div>
 
 <ilw-content>
 <h2>
-    Creating the Illinois Experience
+    An Education Rooted in Wonder
 </h2>
 <p>
-    Through&nbsp;<strong>exceptional programming</strong>,&nbsp;<strong>relevant services</strong>,&nbsp;<strong>progressive facilities</strong>, and&nbsp;<strong>vibrant living/learning environments</strong>, we create an Illinois experience that focuses on developing life skills and propelling bright minds. We are determined to build on the successful programs we already have and to make them even stronger and more effective across the entire student body.
+    Through <strong>transformative courses</strong>, <strong>attentive mentorship</strong>, <strong>storied spaces</strong>, and <strong>immersive living and learning</strong>, Whispering Pines turns curiosity into purpose. We honor the traditions that have long guided our college while continually finding new ways for every student to explore, create, and flourish.
 </p>
-  
+
 </ilw-content>
 
 
 </ilw-columns>
 
-<ilw-columns mode="1x2" theme="gray" width="auto">
-    <div><img src="/img/UI-02-160420-012.jpg" alt="Student sitting at a desk in the library"></div>
+<ilw-columns mode="1x2" theme="gray" width="page">
+    <div><img src="/img/demo-landing/image-3.jpg" alt="Student sitting at a desk in the library"></div>
 
 <ilw-content theme="gray">
 <h2>
-    Developing the Leaders of the Future
+    Preparing Stewards of What Comes Next
 </h2>
 <p>
-    As the student experience changes, we can be the international leader for student affairs. We seek to:
+    The world beyond the pines is changing. Our students are preparing to meet it with imagination, wisdom, and resolve. Together, we seek to:
 </p>
 <ul>
     <li>
-        bring more students and cultures together
+        invite more voices and traditions into our community
     </li>
     <li>
-        create more spaces for student activity
+        create inspiring spaces for study, gathering, and discovery
     </li>
     <li>
-        better serve communities, and
+        serve our neighbors with generosity and purpose, and
     </li>
     <li>
-        meet all the rapidly changing needs of today’s and tomorrow’s Illinois students.
+        answer the emerging needs of students today and for generations to come.
     </li>
 </ul>
 <p>
-    <strong>With Illinois, we can redefine the way Student Affairs can transform lives and develop the leaders of the future.</strong>
+    <strong>At Whispering Pines, students learn not merely to enter the future, but to illuminate it.</strong>
 </p>
 </ilw-content>
 
 
 </ilw-columns>
 
+<ilw-image-gallery>
+<ilw-grid width="page" gap="25px" padding="0">
+  <a data-gallery-item="" href="/img/demo-landing/whispering-pines-aerial-campus.png" data-gallery-alt="Aerial view of Whispering Pines College glowing at blue hour above a mist-filled evergreen valley beneath the northern lights.">
+    <ilw-card aspectratio="16/10">
+      <img src="/img/demo-landing/whispering-pines-aerial-campus.png" alt="" slot="image">
+      <p>Aurora Crown — the college rises above the pines as evening settles over the valley.</p>
+    </ilw-card>
+  </a>
 
-<ilw-call-to-action theme="blue-gradient" width="full" align="center">
-<h2>Contact the Office of Advancement</h2>
+  <a data-gallery-item="" href="/img/demo-landing/whispering-gate.png" data-gallery-alt="An open Gothic stone gate framed by enormous moss-covered pine trees, leading toward the illuminated halls of Whispering Pines College.">
+    <ilw-card aspectratio="16/10">
+      <img src="/img/demo-landing/whispering-gate.png" alt="" slot="image">
+      <p>The Whispering Gate — every journey into the college begins beneath its ancient arch.</p>
+    </ilw-card>
+  </a>
+
+  <a data-gallery-item="" href="/img/demo-landing/moonroot-library.png" data-gallery-alt="The Gothic Moonroot Library at night, its amber windows shining beside ancient roots, moss, and rain-darkened flagstones.">
+    <ilw-card aspectratio="16/10">
+      <img src="/img/demo-landing/moonroot-library.png" alt="" slot="image">
+      <p>Moonroot Library — old roots guard the college's most luminous collection.</p>
+    </ilw-card>
+  </a>
+
+  <a data-gallery-item="" href="/img/demo-landing/starfall-observatory.png" data-gallery-alt="A copper-domed observatory on a rocky hill beneath a star-filled sky, with a magical constellation hovering over the distant campus.">
+    <ilw-card aspectratio="16/10">
+      <img src="/img/demo-landing/starfall-observatory.png" alt="" slot="image">
+      <p>Starfall Observatory — scholars map constellations that appear nowhere else.</p>
+    </ilw-card>
+  </a>
+
+  <a data-gallery-item="" href="/img/demo-landing/everglass-conservatory.png" data-gallery-alt="A grand Victorian glasshouse filled with luminous plants, surrounded by ferns, waterfalls, and misty pines at sunrise.">
+    <ilw-card aspectratio="16/10">
+      <img src="/img/demo-landing/everglass-conservatory.png" alt="" slot="image">
+      <p>Everglass Conservatory — rare flora flourishes beneath its weathered copper ribs.</p>
+    </ilw-card>
+  </a>
+
+  <a data-gallery-item="" href="/img/demo-landing/lantern-quad.png" data-gallery-alt="Students with umbrellas cross a rain-polished Gothic courtyard filled with glowing lanterns and vivid autumn trees.">
+    <ilw-card aspectratio="16/10">
+      <img src="/img/demo-landing/lantern-quad.png" alt="" slot="image">
+      <p>Lantern Quad — autumn rain turns the heart of campus to gold.</p>
+    </ilw-card>
+  </a>
+
+  <a data-gallery-item="" href="/img/demo-landing/pinewater-bridge.png" data-gallery-alt="A stone bridge spans a mirror-like mountain lake at sunrise while a lone rowboat crosses beneath the towers of Whispering Pines College.">
+    <ilw-card aspectratio="16/10">
+      <img src="/img/demo-landing/pinewater-bridge.png" alt="" slot="image">
+      <p>Pinewater Bridge — morning mist reveals the quiet way across Blackglass Lake.</p>
+    </ilw-card>
+  </a>
+</ilw-grid>
+</ilw-image-gallery>
+<ilw-spacer height="50px">
+<ilw-call-to-action theme="blue-gradient" width="page" align="center">
+<h2>Contact Whispering Pines College</h2>
 <p>
-    Student Affairs&nbsp;Advancement<br>
-    601 East John Street<br>
-    100 Swanlund Administration Building<br>
-    Champaign, IL 61820
+    Office of College Advancement<br>
+    1 Lantern Way<br>
+    Moonroot Hall<br>
+    Whispering Pines, IL 61820
 </p>
 <ul class="ilw-buttons">
 <li><a href="mailto:no-reply@illinois.edu">Email us</a></li>
