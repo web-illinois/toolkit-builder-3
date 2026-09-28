@@ -49,7 +49,9 @@ Any files in the directories */site/_localfiles* will not be pushed to GitHub.
 
 You may want to run a local version of code so you can test interactions with other components. The toolkit builder and toolkit management Github repositories support this workflow. 
 
-In Github, make a local copy of the `toolkit-management` repository. Manually run an NPM install of the packages you want to run, and then run the build step for the toolkit management. Then, copy those build files to the _localfiles folder in the builder application. These _localfiles will not be deployed to Github. Below is a sample Windows script to run that installs the local version of *ilw-page*, assuming you are on the toolkit-management repository. 
+First, build the components locally. 
+
+Then, make a local copy of the `toolkit-management` repository. Manually run an NPM install of the packages you want to run, and then run the build step for the toolkit management. Then, copy those build files to the _localfiles folder in the builder application. These _localfiles will not be deployed to Github. Below is a sample Windows script to run that installs the local version of *ilw-page*, assuming you are on the toolkit-management repository. 
 
 ```
 cd source/repos/toolkit-management

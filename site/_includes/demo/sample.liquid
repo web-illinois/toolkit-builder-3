@@ -19,6 +19,7 @@
 
     {% if localFiles %}
       <link rel="stylesheet" href="/_localfiles/toolkit.css">
+      <link rel="stylesheet" href="/_localfiles/dark-mode.css">
     {% else %}
       <link rel="stylesheet" href="{{ environment.baseurl }}toolkit.css">
     {% endif %}
@@ -41,7 +42,7 @@
     <title>{{ title }}</title>
   </head>
   <body style="margin: 0;">
-    <ilw-page class="{{ classOptions }}">
+    <ilw-page class="{{ classOptions }}" data-dark-mode-supported="true">
       <ilw-header slot="header">
         <a slot="primary-unit" href="/">Toolkit Builder 3</a>
         <a slot="site-name" href="/sample_page/index.html">Whispering Pines College</a>
