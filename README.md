@@ -23,20 +23,14 @@ If a repository uses a README.md file for other information besides component in
 
 ## Running the builder on your local machine
 
-Copy component JSON files. If you have the `toolkit-management` repository, you can use something like:
-
-```bash
-
-```
-
-You can run the following commands to build and run the test site:
+The `import-components` NPM command will automatically call the various GitHub repositories and copy the files needed. You can run the following commands to build and run the test site:
 
 ````
 npm install
 npm rebuild
-npm import-components
-npm clean-external-only
-npm dev
+npm run import-components
+npm run clean-external-only
+npm run dev
 ````
 
 ## Using the builder to test your components

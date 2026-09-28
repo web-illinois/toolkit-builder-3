@@ -13,6 +13,8 @@ The JSON files are broken down into two categories:
 * `purpose`: short statement, declarative purpose, shows up on the builder homepage.
 * `customtemplates`: Array of custom templates for more complex items. See *custom templates* below.
 * `versions`: Array of versions. See *versions* below.
+* `devonly`: True or false, which is optional and defaults to false. If this is set to true, then we will skip the default production view and just display the dev version. Make sure you remove this when this is pushed to production the first time. 
+* `notes`: Free text for notes. This is optional and will not display if this value is null. 
 
 ### Custom Templates (used in component.json)
 * `name`: The name of the custom template.
