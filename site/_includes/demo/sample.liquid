@@ -17,11 +17,13 @@
     <link rel="apple-touch-icon" sizes="167x167" href="https://cdn.brand.illinois.edu/touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.brand.illinois.edu/touch-icon-180x180.png">
 
+    <link rel="stylesheet" href="https://cdn.brand.illinois.edu/illinois.css">
     {% if localFiles %}
       <link rel="stylesheet" href="/_localfiles/toolkit.css">
       <link rel="stylesheet" href="/_localfiles/dark-mode.css">
     {% else %}
       <link rel="stylesheet" href="{{ environment.baseurl }}toolkit.css">
+      <link rel="stylesheet" href="{{ '/stylesheets/general/dark-mode.css' |  url }}">
     {% endif %}
     {% if localFiles %}
       <script type="module" src="/_localfiles/toolkit.js"></script>
@@ -43,7 +45,7 @@
   </head>
   <body style="margin: 0;">
     <ilw-page class="{{ classOptions }}" data-dark-mode-supported="true">
-      <ilw-header slot="header">
+      <ilw-header slot="header" dark-mode-visible="true">
         <a slot="primary-unit" href="/">Toolkit Builder 3</a>
         <a slot="site-name" href="/sample_page/index.html">Whispering Pines College</a>
         <nav slot="links" aria-label="Utility">

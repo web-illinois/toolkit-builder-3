@@ -1,0 +1,350 @@
+/* =========================================================
+   Illinois Toolkit Dark Mode
+   --------------------------------------------------------- 
+   1. System/browser preference: 
+      @media (prefers-color-scheme: dark) 
+   2. Explicit application/user preference: 
+      <html data-theme="dark"> 
+      <html data-theme="light"> 
+    3. User preference stored in cookie:
+      document.cookie = "darkMode=true; path=/; max-age=31536000"; 
+      document.cookie = "darkMode=false; path=/; max-age=31536000";
+   
+    The ilw-header component owns the Dark Mode checkbox 
+    and communicates the user's preference to ilw-page.
+   ========================================================= */
+
+/* ---------- Illinois color definitions ---------- */
+:root {
+    --ilw-color--background: var(--ilw-color--white--background); 
+    --ilw-color--text: var(--ilw-color--white--text); 
+    --ilw-color--border: var(--ilw-color--white--border); 
+    --ilw-color--border-light: var(--ilw-color--white--border-light); 
+    --ilw-color--link: var(--ilw-color--white--link); 
+    --ilw-color--link-hover: var(--ilw-color--white--link-hover); 
+    --ilw-color--link-visited: var(--ilw-color--white--link-visited); 
+    --ilw-color--heading: var(--ilw-color--white--heading); 
+    --ilw-color--heading-link: var(--ilw-color--white--heading-link); 
+    --ilw-color--heading-link-hover: var(--ilw-color--white--heading-link-hover); 
+    --ilw-color--heading-link-visited: var(--ilw-color--white--heading-link-visited); 
+    --ilw-color--control: var(--ilw-color--white--control); 
+    --ilw-color--control-text: var(--ilw-color--white--control-text); 
+    --ilw-color--control-accent: var(--ilw-color--white--control-accent); 
+    --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text); 
+    --ilw-color--table-border: var(--ilw-color--white--table-border); 
+    --ilw-color--table-background: var(--ilw-color--white--table-background); 
+    --ilw-color--table-row-stripe: var(--ilw-color--white--table-row-stripe); 
+    --ilw-color--table-head-background: var(--ilw-color--white--table-head-background); 
+    --ilw-color--table-head-color: var(--ilw-color--white--table-head-color);
+}
+
+/* ========================================================= 
+  OS PREFERENCE / SYSTEM DARK MODE
+--------------------------------------------------------- 
+If the user has not explicitly selected a theme, 
+follow the operating system/browser preference. 
+========================================================= */ 
+@media (prefers-color-scheme: dark) { 
+    :root { 
+        --ilw-color--background: var(--il-storm-95); 
+        --ilw-color--text: var(--il-storm-10); 
+        --ilw-color--border: var(--il-storm-80); 
+        --ilw-color--border-light: var(--il-storm-80); 
+        --ilw-color--link: var(--il-industrial-lighter-4); 
+        --ilw-color--link-hover: var(--il-orange); 
+        --ilw-color--link-visited: var(--il-arches-90); 
+        --ilw-color--heading: var(--il-storm-10); 
+        --ilw-color--heading-link: var(--il-storm-10); 
+        --ilw-color--heading-link-hover: var(--il-orange); 
+        --ilw-color--heading-link-visited: var(--il-arches-90); 
+        --ilw-color--control: var(--il-storm-80); 
+        --ilw-color--control-text: var(--il-storm-10); 
+        --ilw-color--control-accent: var(--il-orange); 
+        --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text); 
+        --ilw-color--table-border: var(--il-storm-80); 
+        --ilw-color--table-background: var(--il-storm-95); 
+        --ilw-color--table-row-stripe: var(--il-storm-80); 
+        --ilw-color--table-head-background: var(--il-blue-70); 
+        --ilw-color--table-head-color: var(--ilw-color--white--table-head-color);
+
+        /* Page colors */
+        --background-color: #181818;
+        --text-color: #f5f5f5;
+        --border-color: #505050;
+        --surface-color: #2a2a2a;
+
+        /* Header colors */
+        --ilw-header--background: var(--il-blue);
+        --ilw-header--text: white;
+        --ilw-header--link-hover: var(--il-orange);
+        --ilw-header--accent: var(--il-orange);
+    }
+}
+
+/* =========================================================
+  EXPLICIT LIGHT MODE
+   ========================================================= */
+[data-theme="light"] {
+    --ilw-color--background: var(--ilw-color--white--background);
+    --ilw-color--text: var(--ilw-color--white--text);
+    --ilw-color--border: var(--ilw-color--white--border);
+    --ilw-color--border-light: var(--ilw-color--white--border-light);
+
+    --ilw-color--link: var(--il-industrial);
+    --ilw-color--link-hover: var(--il-orange);
+    --ilw-color--link-visited: var(--il-industrial);
+
+    --ilw-color--heading: var(--ilw-color--white--heading);
+    --ilw-color--heading-link: var(--il-industrial);
+    --ilw-color--heading-link-hover: var(--il-orange);
+    --ilw-color--heading-visited: var(--il-industrial);
+
+    --ilw-color--background: var(--ilw-color--white--background); 
+    --ilw-color--text: var(--ilw-color--white--text); 
+    --ilw-color--border: var(--ilw-color--white--border); 
+    --ilw-color--border-light: var(--ilw-color--white--border-light);
+    --ilw-color--link: var(--ilw-color--white--link); 
+    --ilw-color--link-hover: var(--ilw-color--white--link-hover); 
+    --ilw-color--link-visited: var(--ilw-color--white--link-visited); 
+    --ilw-color--heading: var(--ilw-color--white--heading); 
+    --ilw-color--heading-link: var(--ilw-color--white--heading-link); 
+    --ilw-color--heading-link-hover: var(--ilw-color--white--heading-link-hover); 
+    --ilw-color--heading-link-visited: var(--ilw-color--white--heading-link-visited); 
+    --ilw-color--control: var(--ilw-color--white--control); 
+    --ilw-color--control-text: var(--ilw-color--white--control-text); 
+    --ilw-color--control-accent: var(--ilw-color--white--control-accent); 
+    --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text); 
+    --ilw-color--table-border: var(--ilw-color--white--table-border); 
+    --ilw-color--table-background: var(--ilw-color--white--table-background); 
+    --ilw-color--table-row-stripe: var(--ilw-color--white--table-row-stripe); 
+    --ilw-color--table-head-background: var(--ilw-color--white--table-head-background); 
+    --ilw-color--table-head-color: var(--ilw-color--white--table-head-color);
+
+    /* Page colors */
+    --background-color: #ffffff;
+    --text-color: #202020;
+    --border-color: #d0d0d0;
+    --surface-color: #ffffff;
+
+    /* Header colors */
+    --ilw-header--background: var(--il-blue);
+    --ilw-header--text: white;
+    --ilw-header--link-hover: var(--il-orange);
+    --ilw-header--accent: var(--il-orange);
+}
+
+/* =========================================================
+   EXPLICIT DARK MODE 
+   --------------------------------------------------------- 
+   data-theme="dark" overrides the system preference.
+   ========================================================= */
+
+[data-dark-mode-supported="true"][data-theme="dark"] {
+    --ilw-color--background: var(--il-storm-95);
+    --ilw-color--text: var(--il-storm-10);
+    --ilw-color--border: var(--il-storm-80);
+    --ilw-color--border-light: var(--il-blue-90);
+
+    --ilw-color--link: var(--il-industrial);
+    --ilw-color--link-hover: var(--il-orange);
+    --ilw-color--link-visited: var(--il-storm-10);
+
+    --ilw-color--heading: var(--il-storm-10);
+
+    --ilw-color--heading-link: var(--il-storm-10);
+    --ilw-color--heading-link-hover: var(--il-orange);
+
+    /* page colors */
+    --background-color: #181818;
+    --text-color: #f5f5f5;
+    --border-color: #505050;
+    --surface-color: #2a2a2a;
+
+    /* Header colors */
+    --ilw-header--background: var(--il-blue);
+    --ilw-header--text: white;
+    --ilw-header--link-hover: var(--il-orange);
+    --ilw-header--accent: var(--il-orange);
+}
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+body {
+    margin: 0;
+    /*font-family: Arial, sans-serif;*/
+
+    background: var(--background-color);
+    color: var(--text-color);
+
+    transition:
+        background-color .25s,
+        color .25s;
+}
+
+
+/* =========================================================
+   DARK MODE PAGE ELEMENTS
+   ========================================================= */
+
+[data-dark-mode-supported="true"][data-theme="dark"] body {
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+[data-dark-mode-supported="true"][data-theme="dark"] a {
+    color: var(--ilw-color--link);
+}
+
+[data-dark-mode-supported="true"][data-theme="dark"] a:hover {
+    color: var(--ilw-color--link-hover);
+}
+
+[data-dark-mode-supported="true"][data-theme="dark"] a:visited {
+    color: var(--ilw-color--link-visited);
+}
+
+/*========================================================= 
+ HEADINGS 
+========================================================= */
+[data-dark-mode-supported="true"][data-theme="dark"] h1,
+[data-dark-mode-supported="true"][data-theme="dark"] h2,
+[data-dark-mode-supported="true"][data-theme="dark"] h3,
+[data-dark-mode-supported="true"][data-theme="dark"] h4,
+[data-dark-mode-supported="true"][data-theme="dark"] h5,
+[data-dark-mode-supported="true"][data-theme="dark"] h6 {
+    color: var(--ilw-color--heading);
+}
+
+/* Heading links */ 
+[data-dark-mode-supported="true"][data-theme="dark"] h1 a, 
+[data-dark-mode-supported="true"][data-theme="dark"] h2 a, 
+[data-dark-mode-supported="true"][data-theme="dark"] h3 a, 
+[data-dark-mode-supported="true"][data-theme="dark"] h4 a, 
+[data-dark-mode-supported="true"][data-theme="dark"] h5 a, 
+[data-dark-mode-supported="true"][data-theme="dark"] h6 a {
+    color: var(--ilw-color--heading-link); 
+} 
+
+[data-dark-mode-supported="true"][data-theme="dark"] h1 a:hover, 
+[data-dark-mode-supported="true"][data-theme="dark"] h2 a:hover, 
+[data-dark-mode-supported="true"][data-theme="dark"] h3 a:hover, 
+[data-dark-mode-supported="true"][data-theme="dark"] h4 a:hover, 
+[data-dark-mode-supported="true"][data-theme="dark"] h5 a:hover, 
+[data-dark-mode-supported="true"][data-theme="dark"] h6 a:hover { 
+    color: var(--ilw-color--heading-link-hover); 
+}
+
+/*========================================================= 
+    FORM CONTROLS 
+========================================================= */ 
+[data-dark-mode-supported="true"][data-theme="dark"] input, 
+[data-dark-mode-supported="true"][data-theme="dark"] select, 
+[data-dark-mode-supported="true"][data-theme="dark"] textarea { 
+    background-color: var(--ilw-color--control); 
+    color: var(--ilw-color--control-text); 
+    border-color: var(--ilw-color--border); 
+} 
+
+[data-dark-mode-supported="true"][data-theme="dark"] input::placeholder, 
+[data-dark-mode-supported="true"][data-theme="dark"] textarea::placeholder { 
+    color: #b8b8b8; 
+}
+
+[data-dark-mode-supported="true"][data-theme="dark"] input:focus, 
+[data-dark-mode-supported="true"][data-theme="dark"] select:focus, 
+[data-dark-mode-supported="true"][data-theme="dark"] textarea:focus { 
+    border-color: var(--ilw-color--control-accent); 
+}
+
+/* ========================================================= 
+TABLES 
+========================================================= */ 
+[data-dark-mode-supported="true"][data-theme="dark"] table { 
+    color: var(--ilw-color--text); 
+    background-color: var(--ilw-color--table-background); 
+}
+
+[data-dark-mode-supported="true"][data-theme="dark"] th { 
+    color: var(--ilw-color--table-head-color); 
+    background-color: var(--ilw-color--table-head-background); 
+}
+
+[data-dark-mode-supported="true"][data-theme="dark"] td, 
+[data-dark-mode-supported="true"][data-theme="dark"] th { 
+    border-color: var(--ilw-color--table-border); 
+} 
+
+[data-dark-mode-supported="true"][data-theme="dark"] tbody tr:nth-child(even) { 
+    background-color: var(--ilw-color--table-row-stripe); 
+}
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+/*.card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 6px;
+}*/
+
+
+/* =========================================================
+   ILLINOIS HEADER
+   --------------------------------------------------------- 
+   Header-specific styling remains here because ilw-header 
+   is a separate web component.
+   ========================================================= */
+
+/* =========================================================
+   ILLINOIS HEADER MENU
+   ========================================================= */
+
+[data-dark-mode-supported="true"][data-theme="dark"] ilw-header-menu {
+    --ilw-header-menu--background: var(--il-blue-70);
+    --ilw-header-menu--link-color: #fff;
+    --ilw-header-menu--link-color--hover: var(--il-blue-70);
+    --ilw-header-menu--link-background: transparent;
+    --ilw-header-menu--link-background--hover: var(--il-orange2);
+    --ilw-header-menu--link-background--focus: var(--il-industrial-lighter-4);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+[data-dark-mode-supported="true"][data-theme="dark"] ilw-footer {
+    --il-blue: var(--il-blue-70);
+}
+
+/* ========================================================= 
+    FOCUS 
+   ========================================================= */
+[data-dark-mode-supported="true"][data-theme="dark"] :focus-visible { 
+    outline-color: #759bd1; 
+} 
+
+/* ========================================================= 
+    SELECTION 
+  ========================================================= */ 
+[data-dark-mode-supported="true"][data-theme="dark"] ::selection { 
+    background-color: #ff5f05; color: #13294b; 
+}
+
+
+/* =========================================================
+   THEME TOGGLE 
+   .theme-switch - Move to ilw-header component and commented out here. 
+   The header component will render the Dark Mode checkbox.
+   ========================================================= */
+
+/* .theme-switch {
+    margin-left: auto;
+} */
+
+.hidden {
+    display: none;
+}
