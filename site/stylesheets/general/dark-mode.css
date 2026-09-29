@@ -46,15 +46,15 @@ follow the operating system/browser preference.
 ========================================================= */ 
 @media (prefers-color-scheme: dark) { 
     :root { 
-        --ilw-color--background: var(--il-storm-95); 
-        --ilw-color--text: var(--il-storm-10); 
+        --ilw-color--background: var(--il-storm-10); 
+        --ilw-color--text: var(--il-storm-95); 
         --ilw-color--border: var(--il-storm-80); 
         --ilw-color--border-light: var(--il-storm-80); 
         --ilw-color--link: var(--il-industrial-lighter-4); 
         --ilw-color--link-hover: var(--il-orange); 
         --ilw-color--link-visited: var(--il-arches-90); 
-        --ilw-color--heading: var(--il-storm-10); 
-        --ilw-color--heading-link: var(--il-storm-10); 
+        --ilw-color--heading: var(--il-storm-95); 
+        --ilw-color--heading-link: var(--il-storm-95); 
         --ilw-color--heading-link-hover: var(--il-orange); 
         --ilw-color--heading-link-visited: var(--il-arches-90); 
         --ilw-color--control: var(--il-storm-80); 
@@ -68,16 +68,26 @@ follow the operating system/browser preference.
         --ilw-color--table-head-color: var(--ilw-color--white--table-head-color);
 
         /* Page colors */
-        --background-color: #181818;
-        --text-color: #f5f5f5;
-        --border-color: #505050;
-        --surface-color: #2a2a2a;
+        --background-color: var(--il-storm-10);
+        --text-color: var(--il-storm-95);
+        --border-color: var(--il-storm-80);
+        --surface-color: var(--il-storm-80);
 
         /* Header colors */
         --ilw-header--background: var(--il-blue);
         --ilw-header--text: white;
         --ilw-header--link-hover: var(--il-orange);
         --ilw-header--accent: var(--il-orange);
+
+        --ilw-hero--text-color: white;
+    }
+
+    ilw-header-menu {
+        --ilw-header-menu--link-color: white;
+        --ilw-header-menu--link-color--hover: var(--il-orange);
+        --ilw-header-menu--background: var(--il-blue-15);
+        --ilw-header-menu--link-background--hover: var(--il-blue);
+        --ilw-header-menu--link-background: var(--il-blue-15);
     }
 }
 
@@ -131,6 +141,7 @@ follow the operating system/browser preference.
     --ilw-header--text: white;
     --ilw-header--link-hover: var(--il-orange);
     --ilw-header--accent: var(--il-orange);
+    
 }
 
 /* =========================================================
@@ -140,31 +151,40 @@ follow the operating system/browser preference.
    ========================================================= */
 
 [data-dark-mode-supported="true"][data-theme="dark"] {
-    --ilw-color--background: var(--il-storm-95);
-    --ilw-color--text: var(--il-storm-10);
-    --ilw-color--border: var(--il-storm-80);
-    --ilw-color--border-light: var(--il-blue-90);
+        --ilw-color--background: var(--il-storm-10); 
+        --ilw-color--text: var(--il-storm-95); 
+        --ilw-color--border: var(--il-storm-80); 
+        --ilw-color--border-light: var(--il-storm-80); 
+        --ilw-color--link: var(--il-industrial-lighter-4); 
+        --ilw-color--link-hover: var(--il-orange); 
+        --ilw-color--link-visited: var(--il-arches-90); 
+        --ilw-color--heading: var(--il-storm-95); 
+        --ilw-color--heading-link: var(--il-storm-95); 
+        --ilw-color--heading-link-hover: var(--il-orange); 
+        --ilw-color--heading-link-visited: var(--il-arches-90); 
+        --ilw-color--control: var(--il-storm-80); 
+        --ilw-color--control-text: var(--il-storm-10); 
+        --ilw-color--control-accent: var(--il-orange); 
+        --ilw-color--control-accent-text: var(--ilw-color--white--control-accent-text); 
+        --ilw-color--table-border: var(--il-storm-80); 
+        --ilw-color--table-background: var(--il-storm-95); 
+        --ilw-color--table-row-stripe: var(--il-storm-80); 
+        --ilw-color--table-head-background: var(--il-blue-70); 
+        --ilw-color--table-head-color: var(--ilw-color--white--table-head-color);
 
-    --ilw-color--link: var(--il-industrial);
-    --ilw-color--link-hover: var(--il-orange);
-    --ilw-color--link-visited: var(--il-storm-10);
+        /* Page colors */
+        --background-color: var(--il-storm-10);
+        --text-color: var(--il-storm-95);
+        --border-color: var(--il-storm-80);
+        --surface-color: var(--il-storm-80);
 
-    --ilw-color--heading: var(--il-storm-10);
+        /* Header colors */
+        --ilw-header--background: var(--il-blue);
+        --ilw-header--text: white;
+        --ilw-header--link-hover: var(--il-orange);
+        --ilw-header--accent: var(--il-orange);
 
-    --ilw-color--heading-link: var(--il-storm-10);
-    --ilw-color--heading-link-hover: var(--il-orange);
-
-    /* page colors */
-    --background-color: #181818;
-    --text-color: #f5f5f5;
-    --border-color: #505050;
-    --surface-color: #2a2a2a;
-
-    /* Header colors */
-    --ilw-header--background: var(--il-blue);
-    --ilw-header--text: white;
-    --ilw-header--link-hover: var(--il-orange);
-    --ilw-header--accent: var(--il-orange);
+        --ilw-hero--text-color: white;
 }
 
 /* =========================================================
