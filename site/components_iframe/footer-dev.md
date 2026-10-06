@@ -167,11 +167,11 @@ stylesheeturl: "//dev.toolkit.illinois.edu/ilw-footer/latest/ilw-footer.css"
 <p><button class="ilw-button" onclick="build();">Build Footer</button></p>
 <div style="max-width: 700px;">
     <p><label for="actions">Actions</label></p>
-    <input id="actions" name="actions" style="width: 100%;">
+    <textarea id="actions" name="actions" style="width: 100%; height: 180px; font-family: monospace; font-size: 16px;"></textarea>
     <p><label for="address">Address</label></p>
-    <input id="address" name="address" style="width: 100%;">
+    <textarea id="address" name="address" style="width: 100%; height: 180px; font-family: monospace; font-size: 16px;"></textarea>
     <p><label for="freeform-content">Freeform Content</label></p>
-    <input id="freeform-content" name="freeform-content" style="width: 100%;">
+    <textarea id="freeform-content" name="freeform-content" style="width: 100%; height: 180px; font-family: monospace; font-size: 16px;"></textarea>
     <p><label for="legal-link-text">Legal Link Text</label></p>
     <input id="legal-link-text" name="legal-link-text" style="width: 100%;">
     <p><label for="legal-link">Legal Link</label></p>
@@ -185,7 +185,7 @@ stylesheeturl: "//dev.toolkit.illinois.edu/ilw-footer/latest/ilw-footer.css"
     <p><label for="site-name-url">Site URL</label></p>
     <input id="site-name-url" name="site-name-url" style="width: 100%;">
     <p><label for="social">Social Media Links</label></p>
-    <input id="social" name="social" style="width: 100%;">
+    <textarea id="social" name="social" style="width: 100%; height: 180px; font-family: monospace; font-size: 16px;"></textarea>
     <p><label for="source">Source</label></p>
     <input id="source" name="source" style="width: 100%;">
 </div>
