@@ -2,7 +2,7 @@
 title: Helpful Links
 layout: general/page.liquid
 permalink: "links/index.html"
-title_background: https://cdn.brand.illinois.edu/patterns/finial/blue.svg
+title_background: /img/bluex2.svg
 ---
 
 Note that links with an <strong>*</strong> will take you to a new website. 

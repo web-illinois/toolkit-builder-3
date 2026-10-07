@@ -60,7 +60,7 @@ ilw-card .buttons {
 }
 
 .home-hero-background {
-    background: var(--il-storm-95) url(../img/ascending.svg) repeat-x;
+    background: var(--il-storm-95) url(/img/ascending.svg) repeat-x;
     border-bottom: 8px solid var(--il-orange);
     display: block;
     position: absolute;
