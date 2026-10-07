@@ -28,7 +28,6 @@ Note that links with an <strong>*</strong> will take you to a new website.
 * <a href="https://webtheme.illinois.edu/">The Illinois Web Theme page <span role="presentation">*</span></a>, which has information about the Web Theme in general (CMS, Hosting, Design, etc.).
 * <a href="https://wigg.illinois.edu/">The Web Implementation Guidelines Group page <span role="presentation">*</span></a>, which has information about WIGG and its overall goals.
 
-
 ## For Content Editors
 * <a href="https://findwebhosting.web.illinois.edu/">Web Hosting Finder <span role="presentation">*</span></a>, which has a questionairre to direct you to the best web hosting platform. 
 * <a href="https://webcoe.illinois.edu/">Website Management Center of Expertise <span role="presentation">*</span></a>, a group that connects people, processes and technology and may be able to help you choose the best option for your website. 
@@ -38,3 +37,12 @@ Note that links with an <strong>*</strong> will take you to a new website.
 * <a href="https://github.com/web-illinois/toolkit-management">The Toolkit Management Github <span role="presentation">*</span></a>, which has documentation on how to help with building components. 
 * <a href="https://wordpress.webtheme.illinois.edu/">The Illinois Theme for Wordpress <span role="presentation">*</span></a>, the web theme around WordPress. 
 * <a href="https://drupal.webtheme.illinois.edu/">The Illinois Theme for Drupal</a> <span role="presentation">*</span></a>, the web theme around Drupal.  
+
+## Applications
+
+The following sites were developed through a collaboration among the <a href="https://wigg.illinois.edu/">Web Implementation Guidelines Group (WIGG) <span role="presentation">* </span></a>, <a href="https://www.techservices.illinois.edu/">Technology Services <span role="presentation">* </span></a>, and <a href="https://itpartners.illinois.edu/">IT Partners <span role="presentation">* </span></a>. Together, they provide shared tools for managing campus information and identifying website technologies.
+
+* <a href="https://resource.wigg.illinois.edu/">Resource site <span role="presentation">*</span></a> organizes and manages resources, publications, notes, frequently asked questions, people, and events.
+* <a href="https://course.wigg.illinois.edu/">Course site <span role="presentation">*</span></a> manages academic programs, credentials, courses, and curriculum requirements.
+* <a href="https://directory.wigg.illinois.edu/">Directory site <span role="presentation">*</span></a> manages employee profiles, office details, and organizational information for campus directories.
+* <a href="https://sitescanner.wigg.illinois.edu/">Site Scanner <span role="presentation">*</span></a> checks websites for hosting information, content management systems, Illinois Toolkit usage, and other technical characteristics.
