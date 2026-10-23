@@ -21,15 +21,16 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 <p>One of the problems with version 2 is that each component didn't have a way to work with other components. To fix this, we created a Page component that can house all the other components. This includes the brand header and footer component. </p>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/component/ilw-page/index.html">ilw-page builder link</a> - <a href=" https://github.com/web-illinois/ilw-page/blob/main/README.md">ilw-page detailed documentation</a></il>
+<li><a href="/component/ilw-page/index.html">ilw-page builder link</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Add the brand header and footer: <code>ilw-header</code>, <code>ilw-footer</code></h3>
 <p>Add the header and footer. We recently moved this from Strategic Communications to the WIGG toolkit.</p>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/notes/header/index.html">ilw-header</a></il>
-<li><a href="/notes/footer/index.html">ilw-footer</a></il>
+<li><a href="/component/ilw-header/index.html">ilw-header</a></il>
+<li><a href="/component/ilw-header-menu/index.html">ilw-header-menu builder link</a></il>
+<li><a href="/component/ilw-footer/index.html">ilw-footer</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Create a title: <code>ilw-hero</code>, <code>ilw-page-title</code>, <code>ilw-content</code></h3>
@@ -41,9 +42,9 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 </ul>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/component/ilw-hero/index.html">ilw-hero builder link</a> - <a href=" https://github.com/web-illinois/ilw-hero/blob/main/README.md">ilw-hero detailed documentation</a></il>
-<li><a href="/component/ilw-page-title/index.html">ilw-page-title builder link</a> - <a href=" https://github.com/web-illinois/ilw-page-title/blob/main/README.md">ilw-page-title detailed documentation</a></il>
-<li><a href="/component/ilw-content/index.html">ilw-content builder link</a> - <a href=" https://github.com/web-illinois/ilw-content/blob/main/README.md">ilw-content detailed documentation</a></il>
+<li><a href="/component/ilw-hero/index.html">ilw-hero builder link</a> </il>
+<li><a href="/component/ilw-page-title/index.html">ilw-page-title builder link</a> </il>
+<li><a href="/component/ilw-content/index.html">ilw-content builder link</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Add in-page navigation: <code>ilw-breadcrumbs</code>, <code>ilw-section-nav</code>, <code>ilw-back-to-top</code></h3>
@@ -55,9 +56,9 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 </ul>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/component/ilw-breadcrumbs/index.html">ilw-breadcrumbs builder link</a> - <a href=" https://github.com/web-illinois/ilw-breadcrumbs/blob/main/README.md">ilw-breadcrumbs detailed documentation</a></il>
-<li><a href="/component/ilw-section-nav/index.html">ilw-section-nav builder link</a> - <a href=" https://github.com/web-illinois/ilw-section-nav/blob/main/README.md">ilw-section-nav detailed documentation</a></il>
-<li><a href="/component/ilw-back-to-top/index.html">ilw-back-to-top builder link</a> - <a href=" https://github.com/web-illinois/ilw-back-to-top/blob/main/README.md">ilw-back-to-top detailed documentation</a></il>
+<li><a href="/component/ilw-breadcrumbs/index.html">ilw-breadcrumbs builder link</a> </il>
+<li><a href="/component/ilw-section-nav/index.html">ilw-section-nav builder link</a></il>
+<li><a href="/component/ilw-back-to-top/index.html">ilw-back-to-top builder link</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Add calls to action: <code>ilw-call-to-action</code>, <code>ilw-button</code></h3>
@@ -70,15 +71,15 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 <ul>
 <li><a href="/component/ilw-global-button-anchor/index.html">global anchor class builder link</a></il>
 <li><a href="/component/ilw-global-button-button/index.html">global button class builder link</a></il>
-<li><a href="/component/ilw-call-to-action/index.html">ilw-call-to-action builder link</a> - <a href=" https://github.com/web-illinois/ilw-call-to-action/blob/main/README.md">ilw-call-to-action detailed documentation</a></il>
+<li><a href="/component/ilw-call-to-action/index.html">ilw-call-to-action builder link</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Add text: <code>ilw-content</code>, <code>ilw-columns</code></h3>
 <p>You will add text to your page. This is mainly with the Content component, and you can break up the text into columns using the Columns component.</p>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/component/ilw-content/index.html">ilw-content builder link</a> - <a href=" https://github.com/web-illinois/ilw-content/blob/main/README.md">ilw-content detailed documentation</a></il>
-<li><a href="/component/ilw-columns/index.html">ilw-columns builder link</a> - <a href=" https://github.com/web-illinois/ilw-columns/blob/main/README.md">ilw-columns detailed documentation</a></il>
+<li><a href="/component/ilw-content/index.html">ilw-content builder link</a></il>
+<li><a href="/component/ilw-columns/index.html">ilw-columns builder link</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Break up text with highlights, video, quotes, and other impactful statements: <code>ilw-video</code>, <code>ilw-statistic</code>, <code>ilw-quote</code>, <code>ilw-content</code>, <code>ilw-columns</code>, <code>ilw-card</code>, <code>ilw-tabs</code></h3>
@@ -94,13 +95,13 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 </ul>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/component/ilw-video/index.html">ilw-video builder link</a> - <a href=" https://github.com/web-illinois/ilw-video/blob/main/README.md">ilw-video detailed documentation</a></il>
-<li><a href="/component/ilw-statistic/index.html">ilw-statistic builder link</a> - <a href=" https://github.com/web-illinois/ilw-statistic/blob/main/README.md">ilw-statistic detailed documentation</a></il>
-<li><a href="/component/ilw-quote/index.html">ilw-quote builder link</a> - <a href=" https://github.com/web-illinois/ilw-quote/blob/main/README.md">ilw-quote detailed documentation</a></il>
-<li><a href="/component/ilw-content/index.html">ilw-content builder link</a> - <a href=" https://github.com/web-illinois/ilw-content/blob/main/README.md">ilw-content detailed documentation</a></il>
-<li><a href="/component/ilw-columns/index.html">ilw-columns builder link</a> - <a href=" https://github.com/web-illinois/ilw-columns/blob/main/README.md">ilw-columns detailed documentation</a></il>
-<li><a href="/component/ilw-card/index.html">ilw-card builder link</a> - <a href=" https://github.com/web-illinois/ilw-card/blob/main/README.md">ilw-card detailed documentation</a></il>
-<li><a href="/component/ilw-tabs/index.html">ilw-tabs builder link</a> - <a href=" https://github.com/web-illinois/ilw-tabs/blob/main/README.md">ilw-tabs detailed documentation</a></il>
+<li><a href="/component/ilw-video/index.html">ilw-video builder link</a></il>
+<li><a href="/component/ilw-statistic/index.html">ilw-statistic builder link</a></il>
+<li><a href="/component/ilw-quote/index.html">ilw-quote builder link</a></il>
+<li><a href="/component/ilw-content/index.html">ilw-content builder link</a></il>
+<li><a href="/component/ilw-columns/index.html">ilw-columns builder link</a></il>
+<li><a href="/component/ilw-card/index.html">ilw-card builder link</a></il>
+<li><a href="/component/ilw-tabs/index.html">ilw-tabs builder link</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Condense large blocks of information to smaller sections: <code>ilw-accordion</code>, <code>ilw-grid</code>, <code>ilw-pagination</code></h3>
@@ -112,17 +113,16 @@ title_background: https://cdn.brand.illinois.edu/patterns/ascend/orange.svg
 </ul>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/component/ilw-accordion/index.html">ilw-accordion builder link</a> - <a href=" https://github.com/web-illinois/ilw-accordion/blob/main/README.md">ilw-accordion detailed documentation</a></il>
-<li><a href="/component/ilw-grid/index.html">ilw-grid builder link</a> - <a href=" https://github.com/web-illinois/ilw-grid/blob/main/README.md">ilw-grid detailed documentation</a></il>
-<li><a href="/component/ilw-pagination/index.html">ilw-pagination builder link</a> - <a href=" https://github.com/web-illinois/ilw-pagination/blob/main/README.md">ilw-pagination detailed documentation</a></il>
+<li><a href="/component/ilw-accordion/index.html">ilw-accordion builder link</a></il>
+<li><a href="/component/ilw-grid/index.html">ilw-grid builder link</a></il>
+<li><a href="/component/ilw-pagination/index.html">ilw-pagination builder link</a></il>
 </ul>
 </ilw-accordion-panel>
 <ilw-accordion-panel><h3 slot="summary">Clean up the page: <code>ilw-spacer</code></h3>
 <p>At this point, you can clean up the page by adding space between items as needed. You can do this with the Spacer component.</p>
 <h4>Resource Links</h4>
 <ul>
-<li><a href="/component/ilw-spacer/index.html">ilw-spacer builder link</a> - <a href=" https://github.com/web-illinois/ilw-spacer/blob/main/README.md">ilw-spacer detailed documentation</a>
-</il>
+<li><a href="/component/ilw-spacer/index.html">ilw-spacer builder link</a></il>
 </ul>
 </ilw-accordion-panel>
 </ilw-accordion>

@@ -45,6 +45,6 @@ Version 2 of the toolkit is no longer supported. If you need a change, you can c
 * <a href="/generic_html/index.html">Get a generic HTML template</a>
 * <a href="/upgrade/index.html">Upgrade a site from version 2</a>
 * <a href="/create_page/index.html">View a step-by-step guide to create a new page</a>
-* <a href="/components_toc/index.html">Dive right into the component specifications directly</a>
+* <a href="/component/index.html">Dive right into the component specifications directly</a>
 * <a href="/philosophy/index.html">Learn more about the philosophy of the toolkit</a>
 * <a href="/links/index.html">Get more resource links on how to build a web page using a campus CMS</a>
