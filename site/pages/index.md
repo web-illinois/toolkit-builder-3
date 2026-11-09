@@ -12,6 +12,7 @@ cards:
     button: Get Started
     link: /getting_started/index.html
 notice: "**Looking for the previous Toolkit version?** [Toolkit v2 Builder](https://builder.toolkit.illinois.edu/)"
+latest: "Latest version is 3.14, deployed on October 5th, 2026"
 cta: Questions? Suggestions?
 cta_text: Get in touch on Teams, or create a Github Issue.
 cta_buttons:
