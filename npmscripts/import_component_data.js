@@ -75,6 +75,81 @@ function rewriteRelativeMarkdownUrls(markdown, repository) {
   });
 }
 
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}\s-]/gu, '')
+    .trim()
+    .replace(/\s+/g, '-');
+}
+
+function parseHeadings(lines) {
+  const headings = [];
+  const slugCounts = new Map();
+  let fence = null;
+
+  for (const [lineIndex, line] of lines.entries()) {
+    const fenceMatch = line.match(/^\s{0,3}(`{3,}|~{3,})/);
+    if (fenceMatch) {
+      if (!fence) {
+        fence = fenceMatch[1][0];
+      } else if (fenceMatch[1][0] === fence) {
+        fence = null;
+      }
+      continue;
+    }
+    if (fence) {
+      continue;
+    }
+
+    const headingMatch = line.match(/^\s{0,3}(#{1,6})\s+(.+?)(?:\s+#+)?\s*$/);
+    if (!headingMatch) {
+      continue;
+    }
+
+    const text = headingMatch[2]
+      .replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
+      .replace(/[`*_]/g, '')
+      .trim();
+    if (!text) {
+      continue;
+    }
+
+    const baseSlug = slugify(text);
+    const count = slugCounts.get(baseSlug) || 0;
+    slugCounts.set(baseSlug, count + 1);
+    headings.push({
+      lineIndex,
+      level: headingMatch[1].length,
+      text,
+      slug: count === 0 ? baseSlug : `${baseSlug}-${count}`,
+    });
+  }
+
+  return headings;
+}
+
+function generateTableOfContents(markdown) {
+  const headings = parseHeadings(markdown.split(/\r?\n/));
+  if (headings.length === 0) {
+    return '';
+  }
+
+  const topLevel = Math.min(...headings.map(heading => heading.level));
+  return headings
+    .map(({ level, text, slug }) => `${'  '.repeat(level - topLevel)}- [${text}](#${slug})`)
+    .join('\n');
+}
+
+// Appends a markdown-it-attrs id ({#slug}) to each heading so the table of contents links resolve.
+function addHeadingIds(markdown) {
+  const lines = markdown.split(/\r?\n/);
+  for (const { lineIndex, slug } of parseHeadings(lines)) {
+    lines[lineIndex] = `${lines[lineIndex].trimEnd()} {#${slug}}`;
+  }
+  return lines.join('\n');
+}
+
 function writeReadmePage(repository, readmeFile, checkoutPath) {
   const readmePath = [readmeFile].map(file => path.join(checkoutPath, file)).find(fs.existsSync);
   const sourceRepository = `https://github.com/${organization}/${repository}`;
@@ -95,6 +170,10 @@ function writeReadmePage(repository, readmeFile, checkoutPath) {
   }
 
   const truncatedBody = body.split('\n').slice(lineValue).join('\n');
+  const tableOfContents = generateTableOfContents(truncatedBody);
+  const pageBody = tableOfContents
+    ? `<h3>Table of Contents</h3>\n\n${tableOfContents}\n\n${addHeadingIds(truncatedBody)}`
+    : truncatedBody;
   const frontMatter = `---
   pagination:
     data: ${repository}
@@ -108,7 +187,7 @@ function writeReadmePage(repository, readmeFile, checkoutPath) {
     title: "{{ component.title }}"
     id: "{{ component.id }}"
 ---`;
-  fs.writeFileSync(outputPath, `${frontMatter}\n\n${truncatedBody}\n`);
+  fs.writeFileSync(outputPath, `${frontMatter}\n\n${pageBody}\n`);
 }
 
 ensureCleanDirectory(checkoutRoot);
