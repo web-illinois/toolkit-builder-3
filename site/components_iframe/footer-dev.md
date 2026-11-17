@@ -4,6 +4,10 @@ layout: components/base.liquid
 permalink: "component/ilw-footer/custom-dev/index.html"
 scripturl: "//dev.toolkit.illinois.edu/ilw-footer/latest/ilw-footer.js"
 stylesheeturl: "//dev.toolkit.illinois.edu/ilw-footer/latest/ilw-footer.css"
+additionalscripts: 
+  - https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.js
+additionalstyles: 
+  - https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.css
 ---
 <script>
     const defaults = {

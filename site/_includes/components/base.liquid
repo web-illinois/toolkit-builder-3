@@ -5,9 +5,15 @@
     <link rel="stylesheet" href="https://cdn.toolkit.illinois.edu/ilw-global/3/ilw-global.css">
     <link rel="stylesheet" href="/stylesheets/components/component.css" data-skip="true">
     <title>{{ title }}</title>
+    {% for scripturl in additionalscripts %}
+        <script type="module" src="{{ scripturl | url }}"></script>
+    {% endfor %}
     {%- if scripturl %}
         <script type="module" src="{{ scripturl | url }}"></script>
     {%- endif %}
+    {% for stylesheeturl in additionalstyles %}
+        <link rel="stylesheet" href="{{ stylesheeturl | url }}">
+    {% endfor %}
     {%- if stylesheeturl %}
         <link rel="stylesheet" href="{{ stylesheeturl | url }}">
     {%- endif %}

@@ -74,6 +74,7 @@ For special case components that cannot be duplicated inside of the builder webs
     * Use the `components/base.liquid` layout -- this just has the bare structure for your page.
     * Your permalink should be nested inside the component -- in most cases, this will be `component/YOUR-COMPONENT/`. Make sure you give it a subdirectory inside this structure -- do not write to the root index.html or it will break.
     * Make sure to add your production or development version JS and CSS with the parameters `scripturl` and `stylesheeturl`. If you want testing for both production and development, create two .md files, one pointing to dev and one pointing to production. 
+    * If you need to add additional javascript or CSS, you can do so by adding `additionalscripts` and `additionalstyles` as array parameters in the front matter. 
 3. Submit a pull-request to request the custom override. 
 4. Once approved, go to your component repo: builder/ilw-YOUR-NEW-COMPONENT.json
 5. Follow the steps to add a Custom Templates (used in component.json) in [the Builder Files readme](https://github.com/web-illinois/toolkit-builder-3/blob/main/BUILDER_FILES.md).
