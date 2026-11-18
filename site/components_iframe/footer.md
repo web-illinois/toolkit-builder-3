@@ -15,7 +15,7 @@ additionalstyles:
     const defaults = {
         'actions': `<a href="#">Register</a>\n<a href="#">Eject</a>`,
         'address': `<p>\n    5678 West Example Street<br>\n    MC-0000<br>\n    Champaign, IL 61820\n</p>\n\n<p>Email: <a href="mailto:address@illinois.edu">address@illinois.edu</a></p>\n<p>Phone: <a href="tel:+12175551234" aria-label="Example Site Office">(217) 555-1234</a></p>`,
-        'freeform-content': `<ilw-column>\n    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>\n</ilw-column>\n\n<ilw-column>\n    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi</p>\n</ilw-column>`,
+        'freeform-content': `<ilw-columns>\n    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur</p>\n</ilw-columns>\n\n<ilw-columns>\n    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi</p>\n</ilw-columns>`,
         'legal-link': 'https://localhost',
         'legal-link-text': 'Compliance Documentation',
         'primary-unit': 'University Unit',
