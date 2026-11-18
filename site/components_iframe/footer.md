@@ -6,8 +6,10 @@ scripturl: "//cdn.toolkit.illinois.edu/ilw-footer/1/ilw-footer.js"
 stylesheeturl: "//cdn.toolkit.illinois.edu/ilw-footer/1/ilw-footer.css"
 additionalscripts: 
   - https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.js
+  - https://cdn.toolkit.illinois.edu/ilw-columns/1/ilw-columns.js
 additionalstyles: 
   - https://cdn.toolkit.illinois.edu/ilw-icon/1/ilw-icon.css
+  - https://cdn.toolkit.illinois.edu/ilw-columns/1/ilw-columns.css
 ---
 <script>
     const defaults = {
